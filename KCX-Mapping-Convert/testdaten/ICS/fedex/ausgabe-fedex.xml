@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>04</Month>
+<Day>05</Day>
+</Date>
+<Time>00:00:00</Time>
+</SentAt>
+<Transmitter>DE.FDXFKB.0725</Transmitter>
+<Receiver>DE.FDX.FKB</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>3397137</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>1DE3397137</ReferenceNumber>
+<ShipmentNumber>CGN3397137</ShipmentNumber>
+<TotalNumberPositions>1</TotalNumberPositions>
+<TotalGrossMass>24.040</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+</MeansOfTransportBorder>
+<ConveyanceReference>FDX9111</ConveyanceReference>
+<LoadingPlace>US Memphis TN</LoadingPlace>
+<LoadingPlaceLng>EN</LoadingPlaceLng>
+<UnloadingPlace>DE CGN</UnloadingPlace>
+<UnloadingPlaceLng>EN</UnloadingPlaceLng>
+<SituationCode>A</SituationCode>
+<PaymentType>A</PaymentType>
+<DeclarationTime>201104051606</DeclarationTime>
+<DeclarationPlace>CGN</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>QUANTEL USA GREG MANCINI</Name>
+<Street>601 HAGGERTY LANE</Street>
+<City>BOZEMAN</City>
+<PostalCode>59715</PostalCode>
+<Country>US</Country>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>QUANTEL PO 283543</Name>
+<Street>2 BIS AVENUE DU PACIFIQUE Z.A. DE C</Street>
+<City>LES ULIS CEDEX</City>
+<PostalCode>91941</PostalCode>
+<Country>FR</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>DE4389921</TIN>
+</PersonLodgingSumaTIN>
+<CarrierTIN>
+<TIN>00</TIN>
+</CarrierTIN>
+<CustomsOfficeFirstEntry>00</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201104051700</DeclaredDateOfArrival>
+<CountryOfRouting>US</CountryOfRouting>
+<CountryOfRouting>DE</CountryOfRouting>
+<CountryOfRouting>FR</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>ASSY, CFR200, 532NM, ICE450, 10,DI CABLE</Description>
+<DescriptionLng>EN</DescriptionLng>
+<GrossMass>24.040</GrossMass>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclaration>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE.SKGTST.4037</To>
+      <From>DE.SKGTST.4037</From>
+      <MessageID>20111122003-IWA</MessageID>
+      <SentAt>2011-11-23T16:42:02</SentAt>
+      <Act>inform</Act>
+      <Procedure>NCTS</Procedure>
+      <MessageType>NCTSDeclaration</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>4.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ncts/body/200911">
+      <NCTS>
+        <NCTSDeclaration>
+          <LocalReferenceNumber>IWA-20111122003</LocalReferenceNumber>
+          <TypeOfDeclaration>T1</TypeOfDeclaration>
+          <CountryOfDestination>PL</CountryOfDestination>
+          <CountryOfDispatch>CN</CountryOfDispatch>
+          <TransportAtBorder>
+            <Identity>LKW</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtBorder>
+          <TransportAtDeparture>
+            <Identity>LKW</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtDeparture>
+          <ContainerIndicator>0</ContainerIndicator>
+          <TotalNumberOfItems>2</TotalNumberOfItems>
+          <TotalNumberOfPackages>904</TotalNumberOfPackages>
+          <TotalGrossMass>14683200</TotalGrossMass>
+          <Consignor>
+            <Address>
+              <Name>ORSAY TRADING (SHANGHAI) CO., LTD. </Name>
+              <Street>RM. G-K, 9/F, CROSS REGION PLAZA</Street>
+              <PostalCode>-</PostalCode>
+              <City>899, LING LING RD., SHANGHAI</City>
+              <CountryCodeISO>CN</CountryCodeISO>
+            </Address>
+          </Consignor>
+          <Consignee>
+            <Address>
+              <Name>ORDIPOL SP. Z O.O.</Name>
+              <Street>LOGISTYCZNA 1</Street>
+              <PostalCode>55-040</PostalCode>
+              <City>BIELANY WROCLAWSKIE</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignee>
+          <Principal>
+            <TIN>1876635</TIN>
+            <Address>
+              <Name>YUSEN LOGISTICS (POLSKA) SP. Z O.O.</Name>
+              <Street>RZYMOWSKIEGO 53</Street>
+              <PostalCode>02-679</PostalCode>
+              <City>WARSZAWA</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Principal>
+          <OfficeOfDeparture>DE004851</OfficeOfDeparture>
+          <OfficeOfDestination>PL451010</OfficeOfDestination>
+          <SimplifiedProcedureFlag>0</SimplifiedProcedureFlag>
+          <RepresentativeName>JOANNA KRAMARCZYK</RepresentativeName>
+          <RepresentativeCapacity>ZOLLAGENT</RepresentativeCapacity>
+          <Guarantee>
+            <TypeOfGuarantee>1</TypeOfGuarantee>
+            <Reference>
+              <GRN>08PL440000T004769</GRN>
+              <AccessCode>8888</AccessCode>
+              <OwnerTIN>TIN-IWA</OwnerTIN>
+              <NotValidForCountry>AD</NotValidForCountry>
+              <NotValidForCountry>SM</NotValidForCountry>
+              <Amounts>
+                <Amount>326522.00</Amount>
+                <Currency>PLN</Currency>
+              </Amounts>
+            </Reference>
+          </Guarantee>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <CommodityCodeKN8>61102099</CommodityCodeKN8>
+            <GoodsDescription>STRICKJACKE AUS GEWIRKEN  FRAUEN
+</GoodsDescription>
+            <GrossMass>5696.000</GrossMass>
+            <NetMass>4984</NetMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>2011-00008036</Reference>
+            </ProducedDocuments>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>2011-00008037</Reference>
+            </ProducedDocuments>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>2011-00008039</Reference>
+            </ProducedDocuments>
+            <ProducedDocuments>
+              <Type>705</Type>
+              <Reference>574654441</Reference>
+            </ProducedDocuments>
+            <ContainerNumber>MRKU2743945</ContainerNumber>
+            <Packages>
+              <Quantity>356</Quantity>
+              <MarksAndNumbers>OHNE</MarksAndNumbers>
+              <Type>CT</Type>
+            </Packages>
+          </GoodsItem>
+          <GoodsItem>
+            <ItemNumber>2</ItemNumber>
+            <CommodityCodeKN8>61103099</CommodityCodeKN8>
+            <GoodsDescription>PULLOVER AUS GEWIRKEN  FRAUEN
+</GoodsDescription>
+            <GrossMass>8987.200</GrossMass>
+            <NetMass>7891.20</NetMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>2011-00008046</Reference>
+            </ProducedDocuments>
+            <ProducedDocuments>
+              <Type>705</Type>
+              <Reference>574654441</Reference>
+            </ProducedDocuments>
+            <ContainerNumber>MRKU2743945</ContainerNumber>
+            <Packages>
+              <Quantity>548</Quantity>
+              <MarksAndNumbers>OHNE</MarksAndNumbers>
+              <Type>CT</Type>
+            </Packages>
+          </GoodsItem>
+        </NCTSDeclaration>
+      </NCTS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

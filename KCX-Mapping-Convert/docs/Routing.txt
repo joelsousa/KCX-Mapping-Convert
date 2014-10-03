@@ -1,0 +1,18 @@
+
+Routing
+
+Von DE (172.16.6.106) nach Kunde (172.16.6.105)
+
+BOB-DE (172.16.6.106)
+Eingangsverzeichnis:    BOB-DE/in/de/export
+An Queue:               client.de.export.to.bob.transform.queue
+An Queue:               bob.to.meg.queue
+An Queue:               BUSINESS
+
+MEG (172.16.6.104):
+Von Queue:              BUSINESS
+An  Queue:              Custom router: com.kewill.kcx.routing.outbound.JmsRecipientList
+
+BOB-ACME (172.16.6.106):
+
+

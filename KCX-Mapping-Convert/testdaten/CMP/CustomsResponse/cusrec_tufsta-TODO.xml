@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Body>
+<CustomsResponse>
+<MessageHeader>
+<MessageType>TUFSTA</MessageType>
+<MessageSubType>NCTS-DE</MessageSubType>
+<MessageName>LH0191150813DXB</MessageName>
+<MessageFunction>RESPONSE</MessageFunction>
+<MessageDateTime>201308151438</MessageDateTime>
+<MessageSender>
+<Identity>FSS</Identity>
+</MessageSender>
+<MessageRecipient>
+<Identity>DE.CMP.TST</Identity>
+</MessageRecipient>
+<MessageVersion>1.0.00</MessageVersion>
+<MessageReferenceID>DE123456789</MessageReferenceID>
+<MessageConversationID>XFFM-LHC-20130813</MessageConversationID>
+</MessageHeader>
+<MessageBody>
+<DeclarationStatus>40</DeclarationStatus>
+<TUFSTA>TODO</TUFSTA>
+<CUSREC>
+<HeaderDetail>
+<FlightNumber>LH0191</FlightNumber>
+<AirportOfDeparture>DXB</AirportOfDeparture>
+<DepartureDate>15082013</DepartureDate>
+<AirportOfArrival>FRA</AirportOfArrival>
+<ArrivalDate>20130815</ArrivalDate>
+<CustomsRegistration>ATB150001550720135876</CustomsRegistration>
+</HeaderDetail>
+<HeaderNotification>
+<FlightNumber>INF</FlightNumber>
+<NotificationDetails>Es wurde eine summarische Anmeldung mit der Registriernummer ATB150001550720135876 angelegt.</NotificationDetails>
+<NotificationDetails>Die Kopfdaten sind fehlerfrei.</NotificationDetails>
+</HeaderNotification>
+<ItemDetails>
+<lineItemNumber>0001</lineItemNumber>
+<LineStatus>90</LineStatus>
+<WaybillNumber>17639297952</WaybillNumber>
+<ItemNotification>
+<NotificationWeight>INF</NotificationWeight>
+<NotificationDetails>Die Daten der Position 1 sind fehlerfrei.</NotificationDetails>
+</ItemNotification>
+</ItemDetails>
+<ItemDetails>
+<lineItemNumber>0002</lineItemNumber>
+<LineStatus>90</LineStatus>
+<WaybillNumber>17639297952</WaybillNumber>
+<ItemNotification>
+<NotificationWeight>INF</NotificationWeight>
+<NotificationDetails>Die Daten der Position 2 sind fehlerfrei.</NotificationDetails>
+</ItemNotification>
+</ItemDetails>
+</CUSREC>
+</MessageBody>
+</CustomsResponse>
+</soap:Body>
+</soap:Envelope>

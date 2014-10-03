@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2010</Year>
+<Month>08</Month>
+<Day>04</Day>
+</Date>
+<Time>145700</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>UK.HJH.TST</Transmitter>
+<Receiver>UK.HJH.TST</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>NL</CountryCode>
+<Procedure>Export</Procedure>
+<ProcedureSpecification>3</ProcedureSpecification>
+<MessageName>localAppResult</MessageName>
+<Release>2.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>1100101443</MessageID>
+<InReplyTo>HJH-EE1CLNT040-1100101443-HPA</InReplyTo>
+</Header>
+</soap:Header>
+<soap:body>
+<localAppResult>
+<GoodsDeclaration>
+<ReferenceNumber>1100101443</ReferenceNumber>
+<GoodsItem>
+<ItemNumber>0</ItemNumber>
+<PositionError>
+<KindOfError>INF</KindOfError>
+<ErrorText>Upload successful, declaration sent to NL Customs.</ErrorText>
+</PositionError>
+</GoodsItem>
+</GoodsDeclaration>
+</localAppResult>
+</soap:body>
+</soap:Envelope>

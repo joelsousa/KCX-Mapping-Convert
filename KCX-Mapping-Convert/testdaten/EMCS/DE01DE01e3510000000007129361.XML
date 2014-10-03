@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+      <To>DE01.ESTO2BI.e351</To>
+      <From>DE01.ESTO2BI.e351</From>
+      <MessageID>DE01DE01e3510000000007129361</MessageID>
+      <SentAt>2012-05-11T09:45:25</SentAt>
+      <Act>request</Act>
+      <TestIndicator>false</TestIndicator>
+      <Procedure>EMCS</Procedure>
+      <Method/>
+      <MessageType>EMCSReportOfReceipt</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+      <EMCS>
+        <EMCSReportOfReceipt>
+          <LocalReferenceNumber>12BE455791320001864</LocalReferenceNumber>
+          <AadReferenceCode>12BEH204NO6P004MJRMV3</AadReferenceCode>
+          <SequenzNumber>1</SequenzNumber>
+          <DestinationOffice>DE008000</DestinationOffice>
+          <DateOfArrivalOfExciseProducts>2012-05-10</DateOfArrivalOfExciseProducts>
+          <GlobalConclusionOfReceipt>2</GlobalConclusionOfReceipt>
+          <ComplementaryInformation language=" d">Litermenge paßt / KG 2640 zuwenig</ComplementaryInformation>
+          <ConsigneeTrader>
+            <ExciseTaxNumber>DE00001447238</ExciseTaxNumber>
+            <Address>
+              <Name>stockmeier chemie gmbh</Name>
+              <StreetAndNumber>ECKENDORFERSTRASSE 10 </StreetAndNumber>
+              <PostalCode>33609</PostalCode>
+              <City>BIELEFELD</City>
+              <Language>nl</Language>
+            </Address>
+          </ConsigneeTrader>
+          <DeliveryPlaceTrader>
+            <ExciseTaxNumber>DE00000575143</ExciseTaxNumber>
+            <Address>
+              <Name>stockmeier chemie gmbh</Name>
+              <StreetAndNumber>ECKENDORFERSTRASSE 10 </StreetAndNumber>
+              <PostalCode>33609</PostalCode>
+              <City>BIELEFELD</City>
+              <Language>nl</Language>
+            </Address>
+          </DeliveryPlaceTrader>
+          <GoodsItem>
+            <ItemNumber>001</ItemNumber>
+            <ExciseProductCode>E480</ExciseProductCode>
+            <RefusedQuantity>           0.000</RefusedQuantity>
+            <ObservedShortageOrExcess>           0.000</ObservedShortageOrExcess>
+            <UnsatisfactoryReason>
+              <UnsatisfactoryReasonCode>0</UnsatisfactoryReasonCode>
+              <ComplementaryInformation language="de">28633 L passen / KG wurden 22660</ComplementaryInformation>
+            </UnsatisfactoryReason>
+          </GoodsItem>
+        </EMCSReportOfReceipt>
+      </EMCS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

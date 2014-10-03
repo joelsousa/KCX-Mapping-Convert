@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <To>DE01.FORDTST.3087</To>
+            <From>DE01.FORDTST.3087</From>
+            <MessageID>DE01DE01308720110525124335104</MessageID>
+            <SentAt>2011-05-25T12:43:07+02:00</SentAt>
+            <Act>request</Act>
+            <Procedure>NCTS</Procedure>
+            <MessageType>NCTSDeclaration</MessageType>
+            <Direction>FROM_CUSTOMER</Direction>
+            <MessageVersion>4.0</MessageVersion>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <Submit xmlns="http://www.eurtradenet.com/schemas/uids/body/200601">
+            <NCTS>
+                <NCTSDeclaration>
+                    <LocalReferenceNumber>beznr</LocalReferenceNumber>                    
+                </NCTSDeclaration>
+            </NCTS>
+        </Submit>
+    </soap:Body>
+</soap:Envelope>
+

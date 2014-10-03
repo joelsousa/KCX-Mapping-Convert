@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310">
+      <To>CZ01.EK.TST</To>
+      <From>CZ01.EK.TST</From>
+      <MessageID>000074</MessageID>
+      <InReplyTo>17619504575-X0XIXT</InReplyTo>
+      <SentAt>2011-02-07 12:12:04</SentAt>
+      <Act>inform</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>ICSDeclarationAccepted</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>    
+    <soap:Body>
+      <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+        <ICS>
+          <ICSDeclarationAccepted>
+            <LocalReferenceNumber>17679134926-X10C2P</LocalReferenceNumber>
+            <CommercialReferenceNumber>17679134926</CommercialReferenceNumber>
+            <MRN>11FRS0308005916880</MRN>
+            <TransportAtBorder>
+              <Mode>4</Mode>
+            </TransportAtBorder>
+            <ConveyanceNumber>EK0077</ConveyanceNumber>
+            <RegistrationDateAndTime>2011-02-09 07:18:00</RegistrationDateAndTime>
+            <PersonLodgingSumDec>
+              <TIN>FR38798674800052</TIN>
+              <Address>
+                <Name>Emirates SkyCargo</Name>
+                <StreetAndNumber>Cargo City South, Building 530 d</StreetAndNumber>
+                <PostalCode>60549</PostalCode>
+                <City>Frankfurt Airport</City>
+                <CountryCodeISO>DE</CountryCodeISO>
+              </Address>
+            </PersonLodgingSumDec>
+            <EntryCarrier>
+              <TIN>FR38798674800052</TIN>
+            </EntryCarrier>
+            <OfficeOfFirstEntry>FR003080</OfficeOfFirstEntry>
+            <ExpectedArrivalDateAndTime>2011-02-09 13:05:00</ExpectedArrivalDateAndTime>
+            <GoodsItem>
+              <ItemNumber>1</ItemNumber>
+              <Documents>
+                <Type>N703</Type>
+                <Reference>MAA00254822</Reference>
+              </Documents>
+            </GoodsItem>
+          </ICSDeclarationAccepted>
+        </ICS>
+      </Submit>
+    </soap:Body>
+</soap:Envelope>

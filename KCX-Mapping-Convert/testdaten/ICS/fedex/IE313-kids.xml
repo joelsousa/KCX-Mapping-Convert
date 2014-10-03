@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+<Primary>DE</Primary>
+<Secondary>ICS</Secondary>
+<Audit_Id>TestAuditId</Audit_Id>
+<Content>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>03</Month>
+<Day>16</Day>
+</Date>
+<Time>00:00:00</Time>
+</SentAt>
+<Transmitter>DE23238787</Transmitter>
+<Receiver>DE.FDX.TST</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSDeclarationAmendment</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>2332736</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSDeclarationAmendment>
+<GoodsDeclaration>
+<ShipmentNumber>FRA2332736</ShipmentNumber>
+<MRN>11DE587600005059I2</MRN>
+<TotalGrossMass>0.227</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+</MeansOfTransportBorder>
+<ConveyanceReference>FDX4040</ConveyanceReference>
+<LoadingPlace>US Memphis TN</LoadingPlace>
+<LoadingPlaceLng>EN</LoadingPlaceLng>
+<UnloadingPlace>DE FRA</UnloadingPlace>
+<UnloadingPlaceLng>EN</UnloadingPlaceLng>
+<SituationCode>A</SituationCode>
+<PaymentType>A</PaymentType>
+<DeclarationTime>201101051806</DeclarationTime>
+<DeclarationPlace>FRA</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>POSTAL ZONE DAN FITZPATRICK</Name>
+<Street>2916 S 132ND ST</Street>
+<City>MEMPHIS</City>
+<PostalCode>68144</PostalCode>
+<Country>US</Country>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>PRO TRACU CONSTUING PRILATE LTD</Name>
+<Street>NO 7 SRIST PALACE   17 EVK SAMPATH</Street>
+<City>FRANKFURT</City>
+<PostalCode>60007</PostalCode>
+<Country>DE</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>DE9000690</TIN>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress />
+<CarrierTIN>
+<TIN>DE9000690</TIN>
+</CarrierTIN>
+<CarrierAddress />
+<CustomsOfficeFirstEntry>DE005876</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201101052100</DeclaredDateOfArrival>
+<CountryOfRouting>US</CountryOfRouting>
+<CountryOfRouting>DE</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>TELEPHONES AND COMPUTERS</Description>
+<DescriptionLng>EN</DescriptionLng>
+<GrossMass>0.227</GrossMass>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSDeclarationAmendment>
+</soap:Body>
+</soap:Envelope>]]>
+</Content>
+</KCX>

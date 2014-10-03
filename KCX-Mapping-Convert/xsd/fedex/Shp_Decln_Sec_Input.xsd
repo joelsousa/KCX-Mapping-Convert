@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Crn_Decln_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Decln_Cmdty_Doc_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Decln_Additional_Info_Sec_Input.xsd"/>
+	<xs:element name="Shp_Decln_Sec_Input" type="SHPT_DECLN"/>
+	<xs:complexType name="SHPT_DECLN">
+		<xs:sequence>
+			<xs:element name="SHPMT_DECLN_OID_NBR" type="xs:double" minOccurs="0"/>
+			<xs:element name="DECLN_OID_NBR" type="xs:double" minOccurs="0"/>
+			<xs:element name="MASTER_UCR_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="AWB_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="LOCAL_SHIPMENT_OID_NBR" type="xs:int" minOccurs="0"/>
+			<xs:element name="GROSS_WT" type="xs:string" minOccurs="0"/>
+			<xs:element name="COMMODITY_COUNT" type="xs:int" minOccurs="0"/>
+			<xs:element name="FIR_DAN_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="SCND_DEFR_AC_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="GCON_TURN" type="xs:string" minOccurs="0"/>
+			<xs:element name="GDS_LOC_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="ICS_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="INV_TOT_AMT" type="xs:string" minOccurs="0"/>
+			<xs:element name="INV_CUR_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="INV_EXCH_RATE" type="xs:string" minOccurs="0"/>
+			<xs:element name="TOT_PKG_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="TOT_CSTMS_VAL_AMT" type="xs:string" minOccurs="0"/>
+			<xs:element name="TOT_DUTY_AMT" type="xs:string" minOccurs="0"/>
+			<xs:element name="TOT_VAT_AMT" type="xs:string" minOccurs="0"/>
+			<xs:element name="DEST_LOCATION_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="ORIGIN_LOCATION_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="SHIPMENT_DT" type="xs:string" minOccurs="0"/>
+			<xs:element name="INPUT_DT" type="xs:string" minOccurs="0"/>
+			<xs:element name="SHIPMENT_OID_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="NAT_OF_TRANS" type="xs:string" minOccurs="0"/>
+			<xs:element name="SHP_CUSDEC_DECLN_OID_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="INCOTERM_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="INCOTERM_CITY" type="xs:string" minOccurs="0"/>
+			<xs:element name="INCOTERM_LOC_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPT_MOD_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPT_MOD_IN_LND_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPT_CTRY_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TDR_OWN_REF_ENT" type="xs:string" minOccurs="0"/>
+			<xs:element name="DISP_CNTRY_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="PLA_ULDG_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPT_TRA_TYPE" type="xs:string" minOccurs="0"/>
+			<xs:element name="PLA_LDG_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPT_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPT_ID_IN_LND" type="xs:string" minOccurs="0"/>
+			<xs:element name="FRGT_CHGE_AC_AMT" type="xs:double" minOccurs="0"/>
+			<xs:element name="FRGT_CHGE_CRRN_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="HORS_VAL_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="HORS_VAL_MOT" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPRT_BILL_TO_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRPRT_BILL_TO_ACCT_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="DUTY_BILL_TO_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="DUTY_BILL_TO_ACCT_NBR" type="xs:string" minOccurs="0"/>
+                            <xs:element name="SHIPMENT_DESC" type="xs:string" minOccurs="0"/>
+            <xs:element name="DEST_CITY" type="xs:string" minOccurs="0"/>
+            <xs:element name="CRN_NBR" type="xs:string" minOccurs="0"/>
+            <xs:element name="CONS_SHP_OID_NBR" type="xs:string" minOccurs="0"/>
+            <xs:element name="ENTRY_STAT_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="MOVMT_REF_NBR" type="xs:string" minOccurs="0"/>
+            <xs:element name="ATRPT_COST_AC_NBR" type="xs:string" minOccurs="0"/>
+            <xs:element name="DEFRD_TOT_AMT" type="xs:string" minOccurs="0"/>
+            <xs:element name="EU_ARR_LOC_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="FARP_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="FIR_DAN_PFX_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="FRGT_APRT_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="FRGT_CHGE_EXCH" type="xs:string" minOccurs="0"/>
+            <xs:element name="IMM_TOTAL_AMT" type="xs:string" minOccurs="0"/>
+            <xs:element name="INS_AMT_AC" type="xs:string" minOccurs="0"/>
+            <xs:element name="INS_AMT_CUR_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="INS_AMT_EXCH" type="xs:string" minOccurs="0"/>
+            <xs:element name="INV_DAMT_CUR_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="INV_DAMT_EXCH" type="xs:string" minOccurs="0"/>
+            <xs:element name="INV_DISC_AMT" type="xs:string" minOccurs="0"/>
+            <xs:element name="INV_DISC_PCT" type="xs:string" minOccurs="0"/>
+            <xs:element name="OCD_AC_AMT" type="xs:string" minOccurs="0"/>
+            <xs:element name="OCD_CUR_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="OCD_EXCH" type="xs:string" minOccurs="0"/>
+            <xs:element name="PROC_INST_CD_ACC" type="xs:string" minOccurs="0"/>
+            <xs:element name="PROC_INST_CD_DSP" type="xs:string" minOccurs="0"/>
+            <xs:element name="PROC_INST_CD_FLG" type="xs:string" minOccurs="0"/>
+            <xs:element name="PROC_INST_CD_RTF" type="xs:string" minOccurs="0"/>
+            <xs:element name="RCNSGE_TURN" type="xs:string" minOccurs="0"/>
+            <xs:element name="REV_PAYBL_AMT" type="xs:string" minOccurs="0"/>
+            <xs:element name="RT_EXAM_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="SCND_DEFR_AC_NBR_PFX" type="xs:string" minOccurs="0"/>
+            <xs:element name="TRPT_CHRGS_PYMT_MTD" type="xs:string" minOccurs="0"/>
+            <xs:element name="VAT_ADJT_VALUE" type="xs:string" minOccurs="0"/>
+            <xs:element name="VAT_ADJ_AMT" type="xs:string" minOccurs="0"/>
+            <xs:element name="VAT_ADJ_CUR_CD" type="xs:string" minOccurs="0"/>
+            <xs:element name="VAT_ADJ_EXCH" type="xs:string" minOccurs="0"/>
+            <xs:element name="INTD_ARR_TMSTP" type="xs:string" minOccurs="0"/>
+            <xs:element name="TDR_PRES_TMSTP" type="xs:string" minOccurs="0"/>
+			<xs:element ref="Crn_Decln_Sec_Input" minOccurs="0"/>
+			<xs:element ref="Shp_Decln_Cmdty_Doc_Sec_Input" minOccurs="0"/>
+			<xs:element ref="Shp_Decln_Additional_Info_Sec_Input" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

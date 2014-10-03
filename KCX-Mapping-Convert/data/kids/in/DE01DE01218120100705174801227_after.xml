@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+  <To>DE01.DIEHTST.2181</To>
+  <From>DE.DIEH.TST</From>
+  <MessageID>DE-DIEH-TST000241050710</MessageID>
+  <InReplyTo>DE01DE0121812010070100000006_2</InReplyTo>
+  <SentAt>2010-07-05 17:48:47 +0200</SentAt>
+  <Act>inform</Act>
+  <Procedure>EMCS</Procedure>
+  <Method>EME</Method>
+  <MessageType>EMCSChgOfDestinationInfo</MessageType>
+  <Direction>TO_CUSTOMER</Direction>
+  <MessageVersion>1.0</MessageVersion>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+  <EMCS>
+  <EMCSChgOfDestinatonInfo>
+  <LocalReferenceNumber>TESTDEKLNR_04</LocalReferenceNumber>
+  <UpdateEaad>
+  <AddReferenceCode>10DE00600000000025170</AddReferenceCode>
+  <JourneyTime>D02</JourneyTime>
+  <ChangedTransportArrangement>0</ChangedTransportArrangement>
+  <SequenceNumber>1</SequenceNumber>
+  <InvoiceDate>2009-12-16</InvoiceDate>
+  <InvoiceNumber>90034841</InvoiceNumber>
+  <TransportModeCode>0</TransportModeCode>
+  </UpdateEaad>
+  <DateAndTimeOfValidationOfEaad>201007051748</DateAndTimeOfValidationOfEaad>
+  <ChangedDestination>
+  <DestinationTypeCode>1</DestinationTypeCode>
+  <NewConsigneeTrader>
+  <ExciseTaxNumber>DE99000010201</ExciseTaxNumber>
+  <Address>
+  <Name>Willibald</Name>
+  <StreetAndNumber>Mozartstr. 7</StreetAndNumber>
+  <PostalCode>1234</PostalCode>
+  <City>Salzburg</City>
+  <Language>de</Language>
+  </Address>
+  </NewConsigneeTrader>
+  <DeliveryPlaceTrader>
+  <ExciseTaxNumber>DE99000010202</ExciseTaxNumber>
+  <Address>
+  <Name>Willibald</Name>
+  <StreetAndNumber>Mozartstr. 7</StreetAndNumber>
+  <PostalCode>1234</PostalCode>
+  <City>Salzburg</City>
+  <Language>de</Language>
+  </Address>
+  </DeliveryPlaceTrader>
+  </ChangedDestination>
+  </EMCSChgOfDestinatonInfo>
+  </EMCS>
+  </Submit>
+  </soap:Body>
+  </soap:Envelope>

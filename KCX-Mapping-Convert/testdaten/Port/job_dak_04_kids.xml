@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2012</Year>
+<Month>01</Month>
+<Day>16</Day>
+</Date>
+<Time>172013</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>GTR</Transmitter>
+<Receiver>DE.TOLL.TST</Receiver>
+<Method>PORT</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>PORT</Procedure>
+<MessageName>PortDeclaration</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>0000232064</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<PortDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>TOLL_IWA_04</ReferenceNumber>
+<PortSystem>ZAPP</PortSystem>
+<DeclarationState>9</DeclarationState>
+<DeclarationType>HDS</DeclarationType>
+<DeclarationTypeSpecification>001</DeclarationTypeSpecification>
+<DeclarationMode>0</DeclarationMode>
+<Shipper>
+<CustomerIdentifier>COSU</CustomerIdentifier>
+<TIN>9228810</TIN>
+<Address>
+<Name>Kardstad Warehouse Gmbh</Name>
+</Address>
+<ContactPerson>
+<Clerk>Kardstad Warehouse Gmbh</Clerk>
+</ContactPerson>
+</Shipper>
+<CustomsOfficeExport>DE004851</CustomsOfficeExport>
+<VoyageDetails>
+<LoadingPort>DEHAM</LoadingPort>
+<DischargePort>THBKK</DischargePort>
+<DestinationPlaceCode>THBKK</DestinationPlaceCode>
+<DestinationPlaceName>BANGKOK</DestinationPlaceName>
+</VoyageDetails>
+<AdditionInformation>
+<BillOfLadingNumber>TOLLTEST0003113</BillOfLadingNumber>
+</AdditionInformation>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<ContainerNumber>MAEU 9832899</ContainerNumber>
+<TarifCode>82055980</TarifCode>
+<TruckNumber>ItemRemarks1</TruckNumber>
+<TransportationNumber>ItemRemarks1</TransportationNumber>
+<FirstGoodsLevel>
+<Quantity>21</Quantity>
+<PackingType>CTN</PackingType>
+<GrossMass>1210.1234</GrossMass>
+<Description>commercial description goods item 1(82055980)</Description>
+<Marks>Marks of item 1</Marks>
+<ItemRemark>ItemRemarks1</ItemRemark>
+<MrnStatement>
+<MRN>11DE586600292076E0</MRN>
+<MRNComplete>1</MRNComplete>
+</MrnStatement>
+<DangerousGoods />
+</FirstGoodsLevel>
+<SecondGoodsLevel>
+<SequenceNumber>1</SequenceNumber>
+<Quantity>2586.1200</Quantity>
+<PackingType>CTN</PackingType>
+</SecondGoodsLevel>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>2</ItemNumber>
+<ContainerNumber>MAEU 9832899</ContainerNumber>
+<TarifCode>90262080</TarifCode>
+<TruckNumber>itemRemark2</TruckNumber>
+<TransportationNumber>itemRemark2</TransportationNumber>
+<FirstGoodsLevel>
+<Quantity>31</Quantity>
+<PackingType>CTN</PackingType>
+<GrossMass>240.4567</GrossMass>
+<Description>commercial description goods item 2: 90262080</Description>
+<Marks>marks of second item 90262080</Marks>
+<ItemRemark>itemRemark2</ItemRemark>
+<MrnStatement>
+<MRN>11DE58600292076E0</MRN>
+<MRNComplete>1</MRNComplete>
+</MrnStatement>
+<DangerousGoods />
+</FirstGoodsLevel>
+<SecondGoodsLevel>
+<SequenceNumber>1</SequenceNumber>
+<Quantity>780.2500</Quantity>
+<PackingType>CTN</PackingType>
+</SecondGoodsLevel>
+</GoodsItem>
+<Container>
+<ContainerNumber>MAEU 9832899</ContainerNumber>
+<GrossMass>1450.58</GrossMass>
+<NetMass>1450.5801</NetMass>
+</Container>
+</GoodsDeclaration>
+</PortDeclaration>
+</soap:Body>
+</soap:Envelope>

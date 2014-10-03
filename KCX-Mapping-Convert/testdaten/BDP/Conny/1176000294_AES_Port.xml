@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <KIDSHeader>
+            <SentAt>
+                <Date>
+                    <Year>2013</Year>
+                    <Month>6</Month>
+                    <Day>21</Day>
+                </Date>
+                <Time>142606</Time>
+                <TimeZone>-0600</TimeZone>
+            </SentAt>
+            <Transmitter>DE.BDP.TST</Transmitter>
+            <Receiver>DE.BDP.TST</Receiver>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>PORT</Procedure>
+                <MessageName>PortDeclaration</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>0</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>BDP_PORT_1176000294_2</MessageID>
+        </KIDSHeader>
+    </soap:Header>
+    <soap:Body>
+        <Declaration>
+            <ReferenceNumber>1176000294_2</ReferenceNumber>
+            <ShipmentNumber>1176000294</ShipmentNumber>
+            <PlaceOfLoading/>
+            <AreaCode>EX</AreaCode>
+            <TypeOfPermit>c</TypeOfPermit>
+            <DestinationCountry>CN</DestinationCountry>
+            <TransportationRoute>
+                <Country>CN</Country>
+            </TransportationRoute>
+            <Traders>
+                <DeclarantAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </DeclarantAddress>
+                <RepresentativeTIN>
+                    <TIN>DE9003827</TIN>
+                    <BO>0000</BO>
+                    <IdentificationType>0</IdentificationType>
+                </RepresentativeTIN>
+                <ConsignorAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </ConsignorAddress>
+                <ConsigneeAddress>
+                    <Name>SHANGHAI AUSPICIOUS IMPORT&amp; EXPORT CO. LTD</Name>
+                    <Street>ROOM 2202, FLOOR 22,</Street>
+                    <City>SHANGHAI</City>
+                    <PostalCode>200336</PostalCode>
+                    <Country>CN</Country>
+                </ConsigneeAddress>
+                <BuyerAddress>
+                    <Name>SHANGHAI AUSPICIOUS IMPORT&amp; EXPORT CO. LTD</Name>
+                    <Street>ROOM 2202, FLOOR 22,</Street>
+                    <City>SHANGHAI</City>
+                    <PostalCode>200336</PostalCode>
+                    <Country>CN</Country>
+                </BuyerAddress>
+                <SellerAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </SellerAddress>
+                <CustomsValueDeclarantAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </CustomsValueDeclarantAddress>
+                <RepresentativeOfCustomsValueDeclarantTIN>
+                    <TIN>DE9003827</TIN>
+                    <BO>0000</BO>
+                    <IdentificationType>0</IdentificationType>
+                </RepresentativeOfCustomsValueDeclarantTIN>
+            </Traders>
+            <DispatchCountry>DE</DispatchCountry>
+            <DestinationFederalState>CN</DestinationFederalState>
+            <CustomsStatus>IM</CustomsStatus>
+            <MeansOfTransportBorder>
+                <TransportMode>10</TransportMode>
+                <TransportationType>10</TransportationType>
+                <TransportationNumber>015E</TransportationNumber>
+            </MeansOfTransportBorder>
+            <MeansOfTransportInland>
+                <TransportMode>30</TransportMode>
+            </MeansOfTransportInland>
+            <ContactPerson>
+                <Identity>FSS</Identity>
+            </ContactPerson>
+            <IncoTerms>
+                <Code>CIF</Code>
+            </IncoTerms>
+            <Container>
+                <Number>TBNU0000001</Number>
+            </Container>
+            <DV1>
+                <BuyerSellerRelationship>0</BuyerSellerRelationship>
+                <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+            </DV1>
+            <Port>
+                <PortSystem>ZAPP</PortSystem>
+                <MessageFunction>9</MessageFunction>
+                <DeclarationType>HAM</DeclarationType>
+                <TestMode>0</TestMode>
+                <ShipperReferenceNumber>FRAU HAHM</ShipperReferenceNumber>
+                <Shipper>
+                    <Address>
+                        <Name>BLUESTAR SILICONES GERMANY GMBH</Name>
+                        <Street>HANS-SACHS-STRASSE 4A</Street>
+                        <City>LUBECK, SCHLESWIG-H</City>
+                        <PostalCode>23566</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                </Shipper>
+                <CustomsOfficeExport>DEHAM</CustomsOfficeExport>
+                <Agent>
+                    <Address>
+                        <Name>VLS GERMANY</Name>
+                        <Street>LINDLEYSTRASSE 19</Street>
+                        <City>FRANKFURT AM MAIN</City>
+                        <PostalCode>60314</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                    <ContactPerson>
+                        <Name>THORSTEN GENGNAGEL</Name>
+                    </ContactPerson>
+                </Agent>
+                <VoyageDetails>
+                    <ShipReferenceNumber>FRAU HAHM</ShipReferenceNumber>
+                    <VoyageNumber>015E</VoyageNumber>
+                    <ShipName>ZIM ROTTERDAM</ShipName>
+                    <ArrivalDate>1130317</ArrivalDate>
+                    <DepartureDate>1130101</DepartureDate>
+                    <LoadingPort>DEHAM</LoadingPort>
+                    <DischargePort>CNSHA</DischargePort>
+                    <DestinationPlaceCode>CNSHA</DestinationPlaceCode>
+                    <DestinationPlaceName>SHANGHAI, CHINA</DestinationPlaceName>
+                </VoyageDetails>
+            </Port>
+            <GoodsItem>
+                <ItemNumber>1</ItemNumber>
+                <Text>SILBIONE</Text>
+                <ProcedureCode>1000</ProcedureCode>
+                <PlaceOfIntroduction>SHANGHAI, CHINA</PlaceOfIntroduction>
+                <GrossMass>3354</GrossMass>
+                <Package>
+                    <Quantity>40</Quantity>
+                    <Type>DR</Type>
+                    <Marks>SILBIONE RT GEL 4717 A
+PAIL P 25 KG</Marks>
+                </Package>
+                <Invoice>
+                    <Amount>0</Amount>
+                </Invoice>
+                <Statistic>
+                    <StatisticalValue>0</StatisticalValue>
+                </Statistic>
+                <Port>
+                    <CustomsDeclarationType>HAM</CustomsDeclarationType>
+                    <FirstGoodsLevel>
+                        <Quantity>40</Quantity>
+                        <PackingType>DR</PackingType>
+                        <GrossMass>3354.0000</GrossMass>
+                        <Volume>10.944</Volume>
+                        <Marks>SHANGHAI HUILING
+CHEMICAL
+91:569</Marks>
+                    </FirstGoodsLevel>
+                </Port>
+            </GoodsItem>
+        </Declaration>
+    </soap:Body>
+</soap:Envelope>

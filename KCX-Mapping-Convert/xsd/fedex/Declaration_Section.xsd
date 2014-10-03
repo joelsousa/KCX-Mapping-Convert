@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Decln_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Decln_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Decln_Cmdty_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Decln_Customer_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Decln_Reason_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Decln_Shpmt_Customs_Stat.xsd"/>
+	<xs:element name="SHP_INPUT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AWB_NBR"/>
+				<xs:element ref="LOCAL_SHIPMENT_OID_NBR"/>
+				<xs:element ref="LOC_CD" minOccurs="0"/>
+				<xs:element ref="LOC_SEQ_NBR" minOccurs="0"/>
+				<xs:element ref="EXP_FLOW" minOccurs="0"/>
+				<xs:element ref="DECLN_INPUT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AWB_NBR" type="xs:string"/>
+	<xs:element name="LOCAL_SHIPMENT_OID_NBR" type="xs:int"/>
+	<xs:element name="LOC_CD" type="xs:string"/>
+	<xs:element name="LOC_SEQ_NBR" type="xs:int"/>
+	<xs:element name="EXP_FLOW" type="xs:string"/>
+	<xs:element name="DECLN_INPUT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Decln_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Shp_Decln_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Shp_Decln_Cmdty_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Decln_Customer_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Decln_Reason_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Decln_Shpmt_Customs_Stat" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

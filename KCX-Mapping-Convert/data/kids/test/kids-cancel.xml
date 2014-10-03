@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>12</Month>
+<Day>04</Day>
+</Date>
+<Time>10:33:04</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>Cancellation</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>DE01DE0122820000000000267170</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<Cancellation>
+<GoodsDeclaration>
+<CancellationTime>200812041133</CancellationTime>
+<CancellationInfo>
+<KindOfCancellation>SV</KindOfCancellation>
+<Reason>Falscher Kunde</Reason>
+</CancellationInfo>
+<ReferenceNumber>KCX-081208-0062</ReferenceNumber>
+<Clerk>PEINE</Clerk>
+</GoodsDeclaration>
+</Cancellation>
+</soap:Body>
+</soap:Envelope>

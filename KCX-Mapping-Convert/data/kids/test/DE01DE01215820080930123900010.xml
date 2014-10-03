@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>12</Month>
+<Day>09</Day>
+</Date>
+<Time>10:29:55</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>ManualTermination</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>DE01DE01215820081211105400068</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ManualTermination>
+<GoodsDeclaration>
+<TerminationTime>200812091129</TerminationTime>
+<Annotation>Fehlerhafte eingabe</Annotation>
+<ReferenceNumber>KCX-081208-0073</ReferenceNumber>
+<Clerk>HEERT</Clerk>
+<Seal>
+<UseOfTydenseals>0</UseOfTydenseals>
+</Seal>
+</GoodsDeclaration>
+</ManualTermination>
+</soap:Body>
+</soap:Envelope>

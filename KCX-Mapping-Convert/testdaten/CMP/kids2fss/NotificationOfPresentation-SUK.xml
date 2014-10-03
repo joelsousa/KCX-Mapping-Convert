@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>06</Month>
+<Day>04</Day>
+</Date>
+<Time>130001</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>CMP</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>MANIFEST</Procedure>
+<MessageName>NotificationOfPresentation</MessageName>
+<Release>2.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>67330c34-7d60-4972-b562-2ea2daa4a8dd</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<NotificationOfPresentation>
+<GoodsDeclaration>
+	<AgentTIN>
+		<TIN>DE1008144</TIN>
+		<BO>0000</BO>
+		<CustomerIdentifier>kdnr123</CustomerIdentifier>
+		<IdentificationType>2</IdentificationType>
+	</AgentTIN>
+	<Contact>
+			<Position>Sachbearbeiter</Position>
+			<Name>Sachbearbeiter Name</Name>
+			<Identity>Identity</Identity>
+			<Email>email-Agent.de</Email>
+			<FaxNumber>0011/879456</FaxNumber>
+			<PhoneNumber>1111/997456</PhoneNumber>
+			<Initials>AK</Initials>
+			<Title>TITELAGENTContact</Title>
+	</Contact>
+	<DateOfPresentation>20130702</DateOfPresentation>
+	<PresenterTIN>
+		<TIN>DE2008144</TIN>
+		<BO>0000</BO>
+		<CustomerIdentifier>Kdnr2323232</CustomerIdentifier>
+		<IdentificationType>2</IdentificationType>
+	</PresenterTIN>
+	<PresenterAddress>			
+			<Address>
+				<Name>PA-NAME</Name>
+				<StreetAndNumber>PresenterStrasse 223</StreetAndNumber>
+				<PostalCode>55522</PostalCode>
+				<City>Essen</City>
+				<District>NRW</District>
+				<Country>DE</Country>
+			</Address>
+	</PresenterAddress>
+	<MessageFunction>E</MessageFunction>
+	<Comments>Comments</Comments>	
+	<ReferenceNumber>LH019102072013DXB</ReferenceNumber>
+	<ReferenceIdentifier>MID</ReferenceIdentifier>
+	<RegistrationNumber>RegistrationNumber</RegistrationNumber>
+	<RegistrationNumberAllocated>REGNRALLOC</RegistrationNumberAllocated> 	
+	<ItemNumberAllocated>9</ItemNumberAllocated>
+	<NCTSID>N</NCTSID>
+	<CustomsOffices>
+			<OfficeOfPresentation>DE008888</OfficeOfPresentation>
+			<OfficeOAtBorder>DE007777</OfficeOAtBorder>
+			<OfficeOfDeparture>DE006666</OfficeOfDeparture>
+			<DeclaredOfficeOfFirstEntry>DE005555</DeclaredOfficeOfFirstEntry>
+			<FirstEntryCustomsOffice>DE005566</FirstEntryCustomsOffice>
+	</CustomsOffices>
+	<PlaceOfLoading>Dubai</PlaceOfLoading>
+	<Port>Port</Port> 
+	<DateOfArrival>20130717</DateOfArrival>
+	<MeansOfTransport>
+			<TransportMode>04</TransportMode>
+			<TransportationType>02</TransportationType>
+			<TransportationNumber>LH5554</TransportationNumber>
+			<TransportationCountry>AE</TransportationCountry>
+			<Description>DescriptionMEANS</Description>
+	</MeansOfTransport>
+	<MeansOfTransportAtBorder>
+			<TransportMode>04</TransportMode>
+			<TransportationType>02</TransportationType>
+			<TransportationNumber>LH4444</TransportationNumber>
+			<TransportationCountry>AE</TransportationCountry>
+			<Description>DescriptionMEANS</Description>
+	</MeansOfTransportAtBorder>
+	<ContainerQuantity>1</ContainerQuantity> 
+	<PreviousDocument>
+			<Type>OHNE</Type>
+			<Reference>VORPAPNR3214</Reference>
+	</PreviousDocument>	
+	<Reference>
+		<ItemNumber>999</ItemNumber>
+		<ReferenceNumber>EK019102072013-DXB</ReferenceNumber>
+		<ReferenceIdentifier>MID</ReferenceIdentifier>
+		<RegistrationNumber>DXB-EK019102072013</RegistrationNumber>
+		<EdifactNumber>EDI9102072013</EdifactNumber>
+		<PlaceOfLoading>DXB</PlaceOfLoading>
+		<PreviousDocument>
+			<Type>OHNE</Type>
+			<Reference>MIT</Reference>
+		</PreviousDocument>
+		<ReferencedSpecification>
+			<TypeOfSpecificationID>AWB</TypeOfSpecificationID>
+			<SpecificationID>33345678888</SpecificationID>
+		</ReferencedSpecification>
+		<CustodianTIN>
+			<TIN>DE2003144</TIN>
+			<BO>0000</BO>
+			<CustomerIdentifier>Knr3332</CustomerIdentifier>
+			<IdentificationType>2</IdentificationType>
+		</CustodianTIN>
+		<PlaceOfCustodyCode>00</PlaceOfCustodyCode>
+	</Reference>		
+	<HeaderExtensions>
+		<AdvanceProcedureID>1</AdvanceProcedureID>
+		<ConfirmationCode>1</ConfirmationCode>
+		<HeadPosID>HeadPosID</HeadPosID>
+		<MaritimTrafficID>seekz</MaritimTrafficID>
+		<RegistrationID>erfkz</RegistrationID>
+		<TerminationOfFlight>TerminationOfFlight</TerminationOfFlight>
+	</HeaderExtensions>	
+	<SumACustomsOfficeIsOfficeIsOfFirstEntry>1</SumACustomsOfficeIsOfficeIsOfFirstEntry>
+	
+	<GoodsItem>
+		<ItemNumber>1</ItemNumber>
+		<DisposalTIN>
+			<TIN>DE22245</TIN>
+			<BO>0000</BO>	
+			<CustomerIdentifier>kdnrD</CustomerIdentifier>
+		</DisposalTIN>
+		<DisposalAddress>			
+			<Address>
+				<Name>name1</Name>
+				<StreetAndNumber>Str2</StreetAndNumber>
+				<PostalCode>plz3</PostalCode>
+				<City>city4</City>
+				<District>district5</District>
+				<Country>DE</Country>
+			</Address>
+		</DisposalAddress>
+		<CustodianTIN>
+					<TIN>DE67890</TIN>
+					<BO>0000</BO>	
+					<CustomerIdentifier>kdnrC</CustomerIdentifier>
+		</CustodianTIN>
+		<CustodianAddress>			
+					<Address>
+						<Name>StringC1</Name>
+						<StreetAndNumber>StringC2</StreetAndNumber>
+						<PostalCode>StringC3</PostalCode>
+						<City>StringC4</City>
+						<District>textC5</District>
+						<Country>DE</Country>
+					</Address>
+		</CustodianAddress>
+		<BriefCargoDescription>bcd</BriefCargoDescription>
+		<ConfirmationCode>cc</ConfirmationCode>
+		<CustomsStatusOfGoods>N</CustomsStatusOfGoods>
+		<CountryOfDestination>MY</CountryOfDestination>
+		<CountryOfDispatch>MY</CountryOfDispatch>
+		<DestinationCode>LIS</DestinationCode>
+		<GrossMass>281.999</GrossMass>
+		<Packages>
+		<Quantity>16</Quantity>
+		<Type>PK</Type>
+		</Packages>		
+		<PlaceOfCustodyCode>00</PlaceOfCustodyCode>
+		<RangeOfGoodsCode>rog</RangeOfGoodsCode>
+		<ReferencedSpecification>
+			<TypeOfSpecificationID>AWB</TypeOfSpecificationID>
+			<SpecificationID>7777777</SpecificationID>
+		</ReferencedSpecification>
+		<RoutingOfCustoms>RoutingOfCustoms</RoutingOfCustoms>		
+		<ItemExtensions>
+			<TemporaryStorageCode>0</TemporaryStorageCode>
+		</ItemExtensions>
+		<EntrySumA>
+			<MRN>13DE11145678MRN</MRN>
+			<ItemNumber>1</ItemNumber>
+		</EntrySumA>
+		<FreezoneFlag>zone</FreezoneFlag>
+	</GoodsItem>
+
+</GoodsDeclaration>
+</NotificationOfPresentation>
+</soap:Body>
+</soap:Envelope>

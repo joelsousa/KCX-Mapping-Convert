@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>CZ01.EK.TST</To>
+      <From>CZ01.EK.TST</From>
+      <MessageID>fd055764-6e52-466b-bdd7-d27ac5dea619</MessageID>
+      <InReplyTo>17619814421-2EV4SV5</InReplyTo>
+      <SentAt>2011-02-11T17:32:46</SentAt>
+      <Act>inform</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>ICSEntryRelease</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+      <ICS>
+        <ICSEntryRelease>
+          <MRN>11CZ194400R51SI1I0</MRN>
+          <EntryCarrier>
+            <TIN>CZ24682705</TIN>
+            <Address>
+              <Name>Emirates, organizační složka</Name>
+              <StreetAndNumber>Olivova 2096/4</StreetAndNumber>
+              <PostalCode>11000</PostalCode>
+              <City>Praha</City>
+              <CountryCodeISO>CZ</CountryCodeISO>
+            </Address>
+          </EntryCarrier>
+          <OfficeOfActualEntry>CZ194400</OfficeOfActualEntry>
+          <PresentationDateAndTime>2011-02-11T14:08:00</PresentationDateAndTime>
+          <EntryDecisionDateAndTime>2011-02-11T17:31:29</EntryDecisionDateAndTime>
+          <EntryDecision>A</EntryDecision>
+        </ICSEntryRelease>
+      </ICS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

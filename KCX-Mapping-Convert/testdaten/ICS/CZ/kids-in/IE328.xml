@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>24</Day>
+                </Date>
+                <Time>195558</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ESU</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSEntrySummaryDeclarationAcknowledgment</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-FDX-TST000121240111</MessageID>
+            <InReplyTo>3368984</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSEntrySummaryDeclarationAcknowledgment>
+            <GoodsDeclaration>
+                <ReferenceNumber>1DE3368984</ReferenceNumber>
+                <MRN>11DE586600007342I5</MRN>
+                <MeansOfTransportBorder>
+                    <TransportMode>4</TransportMode>
+                    <PlaceOfLoading>Memphis TN</PlaceOfLoading>
+                    <PlaceOfLoadingCode>US</PlaceOfLoadingCode>
+                </MeansOfTransportBorder>
+                <ShipmentNumber>FRA3368984</ShipmentNumber>
+                <ConveyanceReference>FDX3678</ConveyanceReference>
+                <RegistrationDateAndTime>201101241955</RegistrationDateAndTime>
+                <PersonLodgingSumaTIN>
+                    <TIN>DE9008454</TIN>
+                    <CustomerIdentifier>3936</CustomerIdentifier>
+                    <IdentificationType>2</IdentificationType>
+                </PersonLodgingSumaTIN>
+                <PersonLodgingSumaAddress>
+                    <Address>
+                        <Name>Federal Express Europe Inc. Abt</Name>
+                        <Street>Tor 26 Flughafen Gebäude 456 b</Street>
+                        <City>Frankfurt</City>
+                        <PostalCode>60549</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                </PersonLodgingSumaAddress>
+                <CarrierTIN>
+                    <TIN>DE9008454</TIN>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+                <CustomsOfficeOfLodgement>FRA</CustomsOfficeOfLodgement>
+                <CustomsOfficeFirstEntry>DE005866</CustomsOfficeFirstEntry>
+                <DeclaredDateOfArrival>201101242000</DeclaredDateOfArrival>
+                <GoodsItem>
+                    <ItemNumber>1</ItemNumber>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </ICSEntrySummaryDeclarationAcknowledgment>
+    </soap:Body>
+</soap:Envelope>

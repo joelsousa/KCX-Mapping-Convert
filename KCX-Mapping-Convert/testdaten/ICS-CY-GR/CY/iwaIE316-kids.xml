@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+<Primary>DECSF</Primary>
+<Secondary>ICS</Secondary>
+<Audit_Id>TestAuditId</Audit_Id>
+<Content>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>07</Month>
+<Day>06</Day>
+</Date>
+<Time>00:00:00:00</Time>
+</SentAt>
+<Transmitter>CY0000000071</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>CY</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationRejected</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>EU</MapFrom>
+<MapTo>CY</MapTo>
+</Codemapping>
+</CustomsExchange>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclarationRejected>
+<GoodsDeclaration>
+<ReferenceNumber>iwa-20110705-001</ReferenceNumber>
+<DeclarationRejectionDateAndTime>201106141651</DeclarationRejectionDateAndTime>
+<DeclarationRejectionReason>252</DeclarationRejectionReason>
+<DeclarationRejectionReasonLNG>DE</DeclarationRejectionReasonLNG>
+<FunctionalError>
+<ErrorType>ErrTypER11</ErrorType>
+<ErrorPointer>ErrPoiER12</ErrorPointer>
+<ErrorReason>ErrReaER13</ErrorReason>
+<OriginalAttributeValue>OriAttValER14</OriginalAttributeValue>
+</FunctionalError>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclarationRejected>
+</soap:Body>
+</soap:Envelope>]]>
+</Content>
+</KCX>

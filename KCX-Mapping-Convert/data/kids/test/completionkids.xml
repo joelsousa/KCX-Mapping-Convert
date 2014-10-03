@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt><Date><Year>2008</Year><Month>09</Month><Day>13</Day></Date><Time>14:29:00</Time><TimeZone>+0200</TimeZone></SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA</Receiver><Method>Export Release</Method>
+	  <MapFrom>DE</MapFrom>
+	  <MapTo>DE</MapTo>
+
+<MessageTP><CountryCode>DE</CountryCode><Procedure>EXPORT</Procedure><MessageName>Completion</MessageName><Release>1.0.00</Release></MessageTP><MessageID>MsgID20080902</MessageID></Header></soap:Header>
+<soap:Body><Completion>
+<GoodsDeclaration>
+<UCRNumber>UCRNumber</UCRNumber>
+<CompletionTime>20081011</CompletionTime>
+<ReferenceNumber>Bezugsnummer</ReferenceNumber>
+<OrderNumber>OrderNumber</OrderNumber>
+<Clerk>sb</Clerk>
+
+<MeansOfTransportInland>
+	<TransportMode>TransportMode</TransportMode>
+</MeansOfTransportInland>
+
+<MeansOfTransportBorder>
+	<TransportMode>TransportMode</TransportMode>
+	<TransportationType>TransportationType</TransportationType>
+	<TransportationNumber>TransportationNumber</TransportationNumber>
+	<TransportationCountry>TransportationCountry</TransportationCountry>
+</MeansOfTransportBorder>
+
+<CustomsOfficeExport>CustomsOfficeExport</CustomsOfficeExport>
+<CustomsOfficeForCompletion>CustomsOfficeForCompletion</CustomsOfficeForCompletion>
+
+<Business>
+	<BusinessTypeCode>BusinessTypeCode</BusinessTypeCode>
+	<InvoicePrice>InvoicePrice</InvoicePrice>
+	<Currency>Currency</Currency>
+</Business>
+<Declarant>
+	<Address>
+		<Name>Declarant 3-name1 3-name2 3-name3</Name>
+		<Street>Declarant street</Street>
+		<City>Declarant city</City>
+		<PostalCode>Declarant PostalCode</PostalCode>
+		<Country>Declarant DE</Country>
+	</Address>
+</Declarant>
+<DeclarantTIN>
+	<TIN>tinan</TIN>
+	<IsTINGermanApprovalNumber>eda20</IsTINGermanApprovalNumber>
+	<CustomerIdentifier>kdnran</CustomerIdentifier>
+</DeclarantTIN>
+<DeclarantContactPerson>
+	<Position> Position</Position>
+	<Clerk></Clerk>
+	<Email></Email>
+	<FaxNumber></FaxNumber>
+	<PhoneNumber></PhoneNumber>
+</DeclarantContactPerson>
+<Consignee>
+	<Address>
+		<Name>Consignee 2-name1 2-name2 2-name3</Name>
+		<Street>Consignee street</Street>
+		<City>Consignee city</City>
+		<PostalCode>Consignee PostalCode</PostalCode>
+		<Country>Consignee DE</Country>
+	</Address>
+</Consignee>
+<ConsigneeTIN>
+	<TIN>ConsigneeTIN TIN</TIN>
+	<CustomerIdentifier>etnan</CustomerIdentifier>
+</ConsigneeTIN>
+<IncoTerms>
+	<IncoTerm>IncoTerm</IncoTerm>
+	<Text>Text</Text>
+	<Place>Place</Place>
+</IncoTerms>
+<GoodsItem>
+	<ItemNumber>ItemNumber1</ItemNumber>
+	<OriginFederalState>OriginFederalState</OriginFederalState>
+	<Statistic>
+		<AdditionalUnit>AdditionalUnit</AdditionalUnit>
+		<StatisticalValue>StatisticalValue</StatisticalValue>
+		<Value>Value</Value>
+		<Currency>Currency</Currency>
+	</Statistic>
+	<Consignee>
+		<Address>
+			<Name>Consignee ItemNumber1 1-name1 1-name2 1-name3</Name>
+			<Street>Consignee street</Street>
+			<City>Consignee city</City>
+			<PostalCode>Consignee PostalCode</PostalCode>
+			<Country>Consignee DE</Country>
+		</Address>
+	</Consignee>
+	<ConsigneeTIN>
+		<TIN>ItemNumber1 kdnrem</TIN>
+		<CustomerIdentifier>ItemNumber1 CustomerIdentifier</CustomerIdentifier>
+	</ConsigneeTIN>
+	<PreviousDocument>
+		<Type></Type>
+		<Marks>ItemNumber1  PreviousDocument1 Marks</Marks>
+		<AdditionalInformation>PreviousDocument1 AdditionalInformation</AdditionalInformation>
+	</PreviousDocument>
+	<PreviousDocument>
+		<Type>ItemNumber1 PreviousDocument2</Type>
+		<Marks>ItemNumber1 PreviousDocument2 Marks</Marks>
+		<AdditionalInformation>ItemNumber1 PreviousDocument2 AdditionalInformation</AdditionalInformation>
+	</PreviousDocument>
+</GoodsItem>
+<GoodsItem>
+	<ItemNumber>ItemNumber2</ItemNumber>
+	<OriginFederalState>OriginFederalState</OriginFederalState>
+	<Statistic>
+		<AdditionalUnit>AdditionalUnit</AdditionalUnit>
+		<StatisticalValue>StatisticalValue</StatisticalValue>
+		<Value>Value</Value>
+		<Currency>Currency</Currency>
+	</Statistic>
+	<Consignee>
+		<Address>
+			<Name>Consignee ItemNumber2 2-name1 2-name2 2-name3</Name>
+		</Address>
+	</Consignee>
+	<ConsigneeTIN>
+		<TIN>ItemNumber2 ConsigneeTIN TIN kdnrem</TIN>
+		<CustomerIdentifier>ConsigneeTIN CustomerIdentifier ItemNumber2 etnan</CustomerIdentifier>
+	</ConsigneeTIN>
+
+	<PreviousDocument>
+		<Type>ItemNumber2 PreviousDocument1 Type</Type>
+		<Marks>ItemNumber2 PreviousDocument1 Marks</Marks>
+		<AdditionalInformation>ItemNumber2 PreviousDocument1 AdditionalInformation</AdditionalInformation>
+	</PreviousDocument>
+	<PreviousDocument>
+		<Marks>ItemNumber2  PreviousDocument2 Marks </Marks>
+		<AdditionalInformation>ItemNumber2  PreviousDocument2 AdditionalInformation</AdditionalInformation>
+	</PreviousDocument>
+</GoodsItem>
+
+</GoodsDeclaration></Completion></soap:Body></soap:Envelope>
+
+
+
+
+
+

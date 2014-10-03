@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Project:	FedEx KCX POC
+	
+Version 26	24-07-2014 - ID 57
+
+"Error:Scheduled Date and Time of Arrival (1D24) is requiredFedex sent 
+Issue FEDEX sent<DECLN_ROUTE_ARR_TMSTP>24/07/2014 06:00:00</DECLN_ROUTE_ARR_TMSTP> but this was not output into the KIDS message. And was not output to Customsmatters Additional docs type ID24"
+ -->
+<DECLN_INPUT>
+    <Decln_Sec_Input>
+        <DECLN_OID_NBR>86082621</DECLN_OID_NBR>
+        <DECLN_STATUS_CD>T</DECLN_STATUS_CD>
+        <DECLN_IN_OUT>O</DECLN_IN_OUT>
+        <DECLN_SUBTYPE_CD>144DEC</DECLN_SUBTYPE_CD>
+        <DECLN_TYP_CD>IMV</DECLN_TYP_CD>
+        <DECLN_ROUTE_ARR_TMSTP>24/07/2014 06:00:00</DECLN_ROUTE_ARR_TMSTP>
+        <ROUTE_NBR>CD8030</ROUTE_NBR>
+        <LOCATION_CD>ORK</LOCATION_CD>
+        <COUNTRY_CD>IE</COUNTRY_CD>
+        <LOC_SEQ_NBR>6</LOC_SEQ_NBR>
+    </Decln_Sec_Input>
+    <Shp_Decln_Sec_Input>
+        <AWB_NBR>804301427000</AWB_NBR>
+        <LOCAL_SHIPMENT_OID_NBR>152817634</LOCAL_SHIPMENT_OID_NBR>
+        <COMMODITY_COUNT>1</COMMODITY_COUNT>
+        <GCON_TURN>0155</GCON_TURN>
+        <GDS_LOC_CD>ORK</GDS_LOC_CD>
+        <INV_TOT_AMT>1000</INV_TOT_AMT>
+        <INV_CUR_CD>USD</INV_CUR_CD>
+        <TOT_PKG_NBR>1</TOT_PKG_NBR>
+        <DEST_LOCATION_CD>ORK</DEST_LOCATION_CD>
+        <ORIGIN_LOCATION_CD>HAF</ORIGIN_LOCATION_CD>
+        <SHIPMENT_DT>21/07/2014</SHIPMENT_DT>
+        <INPUT_DT>22/07/2014</INPUT_DT>
+        <SHIPMENT_OID_NBR>8043014275031140722</SHIPMENT_OID_NBR>
+        <NAT_OF_TRANS>11</NAT_OF_TRANS>
+        <INCOTERM_CD>FOB</INCOTERM_CD>
+        <INCOTERM_CITY>NORTHRIDGE</INCOTERM_CITY>
+        <TRPT_MOD_CD>4</TRPT_MOD_CD>
+        <TRPT_MOD_IN_LND_CD>4</TRPT_MOD_IN_LND_CD>
+        <TRPT_CTRY_CD>US</TRPT_CTRY_CD>
+        <TDR_OWN_REF_ENT>C-SUM FEDEX</TDR_OWN_REF_ENT>
+        <DISP_CNTRY_CD>US</DISP_CNTRY_CD>
+        <TRPT_ID>FEDERAL EXPRESS</TRPT_ID>
+        <TRPRT_BILL_TO_CD>C</TRPRT_BILL_TO_CD>
+        <TRPRT_BILL_TO_ACCT_NBR>0</TRPRT_BILL_TO_ACCT_NBR>
+        <DUTY_BILL_TO_CD>C</DUTY_BILL_TO_CD>
+        <DUTY_BILL_TO_ACCT_NBR>0</DUTY_BILL_TO_ACCT_NBR>
+        <Shp_Decln_Cmdty_Doc_Sec_Input/>
+    </Shp_Decln_Sec_Input>
+    <Shp_Decln_Cmdty_Sec_Input>
+        <ITEM_SHP_DECLN_COMDTY>
+            <PKG_KIND>CT</PKG_KIND>
+            <PKG_MARKS>804301427503</PKG_MARKS>
+            <PKG_COUNT>1</PKG_COUNT>
+            <ITEM_NBR>1</ITEM_NBR>
+            <TARIC_CMDTY_CD>6210400000</TARIC_CMDTY_CD>
+            <GOODS_DESC>GARMENTS MADE UP OF FABRICS OF HEADING 5602 5603 5903 5906 OR 5907Other mens or boys garmentsTEXT 078</GOODS_DESC>
+            <ITEM_NET_WT>11.025</ITEM_NET_WT>
+            <ITEM_GROSS_WT>12.25</ITEM_GROSS_WT>
+            <ITEM_ORG_CTRY_CD>US</ITEM_ORG_CTRY_CD>
+            <CPC_CD>4000</CPC_CD>
+            <PREF_NBR>100</PREF_NBR>
+            <ITEM_VALUE>737</ITEM_VALUE>
+            <LOC_SEQ_NBR>6</LOC_SEQ_NBR>
+            <LOC_CD>ORK</LOC_CD>
+            <SEQUENCE_NBR>1</SEQUENCE_NBR>
+            <ITEM_SUPP_UNITS/>
+            <ITEM_STAT_VALUE>737</ITEM_STAT_VALUE>
+            <ITEM_THRD_QTY>0</ITEM_THRD_QTY>
+            <ITEM_CSTMS_VAL>737</ITEM_CSTMS_VAL>
+            <ITEM_LCNC_VAL>1000</ITEM_LCNC_VAL>
+            <EC_SUPPLEMENT/>
+            <EC_SUPPLEMENT_2/>
+            <PREV_DOC_CLASS_CD>Y</PREV_DOC_CLASS_CD>
+            <PREV_DOC_TYP_CD>CLE</PREV_DOC_TYP_CD>
+            <PREV_DOC_REF>140724</PREV_DOC_REF>
+            <Decln_Cmdty_Tax_Sec_Input>
+                <ITEM_DECLN_COMDTY_TAX>
+                    <COMMODITY_OID_NBR>1</COMMODITY_OID_NBR>
+                    <LOC_SEQ_NBR>6</LOC_SEQ_NBR>
+                    <LOC_CD>ORK</LOC_CD>
+                    <TTY_CD>B00</TTY_CD>
+                    <ADDL_CD/>
+                    <PAYMENT_METHOD_CD/>
+                    <ITLN_BASE_AMT>0</ITLN_BASE_AMT>
+                    <ITLN_BASE_QTY/>
+                </ITEM_DECLN_COMDTY_TAX>
+            </Decln_Cmdty_Tax_Sec_Input>
+            <Shp_Decln_Cmdty_Doc_Sec_Input>
+                <ITEM_SHP_DECLN_COMDTY_DOC>
+                    <HDR_DOC_CODE>N740</HDR_DOC_CODE>
+                    <HDR_DOC_REF>804301427503</HDR_DOC_REF>
+                    <DOC_QTY/>
+                </ITEM_SHP_DECLN_COMDTY_DOC>
+                <ITEM_SHP_DECLN_COMDTY_DOC>
+                    <HDR_DOC_CODE>N935</HDR_DOC_CODE>
+                    <HDR_DOC_REF>804301427503</HDR_DOC_REF>
+                    <DOC_QTY/>
+                </ITEM_SHP_DECLN_COMDTY_DOC>
+            </Shp_Decln_Cmdty_Doc_Sec_Input>
+            <Shp_Decln_Additional_Info_Sec_Input/>
+        </ITEM_SHP_DECLN_COMDTY>
+    </Shp_Decln_Cmdty_Sec_Input>
+    <Decln_Customer_Sec_Input>
+        <DECLN_CUST>
+            <VAT_NBR>9U65665U</VAT_NBR>
+            <CUSTOMER_NM>STANLEY FERGUSON SHEELIN</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM>STANLEY FERGUSON SHEELIN</CUSTOMER_COMPANY_NM>
+            <ADDR_STREET_1_NM>UNIT 1 GREEHILLS BUSINESS PARK</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>IE</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>X</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>COUNTY LOUTH</ADDR_CITY_NM>
+            <STATE_CD/>
+            <TRADER_ID>9U65665U</TRADER_ID>
+            <CUSTOMER_TYPE_CD>IM</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR>9304516</PROFILE_OID_NBR>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+        <DECLN_CUST>
+            <VAT_NBR/>
+            <CUSTOMER_NM>Federal Express Europe Inc.</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM/>
+            <ADDR_STREET_1_NM>Unit 3 Constellation Road,     Airw</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>IE</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>C04001</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>Dublin 17</ADDR_CITY_NM>
+            <TRADER_ID/>
+            <CUSTOMER_TYPE_CD>AG</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR/>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+        <DECLN_CUST>
+            <VAT_NBR>9U65665U</VAT_NBR>
+            <CUSTOMER_NM>STANLEY FERGUSON SHEELIN</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM>STANLEY FERGUSON SHEELIN</CUSTOMER_COMPANY_NM>
+            <ADDR_STREET_1_NM>UNIT 1 GREEHILLS BUSINESS PARK</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>IE</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>X</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>COUNTY LOUTH</ADDR_CITY_NM>
+            <STATE_CD/>
+            <TRADER_ID>9U65665U</TRADER_ID>
+            <CUSTOMER_TYPE_CD>CN</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR>9304515</PROFILE_OID_NBR>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+    </Decln_Customer_Sec_Input>
+</DECLN_INPUT>

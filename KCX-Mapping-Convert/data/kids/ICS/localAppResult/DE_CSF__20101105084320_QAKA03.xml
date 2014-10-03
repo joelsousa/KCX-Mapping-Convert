@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>11</Month>
+                    <Day>05</Day>
+                </Date>
+                <Time>11:16:12</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ARN</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>localAppResult</MessageName>
+                <Direction>TO_CUSTOMER</Direction>
+                <Release>1.0.00</Release>
+            </MessageTP>
+            <MessageID>DE-CSF000212051110</MessageID>
+            <InReplyTo>90006902010052600000881</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <localAppResult>
+            <GoodsDeclaration>
+                <ReferenceNumber>QA-20101102-KA-ESU-002</ReferenceNumber>
+                <CorrectionNumber>0</CorrectionNumber>
+                <ProcedureType>ARN</ProcedureType>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>INF</KindOfError>
+                        <ErrorCode>SUPPLEMENT</ErrorCode>
+                        <ErrorText>Kundennummer 2145 wird nicht ergänzt, da bereits eine VERBRINGER-Adresse in der Nachricht steht</ErrorText>
+                        <DateOfErrorMessage>20101105</DateOfErrorMessage>
+                        <TimeOfErrorMessage>111611</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>WRG</KindOfError>
+                        <ErrorCode>ArrivalNotification.traderAtEntryTIN.0001</ErrorCode>
+                        <ErrorText>Die EORI-TIN des Carriers muss angegeben werden. [EORI-TIN-Nummer Verbringer]</ErrorText>
+                        <DateOfErrorMessage>20101105</DateOfErrorMessage>
+                        <TimeOfErrorMessage>111611</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>INF</KindOfError>
+                        <ErrorCode>LOGGING</ErrorCode>
+                        <ErrorText>--- ARNENT-Nachricht mit 1 Warnung(en) verarbeitet</ErrorText>
+                        <DateOfErrorMessage>20101105</DateOfErrorMessage>
+                        <TimeOfErrorMessage>111612</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </localAppResult>
+    </soap:Body>
+</soap:Envelope>

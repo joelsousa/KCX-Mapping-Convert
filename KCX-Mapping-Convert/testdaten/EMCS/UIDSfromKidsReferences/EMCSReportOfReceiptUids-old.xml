@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>DE01.CSFALT.2144</From>
+<MessageID>EI20100519</MessageID>
+<SentAt>2010-05-19 12:02:00 +0200</SentAt>
+<Act>request</Act>
+<MessageType>EMCSReportOfReceipt</MessageType>
+<MessageVersion>1.0</MessageVersion>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+<EMCS><EMCSReportOfReceipt><LocalReferenceNumber>ReferenceNumber</LocalReferenceNumber><ExciseMovementEaad><SequenceNumber>6</SequenceNumber><AadReferenceCode>AadReferenceCode</AadReferenceCode></ExciseMovementEaad><SequenceNumber>6</SequenceNumber><DestinationOffice>DestinationOffice</DestinationOffice><DateOfArrivalOfExciseProducts>2010-05-25 00:00:00 +0200</DateOfArrivalOfExciseProducts><GlobalConclusionOfReceipt>GlobalConclusionOfReceipt</GlobalConclusionOfReceipt><ComplementaryInformation language="CI">ComplementaryInformation</ComplementaryInformation><ConsigneeTrader><CustomerID>CustomerID-Consignee</CustomerID><VATID>VATID-Consignee</VATID><Address><Name>Name-Consignee</Name><StreetAndNumber>StreetAndNumber-Consignee</StreetAndNumber><PostalCode>PostalCode-Consignee</PostalCode><City>City-Consignee</City><CountryCodeISO>CE</CountryCodeISO></Address></ConsigneeTrader><DeliveryPlaceTrader><CustomerID>CustomerID-Consignee</CustomerID><VATID>VATID-Consignee</VATID><Address><Name>Name-Consignee</Name><StreetAndNumber>StreetAndNumber-Consignee</StreetAndNumber><PostalCode>PostalCode-Consignee</PostalCode><City>City-Consignee</City><CountryCodeISO>CE</CountryCodeISO></Address></DeliveryPlaceTrader><BodyEaad><ItemNumber>1</ItemNumber><ExciseProductCode>A000</ExciseProductCode><RefusedQuantity>RefusedQuantity</RefusedQuantity><IndicatorOfShortageOrExcess>IndicatorOfShortageOrExcess</IndicatorOfShortageOrExcess><ObservedShortageOrExcess>ObservedShortageOrExcess</ObservedShortageOrExcess><UnsatisfactoryReason><UnsatisfactoryReasonCode>UnsatisfactoryReasonCode</UnsatisfactoryReasonCode><ComplementaryInformation language="CI">ComplementaryInformation</ComplementaryInformation></UnsatisfactoryReason></BodyEaad><BodyEaad><ItemNumber>2</ItemNumber><ExciseProductCode>B000</ExciseProductCode><RefusedQuantity>RefusedQuantity</RefusedQuantity><IndicatorOfShortageOrExcess>IndicatorOfShortageOrExcess</IndicatorOfShortageOrExcess><ObservedShortageOrExcess>ObservedShortageOrExcess</ObservedShortageOrExcess><UnsatisfactoryReason><UnsatisfactoryReasonCode>UnsatisfactoryReasonCode</UnsatisfactoryReasonCode><ComplementaryInformation language="CI">ComplementaryInformation</ComplementaryInformation></UnsatisfactoryReason></BodyEaad></EMCSReportOfReceipt></EMCS></Submit></soap:Body></soap:Envelope>
+

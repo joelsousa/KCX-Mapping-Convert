@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>12</Month>
+<Day>07</Day>
+</Date>
+<Time>132219</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE.SKGTST.4037</Transmitter>
+<Receiver>PL.SKG.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>NCTS</Procedure>
+<MessageName>NCTSDeclaration</MessageName>
+<Release>4.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+</Codemapping>
+</CustomsExchange>
+<MessageID>1874d804-6458-41a5-a0be-af1368d39536</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<NCTSDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>EI0001D29</ReferenceNumber>
+<TypeOfDeclaration>T1</TypeOfDeclaration>
+<DestinationCountry>PL</DestinationCountry>
+<DispatchCountry>TH</DispatchCountry>
+<MeansOfTransportBorder>
+<TransportMode>1</TransportMode>
+<TransportationNumber>SHIFF</TransportationNumber>
+<TransportationCountry>TH</TransportationCountry>
+</MeansOfTransportBorder>
+<MeansOfTransportDeparture>
+<TransportMode>3</TransportMode>
+<TransportationNumber>LKW</TransportationNumber>
+<TransportationCountry>PL</TransportationCountry>
+</MeansOfTransportDeparture>
+<TransportInContainer>0</TransportInContainer>
+<TotalNumberPositions>1</TotalNumberPositions>
+<TotalNumberPackages>5</TotalNumberPackages>
+<TotalGrossMass>1369000</TotalGrossMass>
+<Consignor>
+<Address>
+<Name>KORAT DENKI LTD</Name>
+<Street>149 M00 10 T. CHOCKCHAI</Street>
+<City>NAKHORNATCHASIMA</City>
+<PostalCode>30190</PostalCode>
+<Country>TH</Country>
+</Address>
+</Consignor>
+<Consignee>
+<Address>
+<Name>ORION ELECTRIC (POLAND) SP. Z O.O.</Name>
+<Street>OSTASZEWO 57</Street>
+<City>LYSOMICE</City>
+<PostalCode>87-148</PostalCode>
+<Country>PL</Country>
+</Address>
+</Consignee>
+<PrincipalTIN>
+<TIN>1876635</TIN>
+</PrincipalTIN>
+<Principal>
+<Address>
+<Name>YUSEN LOGISTICS (POLSKA) SP. Z O.O.</Name>
+<Street>RZYMOWSKIEGO 53</Street>
+<City>WARSZAWA</City>
+<PostalCode>02-679</PostalCode>
+<Country>PL</Country>
+</Address>
+</Principal>
+<OfficeOfDeparture>DE005866</OfficeOfDeparture>
+<OfficeOfDestination>DE005866</OfficeOfDestination>
+<SimplifiedProcedureIndicator>0</SimplifiedProcedureIndicator>
+<RepresentativeName>EI</RepresentativeName>
+<RepresentativeCapacity>Zoll agent</RepresentativeCapacity>
+<Guarantee>
+<TypeOfGuarantee>1</TypeOfGuarantee>
+<Reference>
+<GRN>08PL440000T004769</GRN>
+<AccessCode>8888</AccessCode>
+<OtherNumber>08PL440000T004769</OtherNumber>
+<OwnerTIN>PL521314521600000</OwnerTIN>
+<NotValidForCountry>AD</NotValidForCountry>
+<NotValidForCountry>SM</NotValidForCountry>
+<Amounts>
+<Amount>2397200</Amount>
+<Currency>PLN</Currency>
+</Amounts>
+</Reference>
+</Guarantee>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<CommodityCode>
+<TarifCode>85229080</TarifCode>
+</CommodityCode>
+<Description>TEILE FUR FERNSEHER DVD-Laufwerk</Description>
+<GrossMass>1369000</GrossMass>
+<Document>
+<Type>380</Type>
+<Reference>LCDMK11-Y01</Reference>
+</Document>
+<Containers>
+<Number>TCKU2505651</Number>
+</Containers>
+<Package>
+<Quantity>5</Quantity>
+<Type>PA</Type>
+<Marks>-</Marks>
+</Package>
+<ManifestCompletion />
+</GoodsItem>
+</GoodsDeclaration>
+</NCTSDeclaration>
+</soap:Body>
+</soap:Envelope>

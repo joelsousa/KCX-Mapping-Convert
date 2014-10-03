@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2009</Year>
+<Month>05</Month>
+<Day>04</Day>
+</Date>
+<Time>17:26:35</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<ProcedureSpecification>NP</ProcedureSpecification>
+<MessageName>DeclarationResponse</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<CodeMapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</CodeMapping>
+</CustomsExchange>
+<MessageID>data\fss\in\ASP.fss</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<DeclarationResponse>
+<GoodsDeclaration>
+<AcceptanceTime>200905041726</AcceptanceTime>
+<ReceiveTime>200905041726</ReceiveTime>
+<StatusOfCompletion>17</StatusOfCompletion>
+<ReferenceNumber>0000027172/0090034409</ReferenceNumber>
+</GoodsDeclaration>
+</DeclarationResponse>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope/">
+  <soap:Header>
+    <Header>
+      <SentAt>
+        <Date>
+          <Year>2013</Year>
+          <Month>08</Month>
+          <Day>08</Day>
+        </Date>
+      </SentAt>
+      <Transmitter>DE.CMP.KWL</Transmitter>
+      <Receiver>DE.KXC.KWL</Receiver>
+      <Method>CMP</Method>
+      <MessageTP>
+        <CountryCode>DE</CountryCode>
+        <Procedure>CMP</Procedure>
+        <MessageName>CMPCompleteDataFormat</MessageName>
+        <Release>1.0.0</Release>
+        <Direction>TO_CUSTOMER</Direction>
+      </MessageTP>
+      <MessageID>edbb6f0c-8604-4021-8d57-6e091e0bc386</MessageID>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <CMPCompleteDataFormat>
+      <PurposeCode>EXIT</PurposeCode>
+      <FlightManifestMessage>
+        <MessageHeaderDocument>
+          <ID>FFM</ID>
+          <Name>Transport Loading Report</Name>
+          <TypeCode listID="1001" listAgencyID="6" listVersionID="D09A">122</TypeCode>
+          <IssueDateTime>2013-08-16T17:24:22</IssueDateTime>
+          <PurposeCode>Creation</PurposeCode>
+          <VersionID>1</VersionID>
+          <SenderParty>
+            <PrimaryID schemeID="1">IBSXXLH</PrimaryID>
+          </SenderParty>
+          <RecipientParty>
+            <PrimaryID schemeID="1">FRAXXLH</PrimaryID>
+          </RecipientParty>
+        </MessageHeaderDocument>
+        <BusinessHeaderDocument>
+          <ID>AV058A20130807SIN</ID>
+          <IncludedHeaderNote>
+            <ContentCode>001</ContentCode>
+            <Content>FlightManifest</Content>
+          </IncludedHeaderNote>
+        </BusinessHeaderDocument>
+        <LogisticsTransportMovement>
+          <StageCode>Main-Carriage</StageCode>
+          <ModeCode listID="Recommendation 19" listAgencyID="6" listVersionID="2">4</ModeCode>
+          <Mode>AIR TRANSPORT</Mode>
+          <ID>AV058A</ID>
+          <SequenceNumeric>1</SequenceNumeric>
+          <TotalGrossWeightMeasure unitCode="KGM">10.0</TotalGrossWeightMeasure>
+          <TotalGrossVolumeMeasure unitCode="MTQ">10.0</TotalGrossVolumeMeasure>
+          <TotalPackageQuantity>10</TotalPackageQuantity>
+          <TotalPieceQuantity>10</TotalPieceQuantity>
+          <MasterResponsibleTransportPerson>
+            <Name>Robert H Schuller</Name>
+          </MasterResponsibleTransportPerson>
+          <UsedLogisticsTransportMeans>
+            <Name>INDIA</Name>
+            <RegistrationCountry>
+              <ID schemeVersionID="second edition 2006">IN</ID>
+            </RegistrationCountry>
+          </UsedLogisticsTransportMeans>
+          <DepartureEvent>
+            <DepartureOccurrenceDateTime>2013-08-16T17:25:34</DepartureOccurrenceDateTime>
+            <DepartureDateTimeTypeCode>S</DepartureDateTimeTypeCode>
+            <OccurrenceDepartureLocation>
+              <ID>LHR</ID>
+              <Name>London Heathrow</Name>
+              <TypeCode>Freight Terminal</TypeCode>
+            </OccurrenceDepartureLocation>
+          </DepartureEvent>
+          <IncludedCustomsNote>
+            <ContentCode>I</ContentCode>
+            <Content>BCBP123</Content>
+            <SubjectCode>ISS</SubjectCode>
+            <CountryID schemeVersionID="second edition 2006">IN</CountryID>
+          </IncludedCustomsNote>
+          <RelatedConsignmentCustomsProcedure>
+            <GoodsStatusCode>T2</GoodsStatusCode>
+          </RelatedConsignmentCustomsProcedure>
+        </LogisticsTransportMovement>
+        <ArrivalEvent>
+          <ArrivalOccurrenceDateTime>2013-08-16T17:25:34</ArrivalOccurrenceDateTime>
+          <ArrivalDateTimeTypeCode>A</ArrivalDateTimeTypeCode>
+          <DepartureOccurrenceDateTime>2013-08-16T17:25:34</DepartureOccurrenceDateTime>
+          <DepartureDateTimeTypeCode>S</DepartureDateTimeTypeCode>
+          <OccurrenceArrivalLocation>
+            <ID>SIN</ID>
+            <Name>Singapore</Name>
+            <TypeCode>Airport</TypeCode>
+          </OccurrenceArrivalLocation>
+          <AssociatedTransportCargo>
+            <TypeCode>ULD</TypeCode>
+            <UtilizedUnitLoadTransportEquipment>
+              <ID>98966</ID>
+              <GrossWeightMeasure unitCode="KGM">100.0</GrossWeightMeasure>
+              <GrossVolumeMeasure unitCode="MTQ">100</GrossVolumeMeasure>
+              <PieceQuantity>10</PieceQuantity>
+              <CharacteristicCode>AKE</CharacteristicCode>
+              <LoadingRemark>A-TRVSINBUP101 W-10 C-C P-LDP</LoadingRemark>
+              <OperatingParty>
+                <PrimaryID schemeAgencyID="3">TW</PrimaryID>
+              </OperatingParty>
+              <OnCarriageTransportMovement>
+                <ID>058A</ID>
+                <CarrierParty>
+                  <PrimaryID schemeAgencyID="3">AV</PrimaryID>
+                </CarrierParty>
+                <ArrivalDestinationEvent>
+                  <OccurrenceDestinationLocation>
+                    <ID>SIN</ID>
+                  </OccurrenceDestinationLocation>
+                </ArrivalDestinationEvent>
+              </OnCarriageTransportMovement>
+            </UtilizedUnitLoadTransportEquipment>
+            <IncludedMasterConsignment>
+              <GrossWeightMeasure unitCode="KGM">10.0</GrossWeightMeasure>
+              <TotalPieceQuantity>10</TotalPieceQuantity>
+              <SummaryDescription>GENERAL CARGO</SummaryDescription>
+              <TransportSplitDescription>T</TransportSplitDescription>
+              <TransportContractDocument>
+                <ID>134-49352122</ID>
+              </TransportContractDocument>
+              <OriginLocation>
+                <ID>TRV</ID>
+                <Name>TRV</Name>
+              </OriginLocation>
+              <FinalDestinationLocation>
+                <ID>SIN</ID>
+                <Name>SIN</Name>
+              </FinalDestinationLocation>
+              <OnCarriageTransportMovement>
+                <ID>058A</ID>
+                <CarrierParty>
+                  <PrimaryID schemeAgencyID="3">AV</PrimaryID>
+                </CarrierParty>
+                <ArrivalDestinationEvent>
+                  <OccurrenceDestinationLocation>
+                    <ID>SIN</ID>
+                  </OccurrenceDestinationLocation>
+                </ArrivalDestinationEvent>
+              </OnCarriageTransportMovement>
+            </IncludedMasterConsignment>
+          </AssociatedTransportCargo>
+        </ArrivalEvent>
+      </FlightManifestMessage>
+    </CMPCompleteDataFormat>
+  </soap:Body>
+</soap:Envelope>

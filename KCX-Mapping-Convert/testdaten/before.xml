@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header xmlns="http://www.eurtradenet.com/schemas/header/200310">
+            <To>DE01.CSFTEST.2158</To>
+            <From>DE01.CSFTEST.2158</From>
+            <MessageID>DE01DE0121582008091010000008</MessageID>
+            <SentAt>2008-09-10T12:18:45 +0200</SentAt>
+            <Act>request</Act>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+            <Export>
+                <ExportDeclaration>
+                    <Consignee>
+                        <Address>
+                            <Name>CityNightLine CNL AG Hr. Nebojsa Mladenovic</Name>
+                            <StreetAndNumber>Militärstraße 36</StreetAndNumber>
+                            <PostalCode>8021</PostalCode>
+                            <City>Zürich</City>
+                            <CountryCodeISO>CH</CountryCodeISO>
+                        </Address>
+                    </Consignee>
+                    <Declarant>
+                        <TIN>9000119</TIN>
+                    </Declarant>
+                    <AuthorisationID>DE5864ZA0002</AuthorisationID>
+                    <ContainerIndicator>0</ContainerIndicator>
+                    <CustomsOffices>
+                        <OfficeOfExit>DE005872</OfficeOfExit>
+                        <OfficeOfExport>DE005866</OfficeOfExport>
+                    </CustomsOffices>
+                    <DestinationCountry>CH</DestinationCountry>
+                    <GrossMass>210000</GrossMass>
+                    <Incoterms>
+                        <Code>CFR</Code>
+                        <City>zürich</City>
+                    </Incoterms>
+                    <ItemsQuantity>001</ItemsQuantity>
+                    <MeansOfTransport TransportType="Inland">
+                        <Type>03</Type>
+                    </MeansOfTransport>
+                    <MeansOfTransport TransportType="Departure">
+                        <Mode>33</Mode>
+                        <Nationality>QU</Nationality>
+                        <Type>03</Type>
+                    </MeansOfTransport>
+                    <ParticipantsCombination>0</ParticipantsCombination>
+                    <PlaceOfLoading>
+                        <Code>AA01</Code>
+                    </PlaceOfLoading>
+                    <ReferenceNumber>MS-080923-008</ReferenceNumber>
+                    <Seals>
+                        <Quantity>0</Quantity>
+                    </Seals>
+                    <Transaction>
+                        <Type>11</Type>
+                        <Amount>20278</Amount>
+                        <Currency>EUR</Currency>
+                    </Transaction>
+                    <TypeOfDeclaration>
+                        <RegionCode>EU</RegionCode>
+                        <ProcedureCode>e</ProcedureCode>
+                    </TypeOfDeclaration>
+                    <HeaderExtensions>
+                        <TydenSealsFlag>0</TydenSealsFlag>
+                        <TydenSealsStockFlag>0</TydenSealsStockFlag>
+                    </HeaderExtensions>
+                    <GoodsItem>
+                        <ItemNumber>001</ItemNumber>
+                        <CommodityCodeKN8>85013100</CommodityCodeKN8>
+                        <GoodsDescription>Gleichstrommotoren; Gleichstromgeneratoren mit einer Leistung von 750W oder weniger</GoodsDescription>
+                        <GrossMass>210000</GrossMass>
+                        <NetMass>200000</NetMass>
+                        <OriginRegion>06</OriginRegion>
+                        <Packaging>
+                            <Number>01</Number>
+                            <Quantity>1</Quantity>
+                            <Type>PX</Type>
+                            <MarksAndNumbers>00000000614069565001</MarksAndNumbers>
+                        </Packaging>
+                        <Procedure>
+                            <Declared>10</Declared>
+                            <Previous>00</Previous>
+                        </Procedure>
+                        <PreviousDocument>
+                            <Type>OHNE</Type>
+                        </PreviousDocument>
+                        <StatisticalValue>000000006</StatisticalValue>
+                        <StatisticalQuantity>34000</StatisticalQuantity>
+                    </GoodsItem>
+                </ExportDeclaration>
+            </Export>
+        </Submit>
+    </soap:Body>
+</soap:Envelope>
+

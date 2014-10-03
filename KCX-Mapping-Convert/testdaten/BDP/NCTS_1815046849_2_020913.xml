@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<KIDSHeader>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>9</Month>
+<Day>02</Day>
+</Date>
+<Time>065013</Time>
+<TimeZone>-0500</TimeZone>
+</SentAt>
+<Transmitter>DE.BDP.TST</Transmitter>
+<Receiver>DE.BDP.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>NCTS</Procedure>
+<MessageName>NCTSDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>KCX_CODE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>BDP_1815046849_2</MessageID>
+</KIDSHeader>
+</soap:Header>
+<soap:Body>
+<Declaration>
+<ReferenceNumber>1815046849_2</ReferenceNumber>
+<ShipmentNumber>1815046849</ShipmentNumber>
+
+					<PlaceOfLoading>
+						<Code>DA01</Code>
+					</PlaceOfLoading>
+<AreaCode>T1</AreaCode>
+
+<TransportationRoute>
+	<Country>JP</Country>
+</TransportationRoute>
+
+<PrincipalTIN>
+	<TIN>DE5027624</TIN>
+</PrincipalTIN>
+
+					<DestinationCountry>DE</DestinationCountry>
+
+
+					<CustomsOfficeExport>DE001111</CustomsOfficeExport>
+					<CustomsOfficeOfDeclaration>DE002222</CustomsOfficeOfDeclaration>
+        				<IntendedOfficeOfExit>DE003333</IntendedOfficeOfExit>
+        				<CustomsOfficeEntry>DE004444</CustomsOfficeEntry>
+        				<CustomsOfficeForCompletion>DE005555</CustomsOfficeForCompletion>
+
+					<Guarantee>
+					<TypeOfGuarantee>1</TypeOfGuarantee>
+          					<Reference>
+            						<GRN>13DE0000000059920</GRN>
+            						<Amounts>
+														      <Amount>175.37000000</Amount>
+														      <Currency>EUR</Currency>
+							</Amounts>
+          					</Reference>
+							
+					</Guarantee>
+
+<Business>
+   <BusinessTypeCode>11</BusinessTypeCode>
+   <InvoicePrice>87094.00</InvoicePrice>
+<Currency>JPY</Currency>
+</Business>
+<Traders>
+<DeclarantAddress>
+<Name>Keihin Airfreight Co. Ltd.</Name>
+<Street>Cargo Agents Bldg. 301 154-4 Furugome Aza Komemae</Street>
+<City>Narita-Shi, Chiba 282-0004 Japan</City>
+<PostalCode>
+</PostalCode>
+<Country>JP</Country>
+</DeclarantAddress>
+
+<RepresentativeTIN>
+<TIN>DE5027624</TIN>
+<BO>0000</BO>
+<IdentificationType>0</IdentificationType>
+</RepresentativeTIN>
+
+
+
+  					<ConsignorAddress>
+            					<Name>Fuji Flavor Co. LTD</Name>
+            					<StreetAndNumbe>3-5-8 Midorigaoka Hamura-shi </StreetAndNumbe>
+            					<City>Toky00000</City>
+            					<PostalCode>00000</PostalCode>
+            					<Country>JP</Country>
+  					</ConsignorAddress>
+  					<ConsigneeAddress>
+            					<Name>JT International Germany GmbH</Name>
+            					<StreetAndNumbe>Diedenhofener Str. 20</StreetAndNumbe>
+            					<City>Trier</City>
+            					<PostalCode>54294</PostalCode>
+            					<Country>DE</Country>
+   					</ConsigneeAddress>
+
+
+
+<CustomsValueDeclarantAddress>
+<Name>Keihin Airfreight Co. Ltd.</Name>
+<Street>Cargo Agents Bldg. 301 154-4 Furugome Aza Komemae</Street>
+<City>Narita-Shi, Chiba 282-0004 Japan</City>
+<PostalCode>
+</PostalCode>
+<Country>JP</Country>
+</CustomsValueDeclarantAddress>
+
+<RepresentativeOfCustomsValueDeclarantTIN>
+<TIN>DE5027624</TIN>
+<BO>0000</BO>
+<IdentificationType>0</IdentificationType>
+</RepresentativeOfCustomsValueDeclarantTIN>
+
+</Traders>
+
+<DispatchCountry>JP</DispatchCountry>
+<CustomsStatus>IM</CustomsStatus>
+
+<MeansOfTransportBorder>
+	<TransportMode>40</TransportMode>
+	<TransportationType>30</TransportationType>
+        				<TransportationNumber>OF-VZ 250/ Sammelverkehr1</TransportationNumber>
+        				<TransportationCountry>DE</TransportationCountry>
+</MeansOfTransportBorder>
+
+					<MeansOfTransportDeparture>
+	 					<TransportationNumber>OF-VZ 250/ Sammelverkehr2</TransportationNumber>
+	 					<TransportationCountry>DE</TransportationCountry>
+					</MeansOfTransportDeparture>
+
+
+<ContactPerson>
+<Identity>FSS</Identity>
+</ContactPerson>
+<IncoTerms>
+<Code>DDU</Code>
+<Place>TRIER</Place>
+</IncoTerms>
+
+
+
+					<WriteOffSumAType>AWB</WriteOffSumAType>
+
+					<Document>
+						<Type>N380</Type>
+						<Number>FF13234 Nach Inco</Number>					 
+						<AdditionalInformation>1130121</AdditionalInformation>
+					</Document>
+					<Document>
+					<Type>740</Type>
+						<Number>JL/13147101983 Nach Inco</Number>
+						<AdditionalInformation>1130122</AdditionalInformation>
+					</Document>
+<DV1>
+<BuyerSellerRelationship>0</BuyerSellerRelationship>
+<AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+</DV1>
+
+
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+
+					<TypeOfDeclaration>T1</TypeOfDeclaration>
+                    
+<Description>FLAVORING JT-40043391</Description>
+<CountryOfOrigin>JP</CountryOfOrigin>
+<PlaceOfIntroduction>FRA</PlaceOfIntroduction>
+<PlaceOfDeparture>TYO</PlaceOfDeparture>
+<NetMass>140.700</NetMass>
+<GrossMass>141.000</GrossMass>
+                
+            
+					<PreviousDocument>
+            					<Type>ATNEU</Type>
+          				</PreviousDocument>
+
+<Package>
+<Quantity>3</Quantity>
+<Type>PK</Type>
+<Marks>gez. Adresse</Marks>
+</Package>
+<Invoice>
+<Amount>87094.00</Amount>
+</Invoice>
+<Statistic>
+<StatisticalValue>0.000</StatisticalValue>
+</Statistic>
+
+
+
+					<Document>
+						<Type>N380</Type>
+						<Number>FF13234 nach Statistic</Number> 
+						<IssueDate>20130821</IssueDate>
+					</Document>
+					<Document>
+						<Type>740</Type>
+						<Number>131-4710198 nach Statistic3</Number>
+						<IssueDate>20130822</IssueDate>
+					</Document>
+
+
+<Port>
+<FirstGoodsLevel>
+<Quantity>3</Quantity>
+<PackingType>CT</PackingType>
+<GrossMass>141.000</GrossMass>
+<Volume>0.000</Volume>
+<Description>FLAVORING JT-40043391</Description>
+<DangerousGoods>
+<NetMass>140.700</NetMass>
+</DangerousGoods>
+</FirstGoodsLevel>
+</Port>
+
+
+</GoodsItem>
+</Declaration>
+</soap:Body>
+</soap:Envelope>

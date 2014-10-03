@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope'>
+  <soap:Header>
+    <Header xmlns="http://www.eBiz.com/schemas/header/200310" >
+      <SentAt>
+        <Date>
+          <Year>2010</Year>
+          <Month>06</Month>
+          <Day>22</Day>
+        </Date>
+        <Time>15:07:44</Time>
+      </SentAt>
+      <Transmitter>UK.HJH.TST</Transmitter>
+      <Receiver>UK.HJH.TST</Receiver>
+      <Method>Export</Method>
+      <MessageTP>
+        <CountryCode>NL</CountryCode>
+        <Procedure>Export</Procedure>
+        <ProcedureSpecification>3</ProcedureSpecification>
+        <MessageName>ExportDeclaration</MessageName>
+        <Release>1.0.00</Release>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>1</Map>
+          <MapFrom>KCX_CODE</MapFrom>
+          <MapTo>NL</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>HJH-EE1CLNT040-1100101174-ABC</MessageID>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <ExportDeclaration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+      <GoodsDeclaration>
+        <AreaCode>AE002</AreaCode>
+        <TypeOfPermit>AF001</TypeOfPermit>
+        <UCRNumber>1100101174</UCRNumber>
+        <FinalCode>AA002</FinalCode>
+        <DeclarationTime>20100617081919</DeclarationTime>
+        <DispatchCountry>NL</DispatchCountry>
+        <DestinationCountry>CA</DestinationCountry>
+        <SituationCode>0</SituationCode>
+        <TransportInContainer>AA001</TransportInContainer>
+        <GrossMass>503275</GrossMass>
+        <ShipmentNumber>1100101174</ShipmentNumber>
+        <ReferenceNumber>1100101174</ReferenceNumber>
+        <TotalNumberPositions>1</TotalNumberPositions>
+        <DeclarantIsConsignor>1</DeclarantIsConsignor>
+        <MeansOfTransport>
+          <PlaceOfLoading>6504 LH20</PlaceOfLoading>
+        </MeansOfTransport>
+        <MeansOfTransportInland>
+          <TransportMode>AY016</TransportMode>
+        </MeansOfTransportInland>
+        <MeansOfTransportDeparture>
+          <TransportationType>AD005</TransportationType>
+          <TransportationNumber>CONTID_1</TransportationNumber>
+          <TransportationCountry>NL</TransportationCountry>
+        </MeansOfTransportDeparture>
+        <MeansOfTransportBorder>
+          <TransportationCountry>NL</TransportationCountry>
+        </MeansOfTransportBorder>
+        <PlaceOfLoading>
+          <Street>Bijsterhuizen 20</Street>
+          <PostalCode>6504 LH</PostalCode>
+          <City>Wijchen</City>
+        </PlaceOfLoading>
+        <Business>
+          <BusinessTypeCode>AU001</BusinessTypeCode>
+          <InvoicePrice>515.000</InvoicePrice>
+          <Currency>USD</Currency>
+        </Business>
+        <LoadingTime>
+          <BeginTime>20100617</BeginTime>
+          <EndTime>20100617</EndTime>
+        </LoadingTime>
+        <Consignor>
+          <Address>
+            <Name>HJ Heinz Nederland BV</Name>
+            <City>Zeist</City>
+            <PostalCode>3708 AH</PostalCode>
+            <Country>NL</Country>
+          </Address>
+        </Consignor>
+        <Declarant>
+          <Address>
+            <Name>HJ Heinz Nederland BV</Name>
+            <City>Zeist</City>
+            <PostalCode>3708 AH</PostalCode>
+            <Country>NL</Country>
+          </Address>
+        </Declarant>
+        <Consignee>
+          <Address>
+            <Name>PRODICAM CAMEROON</Name>
+            <Street>BOITE POSTALE 5350</Street>
+            <City>DOUALA</City>
+            <PostalCode>A5A 3A2</PostalCode>
+            <Country>CA</Country>
+          </Address>
+        </Consignee>
+        <IncoTerms>
+          <IncoTerm>DDP</IncoTerm>
+          <Place>Nabuurs</Place>
+        </IncoTerms>
+        <GoodsItem>
+          <ItemNumber>1</ItemNumber>
+          <ArticleNumber>000000000071624400</ArticleNumber>
+          <Description>DUTCH - PARBOILED RIJST 20KG</Description>
+          <OriginCountry>NL</OriginCountry>
+          <NetMass>500</NetMass>
+          <GrossMass>503275</GrossMass>
+          <CommodityBoard>ABC</CommodityBoard>
+          <CommodityCode>
+            <TarifCode>1019011</TarifCode>
+          </CommodityCode>
+          <CustomsApprovedTreatment>
+            <Declared>10</Declared>
+            <Previous>0</Previous>
+            <Current>0</Current>
+          </CustomsApprovedTreatment>
+          <Statistic>
+            <Value>515</Value>
+            <Currency>USD</Currency>
+          </Statistic>
+          <SensitiveGoods>
+            <Type>BD001</Type>
+          </SensitiveGoods>
+          <Package>
+            <Quantity>25</Quantity>
+            <Type>CS</Type>
+            <Marks>ADR</Marks>
+          </Package>
+        </GoodsItem>
+      </GoodsDeclaration>
+    </ExportDeclaration>
+  </soap:Body>
+</soap:Envelope>

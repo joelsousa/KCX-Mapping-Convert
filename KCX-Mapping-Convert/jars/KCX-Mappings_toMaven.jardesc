@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<jardesc>
+    <jar path="C:/develop/java/eclipse-maven/kcx/mule/bob/bespoke/CY/trunk/lib/KCX-Mappings.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/KCX-Mapping-Convert/jars/KCX-Mappings_toMaven.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.ncts.subsets.v62"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.common.start.customs.out"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.ncts.subsets"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.emcs.kids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.kids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.uids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.base"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.ch.aus.kids2fss"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.kids2fss"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.aes.subsets.V53"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.cyprus.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.pl"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.edec.aus.subsets"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.ncts"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.uids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.kids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ics.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.unisys.ics.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.base.messages"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.base.subsets"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.kids2fss.v62"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.fedex.ics.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.nl.aes.kids2kidsNl"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.aes"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.common.start.customer.out"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.common.start.customs.in"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.mappings"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ics.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.uk.exp"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.uids.aes"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.uids.ncts"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.utils"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.tools.XLSReader"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.cy.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.uids.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.fss2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.cyprus.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.BellDavies.messages"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.ch.aus.fss2kids.V60"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.aes.subsets.V60"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.emcs.kids2uids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.ch.aus.kids2uids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.emcs.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.db"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.BellDavies.subsets"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.emcs.uids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ics.kids2uids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.unisys.ics.mains"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.ch.aus.fss2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.unisys.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.fss2kids.V60"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.cy.ics.kids2cy"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.uids.emcs"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.unisys.ics.kids2unisys"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.kids2uids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.common.start.customer.in"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.aes.messages"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.fedex.ics.fedex2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.common.start"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.xml"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.uids.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.aes.messages.V53"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.unisys.ics.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.ch.aus.uids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.edec.aus"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.ncts.messages"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.util"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.kids2uids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.emcs"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.fedex.ics"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.fedex.ics.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.uk.exp.kids2eCustoms"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.unisys.ics.unisys2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ics.kids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.aes.messages.V60"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.conf"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kids.emcs"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.cy.ics.cy2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.companies.fedex.ics.kids2fedex"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.uids.edec.aus"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.nl.aes"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ncts.fss2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.ics.uids2kids"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.kcx"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.formats.fss.edec.aus.messages"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.cy.ics.msg"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.cy.ics.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.emcs.msg.common"/>
+        <javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.countries.de.aes.kids2fss.V60"/>
+    </selectedElements>
+</jardesc>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1"
+	xmlns:smtp="http://www.mulesource.org/schema/mule/smtp/2.1"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd
+		http://www.mulesource.org/schema/mule/smtp/2.1 http://www.mulesource.org/schema/mule/smtp/2.1/mule-smtp.xsd">
+
+	<!-- DO NOT ALTER -->
+
+	<model name="errorModel">
+		<!-- if we throw an exception in here try to email directly -->
+		<default-service-exception-strategy>
+			<vm:outbound-endpoint path="error.email.queue"/>
+		</default-service-exception-strategy>
+
+		<service name="errorService">
+			<inbound>
+				<vm:inbound-endpoint path="error.queue"/>
+			</inbound>
+			<outbound>
+				<pass-through-router>
+					<vm:outbound-endpoint path="error.route.queue"/>
+				</pass-through-router>
+			</outbound>
+		</service>
+
+		<service name="errorRouteToJMSService">
+			<inbound>
+				<vm:inbound-endpoint path="error.route.queue"/>
+			</inbound>
+			<outbound>
+			  	<custom-outbound-router class="com.kewill.kcx.routing.outbound.JmsRecipientList">
+			  		<spring:property name="synchronousResolvedEndpoints" value="false"/>
+			  		<spring:property name="resolveEndpoints">
+			  			<spring:list>
+			  				<spring:value>ERROR.QUEUE</spring:value>
+			  			</spring:list>
+			  		</spring:property>
+			  	</custom-outbound-router>
+			</outbound>
+		</service>
+
+		<service name="errorRouteToEMailService">
+			<inbound>
+				<vm:inbound-endpoint path="error.email.queue"/>
+			</inbound>
+			<component>
+				<prototype-object class="com.kewill.kcx.component.SetErrorEMailProperties">
+					<properties>
+						<spring:entry key="toAddresses" value="${email.smtp.error.toAddresses}"/>
+						<spring:entry key="subject" value="${email.smtp.error.subject}"/>
+					</properties>
+				</prototype-object>
+			</component>
+			<outbound>
+				<pass-through-router>
+					<smtp:outbound-endpoint host="${email.smtp.host}"/>
+				</pass-through-router>
+			</outbound>
+		</service>
+		
+		<!-- for the moment point the failover at the email server???? -->
+		<service name="errorFailoverService">
+			<inbound>
+				<vm:inbound-endpoint path="error.failover.queue"/>
+			</inbound>
+			<outbound>
+				<pass-through-router>
+					<vm:outbound-endpoint path="error.email.queue"/>
+				</pass-through-router>
+			</outbound>
+		</service>
+	</model>
+</mule>

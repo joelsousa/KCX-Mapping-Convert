@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Cust_Resp_Tax_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Decln_Cmdty_Tax_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Decln_Cmdty_Doc_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Decln_Additional_Info_Sec_Input.xsd"/>
+	<xs:include schemaLocation="Shp_Cmdty_Supp_Cds_Sec_Input.xsd"/>
+	<xs:element name="Shp_Decln_Cmdty_Sec_Input" type="SHP_DECLN_COMDTY"/>
+	<xs:complexType name="SHP_DECLN_COMDTY">
+		<xs:sequence>
+			<xs:element ref="ITEM_SHP_DECLN_COMDTY" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ITEM_SHP_DECLN_COMDTY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SHPMT_DECLN_COMM_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="CUSRES_SHPMT_DECLN_COMM_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="SHPMT_DECLN_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="CUSRES_SHPMT_DECLN_OID_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="DECLN_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="PKG_KIND" type="xs:string" minOccurs="0"/>
+				<xs:element name="PKG_MARKS" type="xs:string" minOccurs="0"/>
+				<xs:element name="PKG_COUNT" type="xs:int" minOccurs="0"/>
+				<xs:element name="ITEM_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="TARIC_CMDTY_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="GOODS_DESC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_NET_WT" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_GROSS_WT" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_ORG_CTRY_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="CPC_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="PREF_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_VALUE" type="xs:double" minOccurs="0"/>
+				<xs:element name="LOC_SEQ_NBR" type="xs:int" minOccurs="0"/>
+				<xs:element name="LOC_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="SEQUENCE_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="QTA_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_SUPP_UNITS" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_SUPP_UNITS_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="VAL_MTHD_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="VAL_ADJ_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="HORS_VAL_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="HORS_VAL_DESC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_STAT_VALUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_CSTMS_VALUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_THRD_QTY" type="xs:string" minOccurs="0"/>
+				<xs:element name="DTP_2899" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_CSTMS_VAL" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_LCNC_VAL" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_VAT_VAL" type="xs:string" minOccurs="0"/>
+				<xs:element name="INS_AMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="TARIFF_ADDN_CD_1" type="xs:string" minOccurs="0"/>
+				<xs:element name="TARIFF_ADDN_CD_2" type="xs:string" minOccurs="0"/>
+				<xs:element name="TARIFF_ADDN_CD_3" type="xs:string" minOccurs="0"/>
+				<xs:element name="EC_SUPPLEMENT" type="xs:string" minOccurs="0"/>
+				<xs:element name="EC_SUPPLEMENT_2" type="xs:string" minOccurs="0"/>
+				<xs:element name="PREV_DOC_CLASS_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="PREV_DOC_TYP_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="PREV_DOC_REF" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITEM_VAL_ADJ_PCT" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Cust_Resp_Tax_Sec_Input" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Decln_Cmdty_Tax_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Shp_Decln_Cmdty_Doc_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Shp_Decln_Additional_Info_Sec_Input" minOccurs="0"/>
+				<xs:element ref="Shp_Cmdty_Supp_Cds_Sec_Input" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

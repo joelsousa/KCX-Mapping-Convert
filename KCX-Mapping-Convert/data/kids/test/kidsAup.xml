@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2009</Year>
+<Month>05</Month>
+<Day>06</Day>
+</Date>
+<Time>07:32:11</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<ProcedureSpecification>NP</ProcedureSpecification>
+<MessageName>Investigation</MessageName>
+<Release>2.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<CodeMapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</CodeMapping>
+</CustomsExchange>
+<MessageID>data\fss\in\aup.fss</MessageID>
+<InReplyTo>DiehlMsgID</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<Investigation>
+<GoodsDeclaration>
+<DateOfLatestPossibleReply>20090115</DateOfLatestPossibleReply>
+<DateOfInquiry>20081216</DateOfInquiry>
+<ReferenceNumber>AL-20081216-101-10008</ReferenceNumber>
+</GoodsDeclaration>
+</Investigation>
+</soap:Body>
+</soap:Envelope>

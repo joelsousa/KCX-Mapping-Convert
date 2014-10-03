@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Decln_Shpmt_Customs_Stat" type="DECLN_STATUS"/>
+	<xs:complexType name="DECLN_STATUS">
+		<xs:sequence>
+			<xs:element ref="DECLN_STATUS" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DECLN_STATUS">
+		<xs:complexType>
+			<xs:sequence>
+					<xs:element name="DECLN_SHP_CUST_STAT_OID_NBR" type="xs:string" minOccurs="0"/>
+					<xs:element name="DECLN_OID_NBR" type="xs:string" minOccurs="0"/>
+					<xs:element name="STATE" type="xs:string" minOccurs="0"/>
+					<xs:element name="STATUS" type="xs:string" minOccurs="0"/>
+					<xs:element name="STATE_DATE" type="xs:string" minOccurs="0"/>
+					<xs:element name="STATE_HOUR" type="xs:string" minOccurs="0"/>
+					<xs:element name="PREVIOUS_STATE" type="xs:string" minOccurs="0"/>
+					<xs:element name="PREVIOUS_STATUS" type="xs:string" minOccurs="0"/>
+					<xs:element name="PREVIOUS_STATE_DATE" type="xs:string" minOccurs="0"/>
+					<xs:element name="PREVIOUS_STATE_HOUR" type="xs:string" minOccurs="0"/>
+					<xs:element name="EVENT" type="xs:string" minOccurs="0"/>
+					<xs:element name="REASON" type="xs:string" minOccurs="0"/>
+					<xs:element name="REQUEST_NUMBER" type="xs:string" minOccurs="0"/>
+					<xs:element name="LAST_UPDATE_TMSTP" type="xs:string" minOccurs="0"/>
+					<xs:element name="REFDEC" type="xs:string" minOccurs="0"/>
+					<xs:element name="REFDOS" type="xs:string" minOccurs="0"/>			
+            </xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

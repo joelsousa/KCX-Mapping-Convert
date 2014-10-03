@@ -1,0 +1,703 @@
+/*
+ * Klasse      : xmlfssein
+ * Titel       : Konvertierung einer UIDS-Nachricht NCTS
+ * Erstellt    : 17.02.2005
+ * Autor       : Christine Kron
+ * Beschreibung: Eine XML-Datei wird in eine CSF-FSS-Datei konvertiert.
+ * Anmerkungen : ZABIS Version 4
+ * Parameter   : 
+ * Rückgabe    : keine
+ * 
+ * 
+ * Änderungen:  
+ * -----------
+ * Author      : Christine Kron
+ * Datum       : 22.03.2006
+ * Kennzeichen : CK220306
+ * Beschreibung: neue Module mit aufgenommen
+ * 				 SumA: Presentation of Notification (neuer namespace)
+ * 
+ * 
+ */
+package uids;
+
+import general.FssUtils;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
+import org.jdom.Namespace;
+import org.jdom.input.SAXBuilder;
+
+
+import uids.aes.canCel.NaCanCel;
+import uids.aes.comPle.NaComPle;
+import uids.aes.expDec.NaExpDec;
+import uids.aes.extInf.NaExtInf;
+import uids.aes.extNot.NaExtNot;
+import uids.aes.extPre.NaExtPre;
+import uids.aes.preNot.NaPreNot;
+import uids.aes.proPoo.NaProPoo;
+import uids.aes.terExp.NaTerExp;
+import uids.aes.terExt.NaTerExt;
+import uids.nctsin.NAArrNot;
+import uids.nctsin.NAUldRem;
+import uids.nctsout.NAAccCod;
+import uids.nctsout.NADecDat;
+import uids.suma.addAsg.NAAddAsg;
+import uids.suma.asgNcts.NAAsgNcts;
+import uids.suma.chgCust.NAChgCust;
+import uids.suma.chgDisp.NAChgDisp;
+import uids.suma.conSol.NAConSol;
+import uids.suma.extReq.NAExtReq;
+import uids.suma.manTer.NAManTer;
+import uids.suma.modSpo.NAModSpo;
+import uids.suma.notCon.NANotPreCon;
+import uids.suma.notPre.NANotPre;
+import uids.suma.reExp.NAReExp;
+
+public class xmlfssein
+{
+	static 			String 			delim 		= "";
+	static long[]	timeList		= new long[8];
+        
+	
+	public static void main (String args[])
+	{
+
+		boolean			debug			= false;
+		
+		xmlnachricht	nachricht		= null;
+
+		Element			startElem		= null;
+		Element			submitElem		= null;
+		Element			elemTmp			= null;
+		Document 		doc				= null;
+		SAXBuilder 		builder			= null;
+		Element			root			= null;
+		Element			elem			= null;
+		String 			soap 			= "http://www.w3.org/2003/05/soap-envelope";
+		Namespace 		nssoap = Namespace.getNamespace(soap);
+		String			header			= "http://www.eurtradenet.com/schemas/header/200310";
+		Namespace 		nsheader = Namespace.getNamespace(header);
+		String			nsTmp			= "";
+// CK220306		
+		String			bodyNctsV1		= "http://www.eurtradenet.com/schemas/uids/body/200310";
+		String			bodyNctsV2		= "http://www.eurtradenet.com/schemas/uids/body/200507";
+		String 			bodyNctsV3		= "http://www.eurtradenet.com/schemas/uids/ncts/body/200601";
+		String			bodyIntraV3		= "http://www.eurtradenet.com/schemas/uids/intrastat/body/200601";
+		String			bodyManifestV3	= "http://www.eurtradenet.com/schemas/uids/manifest/body/200601";
+		String			bodyExportV3	= "http://www.eurtradenet.com/schemas/uids/export/body/200601";
+		String			bodyImportV3	= "http://www.eurtradenet.com/schemas/uids/import/body/200601";
+		String			bodyInvoiceV3	= "http://www.eurtradenet.com/schemas/uids/invoice/body/200601";
+        String          nsbodyURI       = null;
+        String          nsbodyVers      = null;
+        
+		Namespace 		nsbody 			= null;
+		List			elemList		= null;
+
+		String			etnTo 			= null;
+		String			etnFrom			= null;
+		String			lfdnr 			= null;
+		String			nachrichtenTyp	= null;
+		String			dateiname		= null;
+		String			csfkdnr			= null;
+		String			vorinfstr		= null;
+		String			msgid			= null;
+		
+		int				nr				= -1;
+		long			val				= 0;
+		
+		
+		if (args == null )
+		{	
+			FssUtils.log("xmlfssein.main(): missing filename as parameter!");
+			System.exit(1);
+		}
+
+		if (args.length < 2 )
+		{	
+			FssUtils.log("xmlfssein.main(): missing parameters: xmlfssein <file> <lfdnr>");
+			System.exit(1);
+		}
+
+		if (args.length == 3 )
+		{	
+			if(args[2].equals("true")) debug=true;	
+		}
+		
+		lfdnr = args[1];
+		
+		if (debug)
+		{
+			FssUtils.log ("xmlfssein.main(): debugmode is on");	
+		}
+
+		if(debug)	
+		{
+			FssUtils.log ("xmlfssein.main() args[0] = " + args[0]);
+			FssUtils.log ("xmlfssein.main() args[1] = " + args[1]);
+		} 		
+				
+		try
+		{
+			timeList[0] = System.currentTimeMillis();
+			System.setProperty("file.encoding", "ISO-8859-1");
+
+			timeList[1] = System.currentTimeMillis();
+			
+			// damit gibt es zur Zeit ein Problem!!!
+			//*******************************************
+			// builder = new SAXBuilder("org.apache.xerces.parsers.SAXParser");
+			builder = new SAXBuilder(false);
+			timeList[2] = System.currentTimeMillis();
+
+			doc = builder.build(new File(args[0]));
+						
+			timeList[3] = System.currentTimeMillis();
+			FssUtils.log ("xmlfssein.main(): read from file : " + args[0]);
+			
+				
+			if (! doc.hasRootElement()) 
+			{
+				if(debug) FssUtils.log ("xmlfssein.main(): doc.hasRootElement() returns false");
+				System.exit(1);
+			} 
+				
+			root 	= doc.getRootElement(); // soap:Envelope
+			timeList[4] = System.currentTimeMillis();
+			
+			elem = root.getChild("Header", nssoap);
+			if(elem == null)
+			{
+				if(debug) FssUtils.log ("xmlfssein.main(): no soap:Header found");
+				System.exit(1);
+			}
+			elem = elem.getChild("Header", nsheader);
+			if(elem == null)
+			{
+				if(debug) FssUtils.log ("xmlfssein.main(): no Header found");
+				System.exit(1);
+			}
+			
+			etnTo 	= elem.getChildText("To", nsheader);
+			if(etnTo == null) 
+			{
+				if(debug) FssUtils.log("xmlfssein.main(): To is null!");
+				System.exit(1);
+			} 
+			if(etnTo.equals ("")) 
+			{
+				if(debug) FssUtils.log("xmlfssein.main(): To is empty!");
+				System.exit(1);
+			} 
+			etnFrom 	= elem.getChildText("From", nsheader);
+			if(etnFrom == null) 
+			{
+				if(debug) FssUtils.log("xmlfssein.main(): From is null!");
+				System.exit(1);
+			} 
+			if(etnFrom.equals ("")) 
+			{
+				if(debug) FssUtils.log("xmlfssein.main(): From is empty!");
+				System.exit(1);
+			} 
+			
+
+			// <To>DE01.DANFRA.0358</To>
+			// <To>DE01.FORDTST.3087</To>
+			// <To>DE01.xxxxyyy.358</To> OHNE führende Nullen!?
+			
+			nr=etnTo.lastIndexOf('.');
+			if ( nr == -1 || etnTo.length() == nr )
+			{
+				if(debug) FssUtils.log("xmlfssein.main(): wrong format in To-element!" + etnTo);
+				System.exit(1);
+			}
+			 
+			csfkdnr=etnTo.substring(nr+1);
+			if(debug) FssUtils.log("xmlfssein.main(): csfkdnr " + csfkdnr);
+			
+			dateiname = csfkdnr + lfdnr;
+			
+			msgid=elem.getChildText("MessageID", nsheader);
+			
+			if(debug) FssUtils.log("xmlfssein.main(): filename output: " + dateiname);
+				
+			elem = root.getChild("Body", nssoap);
+			if(elem == null)
+			{
+				if(debug) FssUtils.log ("xmlfssein.main(): no soap:Body found");
+				System.exit(1);
+			}
+			
+			// nsBody noch nicht bekannt, daher lesen ohne namespace!!
+			// dies geht nur bei Auslesen einer Liste
+			// submitElem	= elem.getChild("Submit",nssoap);
+			// submitElem	= elem.getChild("Submit");
+			elemList = elem.getChildren();
+
+			if(elemList == null)
+			{
+				if(debug) FssUtils.log ("xmlfssein.main(): no Submit found");
+				System.exit(1);
+			}
+			
+			submitElem = (Element) elemList.get(0);
+			
+			if(submitElem == null)
+			{
+				if(debug) FssUtils.log ("xmlfssein.main(): no Submit found");
+				System.exit(1);
+			}
+
+			nsbody = submitElem.getNamespace();
+			if(debug) FssUtils.log ("xmlfssein.main():der namespace Submit lautet: " + nsbody.toString());
+            
+            // KB 23.05.2005 die letzten vier Zeichen aus dem nsbody auslesen, um die Schemaversion des 
+            // jeweiligen Bodies zu erhalten.
+            if(nsbody != null && !nsbody.equals("")) {
+                nsbodyURI   = nsbody.getURI();                
+                if(nsbodyURI.length() > 3) {
+                    nsbodyVers  = nsbodyURI.substring((nsbodyURI.length()-4),nsbodyURI.length());            
+                }
+            }
+			
+// CK220306			
+//			startElem = submitElem.getChild("NCTSdeparture", nsbody);
+//			if(startElem == null) startElem = submitElem.getChild("NCTSarrival", nsbody);
+//			if(startElem == null)
+//			{
+//				if(debug) FssUtils.log ("xmlfssein.main(): NCTSdeparture/NCTSarrival missing");
+//				System.exit(1);
+//			}
+//
+//			nachrichtenTyp	=	startElem.getAttributeValue("messagetype");
+//				
+//			if(nachrichtenTyp == null)
+//			{
+//				if(debug) FssUtils.log ("xmlfssein.main(): attribute messagetype missing!");
+//				System.exit(1);
+//			}
+//			
+//			if(debug) FssUtils.log("xmlfssein.main(): Nachrichtentyp : " + nachrichtenTyp);
+//
+//			timeList[5] = System.currentTimeMillis();
+//			
+//			if(nachrichtenTyp.equals("E_DEC_DAT"))
+//			{
+//				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVAN",msgid, "VAN  ");
+//				nachricht = new NADecDat(debug, vorinfstr);
+//			}
+//
+//			if(nachrichtenTyp.equals("E_ACC_COD"))
+//			{
+//				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVAC",msgid, "VAC  ");
+//				nachricht = new NAAccCod(debug, vorinfstr);
+//			}
+//			
+//			if(nachrichtenTyp.equals("E_REL_MAN"))
+//			{
+//				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVME",msgid, "VME  ");
+//				// nachricht = new NARelMan(debug, vorinfstr);
+//			}
+//
+//			if(nachrichtenTyp.equals("E_ARR_NOT"))
+//			{
+//				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVIA",msgid, "VIA  ");
+//				nachricht = new NAArrNot(debug, vorinfstr);
+//			}
+//
+//			if(nachrichtenTyp.equals("E_ULD_REM"))
+//			{
+//				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVUR",msgid, "VUR  ");
+//				nachricht = new NAUldRem(debug, vorinfstr);
+//			}
+//
+//			// Methoden, die immer aufgerufen werden:
+//			nachricht.processFile(startElem, nsbody, dateiname);
+//			
+//			timeList[6] = System.currentTimeMillis();
+
+			
+			// CK220306
+			// NCTS (UIDS V2): unverändert:
+			// unterhalb submit steht entweder NCTSdeparture oder NCTSarrival
+			// der Narichtenname ist im Attribut messagetype enthalten
+			// (UIDS V3) alle anderen Module :
+			// unterhalb submit steht das tag das dem Modulnamen entspricht, 
+			// darunter findet sich das tag mit dem message Namen
+			
+			startElem = submitElem.getChild("NCTSdeparture", nsbody);
+			if(startElem == null) startElem = submitElem.getChild("NCTSarrival", nsbody);
+			if(startElem != null)
+			{
+				nachrichtenTyp	=	startElem.getAttributeValue("messagetype");
+				
+				if(nachrichtenTyp == null)
+				{
+					if(debug) FssUtils.log ("xmlfssein.main(): Attribute messagetype fehlt!");
+					System.exit(1);
+				}
+				
+				if(debug) FssUtils.log("xmlfssein.main(): Nachrichtentyp : " + nachrichtenTyp);
+				
+			}
+			else
+			{
+				// Suchen mit getChildren, da der Modulname und somit der namespace nicht feststeht
+				elemList = submitElem.getChildren();
+
+				if(elemList == null)
+				{
+					if(debug) FssUtils.log ("xmlfssein.main(): kein Element unter Submit gefunden");
+					System.exit(1);
+				}
+			
+				startElem = (Element) elemList.get(0);
+			
+				if(startElem == null)
+				{
+					if(debug) FssUtils.log ("xmlfssein.main(): kein Element unter Submit gefunden");
+					System.exit(1);
+				}
+				
+				//  Suchen mit getChildren, da der Nachrichtenname nicht feststeht
+				elemList = startElem.getChildren();
+				if(elemList == null)
+				{
+					if(debug) FssUtils.log ("xmlfssein.main(): kein Element unter " + startElem.getText() + " gefunden");
+					System.exit(1);
+				}
+				
+				startElem = (Element) elemList.get(0);
+				nachrichtenTyp = startElem.getName();
+				
+			}
+				
+			timeList[5] = System.currentTimeMillis();
+			
+			//************************************
+			//
+			// NCTS eingehende Nachrichten
+			//
+			//************************************
+			
+			if(nachrichtenTyp.equals("E_DEC_DAT"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVAN",msgid, "VAN  ");
+				nachricht = new NADecDat(debug, vorinfstr);
+			}
+
+			if(nachrichtenTyp.equals("E_ACC_COD"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVAC",msgid, "VAC  ");
+				nachricht = new NAAccCod(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("E_REL_MAN"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVME",msgid, "VME  ");
+				// nachricht = new NARelMan(debug, vorinfstr);
+			}
+
+			if(nachrichtenTyp.equals("E_ARR_NOT"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVIA",msgid, "VIA  ");
+				nachricht = new NAArrNot(debug, vorinfstr);
+			}
+
+			if(nachrichtenTyp.equals("E_ULD_REM"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSVUR",msgid, "VUR  ");
+				nachricht = new NAUldRem(debug, vorinfstr);
+			}
+
+			//************************************
+			//
+			// Manifest eingehende Nachrichten
+			//
+			//************************************
+			if(nachrichtenTyp.equals("NotificationOfPresentation"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSUK",msgid, "SUK  ");
+				nachricht = new NANotPre(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("NotificationOfPresentationConfirmed"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSBK",msgid, "SBK  ");
+				nachricht = new NANotPreCon(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("AdditionalAssignmentOfNCTSDocument"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSNK",msgid, "SNK  ");
+				nachricht = new NAAddAsg(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("AssignmentOfNCTSItem"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSZK",msgid, "SZK  ");
+				nachricht = new NAAsgNcts(debug, vorinfstr);
+			}
+
+			if(nachrichtenTyp.equals("ChangeOfCustodian"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSWK",msgid, "SWK  ");
+				nachricht = new NAChgCust(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("ChangeOfDisposal"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSVK",msgid, "SVK  ");
+				nachricht = new NAChgDisp(debug, vorinfstr);
+			}
+            
+			if(nachrichtenTyp.equals("ModificationOfSpO"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSPK",msgid, "SPK  ");
+				nachricht = new NAModSpo(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("Consolidation"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSOK",msgid, "SOK  ");
+				nachricht = new NAConSol(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("ReExportation"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSAK",msgid, "SAK  ");
+				nachricht = new NAReExp(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("ExtensionRequest"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSFK",msgid, "SFK  ");
+				nachricht = new NAExtReq(debug, vorinfstr);
+			}
+			
+			if(nachrichtenTyp.equals("ManualTermination"))
+			{
+				vorinfstr=getVorinfString(etnTo, etnFrom,"IDSSLK",msgid, "SLK  ");
+				nachricht = new NAManTer(debug, vorinfstr);
+			}
+			
+			//**************************************
+            //
+            // Export eingehende Nachrichten - Begin
+            //
+            //**************************************            
+            
+            if(nachrichtenTyp.equals("ExportDeclaration"))
+            {
+                // KB 23.05.2006 - Austausch von VORINF mit HEADER
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSADA",msgid, "ADA  ");
+//                vorinfstr = getHeaderString(csfkdnr, dateiname, etnTo, etnFrom, "IDSADA", "AES", msgid, nsbodyVers);
+                nachricht = new NaExpDec(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("Completion"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSEAM",msgid, "EAM  ");
+                nachricht = new NaComPle(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("Cancelation"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSACA",msgid, "ACA  ");
+                nachricht = new NaCanCel(debug, vorinfstr);
+            }
+             
+            if(nachrichtenTyp.equals("ManualTerminationExport"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSAEP",msgid, "AEP  ");
+                nachricht = new NaTerExp(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("PreNotification"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSAAR",msgid, "AAR  ");
+                nachricht = new NaPreNot(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("ExitPresentation"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSAAN",msgid, "AAN  ");
+                nachricht = new NaExtPre(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("ExitInformation"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSAIF",msgid, "AIF  ");
+                nachricht = new NaExtInf(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("ExitNotification"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSANO",msgid, "ANO  ");
+                nachricht = new NaExtNot(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("ManualTerminationExit"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSAET",msgid, "AET  ");
+                nachricht = new NaTerExt(debug, vorinfstr);
+            }
+            
+            if(nachrichtenTyp.equals("ProcedurePooling"))
+            {
+                vorinfstr=getVorinfString(etnTo, etnFrom,"IDSASZ",msgid, "ASZ  ");
+                nachricht = new NaProPoo(debug, vorinfstr);
+            }
+            
+            
+            //************************************
+            //
+            // Export eingehende Nachrichten - End
+            //
+            //************************************
+            
+            
+			// Methoden, die immer aufgerufen werden:
+			nachricht.processFile(startElem, nsbody, dateiname);            
+			
+			timeList[6] = System.currentTimeMillis();
+			
+		
+			// Methoden, die Nachrichtenspezifisch sind
+			/*
+			if(nachrichtenTyp.equals("E_DEC_DAT"))
+			{
+				nachricht.set_Anmart();
+				nachricht.set_Ldbe();
+			}
+			*/
+			timeList[7] = System.currentTimeMillis();
+			if (debug) {
+// KB 19.04.2006 - zuviel Consolentext                
+//				for ( int i=0; i<8; i++)
+//				{
+//					FssUtils.log("***** Zeit i " + i + " " + timeList[i] + " " + (timeList[i] - val));
+//					val= timeList[i];
+//				}
+				// keine Ausgaben auf die Standardausgabe!!!
+				FssUtils.log("********************************************");
+				long zeit 	= (timeList[7] - timeList[0]);
+				FssUtils.log("Verarbeitungszeit in millisec: " + zeit);
+				
+			}
+			System.exit(0);
+		}
+		catch (IOException e)
+		{
+			if(debug) FssUtils.log ("xmlfssein.main() IO-Exception in xmlnachricht: " + e.getMessage());
+			System.exit(1);
+		}
+		catch (JDOMException e)
+		{
+			if(debug) FssUtils.log ("xmlfssein.main() JDOMException in xmlnachricht: " + e.getMessage());
+			System.exit(1);
+		}
+	}
+	
+	public static String getVorinfString(String etnze, String etnabs, String msgtype, String msgid, String fss)
+	{
+             
+	   StringBuffer 	strBuf		= new StringBuffer("VORINF" + delim);
+
+	   // filename
+	   strBuf.append("XXXXXXXXXX");					    strBuf.append(delim);
+	   // Version
+	   strBuf.append("4000"); 		  					strBuf.append(delim);
+	   // CSF-KDNR
+	   strBuf.append("XXXX"); 							strBuf.append(delim);
+	   // Zollnummer
+	   strBuf.append("XXXXXXX"); 						strBuf.append(delim);
+	   // message-type
+	   strBuf.append("UVX"); 							strBuf.append(delim);
+	   // Bestimmungs-Clearingcenter bei ETN,
+	   // UIDS: FSS-Datei
+	   strBuf.append(fss); 							    strBuf.append(delim);
+	   // Nachrichten-ID
+	   strBuf.append(msgtype);
+	   strBuf.append("!");
+	   // gefolgt von Zieladresse aus dem XML-envelope
+	   strBuf.append(etnze);
+	   strBuf.append("!");
+	   // gefolgt von Absenderadresse aus dem XML-envelope
+	   strBuf.append(etnabs);
+	   strBuf.append("!");
+	   // gefolgt von Message-ID des Absenders (benötigt für confirm und failure)
+	   strBuf.append(msgid);
+	   strBuf.append("!");
+
+	   return strBuf.toString();
+	   }
+	
+    
+
+    public static String getHeaderString(String csfkdnr, String dateiname, String etnze, String etnabs, 
+                                         String msgtype, String vbtyp, String msgid, String nsbodyVers)
+    {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");        
+        String dat = sdf.format(new Date());        
+        
+       // TODO allg. Behandlung:
+       // Felder die von WI gefüllt werden, sollen leer oder geXt werden oder egal?
+       StringBuffer     strBuf      = new StringBuffer("HEADER" + delim);
+
+       // 1 Art
+       strBuf.append("ids");                           strBuf.append(delim);
+       // 2 dateiname
+       // TODO Soll Dateiname gefuellt werden
+       strBuf.append(dateiname);                        strBuf.append(delim);
+       // 3 version
+       strBuf.append("04000");                          strBuf.append(delim);
+       // 4 kdnr
+       strBuf.append(csfkdnr);                          strBuf.append(delim);
+       // 5 zbnr
+       strBuf.append("");                               strBuf.append(delim);
+       // 6 vbtyp
+       strBuf.append(vbtyp);                            strBuf.append(delim);
+       // 7 dstnr
+       strBuf.append("");                               strBuf.append(delim);
+       // 8 techn. Nachr.Name
+       strBuf.append(msgtype);                          strBuf.append(delim);
+       // 9 konvertertyp
+       strBuf.append("XML");                            strBuf.append(delim);
+       // 10 Schemaversion
+       strBuf.append(nsbodyVers);                       strBuf.append(delim);
+       // 11 antragsart
+       strBuf.append("");                               strBuf.append(delim);
+       // 12 edinr  
+       strBuf.append("");                               strBuf.append(delim);
+       // 13 mrn
+       strBuf.append("");                               strBuf.append(delim);
+       // 14 msg-id (inreplyto ?)
+       strBuf.append(msgid);                            strBuf.append(delim);
+       // 15 adrtyp
+       strBuf.append("etnadr");                         strBuf.append(delim);
+       // 16 empfadr
+       strBuf.append(etnze);                            strBuf.append(delim);
+       // 17 absadr
+       strBuf.append(etnabs);                           strBuf.append(delim);
+       // 18 email
+       strBuf.append("");                               strBuf.append(delim);
+       // 19 Sprache
+       strBuf.append("DE");                             strBuf.append(delim);
+       // 20 datzei
+       strBuf.append(dat);                             strBuf.append(delim);
+       
+       
+       return strBuf.toString();
+       }
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header>
+      <SentAt>
+        <Date>
+          <Year>2011</Year>
+          <Month>12</Month>
+          <Day>20</Day>
+        </Date>
+        <Time>093339</Time>
+      </SentAt>
+      <Transmitter>SILVERSTREAM</Transmitter>
+      <Receiver>DE.KFF.TST</Receiver>
+      <Method>Export</Method>
+      <MessageTP>
+        <CountryCode>NL</CountryCode>
+        <Procedure>Export</Procedure>
+        <ProcedureSpecification>3</ProcedureSpecification>
+        <MessageName>ExportDeclaration</MessageName>
+        <Release>1.0.00</Release>
+        <Direction>FROM_CUSTOMER</Direction>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>1</Map>
+          <MapFrom>KCX_CODE</MapFrom>
+          <MapTo>NL</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>NL/EXP-SD02</MessageID>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <ExportDeclaration>
+      <GoodsDeclaration>
+        <AreaCode>EX</AreaCode>
+        <TypeOfPermit>A</TypeOfPermit>
+        <UCRNumber>1100176049</UCRNumber>
+        <FinalCode>1</FinalCode>
+        <DeclarationTime>201112200930</DeclarationTime>
+        <DispatchCountry>NL</DispatchCountry>
+        <DestinationCountry>RU</DestinationCountry>
+        <SituationCode>1</SituationCode>
+        <TransportInContainer>1</TransportInContainer>
+        <GrossMass>26019.728</GrossMass>
+        <ShipmentNumber>11001760491112070930</ShipmentNumber>
+        <ReferenceNumber>11001760491112070930</ReferenceNumber>
+        <DeclarationNumber>1444</DeclarationNumber>
+        <TotalNumberPositions>1</TotalNumberPositions>
+        <DeclarantIsConsignor>1</DeclarantIsConsignor>
+        <TypeOfRepresentation>1</TypeOfRepresentation>
+        <MeansOfTransport>
+          <PlaceOfLoading>5433NL6</PlaceOfLoading>
+        </MeansOfTransport>
+        <MeansOfTransportInland>
+          <TransportMode>3</TransportMode>
+        </MeansOfTransportInland>
+        <MeansOfTransportDeparture>
+          <TransportationType>0003</TransportationType>
+          <TransportationNumber>CSFU 965003 0</TransportationNumber>
+          <TransportationCountry>NL</TransportationCountry>
+        </MeansOfTransportDeparture>
+        <MeansOfTransportBorder>
+          <TransportMode>3</TransportMode>
+          <TransportationNumber>CSFU 965003 0</TransportationNumber>
+          <TransportationCountry>NL</TransportationCountry>
+        </MeansOfTransportBorder>
+        <PlaceOfLoading>
+          <Street>Havenlaan 6</Street>
+          <PostalCode>5433 NL</PostalCode>
+          <City>Katwijk</City>
+        </PlaceOfLoading>
+        <CustomsOfficeExport>NL000396</CustomsOfficeExport>
+        <IntendedOfficeOfExit>NL566396</IntendedOfficeOfExit>
+        <Business>
+          <InvoicePrice>24888.960</InvoicePrice>
+          <Currency>EUR</Currency>
+        </Business>
+        <LoadingTime>
+          <BeginTime>201112071012</BeginTime>
+          <EndTime>201112071030</EndTime>
+        </LoadingTime>
+        <ConsignorTIN>
+          <TIN>NL850230378</TIN>
+        </ConsignorTIN>
+        <Consignor>
+          <Address>
+            <Name>H.J. Heinz Supply Chain Europe BV</Name>
+            <Street>Arnhemse Bovenweg</Street>
+            <HouseNumber>160-178</HouseNumber>
+            <City>Zeist</City>
+            <PostalCode>3708 AH</PostalCode>
+            <Country>NL</Country>
+          </Address>
+        </Consignor>
+        <DeclarantTIN>
+          <TIN>NL850230378</TIN>
+        </DeclarantTIN>
+        <Declarant>
+          <Address>
+            <Name>H.J. Heinz Supply Chain Europe BV</Name>
+            <Street>Arnhemse Bovenweg</Street>
+            <HouseNumber>160-178</HouseNumber>
+            <City>Zeist</City>
+            <PostalCode>3708 AH</PostalCode>
+            <Country>NL</Country>
+          </Address>
+        </Declarant>
+        <Consignee>
+          <Address>
+            <Name>PPK LTD</Name>
+            <Street>Arsenalnaya Street</Street>
+            <HouseNumber>1-2</HouseNumber>
+            <City>SAINT PETERSBURG</City>
+            <PostalCode>195009</PostalCode>
+            <Country>RU</Country>
+          </Address>
+        </Consignee>
+        <IncoTerms>
+          <IncoTerm>EXW</IncoTerm>
+          <Place>Ex-works</Place>
+        </IncoTerms>
+        <GoodsItem>
+          <ItemNumber>1</ItemNumber>
+          <ArticleNumber>000000000071519105</ArticleNumber>
+          <Description>200ML Heinz Soya Sauce</Description>
+          <OriginCountry>NL</OriginCountry>
+          <NetMass>12878.784</NetMass>
+          <GrossMass>25381.728</GrossMass>
+          <CommodityBoard>HPA</CommodityBoard>
+          <CommodityCode>
+            <TarifCode>21031000</TarifCode>
+          </CommodityCode>
+          <CustomsApprovedTreatment>
+            <Declared>10</Declared>
+            <Previous>0</Previous>
+          </CustomsApprovedTreatment>
+          <Statistic>
+            <Value>24888.960</Value>
+            <Currency>EUR</Currency>
+          </Statistic>
+          <SensitiveGoods/>
+          <Package>
+            <Quantity>4176</Quantity>
+            <Type>CS</Type>
+            <Marks>ADR</Marks>
+          </Package>
+          <Container>
+            <Number>CSFU 965003 0</Number>
+          </Container>
+        </GoodsItem>
+      </GoodsDeclaration>
+    </ExportDeclaration>
+  </soap:Body>
+</soap:Envelope>

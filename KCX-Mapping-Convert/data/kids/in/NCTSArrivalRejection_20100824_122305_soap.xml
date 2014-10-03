@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+      <SentAt>
+        <Date>
+          <Year>2010</Year>
+          <Month>05</Month>
+          <Day>10</Day>
+        </Date>
+        <Time>12:02:00</Time>
+        <TimeZone>+0100</TimeZone>
+      </SentAt>
+      <Transmitter>DE01.CSFALT.2144</Transmitter>
+      <Receiver>DE.CSF</Receiver>
+      <Method>NCTS</Method>
+      <MessageTP>
+        <CountryCode>DE</CountryCode>
+        <Procedure>NCTS</Procedure>
+        <MessageName>NCTSArrivalRejection</MessageName>
+        <Release>1.0.00</Release>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>0</Map>
+          <MapFrom>DE</MapFrom>
+          <MapTo>DE</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>DE01DE01214420100510120200000001</MessageID>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+  <NCTS>
+
+<NCTSArrivalRejection>
+  <LocalReferenceNumber>LocalReferenceNumber1</LocalReferenceNumber>
+  <MRN>MRN1</MRN>
+  <ArrivalRejectionDate>2010-08-25</ArrivalRejectionDate>
+  <ActionToBeTaken>ActionToBeTaken1</ActionToBeTaken>
+  <ArrivalRejectionReason>ArrivalRejectionReason1</ArrivalRejectionReason>
+  <FunctionalError>
+    <Type>Type1</Type>
+    <Pointer>Pointer1</Pointer>
+    <Reason>Reason1</Reason>
+    <OriginalValue>OriginalValue1</OriginalValue>
+    <Description>Description1</Description>
+  </FunctionalError>
+  <FunctionalError>
+    <Type>Type2</Type>
+    <Pointer>Pointer2</Pointer>
+    <Reason>Reason2</Reason>
+    <OriginalValue>OriginalValue2</OriginalValue>
+    <Description>Description2</Description>
+  </FunctionalError>
+</NCTSArrivalRejection>
+  </NCTS>
+  </soap:Body>
+  </soap:Envelope>

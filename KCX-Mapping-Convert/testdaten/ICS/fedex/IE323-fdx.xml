@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageOperateur>
+    <Messages>
+        <Message>
+                
+		<EnveloppeMessage>
+		                <schemaID>MessageIE323</schemaID>
+		                <schemaVersion>TBD</schemaVersion>
+		                <partyId>DE.FDXFKB.0725</partyId>
+		                <transactionId>2333193</transactionId>
+		                <numseq>0</numseq>
+		</EnveloppeMessage>
+	        <MessageBody>
+		                <CC323A>
+		                    <MesSenMES3>DE.FDXFKB.0725</MesSenMES3>
+		                    <MesRecMES6>DE.FDXFKB.0725</MesRecMES6>
+		                    <DatOfPreMES9>110315</DatOfPreMES9>
+		                    <TimOfPreMES10>1628</TimOfPreMES10>
+		                    <MesIdeMES19>CGN2333193</MesIdeMES19>
+		                    <MesTypMES20>CC323A</MesTypMES20>
+		                    <HEAHEA>
+		                        <TraModAtBorHEA76>4</TraModAtBorHEA76>
+		                        <InfTypHEA122>1</InfTypHEA122>
+		                        <DivRefNumHEA119>23rest fehlt</DivRefNumHEA119>
+		                    </HEAHEA>
+				</CC323A>		                        
+                 </MessageBody>
+        </Message>
+    </Messages>
+</MessageOperateur>
+ 

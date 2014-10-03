@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<To>DE01.CSFTEST.2158</To>
+<From>DE01.CSFTEST.2158</From>
+<MessageID>UI01DE01308720110221114435999</MessageID>
+<SentAt>2011-02-18T12:19:45 +0100</SentAt>
+<Act>request</Act>
+<Procedure>NCTS</Procedure>
+<MessageType>NCTSDeclaration</MessageType>
+<Direction>FROM_CUSTOMER</Direction>
+<MessageVersion>4.0</MessageVersion>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit>
+<NCTS>
+<NCTSDeclaration>
+<LocalReferenceNumber>308720110221114435999</LocalReferenceNumber>
+<CommercialReferenceNumber>DE1102D2900999</CommercialReferenceNumber>
+<AuthorisationID>DE5864ZV0083</AuthorisationID>
+<TypeOfDeclaration>T1</TypeOfDeclaration>
+<CountryOfDestination>PH</CountryOfDestination>
+<CountryOfDispatch>DE</CountryOfDispatch>
+<PlaceOfLoading>AB01</PlaceOfLoading>
+<TransportAtBorder>
+<Identity>SHIP</Identity>
+<Mode>3</Mode>
+<Nationality>DE</Nationality>
+<Type>33</Type>
+</TransportAtBorder>
+<TransportAtDeparture>
+<Identity>TRUCK</Identity>
+<Nationality>DE</Nationality>
+</TransportAtDeparture>
+<TotalNumberOfItems>2</TotalNumberOfItems>
+<TotalNumberOfPackages>18</TotalNumberOfPackages>
+<TotalGrossMass>999000</TotalGrossMass>
+<Consignor>
+<TIN>9000135</TIN>
+<Address>
+<Name>Ford-Werke GmbH c/o P. Huppertz GmbH Emdener Str.</Name>
+<StreetAndNumber>Emdener Str. 4</StreetAndNumber>
+<PostalCode>50735</PostalCode>
+<City>Koeln</City>
+<CountryCodeISO>DE</CountryCodeISO>
+</Address>
+</Consignor>
+<Consignee>
+<Address>
+<Name>Ford Motor Co Philippines Inc.</Name>
+<StreetAndNumber>c/o ECT Delta Terminal, Europaweg</StreetAndNumber>
+<PostalCode>4026</PostalCode>
+<City>Laguna</City>
+<CountryCodeISO>PH</CountryCodeISO>
+</Address>
+</Consignee>
+<Principal>
+<TIN>9000135</TIN>
+<Address>
+<Name>Ford-Werke GmbH</Name>
+<StreetAndNumber>Henry-Ford-Str. 1</StreetAndNumber>
+<PostalCode>50735</PostalCode>
+<City>Koeln</City>
+<CountryCodeISO>DE</CountryCodeISO>
+</Address>
+</Principal>
+<OfficeOfDeparture>DE005866</OfficeOfDeparture>
+<OfficeOfDestination>NL566511</OfficeOfDestination>
+<ControlResultDateLimit>2011-03-01</ControlResultDateLimit>
+<SimplifiedProcedureFlag>1</SimplifiedProcedureFlag>
+<RepresentativeName>ALFRED AHRENDS</RepresentativeName>
+<RepresentativeCapacity>CUSTOMS SUPERVISOR</RepresentativeCapacity>
+<TydenSeals>
+<TydenSealFlag>0</TydenSealFlag>
+<Quantity>2</Quantity>
+</TydenSeals>
+<SealsType>R</SealsType>
+<SealsIdentity>SEAL1</SealsIdentity>
+<Guarantee>
+<TypeOfGuarantee>01</TypeOfGuarantee>
+<Reference>
+<GRN>07DE0000000003658</GRN>
+</Reference>
+</Guarantee>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<CommodityCodeKN8>84020000</CommodityCodeKN8>
+<GoodsDescription>Kraftfahrzeugteile</GoodsDescription>
+<GrossMass>555000</GrossMass>
+<PreviousDocuments>
+<Type>ATNEU</Type>
+</PreviousDocuments>
+<ContainerNumber>CONT1</ContainerNumber>
+<Packages>
+<Quantity>9</Quantity>
+<MarksAndNumbers>MARKS</MarksAndNumbers>
+<Type>PK</Type>
+</Packages>
+<Guarantee>
+<TypeOfGuarantee>01</TypeOfGuarantee>
+<Reference>
+<GRN>07DE0000000003658</GRN>
+<Amounts>
+<LocalAmount>750000</LocalAmount>
+</Amounts>
+</Reference>
+</Guarantee>
+<WriteOffInfo>
+<WriteOffSumA>
+<WriteOffData>
+<NumberOfPieces>2</NumberOfPieces>
+<RegNumber>ATB150021660820105866</RegNumber>
+<ItemNumber>1</ItemNumber>
+</WriteOffData>
+</WriteOffSumA>
+</WriteOffInfo>
+</GoodsItem>
+</NCTSDeclaration>
+</NCTS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

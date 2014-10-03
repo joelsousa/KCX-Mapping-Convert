@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header><Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true"><SentAt><Date><Year>2010</Year><Month>12</Month><Day>16</Day></Date><Time>09:20:00</Time></SentAt><Transmitter>DE.UNSY.TST</Transmitter><Receiver>DE.UNSY.TST</Receiver><Method>ESU</Method>
+<MessageTP><CountryCode>DE</CountryCode><Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationAcknowledgment</MessageName><Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange><Codemapping><Map>0</Map><MapFrom>DE</MapFrom><MapTo>DE</MapTo></Codemapping>
+</CustomsExchange>
+<MessageID>6070100566077286604593</MessageID></Header></soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclarationAcknowledgment>
+<GoodsDeclaration>
+<ReferenceNumber>TEST-Neu</ReferenceNumber>
+<MRN>DE3456789012345678</MRN>
+<MeansOfTransportBorder><TransportMode>4</TransportMode><TransportationNumber>AC844121210</TransportationNumber><TransportationCountry>DE</TransportationCountry></MeansOfTransportBorder>
+<ShipmentNumber>TEST-6604593</ShipmentNumber>
+<ConveyanceReference>AC844</ConveyanceReference>
+<RegistrationDateAndTime>201012150910</RegistrationDateAndTime>
+<PersonLodgingSumaTIN><TIN>DE123456789012345</TIN></PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address><Name>AGILITY LOGISTICS S.R.O.</Name><Street>UL. 1   PLUKU 8-10</Street><City>CZ-18630  PRAHA 8</City><Country>CZ</Country><CountrySubEntity>18630</CountrySubEntity>
+</Address>
+</PersonLodgingSumaAddress>
+<RepresentativeTIN><TIN>DE222256789012345</TIN></RepresentativeTIN>
+<RepresentativeAddress>
+<Address><Name>AGILITY LOGISTICS S.R.O.</Name><Street>UL. 1   PLUKU 8-10</Street><City>CZ-18630  PRAHA 8</City><Country>CZ</Country><CountrySubEntity>18630</CountrySubEntity>
+</Address>
+</RepresentativeAddress>
+<CarrierTIN><TIN>DE333356789012345</TIN></CarrierTIN>
+<CarrierAddress>
+<Address><Name>AGILITY LOGISTICS S.R.O.</Name><Street>UL. 1   PLUKU 8-10</Street><City>CZ-18630  PRAHA 8</City><Country>CZ</Country><CountrySubEntity>18630</CountrySubEntity>
+</Address>
+</CarrierAddress>
+<CustomsOfficeFirstEntry>DE005876</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201012121115</DeclaredDateOfArrival>
+<Document><Type>N380</Type><Reference>1234</Reference></Document>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<ShipmentNumber>TEST-6604593</ShipmentNumber>
+<Containers>PMC07702AC</Containers>
+<MeansOfTransportBorder><TransportMode>4</TransportMode><TransportationNumber>AC844121210</TransportationNumber><TransportationCountry>DE</TransportationCountry></MeansOfTransportBorder>
+<Document><Type>Y990</Type><Reference>9999</Reference></Document>
+</GoodsItem>
+</GoodsDeclaration></ICSEntrySummaryDeclarationAcknowledgment></soap:Body></soap:Envelope>
+

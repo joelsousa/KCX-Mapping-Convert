@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+      <To>DE01.CSFTEST.2158</To>
+      <From>DE01.CSFTEST.2158</From>
+      <MessageID>DE01DE01215820081001155700070</MessageID>
+      <InReplyTo>DE01DE01215820080930123900010</InReplyTo>
+      <SentAt>2008-10-01 15:57:37 +0200</SentAt>
+      <Act>confirm</Act>
+    </Header>
+  </soap:Header>
+  <soap:Body />
+</soap:Envelope>
+

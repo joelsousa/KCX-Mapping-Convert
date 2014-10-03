@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Job>
+    <DocumentInformation>
+        <DocumentFormat>
+            <FormatIdentifier>JOB</FormatIdentifier>
+            <FormatVersion>V1_0</FormatVersion>
+        </DocumentFormat>
+        <TransmissionDateTime>
+            <TransmissionDate>20111102</TransmissionDate>
+            <TransmissionTime>093534</TransmissionTime>
+            <TransmissionTimeZone>Europe/Berlin</TransmissionTimeZone>
+        </TransmissionDateTime>
+        <BatchNo>0000231011</BatchNo>
+    </DocumentInformation>
+    <UserInformation>
+        <SenderID>TOLLTEST</SenderID>
+        <SenderUserID>TOLL001</SenderUserID>
+    </UserInformation>
+    <JobInformation>
+        <FuncCode>9</FuncCode>
+        <UNID>6247</UNID>
+        <JobStageCode>S</JobStageCode>
+        <OwnerID>TOLLTEST</OwnerID>
+        <OwnerName>TOLLTEST</OwnerName>
+        <OwnerAddr1>TOLLTEST</OwnerAddr1>
+        <OwnerAddr2>addr1</OwnerAddr2>
+        <OwnerAddr3>addr2</OwnerAddr3>
+        <OwnerAddr4>90909</OwnerAddr4>
+        <OwnerCityCode>FRA</OwnerCityCode>
+        <OwnerCtryCode>DE</OwnerCtryCode>
+        <OwnerPostalCode>12345678</OwnerPostalCode>
+        <GshpID>GCEN0000000000000001814</GshpID>
+        <BizType>SE</BizType>
+        <ShpNo>TOLLTEST0003056</ShpNo>
+        <JobNo>JOB_IWA_011</JobNo>
+        <JobDate>20111102</JobDate>
+        <ShpType>H</ShpType>
+        <PORCity>FRA</PORCity>
+        <PORCtry>DE</PORCtry>
+        <PORName>FRANKFURT</PORName>
+        <PORMode>RD</PORMode>
+        <POLCity>MM4</POLCity>
+        <POLCtry>DE</POLCtry>
+        <POLName>MUELLENBACH B MAYEN</POLName>
+        <TSPCity>36Z</TSPCity>
+        <TSPCtry>RU</TSPCtry>
+        <TSPName>ROSTOV VELIKY</TSPName>
+        <POLOnBoardDate>20111115</POLOnBoardDate>
+        <VIACity>23K</VIACity>
+        <VIACtry>DE</VIACtry>
+        <VIAName>KOENIGSWALDE</VIAName>
+        <PODCity>BKK</PODCity>
+        <PODCtry>TH</PODCtry>
+        <PODName>BANGKOK</PODName>
+        <DestCity>6UL</DestCity>
+        <DestCtry>TH</DestCtry>
+        <DestName>PATTANI</DestName>
+        <DevryCity>49E</DevryCity>
+        <DevryCtry>TH</DevryCtry>
+        <DevryName>YALA</DevryName>
+        <DevryETADate>20111118</DevryETADate>
+        <FltDate>20111115</FltDate>
+        <Oagent>CUSTOMERA</Oagent>
+        <PartyID_Cust>CUSTOMERA</PartyID_Cust>
+        <CustEORINo>CUSTOMERA</CustEORINo>
+        <CustName>CUSTOMER A</CustName>
+        <CustAddr1>company address1</CustAddr1>
+        <CustAddr2>company address2</CustAddr2>
+        <CustAddr3>company address3</CustAddr3>
+        <CustAddr4>company address4</CustAddr4>
+        <Cust_PIC>YWANG</Cust_PIC>
+        <Cust_Tel>210345678</Cust_Tel>
+        <Cust_Fax>210345678</Cust_Fax>
+        <CustCityCode>SHA</CustCityCode>
+        <CustCtryCode>CN</CustCtryCode>
+        <CustPostalCode>23241323</CustPostalCode>
+        <CarrierCode>COSU</CarrierCode>
+        <CarrierName>COSCO GROUP</CarrierName>
+        <PartyID_Shpr>CUSTOMERA</PartyID_Shpr>
+        <ShprName>CUSTOMER A</ShprName>
+        <ShprAddr1>company address1</ShprAddr1>
+        <ShprAddr2>company address2</ShprAddr2>
+        <ShprAddr3>company address3</ShprAddr3>
+        <ShprAddr4>company address4</ShprAddr4>
+        <Shpr_PIC>YWANG</Shpr_PIC>
+        <Shpr_Tel>210345678</Shpr_Tel>
+        <Shpr_Fax>210345678</Shpr_Fax>
+        <ShprCityCode>SHA</ShprCityCode>
+        <ShprCtryCode>CN</ShprCtryCode>
+        <ShprPostalCode>23241323</ShprPostalCode>
+        <PartyID_Csgn>THACMEINDU</PartyID_Csgn>
+        <CsgnName>ACME INDUSTRIES CO LTD</CsgnName>
+        <PartyID_CsgnOnWB>THACMEINDU</PartyID_CsgnOnWB>
+        <CsgnNameOnWB>ACME INDUSTRIES CO LTD</CsgnNameOnWB>
+        <CsgnAddr1>ACME GROUP BLDG</CsgnAddr1>
+        <CsgnAddr2>12/399 MOO 15 BANGNA-TRAD KM 5</CsgnAddr2>
+        <CsgnAddr3>BANGKAEW BANGPLEE</CsgnAddr3>
+        <CsgnAddr4>SAMUTPRAKAN</CsgnAddr4>
+        <Csgn_Fax>02186745</Csgn_Fax>
+        <CsgnCityCode>GA6</CsgnCityCode>
+        <CsgnCtryCode>TH</CsgnCtryCode>
+        <CsgnPostalCode>10540</CsgnPostalCode>
+        <CsgnDvryAddr1>ACME INDUSTRIES</CsgnDvryAddr1>
+        <CsgnDvryAddr2>12/399 MOO 15,BANGNA-TRAD</CsgnDvryAddr2>
+        <Csgn2Addr1>ACME GROUP BLDG</Csgn2Addr1>
+        <Csgn2Addr2>12/399 MOO 15 BANGNA-TRAD KM 5</Csgn2Addr2>
+        <Csgn2Addr3>BANGKAEW BANGPLEE</Csgn2Addr3>
+        <Csgn2Addr4>SAMUTPRAKAN</Csgn2Addr4>
+        <Csgn2_Tel>0656430</Csgn2_Tel>
+        <Csgn2_Fax>0656431</Csgn2_Fax>
+        <Csgn2CityCode>GA6</Csgn2CityCode>
+        <Csgn2CtryCode>TH</Csgn2CtryCode>
+        <Csgn2PostalCode>10540</Csgn2PostalCode>
+        <Csgn2Zone>US ZONE</Csgn2Zone>
+        <NtfyName>SAME AS CONSIGNEE</NtfyName>
+        <TOTPCS>65</TOTPCS>
+        <TOTPCS_UT>PCS</TOTPCS_UT>
+        <TOTNWGT>30.570</TOTNWGT>
+        <TOTNWGT_UT>LB</TOTNWGT_UT>
+        <TOTGWGT>50.0000</TOTGWGT>
+        <TOTGWGT_UT>KGS</TOTGWGT_UT>
+        <TOTVOL>50.0000</TOTVOL>
+        <TOTCWGT_UT>CBM</TOTCWGT_UT>
+        <TOTInnerPCS>95.0000</TOTInnerPCS>
+        <TOTInnerPCS_UT>PCS</TOTInnerPCS_UT>
+        <AWBBLDate>20111102</AWBBLDate>
+        <IsAssembly>0</IsAssembly>
+        <IsLCShp>0</IsLCShp>
+        <Handling_Party>CUSTOMERA</Handling_Party>
+        <HandlingName>CUSTOMER A</HandlingName>
+        <HandlingCity>SHA</HandlingCity>
+        <HandlingCtry>CN</HandlingCtry>
+        <Handling_PIC>YWANG</Handling_PIC>
+        <Handling_Tel>210345678</Handling_Tel>
+        <Handling_Fax>210345678</Handling_Fax>
+        <CSInd>C00A</CSInd>
+        <TOTPP>2115.00</TOTPP>
+        <TOTCC>0.00</TOTCC>
+        <TOTCCLC>0.00</TOTCCLC>
+        <CommCode>ARM</CommCode>
+        <Comm>Arms, Ammunication and War Materials</Comm>
+        <CargoValue>150.12</CargoValue>
+        <CargoValue_Curr>USD</CargoValue_Curr>
+        <IsPartShp>0</IsPartShp>
+        <BKCarrier>GMLI</BKCarrier>
+        <BKOnBoardDate>20111115</BKOnBoardDate>
+        <BKVesselFlt>A VESSEL</BKVesselFlt>
+        <Statistic_Party>CUSTOMERA</Statistic_Party>
+        <Triangle>0</Triangle>
+        <IsFOB>0</IsFOB>
+        <ReqBro>0</ReqBro>
+        <IntoWHNo>INWHSE01135</IntoWHNo>
+        <Coload>NA</Coload>
+        <PartyID_Col>CNDLC</PartyID_Col>
+        <ServiceType>DTD</ServiceType>
+        <ServiceLevel>STD</ServiceLevel>
+        <Lane>Asia</Lane>
+        <IncoTerm>FOB</IncoTerm>
+        <ServiceReq>,CUSTOMS,</ServiceReq>
+        <SpecialReq>,DC,</SpecialReq>
+        <RLJ>R</RLJ>
+        <Sales>TOLL001</Sales>
+        <FRTTerm>FREIGHT COLLECT</FRTTerm>
+        <FRTType>C</FRTType>
+        <OTHType>P</OTHType>
+        <PPCurrCode>EUR</PPCurrCode>
+        <CustomsDeclType>EXPORT</CustomsDeclType>
+        <DeclPlace>DE003302</DeclPlace>
+        <FollowConsole>1</FollowConsole>
+        <OPUserID>TOLL001</OPUserID>
+        <JobCreateBy>TOLL001</JobCreateBy>
+        <JobCreateByName>KEILI</JobCreateByName>
+        <JobCreateDate>20111102102956</JobCreateDate>
+        <JobUpdateBy>TOLL001</JobUpdateBy>
+        <JobUpdateByName>KEILI</JobUpdateByName>
+        <JobUpdateDate>20111102103330</JobUpdateDate>
+        <IncoTermLocation>KCX TEST Term</IncoTermLocation>
+        <KnownStatus>UNKNOWN</KnownStatus>
+        <CustomerLocalName>CUSTOMER A</CustomerLocalName>
+        <RevCostRecognition>0</RevCostRecognition>
+        <ShpTradeType>SCM</ShpTradeType>
+        <Mccshipment>0</Mccshipment>
+        <CustCate>B</CustCate>
+        <ShprCate>B</ShprCate>
+        <Csgn2Cate>B</Csgn2Cate>
+        <TypeOfPermit>CPL2NDSTEPOUTCUST</TypeOfPermit>
+        <Sea>
+            <MoveType>CY/CY</MoveType>
+            <WGT_Divide>1000</WGT_Divide>
+            <WGTToVOL>0.050</WGTToVOL>
+            <IsPartOf1>0</IsPartOf1>
+            <IsPartOf2>0</IsPartOf2>
+            <IsPartOf3>0</IsPartOf3>
+            <IsPartOf4>0</IsPartOf4>
+            <OFTCurrCode>USD</OFTCurrCode>
+            <IsMinFrt>0</IsMinFrt>
+            <OFTPrt>AA</OFTPrt>
+            <OtherPrt>AA</OtherPrt>
+            <OFTPrt2>AA</OFTPrt2>
+            <OtherPrt2>AA</OtherPrt2>
+            <LoadTerm>FCL</LoadTerm>
+            <OFTPay>FRANKFURT</OFTPay>
+            <CarrPrtSeaWB>1</CarrPrtSeaWB>
+            <CargoRelease>HOUSE SEAWAYBILL</CargoRelease>
+            <TelexRelease>0</TelexRelease>
+            <StuffType>4</StuffType>
+            <StuffTerm>SHIPPERS LOAD, STOWAGE, COUNT &amp; WEIGHT</StuffTerm>
+            <ConsoleFCLBy>C</ConsoleFCLBy>
+            <SRPaymentTerm>FREIGHT PREPAID</SRPaymentTerm>
+            <SODate>20111105</SODate>
+            <OFTPayCtry>DE</OFTPayCtry>
+            <OFTPayCity>FRA</OFTPayCity>
+        </Sea>
+        <ConsolJob>
+        </ConsolJob>
+        <SOParty>
+            <SOPartyID_Shpr>TOLLTEST</SOPartyID_Shpr>
+            <SOShprName>TOLLTEST</SOShprName>
+            <SOShprAddr1>TOLLTEST</SOShprAddr1>
+            <SOShprAddr2>addr1</SOShprAddr2>
+            <SOShprAddr3>addr2</SOShprAddr3>
+            <SOShprAddr4>90909</SOShprAddr4>
+            <SOPartyID_Csgn>CUSTOMERA</SOPartyID_Csgn>
+            <SOCsgnName>CUSTOMER A</SOCsgnName>
+            <SOCsgnAddr1>company address1</SOCsgnAddr1>
+            <SOCsgnAddr2>company address2</SOCsgnAddr2>
+            <SOCsgnAddr3>company address3</SOCsgnAddr3>
+            <SOCsgnAddr4>company address4</SOCsgnAddr4>
+            <SOCsgn_PIC>YWANG</SOCsgn_PIC>
+            <SOCsgn_Tel>210345678</SOCsgn_Tel>
+            <SOCsgn_Fax>210345678</SOCsgn_Fax>
+            <SONtfyName>SAME AS CONSIGNEE</SONtfyName>
+            <SOMoveType>CY/CY</SOMoveType>
+        </SOParty>
+        <Containers>
+            <Container>
+                <CtnUNID>1950</CtnUNID>
+                <ContNo>AAAA1234567</ContNo>
+                <IntContNo>CEN001066</IntContNo>
+                <ContType>20BU</ContType>
+                <CtnPOLCity>MM4</CtnPOLCity>
+                <CtnPOLCtry>DE</CtnPOLCtry>
+                <CtnPODCity>BKK</CtnPODCity>
+                <CtnPODCtry>TH</CtnPODCtry>
+                <CtnMoveType>CY/CY</CtnMoveType>
+                <Closed>0</Closed>
+                <CtnTOTPCS>20</CtnTOTPCS>
+                <CtnTOTPCS_UT>PCS</CtnTOTPCS_UT>
+                <CtnTOTWGT>20.0000</CtnTOTWGT>
+                <CtnTOTWGT_UT>KGS</CtnTOTWGT_UT>
+                <CtnTOTVOL>20.0000</CtnTOTVOL>
+                <CtnTotGrossWGT>20.00</CtnTotGrossWGT>
+                <CtnIsPartOf>0</CtnIsPartOf>
+                <ContainerStatusList>
+                </ContainerStatusList>
+            </Container>
+            <Container>
+                <CtnUNID>1951</CtnUNID>
+                <ContNo>CCCC1234567</ContNo>
+                <IntContNo>CEN001067</IntContNo>
+                <ContType>20HR</ContType>
+                <CtnPOLCity>MM4</CtnPOLCity>
+                <CtnPOLCtry>DE</CtnPOLCtry>
+                <CtnPODCity>BKK</CtnPODCity>
+                <CtnPODCtry>TH</CtnPODCtry>
+                <CtnMoveType>CY/CY</CtnMoveType>
+                <Closed>0</Closed>
+                <CtnTOTPCS>45</CtnTOTPCS>
+                <CtnTOTPCS_UT>PCS</CtnTOTPCS_UT>
+                <CtnTOTWGT>30.0000</CtnTOTWGT>
+                <CtnTOTWGT_UT>KGS</CtnTOTWGT_UT>
+                <CtnTOTVOL>30.0000</CtnTOTVOL>
+                <CtnTotGrossWGT>30.00</CtnTotGrossWGT>
+                <CtnIsPartOf>0</CtnIsPartOf>
+                <ContainerStatusList>
+                </ContainerStatusList>
+            </Container>
+        </Containers>
+        <CargoItems>
+            <CargoItem>
+                <ItemSNO>1</ItemSNO>
+                <ItemPCS>20</ItemPCS>
+                <ItemPCS_UT>PCS</ItemPCS_UT>
+                <ItemPCS_UT_Description>PIECE(S)</ItemPCS_UT_Description>
+                <ItemWGT>20.0000</ItemWGT>
+                <ItemWGT_UT>KGS</ItemWGT_UT>
+                <ItemWgt_UT_Description>Kilogram</ItemWgt_UT_Description>
+                <ItemVOL>20.0000</ItemVOL>
+                <ItemVOL_UT>CBM</ItemVOL_UT>
+                <ItemVOL_UT_Description>CBM</ItemVOL_UT_Description>
+                <Marks>Marks:The item is from DEFRA </Marks>
+                <Description>Description: The item full with the pear.(82055980)</Description>
+                <HSCode>82055980</HSCode>
+                <PO_ItemNo>11</PO_ItemNo>
+                <CtryOfOrigin>DE</CtryOfOrigin>
+                <CtryOfDest>DE</CtryOfDest>
+                <FOBCIF>20.00</FOBCIF>
+                <FOBCIF_Curr>USD</FOBCIF_Curr>
+                <ItemInnerPCS>10.0000</ItemInnerPCS>
+                <ItemInnerPCS_UT>PCS</ItemInnerPCS_UT>
+                <ItemInnerPCS_UT_Description>PIECE(S)</ItemInnerPCS_UT_Description>
+                <ItemNetWGT>10.230</ItemNetWGT>
+                <ItemNetWGT_UT>LB</ItemNetWGT_UT>
+                <FOBCIF_ExRate>5.0000000</FOBCIF_ExRate>
+                <FOBCIFLC>100.00</FOBCIFLC>
+                <CSIPCS>20</CSIPCS>
+                <CSIPCS_UT>PCS</CSIPCS_UT>
+                <CSIWGT>20.000</CSIWGT>
+                <CSIWGT_UT>KGS</CSIWGT_UT>
+                <CSIVOL>20.000</CSIVOL>
+                <CSIVOL_UT>CBM</CSIVOL_UT>
+                <ItemHazardCode>0012</ItemHazardCode>
+                <ItemHazardClass>1.4</ItemHazardClass>
+                <ItemHazardDesc>CARTRIDGES FOR WEAPONS, INERT PROJECTILE</ItemHazardDesc>
+                <ItemHazardCodeQualifier>U</ItemHazardCodeQualifier>
+                <ItemDGPackingGroup>-</ItemDGPackingGroup>
+                <CtnItems>
+                    <CtnItem>
+                        <ItemIntContNo>CEN001066</ItemIntContNo>
+                        <CtnItemTOTPCS>20</CtnItemTOTPCS>
+                        <CtnItemTOTPCS_UT>PCS</CtnItemTOTPCS_UT>
+                        <CtnItemTOTWGT>20.0000</CtnItemTOTWGT>
+                        <CtnItemTOTWGT_UT>KGS</CtnItemTOTWGT_UT>
+                        <CtnItemTOTVOL>20.0000</CtnItemTOTVOL>
+                        <CtnItemLoadSEQ>1</CtnItemLoadSEQ>
+                        <CtnItemInvNo>Invoice_02</CtnItemInvNo>
+                        <CtnType>20BU</CtnType>
+                        <ItemContNo>AAAA1234567</ItemContNo>
+                        <CtnItemCSIPCS>20</CtnItemCSIPCS>
+                        <CtnItemCSIPCS_UT>PCS</CtnItemCSIPCS_UT>
+                        <CtnItemCSIWGT>20.000</CtnItemCSIWGT>
+                        <CtnItemCSIWGT_UT>KGS</CtnItemCSIWGT_UT>
+                        <CtnItemCSIVOL>20.000</CtnItemCSIVOL>
+                        <CtnItemCSIVOL_UT>CBM</CtnItemCSIVOL_UT>
+                    </CtnItem>
+                </CtnItems>
+            </CargoItem>
+            <CargoItem>
+                <ItemSNO>2</ItemSNO>
+                <ItemPCS>45</ItemPCS>
+                <ItemPCS_UT>PCS</ItemPCS_UT>
+                <ItemPCS_UT_Description>PIECE(S)</ItemPCS_UT_Description>
+                <ItemWGT>30.0000</ItemWGT>
+                <ItemWGT_UT>KGS</ItemWGT_UT>
+                <ItemWgt_UT_Description>Kilogram</ItemWgt_UT_Description>
+                <ItemVOL>30.0000</ItemVOL>
+                <ItemVOL_UT>CBM</ItemVOL_UT>
+                <ItemVOL_UT_Description>CBM</ItemVOL_UT_Description>
+                <Marks>maks of 90262080</Marks>
+                <Description>items of tarrif no  90262080</Description>
+                <HSCode>90262080</HSCode>
+                <PO_ItemNo>11</PO_ItemNo>
+                <CtryOfOrigin>DE</CtryOfOrigin>
+                <CtryOfDest>DE</CtryOfDest>
+                <FOBCIF>30.00</FOBCIF>
+                <FOBCIF_Curr>USD</FOBCIF_Curr>
+                <ItemInnerPCS>20.0000</ItemInnerPCS>
+                <ItemInnerPCS_UT>PCS</ItemInnerPCS_UT>
+                <ItemInnerPCS_UT_Description>PIECE(S)</ItemInnerPCS_UT_Description>
+                <ItemNetWGT>20.340</ItemNetWGT>
+                <ItemNetWGT_UT>LB</ItemNetWGT_UT>
+                <FOBCIF_ExRate>5.0000000</FOBCIF_ExRate>
+                <FOBCIFLC>150.00</FOBCIFLC>
+                <CSIPCS>45</CSIPCS>
+                <CSIPCS_UT>PCS</CSIPCS_UT>
+                <CSIWGT>30.000</CSIWGT>
+                <CSIWGT_UT>KGS</CSIWGT_UT>
+                <CSIVOL>30.000</CSIVOL>
+                <CSIVOL_UT>CBM</CSIVOL_UT>
+                <ItemHazardCode>0012</ItemHazardCode>
+                <ItemHazardClass>1.4</ItemHazardClass>
+                <ItemHazardDesc>CARTRIDGES FOR WEAPONS, INERT PROJECTILE</ItemHazardDesc>
+                <ItemHazardCodeQualifier>U</ItemHazardCodeQualifier>
+                <ItemDGPackingGroup>-</ItemDGPackingGroup>
+                <CtnItems>
+                    <CtnItem>
+                        <ItemIntContNo>CEN001067</ItemIntContNo>
+                        <CtnItemTOTPCS>45</CtnItemTOTPCS>
+                        <CtnItemTOTPCS_UT>PCS</CtnItemTOTPCS_UT>
+                        <CtnItemTOTWGT>30.0000</CtnItemTOTWGT>
+                        <CtnItemTOTWGT_UT>KGS</CtnItemTOTWGT_UT>
+                        <CtnItemTOTVOL>30.0000</CtnItemTOTVOL>
+                        <CtnItemLoadSEQ>1</CtnItemLoadSEQ>
+                        <CtnItemInvNo>Invoice_02</CtnItemInvNo>
+                        <CtnType>20HR</CtnType>
+                        <ItemContNo>CCCC1234567</ItemContNo>
+                        <CtnItemCSIPCS>45</CtnItemCSIPCS>
+                        <CtnItemCSIPCS_UT>PCS</CtnItemCSIPCS_UT>
+                        <CtnItemCSIWGT>30.000</CtnItemCSIWGT>
+                        <CtnItemCSIWGT_UT>KGS</CtnItemCSIWGT_UT>
+                        <CtnItemCSIVOL>30.000</CtnItemCSIVOL>
+                        <CtnItemCSIVOL_UT>CBM</CtnItemCSIVOL_UT>
+                    </CtnItem>
+                </CtnItems>
+            </CargoItem>
+        </CargoItems>
+        <RefNos>
+            <RefNo>
+                <RefNoSNO>1</RefNoSNO>
+                <RefCode>INV</RefCode>
+                <RefNumber>Invoice_01</RefNumber>
+                <RefNoRemark>ITEM:1;</RefNoRemark>
+                <RefNoIssueDate>20111024</RefNoIssueDate>
+                <RefNoExpiryDate>20111024</RefNoExpiryDate>
+            </RefNo>
+            <RefNo>
+                <RefNoSNO>2</RefNoSNO>
+                <RefCode>INV</RefCode>
+                <RefNumber>Invoice_02</RefNumber>
+                <RefNoRemark>ITEM:2;</RefNoRemark>
+                <RefNoIssueDate>20111024</RefNoIssueDate>
+                <RefNoExpiryDate>20111024</RefNoExpiryDate>
+            </RefNo>
+            <RefNo>
+                <RefNoSNO>3</RefNoSNO>
+                <RefCode>PMT</RefCode>
+                <RefNumber>11DE586600289044E2</RefNumber>
+                <RefNoIssueDate>20111026</RefNoIssueDate>
+            </RefNo>
+        </RefNos>
+        <ServiceReqs>
+            <ServiceReq>
+                <SrvReqRefno>0000000215</SrvReqRefno>
+                <SrvReqPartyidSubc>PLEROM01</SrvReqPartyidSubc>
+                <SrvReqSubcName>Pleroma Transport Limited</SrvReqSubcName>
+                <SrvReqTruckNo>test A</SrvReqTruckNo>
+                <SrvReqActDate>20111024</SrvReqActDate>
+                <SrvReqActTime>1212</SrvReqActTime>
+                <SrvReqTotPcs>50</SrvReqTotPcs>
+                <SrvReqTotPcsUT>PCS</SrvReqTotPcsUT>
+                <SrvReqTotWgt>50.0000</SrvReqTotWgt>
+                <SrvReqTotWgtUT>KGS</SrvReqTotWgtUT>
+                <SrvReqTotVol>50.0000</SrvReqTotVol>
+                <SrvReqCarrierName>COSCO GROUP</SrvReqCarrierName>
+                <SrvReqPartyidShpr>CUSTOMERA</SrvReqPartyidShpr>
+                <SrvReqShprName>CUSTOMER A</SrvReqShprName>
+                <SrvReqCompleteDate>20111024</SrvReqCompleteDate>
+                <SrvReqCompleteTime>2323</SrvReqCompleteTime>
+                <SrvReqPartyIdFrom>DEFRA</SrvReqPartyIdFrom>
+                <SrvReqFromEORINo>9000267</SrvReqFromEORINo>
+                <SrvReqFromName>DEFRA</SrvReqFromName>
+                <SrvReqFromAddr1>Germany</SrvReqFromAddr1>
+                <SrvReqFromAddr4>234</SrvReqFromAddr4>
+                <SrvReqFromTel>0659874</SrvReqFromTel>
+                <SrvReqFromFax>0659873</SrvReqFromFax>
+                <SrvReqFromCtry>DE</SrvReqFromCtry>
+                <SrvReqFromCity>FRA</SrvReqFromCity>
+                <SrvReqFromZone>WESTEUR</SrvReqFromZone>
+                <SrvReqPartyIdTo>THB011 CO1</SrvReqPartyIdTo>
+                <SrvReqToName>THB011 Company</SrvReqToName>
+                <SrvReqToAddr1>1, Free Street</SrvReqToAddr1>
+                <SrvReqToTel>0982345</SrvReqToTel>
+                <SrvReqToFax>0983456</SrvReqToFax>
+                <SrvReqToCtry>CL</SrvReqToCtry>
+                <SrvReqToCity>CAS</SrvReqToCity>
+            </ServiceReq>
+        </ServiceReqs>
+
+
+        <Revenues>
+            <Revenue>
+                <RevSNO>1</RevSNO>
+                <RevActionCode>R</RevActionCode>
+                <RevSortOrder>1</RevSortOrder>
+                <RevChrgCode>101</RevChrgCode>
+                <RevChrgDesc>Destination Documentation Fee</RevChrgDesc>
+                <RevRate>9.000</RevRate>
+                <RevQuantity>200.0000</RevQuantity>
+                <RevQuantityUnit>STD</RevQuantityUnit>
+                <RevCurrCode>EUR</RevCurrCode>
+                <RevExRate>0.0000000</RevExRate>
+                <RevAMTFC>1800.00</RevAMTFC>
+                <RevAMTLC>0.00</RevAMTLC>
+                <RevPPCC>P</RevPPCC>
+                <RevVAT>Y</RevVAT>
+                <RevVATAmtLC>0.00</RevVATAmtLC>
+                <Billing_PartyID>CUSTOMERA</Billing_PartyID>
+                <RevIsMin>0</RevIsMin>
+                <RevIsProgressive>0</RevIsProgressive>
+                <RevIsSupress>0</RevIsSupress>
+                <RevIsOwn>1</RevIsOwn>
+                <RevCSInd>C00A</RevCSInd>
+                <RevDocType>IV</RevDocType>
+                <RevBatchNo>0000231972</RevBatchNo>
+                <RevCreateby>TOLL001</RevCreateby>
+                <RevIsDisbursement>0</RevIsDisbursement>
+                <RevCRI>0</RevCRI>
+            </Revenue>
+            <Revenue>
+                <RevSNO>2</RevSNO>
+                <RevActionCode>R</RevActionCode>
+                <RevSortOrder>2</RevSortOrder>
+                <RevChrgCode>102</RevChrgCode>
+                <RevChrgDesc>Destination Terminal Handling</RevChrgDesc>
+                <RevRate>9.000</RevRate>
+                <RevQuantity>35.0000</RevQuantity>
+                <RevQuantityUnit>KGS</RevQuantityUnit>
+                <RevCurrCode>EUR</RevCurrCode>
+                <RevExRate>0.0000000</RevExRate>
+                <RevAMTFC>315.00</RevAMTFC>
+                <RevAMTLC>0.00</RevAMTLC>
+                <RevPPCC>P</RevPPCC>
+                <RevVAT>Y</RevVAT>
+                <RevVATAmtLC>0.00</RevVATAmtLC>
+                <Billing_PartyID>CUSTOMERA</Billing_PartyID>
+                <RevIsMin>0</RevIsMin>
+                <RevIsProgressive>0</RevIsProgressive>
+                <RevIsSupress>0</RevIsSupress>
+                <RevIsOwn>1</RevIsOwn>
+                <RevCSInd>C00A</RevCSInd>
+                <RevDocType>IV</RevDocType>
+                <RevBatchNo>0000231972</RevBatchNo>
+                <RevCreateby>TOLL001</RevCreateby>
+                <RevIsDisbursement>0</RevIsDisbursement>
+                <RevCRI>0</RevCRI>
+            </Revenue>
+        </Revenues>
+        <Costs>
+            <Cost>
+                <CostSNO>1</CostSNO>
+                <CostSortOrder>1</CostSortOrder>
+                <CostChrgCode>107</CostChrgCode>
+                <CostChrgDesc>Consolidation Fee</CostChrgDesc>
+                <CostRate>8.000</CostRate>
+                <CostQuantity>200.0000</CostQuantity>
+                <CostQuantityUnit>STD</CostQuantityUnit>
+                <CostQuantityDesc>STANDARD</CostQuantityDesc>
+                <CostCurrCode>EUR</CostCurrCode>
+                <CostExRate>0.0000000</CostExRate>
+                <CostAMTFC>1600.00</CostAMTFC>
+                <CostAMTLC>0.00</CostAMTLC>
+                <CostPPCC>P</CostPPCC>
+                <CostVAT>Y</CostVAT>
+                <Payee_PartyID>COSU</Payee_PartyID>
+                <CostIsMin>0</CostIsMin>
+                <CostIsProgressive>0</CostIsProgressive>
+                <CostIsOwn>1</CostIsOwn>
+                <CostCSInd>C01C</CostCSInd>
+                <CostARAP>AP</CostARAP>
+                <CostDocType>CP</CostDocType>
+                <CostBatchNo>0000231972</CostBatchNo>
+                <CostCreateBy>TOLL001</CostCreateBy>
+                <CostIsDisbursement>0</CostIsDisbursement>
+                <CostCRI>0</CostCRI>
+            </Cost>
+        </Costs>
+        <JobFlexiInformation>
+            <JobFlexi>
+                <FlexiType>AIREXCEPTION</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>ANTFYOVERFLOWADDR</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>CSGNOVERFLOWADDR</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>JOBINDICATOR</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>JOBRELATED</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>NACCSPARTY</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>NTFYOVERFLOWADDR</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>REMARKSTATUS</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>SERVICEREQ</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>SHPROVERFLOWADDR</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>SPECIALREQ</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>STUFFTYPE</FlexiType>
+            </JobFlexi>
+            <JobFlexi>
+                <FlexiType>USERDEFINED</FlexiType>
+                <FlexiFld1>123</FlexiFld1>
+                <FlexiFld2>TEU</FlexiFld2>
+                <FlexiFld3>TEU</FlexiFld3>
+                <FlexiFld5>KEIL</FlexiFld5>
+                <FlexiFld9>C</FlexiFld9>
+            </JobFlexi>
+        </JobFlexiInformation>
+    </JobInformation>
+</Job>

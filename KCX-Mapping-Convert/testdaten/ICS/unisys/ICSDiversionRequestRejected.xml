@@ -1,0 +1,46 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>12</Month>
+                    <Day>09</Day>
+                </Date>
+                <Time>140657</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.UNSY.TST</Transmitter>
+            <Receiver>DE.UNSY.TST</Receiver>
+            <Method>DIV</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSDiversionRequestRejected</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-CSF006701091210</MessageID>
+            <InReplyTo>10122145000887</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSDiversionRequestRejected>
+            <ReferenceNumber>HS-UMLTEST-2010120901</ReferenceNumber>
+            <DeclarationRejectionDateAndTime>201012091406</DeclarationRejectionDateAndTime>
+            <DeclarationRejectionReason>Nachricht IC585 wurde mit 3 Meldungen abgelehnt</DeclarationRejectionReason>
+            <FunctionalError>
+                <ErrorPointer>line='14' column='19' - The content of element 'Hea' is not complete. One of '{"http://brz.gv.at/ezoll/V01":DecDT}' is expected.</ErrorPointer>
+            </FunctionalError>
+            <FunctionalError>
+                <ErrorPointer>line='19' column='21' - Invalid content was found starting with element 'RepTra'. One of '{"http://brz.gv.at/ezoll/V01":ReqTra}' is expected.</ErrorPointer>
+            </FunctionalError>
+            <FunctionalError>
+                <ErrorPointer>line='22' column='25' - The content of element 'Represent' is not complete. One of '{"http://brz.gv.at/ezoll/V01":RIN}' is expected.</ErrorPointer>
+            </FunctionalError>
+        </ICSDiversionRequestRejected>
+    </soap:Body>
+</soap:Envelope>

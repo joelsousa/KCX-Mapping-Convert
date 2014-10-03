@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:complexType name="DECLN">
+		<xs:sequence>
+			<xs:element name="DECLN_OID_NBR" type="xs:int" minOccurs="0"/>
+			<xs:element name="DECLN_STATUS_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_IN_OUT" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_SUBTYPE_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_BATCH_NBR" type="xs:int" minOccurs="0"/>
+			<xs:element name="DECLN_UCR" type="xs:string" minOccurs="0"/>
+			<xs:element name="ENTRY_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLT_REP" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_TYP_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECL_TYPE_DSCR" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_GOODS_TYPE" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_ROUTE_DT" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_ROUTE_ARR_TMSTP" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_ROUTE_ORIG_CNTRY_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="ROUTE_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="LOCATION_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="COUNTRY_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="LOC_SEQ_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="UCR" type="xs:string" minOccurs="0"/>
+			<xs:element name="SYSTEM_MESSAGE_REFERENCE_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="ENTRY_TMSTP" type="xs:string" minOccurs="0"/>
+			<xs:element name="CARRIER_NM" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_PART_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_CUR_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_EXCH" type="xs:string" minOccurs="0"/>
+			<xs:element name="ENTRY_EPS_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="ENTRY_EPU_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="APP_REF" type="xs:string" minOccurs="0"/>
+			<xs:element name="ENTRY_VER_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="TEST_IND" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_COUNT" type="xs:string" minOccurs="0"/>
+			<xs:element name="RESPONSE_TMSTP" type="xs:string" minOccurs="0"/>
+			<xs:element name="RESPONSE_CD" type="xs:string" minOccurs="0"/>
+			<xs:element name="RESPONSE_DATE" type="xs:string" minOccurs="0"/>
+			<xs:element name="RESPONSE_CONTENT_DESC" type="xs:string" minOccurs="0"/>
+			<xs:element name="ACPTNC_TMSTP" type="xs:string" minOccurs="0"/>
+			<xs:element name="ACPTNC_EPS_ID" type="xs:string" minOccurs="0"/>
+			<xs:element name="ACPTNC_EPU_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="ATRPT_COST" type="xs:string" minOccurs="0"/>
+			<xs:element name="EDI_FILE_REF" type="xs:string" minOccurs="0"/>
+			<xs:element name="DECLN_CITY_NM" type="xs:string" minOccurs="0"/>
+			<xs:element name="CONTINGENCY_DEC_DT" type="xs:string" minOccurs="0"/>
+			<xs:element name="EMP_NM" type="xs:string" minOccurs="0"/>
+			<xs:element name="EMP_ID" type="xs:int" minOccurs="0"/>
+			<xs:element name="LAST_MODFY_NM" type="xs:string" minOccurs="0"/>
+			<xs:element name="TRIG_BY" type="xs:string" minOccurs="0"/>
+			<xs:element name="STATS_REASON_DESC" type="xs:string" minOccurs="0"/>
+			<xs:element name="CURRENT_TMSTP" type="xs:string" minOccurs="0"/>
+			<xs:element name="FRONTIER_CUSDEC_DECLN_OID_NBR" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Decln_Sec_Input" type="DECLN"/>
+</xs:schema>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <KCX>
+  <Primary>DE</Primary>
+  <Secondary>NCTS</Secondary>
+  <Audit_Id>No Mule Call</Audit_Id>
+  <Content>
+  <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2011</Year>
+  <Month>11</Month>
+  <Day>3</Day>
+  </Date>
+  <Time>111242</Time>
+  <TimeZone>+0100</TimeZone>
+  </SentAt>
+  <Transmitter>DE.TOLL.TST</Transmitter>
+  <Receiver>DE.TOLL.TST</Receiver>
+  <Method>NCTS</Method>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>NCTS</Procedure>
+  <MessageName>NCTSDeclaration</MessageName>
+  <Release>4.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>KCX_CODE</MapFrom>
+  <MapTo>DE</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>cktest-codes-1</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <NCTSDeclaration>
+  <GoodsDeclaration>
+  <ReferenceNumber>cktest-codes-1</ReferenceNumber>
+  <ShipmentNumber>TOLLTEST0003059</ShipmentNumber>
+  <TypeOfDeclaration>T1</TypeOfDeclaration>
+  <PlaceOfLoading>
+  <Code>AB01</Code>
+  </PlaceOfLoading>
+  <DestinationCountry>NL</DestinationCountry>
+  <DispatchCountry>DE</DispatchCountry>
+  <MeansOfTransportInland>
+  <TransportMode>3</TransportMode>
+  </MeansOfTransportInland>
+  <MeansOfTransportBorder>
+  <TransportMode>3</TransportMode>
+  <TransportationType>10</TransportationType>
+  </MeansOfTransportBorder>
+  <MeansOfTransportDeparture>
+  <TransportationType>33</TransportationType>
+  <TransportationNumber>test A</TransportationNumber>
+  </MeansOfTransportDeparture>
+  <TransportInContainer>1</TransportInContainer>
+  <TotalNumberPositions>2</TotalNumberPositions>
+  <ConsignorTIN>
+  <IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+  </ConsignorTIN>
+  <Consignor>
+  <Address>
+  <Name>CUSTOMER A</Name>
+  <Street>company address1 company</Street>
+  <HouseNumber>no123</HouseNumber>
+  <City>HEUSDEN (GEM ASTEN)</City>
+  <PostalCode>23241323</PostalCode>
+  <Country>NL</Country>
+  </Address>
+  </Consignor>
+  <ConsigneeTIN>
+  <IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+  </ConsigneeTIN>
+  <Consignee>
+  <Address>
+  <Name>ACME INDUSTRIES CO LTD</Name>
+  <Street>ACME GROUP BLDG str str</Street>
+  <HouseNumber>house</HouseNumber>
+  <City>BRUNN (B NEUSTADT / DOOSE)</City>
+  <PostalCode>10540</PostalCode>
+  <Country>DE</Country>
+  </Address>
+  </Consignee>
+  <Clerk>
+  <Identity>KEILI</Identity>
+  </Clerk>
+  <CarrierTIN>
+  <TIN>DE9008810</TIN>
+  <IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+  </CarrierTIN>
+  <GoodsItem>
+  <ItemNumber>1</ItemNumber>
+  <CommodityCode>
+  <TarifCode>82070000</TarifCode>
+  </CommodityCode>
+  <Description>Description: The item full with the pear.(82055980)</Description>
+  <DestinationCountry>NL</DestinationCountry>
+  <NetMass>10.230</NetMass>
+  <GrossMass>20.444</GrossMass>
+  <Document>
+  <Reference>Invoice_01</Reference>
+  </Document>
+  <Package>
+  <Quantity>10</Quantity>
+  <Type>PK</Type>
+  <Marks>Marks:The item is from DEFRA</Marks>
+  </Package>
+  </GoodsItem>
+  <GoodsItem>
+  <ItemNumber>2</ItemNumber>
+  <CommodityCode>
+  <TarifCode>8207130000</TarifCode>
+  </CommodityCode>
+  <Description>items of tarrif no  90262080</Description>
+  <DestinationCountry>NL</DestinationCountry>
+  <NetMass>20.340</NetMass>
+  <GrossMass>30.556</GrossMass>
+  <Document>
+  <Reference>Invoice_02</Reference>
+  </Document>
+  <Package>
+  <Quantity>20</Quantity>
+  <Type>PK</Type>
+  <Marks>maks of 90262080</Marks>
+  </Package>
+  </GoodsItem>
+  </GoodsDeclaration>
+  </NCTSDeclaration>
+  </soap:Body>
+  </soap:Envelope>]]>
+  </Content>
+  </KCX>

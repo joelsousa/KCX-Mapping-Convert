@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Header>
+      <Header>
+      	<SentAt>
+      		<Date>
+      			<Year>2010</Year>
+      			<Month>8</Month>
+      			<Day>11</Day>
+      		</Date>
+      		<Time>130920</Time>
+      		<TimeZone>+0200</TimeZone>
+      	</SentAt>
+      	<Transmitter>UK.HJH.TST</Transmitter>
+      	<Receiver>UK.HJH.TST</Receiver>
+      	<Method>Export</Method>
+      	<MessageTP>
+      		<CountryCode>NL</CountryCode>
+      		<Procedure>Export</Procedure>
+      		<ProcedureSpecification>3</ProcedureSpecification>
+      		<MessageName>Completion</MessageName>
+      		<Release>1.0.00</Release>
+      		<Direction>TO_CUSTOMS</Direction>
+      	</MessageTP>
+      	 <CustomsExchange>
+	        <Codemapping>
+	          <Map>1</Map>
+	          <MapFrom>KCX_CODE</MapFrom>
+	          <MapTo>NL</MapTo>
+	        </Codemapping>
+	      </CustomsExchange>
+      	<MessageID>HJH-EE1CLNT040-1100101449-HPA</MessageID>
+</Header>
+   </soap:Header>
+   <soap:Body>
+<Completion>
+	<GoodsDeclaration>
+		<CompletionTime>201006021200</CompletionTime>
+		<ShipmentNumber>1100101449</ShipmentNumber>
+		<ReferenceNumber>refnrABC_chk_gibtsNICHT</ReferenceNumber>
+		<OrderNumber>1100101449</OrderNumber>
+		<LoadingTime>
+			<BeginTime>201006021200</BeginTime>
+			<EndTime>201006021200</EndTime>
+		</LoadingTime>
+		<GoodsItem>
+			<ItemNumber>1</ItemNumber>
+			<Containers>
+				<Number>AAAA1111111</Number>
+			</Containers>
+		</GoodsItem>
+	</GoodsDeclaration>
+</Completion>
+
+ </soap:Body>
+</soap:Envelope>

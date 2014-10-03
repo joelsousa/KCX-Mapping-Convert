@@ -1,0 +1,31 @@
+jar neu ausliefern und Neustart BOBs
+
+
+auf Test
+
+172.16.8.194  kcx/kcx
+
+cd install
+cp -p KCX-Mappings.jar KCX-Mappings.jar.<datum>
+
+mit winscp KCX-Mappings.jar ins Verz install kopieren
+
+
+
+stoppen aller bobs von Rechner kcx-meg-test aus 172.16.8.195 root/siemens
+
+cd /home2/jmx_shutdown
+
+./shutdown_bobs.sh
+
+
+abwarten...
+
+
+auf kcx-test
+
+skript deploy aufrufen zum Verteilen der Jars zu allen BOBs
+alle BOBs starten mit 
+
+
+procdir/start_bobs

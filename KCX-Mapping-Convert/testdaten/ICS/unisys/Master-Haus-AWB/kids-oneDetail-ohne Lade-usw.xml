@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>04</Month>
+<Day>14</Day>
+</Date>
+<Time>22:00:00</Time>
+</SentAt>
+<Transmitter>AC.AIRCFRA.1507</Transmitter>
+<Receiver>DE.UNSY.TST</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>5604503750047409332295</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>560450375004740933-IWA</ReferenceNumber>
+<ShipmentNumber>01465043322</ShipmentNumber>
+<TotalNumberPositions>1</TotalNumberPositions>
+<TotalNumberPackages>1</TotalNumberPackages>
+<TotalGrossMass>891.8</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+</MeansOfTransportBorder>
+<ConveyanceReference>AC872</ConveyanceReference>
+<LoadingPlace>CAYYZ</LoadingPlace>
+<UnloadingPlace>DEFRA</UnloadingPlace>
+<DeclarationTime>201104142200</DeclarationTime>
+<DeclarationPlace>FRA</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>GENERAL ELECTRIC CO</Name>
+<Street>534 GRIFFIN RD</Street>
+<City>BANGOR</City>
+<PostalCode>04401</PostalCode>
+<Country>US</Country>
+<CountrySubEntity>ME</CountrySubEntity>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>PAMA BRESCIA</Name>
+<Street>VIA RENOLDA 23</Street>
+<City>ADRO</City>
+<PostalCode>25030</PostalCode>
+<Country>IT</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>DE9008691</TIN>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>AIR CANADA</Name>
+<Street>PO BOX 14000</Street>
+<City>MONTREAL</City>
+<PostalCode>H4Y 1H4</PostalCode>
+<Country>CA</Country>
+<CountrySubEntity>QC</CountrySubEntity>
+</Address>
+</PersonLodgingSumaAddress>
+<PersonLodgingSumaContact>
+<Clerk>AIR CANADA</Clerk>
+<PhoneNumber>(514) 422 5000</PhoneNumber>
+</PersonLodgingSumaContact>
+<CustomsOfficeFirstEntry>DE005876</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201104150700</DeclaredDateOfArrival>
+<CountryOfRouting>US</CountryOfRouting>
+<CountryOfRouting>CA</CountryOfRouting>
+<CountryOfRouting>DE</CountryOfRouting>
+<CountryOfRouting>IT</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>PARTS OF MECHANICAL TRANSFER PRESSES EXC</Description>
+<GrossMass>891.8</GrossMass>
+<Containers>PMC08418AC</Containers>
+<Containers>PMC08659AC</Containers>
+<Packages>
+<Type>NE</Type>
+<Number>1</Number>
+</Packages>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+</MeansOfTransportBorder>
+<Document>
+<Type>N703</Type>
+<Reference>3913262133</Reference>
+</Document>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclaration>
+</soap:Body>
+</soap:Envelope>

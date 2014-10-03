@@ -1,0 +1,50 @@
+Freitag, 05.09.2008
+CK
+
+von den 4 Starterklassen sind FssToKids, KidsToUIds und UidsToKids fertig
+fehlt noch KidsToFss
+
+Die Package-Struktur im Eclipse-Projekt wurde geändert
+
+Die ersten Mappings für folgende Richtung sind fertig
+fssToKids: MapAMRToExpCon	konvertiert AMR nach Confirmation
+	   MaMapSTIToExpNck	konvertiert STI nach InternalStatus
+KidsToUids: MapExpConKU		konvertiert die Confirmation von KIDS nach UIDS
+
+UidsToKids:	MapExpConUK	konvertiert die Confirmation von KIDS nach UIDS
+
+SuperkLassen für KidsMessage und UidsMessage
+Enums für XML-Tags in beiden Headern
+
+mehrere Klassen die den Nachrichteninhalt gültig für Uids und Kids beschreiben unabhängig 
+von XML-Struktur und XML-Methoden z.B. MsgExpCon beschreibt die Confirmation
+
+sog. Body-Klassen, die den Nachrichtenbody einer Uids oder (!) KIDS-Klasse herausschreiben 
+und den Inhalt aus einer Nachrichtenklasse holen z.B. BodyExportConfirmationKids
+
+4 Zabis-Nachrichten  sind ins Eclipse-Projekt eingebunden
+(MsgADP, MsgAMR, MsgASP, MsgAZP) sowie alle zugehörige Teilsätze
+
+Die bisherigen Tests sind NUR lokal gemacht worden.
+
+Ein Packen zu einem Jar-File und Ausliefern auf den sog. BOB-DE und BOB-ACME steht noch aus.
+Getestet werden kann auf den BOBs erst wenn Richard unsere Transformer in die 
+Mule-XML-Config-files eingetragen hat
+(oder ich mit seiner Unterstützung)
+
+
+Hier muss noch geklärt werden (mit Richard) ob auf dem BOB-ACME die Konvertierung nach/von 
+UIDS laufen soll oder ob wir stattdessen einen BOB-PL aufsetzen.
+
+Wichtig: es ist notwendig bei der Verwendung des von MS ausgewählten XML-Parsers eine 
+sogenannte Scanner-Klasse zu schreiben, die auf uns zugeschnitten Methoden anbietet zum 
+Auslesen der XML-Daten.
+Dieser Scanner wird von TR und CK nächste Woche geschrieben.
+Er soll eingesetzt werden in allen Mappings außer FssToKids. Die derzeitigen Methoden 
+werden dann ersetzt.
+Sinn des Ganzen: einheitliche Programmierung, Mehrfachverwendung von Methoden, 
+einfacheres Programmieren wenn der Scanner fertig ist.
+
+
+
+	

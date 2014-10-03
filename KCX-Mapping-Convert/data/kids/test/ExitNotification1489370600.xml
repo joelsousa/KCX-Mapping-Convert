@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>11</Month>
+<Day>18</Day>
+</Date>
+<Time>11:34:08</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA           </Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>CS</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>ExitNotification</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>2001489370600</MessageID>
+<InReplyTo>20014892008111800011407</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<ExitNotification>
+<GoodsDeclaration>
+<UCRNumber>08DE588002806434E8</UCRNumber>
+<FinalCode>1</FinalCode>
+<ExitOrForwardingTime>200811152230</ExitOrForwardingTime>
+<CancellationInfo>
+<KindOfCancellation>AV</KindOfCancellation>
+</CancellationInfo>
+<UCROtherSystem>95782311051</UCROtherSystem>
+<ReferenceNumber>080061427-3</ReferenceNumber>
+<RealOfficeOfExit>DE003302</RealOfficeOfExit>
+</GoodsDeclaration>
+</ExitNotification>
+</soap:Body>

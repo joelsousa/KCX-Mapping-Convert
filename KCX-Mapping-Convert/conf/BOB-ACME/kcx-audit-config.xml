@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1" xmlns:cxf="http://www.mulesource.org/schema/mule/cxf/2.1" 
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:file="http://www.mulesource.org/schema/mule/file/2.1" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+               http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+			   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+               http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd
+               http://www.mulesource.org/schema/mule/file/2.1 http://www.mulesource.org/schema/mule/file/2.1/mule-file.xsd">
+
+	<model name="auditModel">
+		<service name="createAuditServiceClient">
+		  <inbound>	
+		    <vm:inbound-endpoint path="audit.create.queue"/>
+		  </inbound>
+		  <component class="com.kewill.kcx.component.audit.AuditCreateComponent"/>
+		  <outbound>
+		  	<custom-outbound-router class="com.kewill.kcx.routing.outbound.JmsRecipientList">
+		  		<spring:property name="synchronousResolvedEndpoints" value="false"/>
+		  		<spring:property name="resolveEndpoints">
+		  			<spring:list>
+		  				<spring:value>AUDIT.QUEUE</spring:value>
+		  			</spring:list>
+		  		</spring:property>
+		  	</custom-outbound-router>
+		  </outbound>
+		</service>
+
+		<service name="auditEventServiceClient">
+		  <inbound>	
+		    <vm:inbound-endpoint path="audit.event.queue"/>
+		  </inbound>
+		  <component class="com.kewill.kcx.component.audit.AuditEventComponent"/>
+		  <outbound>
+		  	<custom-outbound-router class="com.kewill.kcx.routing.outbound.JmsRecipientList">
+		  		<spring:property name="synchronousResolvedEndpoints" value="false"/>
+		  		<spring:property name="resolveEndpoints">
+		  			<spring:list>
+		  				<spring:value>AUDIT.QUEUE</spring:value>
+		  			</spring:list>
+		  		</spring:property>
+		  	</custom-outbound-router>
+		  </outbound>
+		</service>
+	</model>
+</mule>

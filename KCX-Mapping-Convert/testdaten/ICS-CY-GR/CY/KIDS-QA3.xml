@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3c.org/2003/05/soap-envelope">
+        <soap:Header>
+<Header xmlns="http:///www.eBiz.com/schemas/header/200310/">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>6</Month>
+<Day>21</Day>
+</Date>
+<Time>17:06:34</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE.CSF</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>CY</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>KA-20110706-03</MessageID>
+</Header>
+</soap:Header>
+        <soap:Body>
+<ICSEntrySummaryDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>KA-20110706-03</ReferenceNumber>
+<ShipmentNumber>17619969250</ShipmentNumber>
+<TotalNumberPositions>2</TotalNumberPositions>
+<TotalNumberPackages>19</TotalNumberPackages>
+<TotalGrossMass>150</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>OO-THB</TransportationNumber>
+<TransportationCountry>BE</TransportationCountry>
+</MeansOfTransportBorder>
+<ConveyanceReference>EK9957</ConveyanceReference>
+<LoadingPlace>AE Dubai Intl</LoadingPlace>
+<UnloadingPlace>ES Zaragoza Ab</UnloadingPlace>
+<PaymentType>A</PaymentType>
+<DeclarationTime>201106141651</DeclarationTime>
+<DeclarationPlace>Zaragoza Ab</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>AGILITY LIMITED</Name>
+<Street>HAKAM FOUNDATION 5TH FLOOR</Street>
+<City>DHAKA</City>
+<PostalCode>1213</PostalCode>
+<Country>BD</Country>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>AGILITY SPAIN S.A.</Name>
+<Street>CALLE JOAQUIN BAU NO 2 BAJO</Street>
+<HouseNumber>999</HouseNumber>
+<City>ZARAGOZA</City>
+<PostalCode>28036</PostalCode>
+<Country>ES</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>DE9008144</TIN>
+<IdentificationType>2</IdentificationType>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>Address</Name>
+<Street>Street</Street>
+<City>City</City>
+<PostalCode>Postcode</PostalCode>
+<Country>DE</Country>
+</Address>
+</PersonLodgingSumaAddress>
+<PersonLodgingSumaContact>
+<Clerk>Max Mustermann</Clerk>
+<Identity>Emirates - Frankfurt</Identity>
+<Email>test@kewill.de</Email>
+<FaxNumber>0815</FaxNumber>
+<PhoneNumber>4711</PhoneNumber>
+</PersonLodgingSumaContact>
+<CustomsOfficeFirstEntry>ES005001</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201105281440</DeclaredDateOfArrival>
+<SealsID>
+</SealsID>
+<CountryOfRouting>AE</CountryOfRouting>
+<CountryOfRouting>ES</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>LADIES GARMENTS.  LADIES CAPRI.</Description>
+<GrossMass>198</GrossMass>
+<Packages>
+<Type>PK</Type>
+<Marks>DAC0052821</Marks>
+<Number>10</Number>
+</Packages>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>OO-THB</TransportationNumber>
+<TransportationCountry>BE</TransportationCountry>
+</MeansOfTransportBorder>
+<Document>
+<Type>N703</Type>
+<Reference>DAC0052821</Reference>
+</Document>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>2</ItemNumber>
+<Description>LADIES GARMENTS.  LADIES CAPRI.</Description>
+<GrossMass>2798</GrossMass>
+<Packages>
+<Type>PK</Type>
+<Marks>DAC0053025</Marks>
+<Number>160</Number>
+</Packages>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>OO-THB</TransportationNumber>
+<TransportationCountry>BE</TransportationCountry>
+</MeansOfTransportBorder>
+<Document>
+<Type>N703</Type>
+<Reference>DAC0053025</Reference>
+</Document>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclaration>
+</soap:Body>
+</soap:Envelope>

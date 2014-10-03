@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd">
+
+	<!-- DO NOT ALTER -->
+	<!-- Responsible for routing to MEG -->
+	
+	<model name="bobToMEGModel">
+		<default-service-exception-strategy>
+			<vm:outbound-endpoint path="error.queue"/>
+		</default-service-exception-strategy>
+
+		<service name="bobToMEGService">
+		  <inbound>
+		    <vm:inbound-endpoint path="bob.to.meg.queue"/>
+		  </inbound>
+		  <component>
+		  	<prototype-object class="com.kewill.kcx.component.audit.SetAuditEventParameters">
+		  		<properties>
+		  			<spring:entry key="auditEventKey" value="SEND TO MEG"/>
+		  			<spring:entry key="auditEventValue" value="#[function:now]"/>
+		  		</properties>
+		  	</prototype-object>
+		  </component>
+		  <outbound>
+		  	<custom-outbound-router class="com.kewill.kcx.routing.outbound.JmsRecipientList">
+		  		<spring:property name="synchronousResolvedEndpoints" value="true"/>
+		  		<spring:property name="resolveEndpoints">
+		  			<spring:list>
+		  				<spring:value>MEG.BUSINESS</spring:value>
+		  			</spring:list>
+		  		</spring:property>
+		  		<spring:property name="staticEndpoints">
+		  			<spring:list>
+		  				<spring:value>vm://to.client.functional.acknowledgement.queue</spring:value>
+		  				<spring:value>vm://audit.event.queue</spring:value>
+		  			</spring:list>
+		  		</spring:property>
+		  	</custom-outbound-router>
+		  </outbound>
+		</service>
+	</model>
+</mule>

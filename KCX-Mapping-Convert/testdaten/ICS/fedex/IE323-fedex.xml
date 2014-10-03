@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageOperateur>
+    <Messages>
+        <Message>
+            <EnveloppeMessage>
+                <schemaID>MessageIE323</schemaID>
+                <schemaVersion>TBD</schemaVersion>
+                <partyId>DE.FDXFRA.0383</partyId>
+                <transactionId>3370279</transactionId>
+                <numseq>0</numseq>
+            </EnveloppeMessage>
+            <MessageBody>
+                <CC323A>
+                    <MesSenMES3>DE.FDXFRA.0383</MesSenMES3>
+                    <MesRecMES6>DE.FDXFRA.0383</MesRecMES6>
+                    <DatOfPreMES9>110131</DatOfPreMES9>
+                    <TimOfPreMES10>2300</TimOfPreMES10>
+                    <MesIdeMES19>FRA3370279</MesIdeMES19>
+                    <MesTypMES20>CC323A</MesTypMES20>
+                    <HEAHEA>
+                        <TraModAtBorHEA76>4</TraModAtBorHEA76>
+                        <InfTypHEA122>1</InfTypHEA122>
+                        <DivRefNumHEA119>3370279</DivRefNumHEA119>
+                        <UniIdeDivHEA132>FDX7777</UniIdeDivHEA132>
+                        <ExpDatArrHEA701>20110131</ExpDatArrHEA701>
+                    </HEAHEA>
+                    <CUSOFFENTACTOFF700>
+                        <RefNumCUSOFFENTACTOFF701>FR00677A</RefNumCUSOFFENTACTOFF701>
+                    </CUSOFFENTACTOFF700>
+                    <CUSOFFFENT730>
+                        <RefNumCUSOFFFENT731>DE005866</RefNumCUSOFFFENT731>
+                    </CUSOFFFENT730>
+                    <TRAREQDIV456>
+                        <TINTRAREQDIV463>DE9008454</TINTRAREQDIV463>
+                    </TRAREQDIV456>
+                </CC323A>
+            </MessageBody>
+        </Message>
+    </Messages>
+</MessageOperateur>

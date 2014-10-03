@@ -1,0 +1,2962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:file="http://www.mulesource.org/schema/mule/file/2.1"
+	xmlns:ftp="http://www.mulesource.org/schema/mule/ftp/2.1"
+	xmlns:xm="http://www.mulesource.org/schema/mule/xml/2.1"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/ftp/2.1 http://www.mulesource.org/schema/mule/ftp/2.1/mule-ftp.xsd
+		http://www.mulesource.org/schema/mule/file/2.1 http://www.mulesource.org/schema/mule/file/2.1/mule-file.xsd
+		http://www.mulesource.org/schema/mule/xml/2.1 http://www.mulesource.org/schema/mule/xml/2.1/mule-xml.xsd
+		http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd">
+
+	<!-- FREE TO ALTER -->
+	<!-- this is fully editable to get data out of the solution into the client, subscribe to data from the outputs of 
+		kcx-bob-to-client-transform-config.xml -->
+
+	<model name="bobToClientModel">
+	  <default-service-exception-strategy>
+	    <vm:outbound-endpoint path="error.queue"/>
+	    <vm:outbound-endpoint path="dlq.queue"/>
+	  </default-service-exception-strategy>
+
+	  <service name="deToDiehts2Service">
+	    <inbound>
+	      <vm:inbound-endpoint path="de.to.diehts2.queue"/>
+	    </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+	        <file:outbound-endpoint path="${diehts2.outbound.file.address}" encoding="${diehts2.outbound.file.encoding}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${diehts2.outbound.ftp.user}" password="${diehts2.outbound.ftp.password}" host="${diehts2.outbound.ftp.host}" port="${diehts2.outbound.ftp.port}" encoding="${diehts2.outbound.ftp.encoding}" path="${diehts2.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+	  </service>
+		
+	<service name="deToDiehpreService">
+	    <inbound>
+	      <vm:inbound-endpoint path="de.to.diehpre.queue"/>
+	    </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+	        <file:outbound-endpoint path="${diehpre.outbound.file.address}" encoding="${diehpre.outbound.file.encoding}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${diehpre.outbound.ftp.user}" password="${diehpre.outbound.ftp.password}" host="${diehpre.outbound.ftp.host}" port="${diehpre.outbound.ftp.port}" encoding="${diehpre.outbound.ftp.encoding}" path="${diehpre.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+	  </service>
+		
+		<service name="deToDiehtstService">
+	    <inbound>
+	      <vm:inbound-endpoint path="de.to.diehtst.queue"/>
+	    </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+	        <file:outbound-endpoint path="${diehtst.outbound.file.address}" encoding="${diehtst.outbound.file.encoding}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${diehtst.outbound.ftp.user}" password="${diehtst.outbound.ftp.password}" host="${diehtst.outbound.ftp.host}" port="${diehtst.outbound.ftp.port}" encoding="${diehtst.outbound.ftp.encoding}" path="${diehtst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+	  </service>
+		
+	  <service name="deToKwlnlService">
+	    <inbound>
+	      <vm:inbound-endpoint path="de.to.kwlnl.queue"/>
+	    </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+	        <file:outbound-endpoint path="${kwlnl.outbound.file.address}" encoding="${kwlnl.outbound.file.encoding}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+	  </service>
+		
+	  <service name="deToCsffraService">
+	    <inbound>
+	      <vm:inbound-endpoint path="de.to.csffra.queue"/>
+	    </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+	        <file:outbound-endpoint path="${csffra.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+	  </service>
+		
+
+          <service name="deToDeAimHbnService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deaimhbn.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deaimhbn.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deaimhbn.outbound.ftp.user}" password="${deaimhbn.outbound.ftp.password}" host="${deaimhbn.outbound.ftp.host}" port="${deaimhbn.outbound.ftp.port}" path="${deaimhbn.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeAldvHuService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dealdvhu.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dealdvhu.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dealdvhu.outbound.ftp.user}" password="${dealdvhu.outbound.ftp.password}" host="${dealdvhu.outbound.ftp.host}" port="${dealdvhu.outbound.ftp.port}" path="${dealdvhu.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeAllwRadService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deallwrad.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deallwrad.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deallwrad.outbound.ftp.user}" password="${deallwrad.outbound.ftp.password}" host="${deallwrad.outbound.ftp.host}" port="${deallwrad.outbound.ftp.port}" path="${deallwrad.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeArevNdtService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dearevndt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dearevndt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dearevndt.outbound.ftp.user}" password="${dearevndt.outbound.ftp.password}" host="${dearevndt.outbound.ftp.host}" port="${dearevndt.outbound.ftp.port}" path="${dearevndt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBadiMerService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debadimer.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debadimer.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debadimer.outbound.ftp.user}" password="${debadimer.outbound.ftp.password}" host="${debadimer.outbound.ftp.host}" port="${debadimer.outbound.ftp.port}" path="${debadimer.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBartMerService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debartmer.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debartmer.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debartmer.outbound.ftp.user}" password="${debartmer.outbound.ftp.password}" host="${debartmer.outbound.ftp.host}" port="${debartmer.outbound.ftp.port}" path="${debartmer.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBhtSaaService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debhtsaa.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debhtsaa.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debhtsaa.outbound.ftp.user}" password="${debhtsaa.outbound.ftp.password}" host="${debhtsaa.outbound.ftp.host}" port="${debhtsaa.outbound.ftp.port}" path="${debhtsaa.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBiesHamService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debiesham.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debiesham.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debiesham.outbound.ftp.user}" password="${debiesham.outbound.ftp.password}" host="${debiesham.outbound.ftp.host}" port="${debiesham.outbound.ftp.port}" path="${debiesham.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBiotBerService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debiotber.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debiotber.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debiotber.outbound.ftp.user}" password="${debiotber.outbound.ftp.password}" host="${debiotber.outbound.ftp.host}" port="${debiotber.outbound.ftp.port}" path="${debiotber.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBrthSgdService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debrthsgd.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debrthsgd.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debrthsgd.outbound.ftp.user}" password="${debrthsgd.outbound.ftp.password}" host="${debrthsgd.outbound.ftp.host}" port="${debrthsgd.outbound.ftp.port}" path="${debrthsgd.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+          </service>
+
+          <service name="deToDeBtagMueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debtagmue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debtagmue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debtagmue.outbound.ftp.user}" password="${debtagmue.outbound.ftp.password}" host="${debtagmue.outbound.ftp.host}" port="${debtagmue.outbound.ftp.port}" path="${debtagmue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeBwfOffService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debwfoff.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debwfoff.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debwfoff.outbound.ftp.user}" password="${debwfoff.outbound.ftp.password}" host="${debwfoff.outbound.ftp.host}" port="${debwfoff.outbound.ftp.port}" path="${debwfoff.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeBwicSchService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.debwicsch.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${debwicsch.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${debwicsch.outbound.ftp.user}" password="${debwicsch.outbound.ftp.password}" host="${debwicsch.outbound.ftp.host}" port="${debwicsch.outbound.ftp.port}" path="${debwicsch.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeCblhHorService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decblhhor.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decblhhor.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decblhhor.outbound.ftp.user}" password="${decblhhor.outbound.ftp.password}" host="${decblhhor.outbound.ftp.host}" port="${decblhhor.outbound.ftp.port}" path="${decblhhor.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeChdgBrhService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dechdgbrh.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dechdgbrh.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dechdgbrh.outbound.ftp.user}" password="${dechdgbrh.outbound.ftp.password}" host="${dechdgbrh.outbound.ftp.host}" port="${dechdgbrh.outbound.ftp.port}" path="${dechdgbrh.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeChirTutService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dechirtut.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dechirtut.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dechirtut.outbound.ftp.user}" password="${dechirtut.outbound.ftp.password}" host="${dechirtut.outbound.ftp.host}" port="${dechirtut.outbound.ftp.port}" path="${dechirtut.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeCsbiMarService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decsbimar.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decsbimar.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decsbimar.outbound.ftp.user}" password="${decsbimar.outbound.ftp.password}" host="${decsbimar.outbound.ftp.host}" port="${decsbimar.outbound.ftp.port}" path="${decsbimar.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeCslbMarService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decslbmar.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decslbmar.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decslbmar.outbound.ftp.user}" password="${decslbmar.outbound.ftp.password}" host="${decslbmar.outbound.ftp.host}" port="${decslbmar.outbound.ftp.port}" path="${decslbmar.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeCyklCgnService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decyklcgn.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decyklcgn.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decyklcgn.outbound.ftp.user}" password="${decyklcgn.outbound.ftp.password}" host="${decyklcgn.outbound.ftp.host}" port="${decyklcgn.outbound.ftp.port}" path="${decyklcgn.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDawoObrService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dedawoobr.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dedawoobr.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dedawoobr.outbound.ftp.user}" password="${dedawoobr.outbound.ftp.password}" host="${dedawoobr.outbound.ftp.host}" port="${dedawoobr.outbound.ftp.port}" path="${dedawoobr.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDbgtUebService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dedbgtueb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dedbgtueb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dedbgtueb.outbound.ftp.user}" password="${dedbgtueb.outbound.ftp.password}" host="${dedbgtueb.outbound.ftp.host}" port="${dedbgtueb.outbound.ftp.port}" path="${dedbgtueb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDemaWieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dedemawie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dedemawie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dedemawie.outbound.ftp.user}" password="${dedemawie.outbound.ftp.password}" host="${dedemawie.outbound.ftp.host}" port="${dedemawie.outbound.ftp.port}" path="${dedemawie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDiaeUebService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dediaeueb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dediaeueb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dediaeueb.outbound.ftp.user}" password="${dediaeueb.outbound.ftp.password}" host="${dediaeueb.outbound.ftp.host}" port="${dediaeueb.outbound.ftp.port}" path="${dediaeueb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDiakWanService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dediakwan.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dediakwan.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dediakwan.outbound.ftp.user}" password="${dediakwan.outbound.ftp.password}" host="${dediakwan.outbound.ftp.host}" port="${dediakwan.outbound.ftp.port}" path="${dediakwan.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDmPegService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dedmpeg.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dedmpeg.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dedmpeg.outbound.ftp.user}" password="${dedmpeg.outbound.ftp.password}" host="${dedmpeg.outbound.ftp.host}" port="${dedmpeg.outbound.ftp.port}" path="${dedmpeg.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDscbAlfService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dedscbalf.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dedscbalf.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dedscbalf.outbound.ftp.user}" password="${dedscbalf.outbound.ftp.password}" host="${dedscbalf.outbound.ftp.host}" port="${dedscbalf.outbound.ftp.port}" path="${dedscbalf.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeDuroNmtService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deduronmt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deduronmt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deduronmt.outbound.ftp.user}" password="${deduronmt.outbound.ftp.password}" host="${deduronmt.outbound.ftp.host}" port="${deduronmt.outbound.ftp.port}" path="${deduronmt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeEchwHamService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deechwham.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deechwham.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deechwham.outbound.ftp.user}" password="${deechwham.outbound.ftp.password}" host="${deechwham.outbound.ftp.host}" port="${deechwham.outbound.ftp.port}" path="${deechwham.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeEcolSieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deecolsie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deecolsie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deecolsie.outbound.ftp.user}" password="${deecolsie.outbound.ftp.password}" host="${deecolsie.outbound.ftp.host}" port="${deecolsie.outbound.ftp.port}" path="${deecolsie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeEddiAhrService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deeddiahr.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deeddiahr.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deeddiahr.outbound.ftp.user}" password="${deeddiahr.outbound.ftp.password}" host="${deeddiahr.outbound.ftp.host}" port="${deeddiahr.outbound.ftp.port}" path="${deeddiahr.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeElomMaiService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deelommai.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deelommai.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deelommai.outbound.ftp.user}" password="${deelommai.outbound.ftp.password}" host="${deelommai.outbound.ftp.host}" port="${deelommai.outbound.ftp.port}" path="${deelommai.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeEtagNueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deetagnue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deetagnue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deetagnue.outbound.ftp.user}" password="${deetagnue.outbound.ftp.password}" host="${deetagnue.outbound.ftp.host}" port="${deetagnue.outbound.ftp.port}" path="${deetagnue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeEtimTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deetimtst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deetimtst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deetimtst.outbound.ftp.user}" password="${deetimtst.outbound.ftp.password}" host="${deetimtst.outbound.ftp.host}" port="${deetimtst.outbound.ftp.port}" path="${deetimtst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeEtimDieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deetimdie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deetimdie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deetimdie.outbound.ftp.user}" password="${deetimdie.outbound.ftp.password}" host="${deetimdie.outbound.ftp.host}" port="${deetimdie.outbound.ftp.port}" path="${deetimdie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeFaceSteService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.defaceste.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${defaceste.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${defaceste.outbound.ftp.user}" password="${defaceste.outbound.ftp.password}" host="${defaceste.outbound.ftp.host}" port="${defaceste.outbound.ftp.port}" path="${defaceste.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeFackHerService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.defackher.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${defackher.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${defackher.outbound.ftp.user}" password="${defackher.outbound.ftp.password}" host="${defackher.outbound.ftp.host}" port="${defackher.outbound.ftp.port}" path="${defackher.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeGesdFdsService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.degesdfds.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${degesdfds.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${degesdfds.outbound.ftp.user}" password="${degesdfds.outbound.ftp.password}" host="${degesdfds.outbound.ftp.host}" port="${degesdfds.outbound.ftp.port}" path="${degesdfds.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeGkegTitService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.degkegtit.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${degkegtit.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${degkegtit.outbound.ftp.user}" password="${degkegtit.outbound.ftp.password}" host="${degkegtit.outbound.ftp.host}" port="${degkegtit.outbound.ftp.port}" path="${degkegtit.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeGkrgSalService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.degkrgsal.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${degkrgsal.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${degkrgsal.outbound.ftp.user}" password="${degkrgsal.outbound.ftp.password}" host="${degkrgsal.outbound.ftp.host}" port="${degkrgsal.outbound.ftp.port}" path="${degkrgsal.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeGrphAacService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.degrphaac.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${degrphaac.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${degrphaac.outbound.ftp.user}" password="${degrphaac.outbound.ftp.password}" host="${degrphaac.outbound.ftp.host}" port="${degrphaac.outbound.ftp.port}" path="${degrphaac.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeGwerMinService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.degwermin.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${degwermin.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${degwermin.outbound.ftp.user}" password="${degwermin.outbound.ftp.password}" host="${degwermin.outbound.ftp.host}" port="${degwermin.outbound.ftp.port}" path="${degwermin.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHaacEttService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehaacett.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehaacett.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehaacett.outbound.ftp.user}" password="${dehaacett.outbound.ftp.password}" host="${dehaacett.outbound.ftp.host}" port="${dehaacett.outbound.ftp.port}" path="${dehaacett.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHammTirService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehammtir.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehammtir.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehammtir.outbound.ftp.user}" password="${dehammtir.outbound.ftp.password}" host="${dehammtir.outbound.ftp.host}" port="${dehammtir.outbound.ftp.port}" path="${dehammtir.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHasbSoeService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehasbsoe.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehasbsoe.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehasbsoe.outbound.ftp.user}" password="${dehasbsoe.outbound.ftp.password}" host="${dehasbsoe.outbound.ftp.host}" port="${dehasbsoe.outbound.ftp.port}" path="${dehasbsoe.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHeidSchService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deheidsch.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deheidsch.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deheidsch.outbound.ftp.user}" password="${deheidsch.outbound.ftp.password}" host="${deheidsch.outbound.ftp.host}" port="${deheidsch.outbound.ftp.port}" path="${deheidsch.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHiacNecService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehiacnec.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehiacnec.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehiacnec.outbound.ftp.user}" password="${dehiacnec.outbound.ftp.password}" host="${dehiacnec.outbound.ftp.host}" port="${dehiacnec.outbound.ftp.port}" path="${dehiacnec.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHobaBriService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehobabri.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehobabri.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehobabri.outbound.ftp.user}" password="${dehobabri.outbound.ftp.password}" host="${dehobabri.outbound.ftp.host}" port="${dehobabri.outbound.ftp.port}" path="${dehobabri.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHobsBriService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehobsbri.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehobsbri.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehobsbri.outbound.ftp.user}" password="${dehobsbri.outbound.ftp.password}" host="${dehobsbri.outbound.ftp.host}" port="${dehobsbri.outbound.ftp.port}" path="${dehobsbri.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHoesSchService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehoessch.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehoessch.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehoessch.outbound.ftp.user}" password="${dehoessch.outbound.ftp.password}" host="${dehoessch.outbound.ftp.host}" port="${dehoessch.outbound.ftp.port}" path="${dehoessch.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeHubtFulService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dehubtful.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dehubtful.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dehubtful.outbound.ftp.user}" password="${dehubtful.outbound.ftp.password}" host="${dehubtful.outbound.ftp.host}" port="${dehubtful.outbound.ftp.port}" path="${dehubtful.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeInsaFreService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deinsafre.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deinsafre.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deinsafre.outbound.ftp.user}" password="${deinsafre.outbound.ftp.password}" host="${deinsafre.outbound.ftp.host}" port="${deinsafre.outbound.ftp.port}" path="${deinsafre.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeJovoManService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dejovoman.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dejovoman.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dejovoman.outbound.ftp.user}" password="${dejovoman.outbound.ftp.password}" host="${dejovoman.outbound.ftp.host}" port="${dejovoman.outbound.ftp.port}" path="${dejovoman.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeJuhoDueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dejuhodue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dejuhodue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dejuhodue.outbound.ftp.user}" password="${dejuhodue.outbound.ftp.password}" host="${dejuhodue.outbound.ftp.host}" port="${dejuhodue.outbound.ftp.port}" path="${dejuhodue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKaduUrbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekaduurb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekaduurb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekaduurb.outbound.ftp.user}" password="${dekaduurb.outbound.ftp.password}" host="${dekaduurb.outbound.ftp.host}" port="${dekaduurb.outbound.ftp.port}" path="${dekaduurb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKamaUlmService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekamaulm.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekamaulm.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekamaulm.outbound.ftp.user}" password="${dekamaulm.outbound.ftp.password}" host="${dekamaulm.outbound.ftp.host}" port="${dekamaulm.outbound.ftp.port}" path="${dekamaulm.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKappCobService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekappcob.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekappcob.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekappcob.outbound.ftp.user}" password="${dekappcob.outbound.ftp.password}" host="${dekappcob.outbound.ftp.host}" port="${dekappcob.outbound.ftp.port}" path="${dekappcob.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKiefFlgService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekiefflg.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekiefflg.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekiefflg.outbound.ftp.user}" password="${dekiefflg.outbound.ftp.password}" host="${dekiefflg.outbound.ftp.host}" port="${dekiefflg.outbound.ftp.port}" path="${dekiefflg.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKloeOwiService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekloeowi.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekloeowi.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekloeowi.outbound.ftp.user}" password="${dekloeowi.outbound.ftp.password}" host="${dekloeowi.outbound.ftp.host}" port="${dekloeowi.outbound.ftp.port}" path="${dekloeowi.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKoemPirService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekoempir.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekoempir.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekoempir.outbound.ftp.user}" password="${dekoempir.outbound.ftp.password}" host="${dekoempir.outbound.ftp.host}" port="${dekoempir.outbound.ftp.port}" path="${dekoempir.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKrtpWkbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekrtpwkb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekrtpwkb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekrtpwkb.outbound.ftp.user}" password="${dekrtpwkb.outbound.ftp.password}" host="${dekrtpwkb.outbound.ftp.host}" port="${dekrtpwkb.outbound.ftp.port}" path="${dekrtpwkb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKspoHaiService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekspohai.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekspohai.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekspohai.outbound.ftp.user}" password="${dekspohai.outbound.ftp.password}" host="${dekspohai.outbound.ftp.host}" port="${dekspohai.outbound.ftp.port}" path="${dekspohai.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKufaBarService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekufabar.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekufabar.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekufabar.outbound.ftp.user}" password="${dekufabar.outbound.ftp.password}" host="${dekufabar.outbound.ftp.host}" port="${dekufabar.outbound.ftp.port}" path="${dekufabar.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLandNueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delandnue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delandnue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delandnue.outbound.ftp.user}" password="${delandnue.outbound.ftp.password}" host="${delandnue.outbound.ftp.host}" port="${delandnue.outbound.ftp.port}" path="${delandnue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLearRemService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delearrem.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delearrem.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delearrem.outbound.ftp.user}" password="${delearrem.outbound.ftp.password}" host="${delearrem.outbound.ftp.host}" port="${delearrem.outbound.ftp.port}" path="${delearrem.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLecaSolService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delecasol.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delecasol.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delecasol.outbound.ftp.user}" password="${delecasol.outbound.ftp.password}" host="${delecasol.outbound.ftp.host}" port="${delecasol.outbound.ftp.port}" path="${delecasol.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLeimNusService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deleimnus.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deleimnus.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deleimnus.outbound.ftp.user}" password="${deleimnus.outbound.ftp.password}" host="${deleimnus.outbound.ftp.host}" port="${deleimnus.outbound.ftp.port}" path="${deleimnus.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLekuFueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delekufue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delekufue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delekufue.outbound.ftp.user}" password="${delekufue.outbound.ftp.password}" host="${delekufue.outbound.ftp.host}" port="${delekufue.outbound.ftp.port}" path="${delekufue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLmsmManService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delmsmman.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delmsmman.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delmsmman.outbound.ftp.user}" password="${delmsmman.outbound.ftp.password}" host="${delmsmman.outbound.ftp.host}" port="${delmsmman.outbound.ftp.port}" path="${delmsmman.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLogtKonService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delogtkon.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delogtkon.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delogtkon.outbound.ftp.user}" password="${delogtkon.outbound.ftp.password}" host="${delogtkon.outbound.ftp.host}" port="${delogtkon.outbound.ftp.port}" path="${delogtkon.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLooGzhService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deloogzh.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deloogzh.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deloogzh.outbound.ftp.user}" password="${deloogzh.outbound.ftp.password}" host="${deloogzh.outbound.ftp.host}" port="${deloogzh.outbound.ftp.port}" path="${deloogzh.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeLucoSkmService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delucoskm.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delucoskm.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delucoskm.outbound.ftp.user}" password="${delucoskm.outbound.ftp.password}" host="${delucoskm.outbound.ftp.host}" port="${delucoskm.outbound.ftp.port}" path="${delucoskm.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeMabhGosService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.demabhgos.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${demabhgos.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${demabhgos.outbound.ftp.user}" password="${demabhgos.outbound.ftp.password}" host="${demabhgos.outbound.ftp.host}" port="${demabhgos.outbound.ftp.port}" path="${demabhgos.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeMahuLbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.demahulb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${demahulb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${demahulb.outbound.ftp.user}" password="${demahulb.outbound.ftp.password}" host="${demahulb.outbound.ftp.host}" port="${demahulb.outbound.ftp.port}" path="${demahulb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeManiSwbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.demaniswb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${demaniswb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${demaniswb.outbound.ftp.user}" password="${demaniswb.outbound.ftp.password}" host="${demaniswb.outbound.ftp.host}" port="${demaniswb.outbound.ftp.port}" path="${demaniswb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeManiTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.demanitst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${demanitst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${demanitst.outbound.ftp.user}" password="${demanitst.outbound.ftp.password}" host="${demanitst.outbound.ftp.host}" port="${demanitst.outbound.ftp.port}" path="${demanitst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+
+          <service name="deToDeMiweArnService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.demiwearn.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${demiwearn.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${demiwearn.outbound.ftp.user}" password="${demiwearn.outbound.ftp.password}" host="${demiwearn.outbound.ftp.host}" port="${demiwearn.outbound.ftp.port}" path="${demiwearn.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeNegeBruService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.denegebru.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${denegebru.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${denegebru.outbound.ftp.user}" password="${denegebru.outbound.ftp.password}" host="${denegebru.outbound.ftp.host}" port="${denegebru.outbound.ftp.port}" path="${denegebru.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeNimaBghService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.denimabgh.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${denimabgh.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${denimabgh.outbound.ftp.user}" password="${denimabgh.outbound.ftp.password}" host="${denimabgh.outbound.ftp.host}" port="${denimabgh.outbound.ftp.port}" path="${denimabgh.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeObogBieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deobogbie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deobogbie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deobogbie.outbound.ftp.user}" password="${deobogbie.outbound.ftp.password}" host="${deobogbie.outbound.ftp.host}" port="${deobogbie.outbound.ftp.port}" path="${deobogbie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeOechAnsService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deoechans.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deoechans.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deoechans.outbound.ftp.user}" password="${deoechans.outbound.ftp.password}" host="${deoechans.outbound.ftp.host}" port="${deoechans.outbound.ftp.port}" path="${deoechans.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDePfeuNmtService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.depfeunmt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${depfeunmt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${depfeunmt.outbound.ftp.user}" password="${depfeunmt.outbound.ftp.password}" host="${depfeunmt.outbound.ftp.host}" port="${depfeunmt.outbound.ftp.port}" path="${depfeunmt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDePfhoGwdService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.depfhogwd.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${depfhogwd.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${depfhogwd.outbound.ftp.user}" password="${depfhogwd.outbound.ftp.password}" host="${depfhogwd.outbound.ftp.host}" port="${depfhogwd.outbound.ftp.port}" path="${depfhogwd.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDePfinNmtService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.depfinnmt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${depfinnmt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${depfinnmt.outbound.ftp.user}" password="${depfinnmt.outbound.ftp.password}" host="${depfinnmt.outbound.ftp.host}" port="${depfinnmt.outbound.ftp.port}" path="${depfinnmt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDePfseNmtService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.depfsenmt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${depfsenmt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${depfsenmt.outbound.ftp.user}" password="${depfsenmt.outbound.ftp.password}" host="${depfsenmt.outbound.ftp.host}" port="${depfsenmt.outbound.ftp.port}" path="${depfsenmt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDePrveFriService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deprvefri.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deprvefri.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deprvefri.outbound.ftp.user}" password="${deprvefri.outbound.ftp.password}" host="${deprvefri.outbound.ftp.host}" port="${deprvefri.outbound.ftp.port}" path="${deprvefri.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeRailNmtService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.derailnmt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${derailnmt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${derailnmt.outbound.ftp.user}" password="${derailnmt.outbound.ftp.password}" host="${derailnmt.outbound.ftp.host}" port="${derailnmt.outbound.ftp.port}" path="${derailnmt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeRefuMetService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.derefumet.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${derefumet.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${derefumet.outbound.ftp.user}" password="${derefumet.outbound.ftp.password}" host="${derefumet.outbound.ftp.host}" port="${derefumet.outbound.ftp.port}" path="${derefumet.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeReimRoeService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dereimroe.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dereimroe.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dereimroe.outbound.ftp.user}" password="${dereimroe.outbound.ftp.password}" host="${dereimroe.outbound.ftp.host}" port="${dereimroe.outbound.ftp.port}" path="${dereimroe.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeRoswMucService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deroswmuc.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deroswmuc.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deroswmuc.outbound.ftp.user}" password="${deroswmuc.outbound.ftp.password}" host="${deroswmuc.outbound.ftp.host}" port="${deroswmuc.outbound.ftp.port}" path="${deroswmuc.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeRuagWesService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deruagwes.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deruagwes.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deruagwes.outbound.ftp.user}" password="${deruagwes.outbound.ftp.password}" host="${deruagwes.outbound.ftp.host}" port="${deruagwes.outbound.ftp.port}" path="${deruagwes.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSccaHmrService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desccahmr.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desccahmr.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desccahmr.outbound.ftp.user}" password="${desccahmr.outbound.ftp.password}" host="${desccahmr.outbound.ftp.host}" port="${desccahmr.outbound.ftp.port}" path="${desccahmr.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSchoBadService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deschobad.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deschobad.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deschobad.outbound.ftp.user}" password="${deschobad.outbound.ftp.password}" host="${deschobad.outbound.ftp.host}" port="${deschobad.outbound.ftp.port}" path="${deschobad.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSchuSelService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deschusel.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deschusel.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deschusel.outbound.ftp.user}" password="${deschusel.outbound.ftp.password}" host="${deschusel.outbound.ftp.host}" port="${deschusel.outbound.ftp.port}" path="${deschusel.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeScmgTodService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.descmgtod.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${descmgtod.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${descmgtod.outbound.ftp.user}" password="${descmgtod.outbound.ftp.password}" host="${descmgtod.outbound.ftp.host}" port="${descmgtod.outbound.ftp.port}" path="${descmgtod.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeScpsAltService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.descpsalt.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${descpsalt.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${descpsalt.outbound.ftp.user}" password="${descpsalt.outbound.ftp.password}" host="${descpsalt.outbound.ftp.host}" port="${descpsalt.outbound.ftp.port}" path="${descpsalt.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeScweNeuService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.descweneu.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${descweneu.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${descweneu.outbound.ftp.user}" password="${descweneu.outbound.ftp.password}" host="${descweneu.outbound.ftp.host}" port="${descweneu.outbound.ftp.port}" path="${descweneu.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSdgfWkbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desdgfwkb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desdgfwkb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desdgfwkb.outbound.ftp.user}" password="${desdgfwkb.outbound.ftp.password}" host="${desdgfwkb.outbound.ftp.host}" port="${desdgfwkb.outbound.ftp.port}" path="${desdgfwkb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSeepBotService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deseepbot.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deseepbot.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deseepbot.outbound.ftp.user}" password="${deseepbot.outbound.ftp.password}" host="${deseepbot.outbound.ftp.host}" port="${deseepbot.outbound.ftp.port}" path="${deseepbot.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSestWalService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desestwal.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desestwal.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desestwal.outbound.ftp.user}" password="${desestwal.outbound.ftp.password}" host="${desestwal.outbound.ftp.host}" port="${desestwal.outbound.ftp.port}" path="${desestwal.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSewGraService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desewgra.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desewgra.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desewgra.outbound.ftp.user}" password="${desewgra.outbound.ftp.password}" host="${desewgra.outbound.ftp.host}" port="${desewgra.outbound.ftp.port}" path="${desewgra.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSfahBieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desfahbie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desfahbie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desfahbie.outbound.ftp.user}" password="${desfahbie.outbound.ftp.password}" host="${desfahbie.outbound.ftp.host}" port="${desfahbie.outbound.ftp.port}" path="${desfahbie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSgfwGotService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desgfwgot.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desgfwgot.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desgfwgot.outbound.ftp.user}" password="${desgfwgot.outbound.ftp.password}" host="${desgfwgot.outbound.ftp.host}" port="${desgfwgot.outbound.ftp.port}" path="${desgfwgot.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSimoKirService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desimokir.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desimokir.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desimokir.outbound.ftp.user}" password="${desimokir.outbound.ftp.password}" host="${desimokir.outbound.ftp.host}" port="${desimokir.outbound.ftp.port}" path="${desimokir.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSingKahService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desingkah.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desingkah.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desingkah.outbound.ftp.user}" password="${desingkah.outbound.ftp.password}" host="${desingkah.outbound.ftp.host}" port="${desingkah.outbound.ftp.port}" path="${desingkah.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSiteTraService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desitetra.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desitetra.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desitetra.outbound.ftp.user}" password="${desitetra.outbound.ftp.password}" host="${desitetra.outbound.ftp.host}" port="${desitetra.outbound.ftp.port}" path="${desitetra.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSmarKsService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desmarks.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desmarks.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desmarks.outbound.ftp.user}" password="${desmarks.outbound.ftp.password}" host="${desmarks.outbound.ftp.host}" port="${desmarks.outbound.ftp.port}" path="${desmarks.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSmasNieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desmasnie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desmasnie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desmasnie.outbound.ftp.user}" password="${desmasnie.outbound.ftp.password}" host="${desmasnie.outbound.ftp.host}" port="${desmasnie.outbound.ftp.port}" path="${desmasnie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSsiBetService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dessibet.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dessibet.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dessibet.outbound.ftp.user}" password="${dessibet.outbound.ftp.password}" host="${dessibet.outbound.ftp.host}" port="${dessibet.outbound.ftp.port}" path="${dessibet.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeStabMesService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.destabmes.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${destabmes.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${destabmes.outbound.ftp.user}" password="${destabmes.outbound.ftp.password}" host="${destabmes.outbound.ftp.host}" port="${destabmes.outbound.ftp.port}" path="${destabmes.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeStcoHtlService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.destcohtl.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${destcohtl.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${destcohtl.outbound.ftp.user}" password="${destcohtl.outbound.ftp.password}" host="${destcohtl.outbound.ftp.host}" port="${destcohtl.outbound.ftp.port}" path="${destcohtl.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeStocBieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.destocbie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${destocbie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${destocbie.outbound.ftp.user}" password="${destocbie.outbound.ftp.password}" host="${destocbie.outbound.ftp.host}" port="${destocbie.outbound.ftp.port}" path="${destocbie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSuedManService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desuedman.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desuedman.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desuedman.outbound.ftp.user}" password="${desuedman.outbound.ftp.password}" host="${desuedman.outbound.ftp.host}" port="${desuedman.outbound.ftp.port}" path="${desuedman.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSupaOchService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.desupaoch.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${desupaoch.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${desupaoch.outbound.ftp.user}" password="${desupaoch.outbound.ftp.password}" host="${desupaoch.outbound.ftp.host}" port="${desupaoch.outbound.ftp.port}" path="${desupaoch.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeTmopLtkService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.detmopltk.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${detmopltk.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${detmopltk.outbound.ftp.user}" password="${detmopltk.outbound.ftp.password}" host="${detmopltk.outbound.ftp.host}" port="${detmopltk.outbound.ftp.port}" path="${detmopltk.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeTtsWenService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dettswen.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dettswen.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dettswen.outbound.ftp.user}" password="${dettswen.outbound.ftp.password}" host="${dettswen.outbound.ftp.host}" port="${dettswen.outbound.ftp.port}" path="${dettswen.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeUnieEscService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deunieesc.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deunieesc.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deunieesc.outbound.ftp.user}" password="${deunieesc.outbound.ftp.password}" host="${deunieesc.outbound.ftp.host}" port="${deunieesc.outbound.ftp.port}" path="${deunieesc.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeVawiBieService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.devawibie.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${devawibie.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${devawibie.outbound.ftp.user}" password="${devawibie.outbound.ftp.password}" host="${devawibie.outbound.ftp.host}" port="${devawibie.outbound.ftp.port}" path="${devawibie.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeVoelWupService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.devoelwup.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${devoelwup.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${devoelwup.outbound.ftp.user}" password="${devoelwup.outbound.ftp.password}" host="${devoelwup.outbound.ftp.host}" port="${devoelwup.outbound.ftp.port}" path="${devoelwup.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeVsvsTbhService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.devsvstbh.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${devsvstbh.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${devsvstbh.outbound.ftp.user}" password="${devsvstbh.outbound.ftp.password}" host="${devsvstbh.outbound.ftp.host}" port="${devsvstbh.outbound.ftp.port}" path="${devsvstbh.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeVulkHerService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.devulkher.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${devulkher.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${devulkher.outbound.ftp.user}" password="${devulkher.outbound.ftp.password}" host="${devulkher.outbound.ftp.host}" port="${devulkher.outbound.ftp.port}" path="${devulkher.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWameLeiService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewamelei.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewamelei.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewamelei.outbound.ftp.user}" password="${dewamelei.outbound.ftp.password}" host="${dewamelei.outbound.ftp.host}" port="${dewamelei.outbound.ftp.port}" path="${dewamelei.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWefaWesService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewefawes.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewefawes.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewefawes.outbound.ftp.user}" password="${dewefawes.outbound.ftp.password}" host="${dewefawes.outbound.ftp.host}" port="${dewefawes.outbound.ftp.port}" path="${dewefawes.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWiduNwdService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewidunwd.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewidunwd.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewidunwd.outbound.ftp.user}" password="${dewidunwd.outbound.ftp.password}" host="${dewidunwd.outbound.ftp.host}" port="${dewidunwd.outbound.ftp.port}" path="${dewidunwd.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWielBamService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewielbam.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewielbam.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewielbam.outbound.ftp.user}" password="${dewielbam.outbound.ftp.password}" host="${dewielbam.outbound.ftp.host}" port="${dewielbam.outbound.ftp.port}" path="${dewielbam.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWigeWinService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewigewin.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewigewin.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewigewin.outbound.ftp.user}" password="${dewigewin.outbound.ftp.password}" host="${dewigewin.outbound.ftp.host}" port="${dewigewin.outbound.ftp.port}" path="${dewigewin.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWiloFdService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewilofd.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewilofd.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewilofd.outbound.ftp.user}" password="${dewilofd.outbound.ftp.password}" host="${dewilofd.outbound.ftp.host}" port="${dewilofd.outbound.ftp.port}" path="${dewilofd.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWolfMaiService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewolfmai.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewolfmai.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewolfmai.outbound.ftp.user}" password="${dewolfmai.outbound.ftp.password}" host="${dewolfmai.outbound.ftp.host}" port="${dewolfmai.outbound.ftp.port}" path="${dewolfmai.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeWomLudService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dewomlud.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dewomlud.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dewomlud.outbound.ftp.user}" password="${dewomlud.outbound.ftp.password}" host="${dewomlud.outbound.ftp.host}" port="${dewomlud.outbound.ftp.port}" path="${dewomlud.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeZapfRoeService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dezapfroe.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dezapfroe.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dezapfroe.outbound.ftp.user}" password="${dezapfroe.outbound.ftp.password}" host="${dezapfroe.outbound.ftp.host}" port="${dezapfroe.outbound.ftp.port}" path="${dezapfroe.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeZargWlhService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dezargwlh.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dezargwlh.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dezargwlh.outbound.ftp.user}" password="${dezargwlh.outbound.ftp.password}" host="${dezargwlh.outbound.ftp.host}" port="${dezargwlh.outbound.ftp.port}" path="${dezargwlh.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeZebaAicService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dezebaaic.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dezebaaic.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dezebaaic.outbound.ftp.user}" password="${dezebaaic.outbound.ftp.password}" host="${dezebaaic.outbound.ftp.host}" port="${dezebaaic.outbound.ftp.port}" path="${dezebaaic.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeZlbpMarService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dezlbpmar.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dezlbpmar.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dezlbpmar.outbound.ftp.user}" password="${dezlbpmar.outbound.ftp.password}" host="${dezlbpmar.outbound.ftp.host}" port="${dezlbpmar.outbound.ftp.port}" path="${dezlbpmar.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeZmdDrsService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dezmddrs.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dezmddrs.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dezmddrs.outbound.ftp.user}" password="${dezmddrs.outbound.ftp.password}" host="${dezmddrs.outbound.ftp.host}" port="${dezmddrs.outbound.ftp.port}" path="${dezmddrs.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+	  <service name="FromClientFunctionalAcknowledgementService">
+	    <inbound>
+	      <file:inbound-endpoint path="${de.inbound.file.functional.acknowledgement.address}" connector-ref="fileConnector-Outbound"/>
+	    </inbound>
+	    <component class="com.kewill.kcx.component.receipt.AnalyseFunctionalAcknowledgementComponent"/>
+	    <outbound>
+	      <pass-through-router>
+	        <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+	      </pass-through-router>
+	    </outbound>
+	  </service>
+
+          <service name="deToDeFlabNueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deflabnue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deflabnue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deflabnue.outbound.ftp.user}" password="${deflabnue.outbound.ftp.password}" host="${deflabnue.outbound.ftp.host}" port="${deflabnue.outbound.ftp.port}" path="${deflabnue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeFlabTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deflabtst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deflabtst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deflabtst.outbound.ftp.user}" password="${deflabtst.outbound.ftp.password}" host="${deflabtst.outbound.ftp.host}" port="${deflabtst.outbound.ftp.port}" path="${deflabtst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSzmaTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deszmatst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deszmatst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deszmatst.outbound.ftp.user}" password="${deszmatst.outbound.ftp.password}" host="${deszmatst.outbound.ftp.host}" port="${deszmatst.outbound.ftp.port}" path="${deszmatst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeSzmaManService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deszmaman.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deszmaman.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deszmaman.outbound.ftp.user}" password="${deszmaman.outbound.ftp.password}" host="${deszmaman.outbound.ftp.host}" port="${deszmaman.outbound.ftp.port}" path="${deszmaman.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeImagFueService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deimagfue.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deimagfue.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deimagfue.outbound.ftp.user}" password="${deimagfue.outbound.ftp.password}" host="${deimagfue.outbound.ftp.host}" port="${deimagfue.outbound.ftp.port}" path="${deimagfue.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeImagTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deimagtst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deimagtst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deimagtst.outbound.ftp.user}" password="${deimagtst.outbound.ftp.password}" host="${deimagtst.outbound.ftp.host}" port="${deimagtst.outbound.ftp.port}" path="${deimagtst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKltrTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekltrtst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekltrtst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekltrtst.outbound.ftp.user}" password="${dekltrtst.outbound.ftp.password}" host="${dekltrtst.outbound.ftp.host}" port="${dekltrtst.outbound.ftp.port}" path="${dekltrtst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeCargKreService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decargkre.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decargkre.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decargkre.outbound.ftp.user}" password="${decargkre.outbound.ftp.password}" host="${decargkre.outbound.ftp.host}" port="${decargkre.outbound.ftp.port}" path="${decargkre.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeDiefTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dedieftst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dedieftst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dedieftst.outbound.ftp.user}" password="${dedieftst.outbound.ftp.password}" host="${dedieftst.outbound.ftp.host}" port="${dedieftst.outbound.ftp.port}" path="${dedieftst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeDiefEppService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dediefepp.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dediefepp.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dediefepp.outbound.ftp.user}" password="${dediefepp.outbound.ftp.password}" host="${dediefepp.outbound.ftp.host}" port="${dediefepp.outbound.ftp.port}" path="${dediefepp.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeNorsTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.denorstst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${denorstst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${denorstst.outbound.ftp.user}" password="${denorstst.outbound.ftp.password}" host="${denorstst.outbound.ftp.host}" port="${denorstst.outbound.ftp.port}" path="${denorstst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeNorsDuiService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.denorsdui.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${denorsdui.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${denorsdui.outbound.ftp.user}" password="${denorsdui.outbound.ftp.password}" host="${denorsdui.outbound.ftp.host}" port="${denorsdui.outbound.ftp.port}" path="${denorsdui.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeLogtTstService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.delogttst.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${delogttst.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${delogttst.outbound.ftp.user}" password="${delogttst.outbound.ftp.password}" host="${delogttst.outbound.ftp.host}" port="${delogttst.outbound.ftp.port}" path="${delogttst.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeKuhoKwhService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekuhokwh.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekuhokwh.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekuhokwh.outbound.ftp.user}" password="${dekuhokwh.outbound.ftp.password}" host="${dekuhokwh.outbound.ftp.host}" port="${dekuhokwh.outbound.ftp.port}" path="${dekuhokwh.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+
+
+
+
+          </service>
+
+          <service name="deToDeRiloUlmService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deriloulm.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deriloulm.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${deriloulm.outbound.ftp.user}" password="${deriloulm.outbound.ftp.password}" host="${deriloulm.outbound.ftp.host}" port="${deriloulm.outbound.ftp.port}" path="${deriloulm.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeCargHamService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decargham.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decargham.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decargham.outbound.ftp.user}" password="${decargham.outbound.ftp.password}" host="${decargham.outbound.ftp.host}" port="${decargham.outbound.ftp.port}" path="${decargham.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeCoteBerService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.decoteber.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${decoteber.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${decoteber.outbound.ftp.user}" password="${decoteber.outbound.ftp.password}" host="${decoteber.outbound.ftp.host}" port="${decoteber.outbound.ftp.port}" path="${decoteber.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeKltrSlbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.dekltrslb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${dekltrslb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound">
+                </file:outbound-endpoint>
+                <ftp:outbound-endpoint user="${dekltrslb.outbound.ftp.user}" password="${dekltrslb.outbound.ftp.password}" host="${dekltrslb.outbound.ftp.host}" port="${dekltrslb.outbound.ftp.port}" path="${dekltrslb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+          <service name="deToDeInprArbService">
+            <inbound>
+              <vm:inbound-endpoint path="de.to.deinprarb.queue"/>
+            </inbound>
+            <outbound matchAll="true">
+              <multicasting-router>
+                <file:outbound-endpoint path="${deinprarb.outbound.file.address}" remoteSync="true" connector-ref="fileConnector-Outbound"/>
+                <ftp:outbound-endpoint user="${deinprarb.outbound.ftp.user}" password="${deinprarb.outbound.ftp.password}" host="${deinprarb.outbound.ftp.host}" port="${deinprarb.outbound.ftp.port}" path="${deinprarb.outbound.ftp.path}"/>
+                <vm:outbound-endpoint path="protocol.receipt.queue"/>
+                <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+               </multicasting-router>
+            </outbound>
+            
+
+
+
+          </service>
+
+	</model>
+</mule>
+

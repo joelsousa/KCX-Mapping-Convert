@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>02</Month>
+<Day>15</Day>
+</Date>
+<Time>090223</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>CZ01.EK.TST</Transmitter>
+<Receiver>AE.EK.TST</Receiver>
+<MessageTP>
+<CountryCode>CZ</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationAmendmentAcceptance</MessageName>
+<Release>1.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+</Codemapping>
+</CustomsExchange>
+<MessageID>a603247c-7689-41c8-8183-01df21ff5753</MessageID>
+<InReplyTo>17677359844-2EVAF4X</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclarationAmendmentAcceptance>
+<GoodsDeclaration>
+<ReferenceNumber>17677359844-2EVAF4X</ReferenceNumber>
+<MRN>11CZ194400Q7BFJTC9</MRN>
+<AmendmentDateAndTime>201102150901</AmendmentDateAndTime>
+<PersonLodgingSumaTIN>
+<TIN>CZ24682705</TIN>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>Emirates, organiza�?ní složka</Name>
+<Street>Olivova 2096/4</Street>
+<City>Praha</City>
+<PostalCode>11000</PostalCode>
+<Country>CZ</Country>
+</Address>
+</PersonLodgingSumaAddress>
+<CustomsOfficeFirstEntry>CZ194400</CustomsOfficeFirstEntry>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclarationAmendmentAcceptance>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:processIncomingMessageResponse xmlns:ns2="http://icis.externaldomain.services.ws">
+                <!-- Header added by Kewill KCX -->
+                <Header>
+                               <Sender>DE3486877</Sender>
+                               <Receiver>DE3486877</Receiver>
+                               <MessageID>MS-20110719-01</MessageID>
+                               <Direction>TO_CUSTOMER</Direction>
+                               <ReferenceNumber>MS-20110719-01</ReferenceNumber>
+                </Header>
+                <!-- Original message content starts here -->
+                <processIncomingMessageResults>
+                               <resultState>
+                                               <status>ValError</status>
+                                               <reasonCode>SyntacticValidationError</reasonCode>
+                                               <explanation>Validation Error.Syntactic Validation Error</explanation>
+                               </resultState>
+                               <ProcessingErrors>
+                                               <Error>
+                                                               <errorCode>1</errorCode>
+                                                               <errorDescription>1111111111111111</errorDescription>
+                                               </Error>
+                                               <Error>                                               
+					              <errorCode>2</errorCode>
+					              <errorDescription>222222222222221</errorDescription>
+                                               </Error>
+                               </ProcessingErrors>
+                </processIncomingMessageResults>
+</ns2:processIncomingMessageResponse>

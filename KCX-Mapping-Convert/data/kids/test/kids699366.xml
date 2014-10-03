@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>11</Month>
+<Day>13</Day>
+</Date>
+<Time>13:01:00</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA           </Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>CS</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>ExportDeclaration</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>DE01DE0122590000000000699366</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ExportDeclaration>
+<GoodsDeclaration>
+<AreaCode>EX</AreaCode>
+<TypeOfPermit>e</TypeOfPermit>
+<DestinationCountry>BR</DestinationCountry>
+<TransportInContainer>0</TransportInContainer>
+<GrossMass>3000</GrossMass>
+<Annotation>Y901</Annotation>
+<AuthorizationNumber>DE5864ZA0187</AuthorizationNumber>
+<DeclarantIsConsignor>0</DeclarantIsConsignor>
+<MeansOfTransportInland>
+<TransportMode>03</TransportMode>
+</MeansOfTransportInland>
+<MeansOfTransportDeparture>
+<TransportMode>01</TransportMode>
+<TransportationType>10</TransportationType>
+<TransportationNumber>CSCF Milano</TransportationNumber>
+<TransportationCountry>QU</TransportationCountry>
+</MeansOfTransportDeparture>
+<PlaceOfLoading>
+<Code>AA01</Code>
+</PlaceOfLoading>
+<CustomsOfficeExport>DE005866</CustomsOfficeExport>
+<IntendedOfficeOfExit>DE005876</IntendedOfficeOfExit>
+<Business>
+<BusinessTypeCode>11</BusinessTypeCode>
+<InvoicePrice>            000</InvoicePrice>
+<Currency>EUR</Currency>
+</Business>
+<Seal>
+<UseOfTydenseals>0</UseOfTydenseals>
+<UseOfTydensealStock>0</UseOfTydensealStock>
+</Seal>
+<Declarant>
+<Address>
+<Name>GROB</Name>
+<Street>Industriestrasse 4</Street>
+<City>MINDELHEIM</City>
+<PostalCode>87719</PostalCode>
+<Country>DE</Country>
+</Address>
+</Declarant>
+<DeclarantTIN>
+<IsTINGermanApprovalNumber>0</IsTINGermanApprovalNumber>
+</DeclarantTIN>
+<Consignee>
+<Address>
+<Name>B. GROB DO BRASIL S/A</Name>
+<Street>AV.OLAVO FONTOURA, 1209</Street>
+<City>SÃƒO PAULO</City>
+<PostalCode>02012-021</PostalCode>
+<Country>BR</Country>
+</Address>
+</Consignee>
+<IncoTerms>
+<IncoTerm>FOB</IncoTerm>
+<Place>Hamburg</Place>
+</IncoTerms>
+<GoodsItem>
+<ItemNumber>001</ItemNumber>
+<Description>Halter</Description>
+<OriginFederalState>99</OriginFederalState>
+<NetMass>2000</NetMass>
+<GrossMass>3000</GrossMass>
+<CommodityCode>
+<TarifCode>73251099</TarifCode>
+</CommodityCode>
+<CustomsApprovedTreatment>
+<Declared>10</Declared>
+<Previous>00</Previous>
+</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>0</AdditionalUnit>
+<StatisticalValue>809</StatisticalValue>
+</Statistic>
+<Packages>
+<Quantity>1</Quantity>
+<SequentialNumber>01</SequentialNumber>
+<Type>CH</Type>
+<Marks>001</Marks>
+</Packages>
+<PreviousDocument>
+<Type>OHNE</Type>
+</PreviousDocument>
+</GoodsItem>
+</GoodsDeclaration>
+</ExportDeclaration>
+</soap:Body>
+</soap:Envelope>]]>
+</Content>
+</KCX>

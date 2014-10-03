@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>08</Month>
+<Day>09</Day>
+</Date>
+<Time>10:56:00</Time>
+</SentAt>
+<Transmitter>DE3486877</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationAmendmentRejected</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>EU</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>GRICS110034174</MessageID>
+<InReplyTo>IWA-COR-20110809-01</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclarationAmendmentRejection>
+<GoodsDeclaration>
+<MRN>11GR000305</MRN>
+<AmendmentRejectionDateAndTime>201107131240</AmendmentRejectionDateAndTime>
+<CustomsOfficeFirstEntry>CY000440</CustomsOfficeFirstEntry>
+<PersonLodgingSumaTIN>
+<TIN>CY0000000071</TIN>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>Address</Name>
+<Street>Street</Street>
+<City>City</City>
+<PostalCode>Postcode</PostalCode>
+<Country>DE</Country>
+</Address>
+</PersonLodgingSumaAddress>
+<RepresentativeTIN>
+<TIN>TIN</TIN>
+</RepresentativeTIN>
+<RepresentativeAddress>
+<Address>
+<Name>NamREP</Name>
+<Street>8TH FLOOR TRAC BUILDING</Street>
+<City>BANGKOK</City>
+<PostalCode>10320</PostalCode>
+<Country>TH</Country>
+</Address>
+</RepresentativeAddress>
+<AmendmentDateAndTime>201106141651</AmendmentDateAndTime>
+<FunctionalError>
+<ErrorType>11</ErrorType>
+<ErrorPointer>MES.HEA.Identity of means of transport crossing border</ErrorPointer>
+<ErrorReason>MES.HEA.Identity of means of transport crossing border, Value: OO-THB, Type: C011/11</ErrorReason>
+<OriginalAttributeValue>OO-THB</OriginalAttributeValue>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>12</ErrorType>
+<ErrorPointer>MES.HEA.Identity of means of transport crossing border</ErrorPointer>
+<ErrorReason>MES.HEA.Identity of means of transport crossing border, Value: OO-THB, Type: C012/12</ErrorReason>
+<OriginalAttributeValue>OO-THB</OriginalAttributeValue>
+</FunctionalError>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclarationAmendmentRejection>
+</soap:Body>
+</soap:Envelope>

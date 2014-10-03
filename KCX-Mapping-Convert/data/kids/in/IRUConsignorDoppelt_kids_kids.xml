@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <KCX>
+  <Primary>DE</Primary>
+  <Secondary>NCTS</Secondary>
+  <Audit_Id>No Mule Call</Audit_Id>
+  <Content>
+  <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2011</Year>
+  <Month>05</Month>
+  <Day>13</Day>
+  </Date>
+  <Time>083911</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE01.CSFTEST.2158</Transmitter>
+  <Receiver>DE.CSF.FRA</Receiver>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>NCTS</Procedure>
+  <MessageName>NCTSDeclaration</MessageName>
+  <Release>4.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>SX66239894P030033</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <NCTSDeclaration>
+  <GoodsDeclaration>
+  <ReferenceNumber>SX66239894P030033</ReferenceNumber>
+  <ShipmentNumber>SX66239894</ShipmentNumber>
+  <TypeOfDeclaration>TIR</TypeOfDeclaration>
+  <PlaceOfLoading />
+  <DestinationCountry>RU</DestinationCountry>
+  <DispatchCountry>DE</DispatchCountry>
+  <MeansOfTransportInland>
+  <TransportMode>3</TransportMode>
+  <TransportationNumber>AA11,BB22</TransportationNumber>
+  <TransportationCountry>FR</TransportationCountry>
+  </MeansOfTransportInland>
+  <MeansOfTransportBorder>
+  <TransportMode>3</TransportMode>
+  <TransportationType>33</TransportationType>
+  <TransportationNumber>AA11,BB22</TransportationNumber>
+  <TransportationCountry>FR</TransportationCountry>
+  </MeansOfTransportBorder>
+  <MeansOfTransportDeparture>
+  <TransportMode>3</TransportMode>
+  <TransportationNumber>AA11,BB22</TransportationNumber>
+  <TransportationCountry>FR</TransportationCountry>
+  </MeansOfTransportDeparture>
+  <TransportInContainer>1</TransportInContainer>
+  <NCTSDocumentLanguage>DE</NCTSDocumentLanguage>
+  <TotalNumberPositions>2</TotalNumberPositions>
+  <TotalNumberPackages>200</TotalNumberPackages>
+  <TotalGrossMass>11000.000</TotalGrossMass>
+  <DeclarationDate>20110513</DeclarationDate>
+  <DeclarationPlace>Geneva</DeclarationPlace>
+  <Principal>
+  <Address>
+  <Name>TESTholder certif</Name>
+  <Street>Adresse Geneve</Street>
+  <PostalCode>1205</PostalCode>
+  <City>Geneve</City>
+  <Country>CH</Country>
+  </Address>
+  </Principal>
+  <CarnetID>FRA019256</CarnetID>
+  <OfficeOfDeparture>DE004851</OfficeOfDeparture>
+  <OfficeOfDestination>HU724000</OfficeOfDestination>
+  <Guarantee>
+  <TypeOfGuarantee>B</TypeOfGuarantee>
+  <Reference>
+  <OtherNumber>SX66239894</OtherNumber>
+  </Reference>
+  </Guarantee>
+  <TransportationRoute />
+  <GoodsItem>
+  <ItemNumber>1</ItemNumber>
+  <CommodityCode>
+  <TarifCode>96089980</TarifCode>
+  </CommodityCode>
+  <Description>Machines</Description>
+  <NetMass>10000.000</NetMass>
+  <GrossMass>10000.000</GrossMass>
+  <Document>
+  <Qualifier>952</Qualifier>
+  <Reference>SX66239894</Reference>
+  </Document>
+  <Document>
+  <Qualifier>730</Qualifier>
+  <Reference>121212</Reference>
+  </Document>
+  <Containers>
+  <Number>AB123456</Number>
+  </Containers>
+  <Package>
+  <Quantity>100</Quantity>
+  <SequentialNumber>1</SequentialNumber>
+  <Type>BX</Type>
+  <Marks>marks</Marks>
+  </Package>
+  <ConsignorTIN>
+  <TIN>PL31101000000076Z</TIN>
+  </ConsignorTIN>
+  <Consignor>
+  <Address>
+  <Name>Societe A</Name>
+  <Street>10 rue de l espoir</Street>
+  <PostalCode>95111</PostalCode>
+  <City>Cergy</City>
+  <Country>FR</Country>
+  </Address>
+  </Consignor>
+  <ConsigneeTIN>
+  <TIN>BGKTR4690026797Z4</TIN>
+  </ConsigneeTIN>
+  <Consignee>
+  <Address>
+  <Name>Societe B</Name>
+  <Street>10 rue de la france</Street>
+  <PostalCode>11111</PostalCode>
+  <City>Varsovie</City>
+  <Country>PL</Country>
+  </Address>
+  </Consignee>
+  </GoodsItem>
+  <GoodsItem>
+  <ItemNumber>2</ItemNumber>
+  <CommodityCode>
+  <TarifCode>96089980</TarifCode>
+  </CommodityCode>
+  <Description>goods 2</Description>
+  <NetMass>1000.000</NetMass>
+  <GrossMass>1000.000</GrossMass>
+  <Document>
+  <Qualifier>730</Qualifier>
+  <Reference>333333</Reference>
+  </Document>
+  <Package>
+  <Quantity>100</Quantity>
+  <SequentialNumber>1</SequentialNumber>
+  <Type>BD</Type>
+  <Marks>marks</Marks>
+  </Package>
+  <ConsignorTIN>
+  <TIN>BGKTR4690026797Z4</TIN>
+  </ConsignorTIN>
+  <Consignor>
+  <Address>
+  <Name>Societe B</Name>
+  <Street>10 rue de la france</Street>
+  <PostalCode>11111</PostalCode>
+  <City>Varsovie</City>
+  <Country>PL</Country>
+  </Address>
+  </Consignor>
+  <ConsigneeTIN>
+  <TIN>PL31101000000076Z</TIN>
+  </ConsigneeTIN>
+  <Consignee>
+  <Address>
+  <Name>Societe A</Name>
+  <Street>10 rue de l espoir</Street>
+  <PostalCode>95111</PostalCode>
+  <City>Cergy</City>
+  <Country>FR</Country>
+  </Address>
+  </Consignee>
+  </GoodsItem>
+  </GoodsDeclaration>
+  </NCTSDeclaration>
+  </soap:Body>
+  </soap:Envelope>
+]]>
+  </Content>
+  </KCX>

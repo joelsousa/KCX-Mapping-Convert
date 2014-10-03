@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:jms="http://www.mulesource.org/schema/mule/jms/2.1"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1"
+	xmlns:xm="http://www.mulesource.org/schema/mule/xml/2.1"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd
+		http://www.mulesource.org/schema/mule/jms/2.0 http://www.mulesource.org/schema/mule/jms/2.1/mule-jms.xsd
+		http://www.mulesource.org/schema/mule/xml/2.1 http://www.mulesource.org/schema/mule/xml/2.1/mule-xml.xsd">
+
+	<!-- FREE TO ALTER -->
+	<!-- add new services to listen to queues in kcx-meg-to-bob-config.xml -->
+
+	<model name="megToBOBTransformModel">
+		<default-service-exception-strategy>
+			<vm:outbound-endpoint path="error.queue"/>
+		</default-service-exception-strategy>
+
+                <service name="megCSFFRAExportToBOBTransformService">
+                  <inbound>
+	    	    <vm:inbound-endpoint path="meg.csffra.export.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="com.kewill.kcx.component.mapping.countries.de.aes.KidsToUids"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.export.to.csffra.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+		<service name="megACMEDEExportToBOBTransformService">
+		  <inbound>
+	    	    <vm:inbound-endpoint path="meg.acme.export.to.bob.transform.queue"/>
+		  </inbound>
+		  <component class="com.kewill.kcx.component.mapping.KidsToKidsTest"/>
+		  <outbound>
+		  	<pass-through-router>
+				<vm:outbound-endpoint path="de.export.to.client.queue"/>
+			</pass-through-router>
+		  </outbound>
+		</service>
+	</model>
+</mule>

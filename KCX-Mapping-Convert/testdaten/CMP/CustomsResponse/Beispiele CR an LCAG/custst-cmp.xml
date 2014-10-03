@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Body>
+	<CustomsResponse>
+		<MessageHeader>
+			<MessageType>CUSTST</MessageType>			
+			<MessageName>EK019102072013DXB-02A</MessageName>
+			<MessageFunction>RESPONSE</MessageFunction>
+			<MessageDateTime>2013-07-04T14:38:34</MessageDateTime>
+			<MessageSender>
+				<Identity>FSS</Identity>
+			</MessageSender>
+			<MessageRecipient>
+				<Identity>DE.CSF</Identity>
+			</MessageRecipient>
+			<MessageVersion>1.0.00</MessageVersion>
+		</MessageHeader>
+		<MessageBody>
+			<DeclarationStatus>45</DeclarationStatus>			
+			<CUSTST>
+				<HeaderDetail>
+					<FlightNumber>EK0191</FlightNumber>
+					<AirportOfDeparture>DXB</AirportOfDeparture>
+					<DepartureDate>20130704</DepartureDate>					
+					<CustomsRegistration>ATB150001550720135876</CustomsRegistration>
+				</HeaderDetail>				
+				<ItemDetails>
+					<LineItemNumber>0001</LineItemNumber>
+					<LineStatus>45</LineStatus>
+					<WaybillNumber>17639297952</WaybillNumber>	
+					<ItemDescription>TZSI01</ItemDescription>
+					<Weight>00000002000000</Weight> 
+					<CustodyDeadline>20130724</CustodyDeadline>
+					<DisposalDetails> 
+						<Eori>0000</Eori> 
+					</DisposalDetails> 
+					<CustodyWarehouse> 
+						<City>Frankfurt</City> 
+					</CustodyWarehouse>					
+				</ItemDetails>				
+			</CUSTST>					
+		</MessageBody>
+	</CustomsResponse>
+</soap:Body>
+</soap:Envelope>

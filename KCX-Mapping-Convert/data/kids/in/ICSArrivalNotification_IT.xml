@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+        <soap:Header>
+<Header xmlns="http:///www.eBiz.com/schemas/header/200310/">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>10</Month>
+<Day>17</Day>
+</Date>
+<Time>11:56:59</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>AE.EK.TST</Transmitter>
+<Receiver>AE.EK.TST</Receiver>
+<Method>ARN</Method>
+<MessageTP>
+<CountryCode>IT</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSArrivalNotification</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>17696278556-4GFZBRI8</MessageID>
+</Header>
+</soap:Header>
+   <soap:Body>
+<ICSArrivalNotification>
+<GoodsDeclaration>
+<ReferenceNumber>17696278556-4GFZBRI8</ReferenceNumber>
+<TotalNumberPositions>1</TotalNumberPositions>
+<TotalNumberPackages>12</TotalNumberPackages>
+<TotalGrossMass>352.18</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>A6-EGA</TransportationNumber>
+<TransportationCountry>AE</TransportationCountry>
+</MeansOfTransportBorder>
+<ConveyanceNumber>EK0059</ConveyanceNumber>
+<DateOfPresentation>201110151355</DateOfPresentation>
+<DeclaredDateOfArrival>201110151358</DeclaredDateOfArrival>
+<CarrierTIN>
+<TIN>DE9008144</TIN>
+<IdentificationType>2</IdentificationType>
+</CarrierTIN>
+<CarrierAddress>
+<Address>
+<Name>Adress Name</Name>
+<Street>Street Name</Street>
+<City>Bad Homburg</City>
+<PostalCode>63512</PostalCode>
+<Country>DE</Country>
+</Address>
+</CarrierAddress>
+<CarrierContact>
+<Clerk>Muster Keil</Clerk>
+<Identity>Emirates - Frankfurt</Identity>
+<Email>Cornelia.Keil@kewill.de </Email>
+<FaxNumber>+49 172 3198 954 </FaxNumber>
+<PhoneNumber>+49 6172 9268 512 </PhoneNumber>
+</CarrierContact>
+<CustomsOfficeFirstEntry>DE005866</CustomsOfficeFirstEntry>
+<CountryOfficeFirstEntry>DE</CountryOfficeFirstEntry>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Document>
+<Type>N741</Type>
+<Reference>17696278556</Reference>
+</Document>
+<EsumaDataReference>
+<MRN>11DE586600075378I9</MRN>
+</EsumaDataReference>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSArrivalNotification>
+</soap:Body>
+</soap:Envelope>

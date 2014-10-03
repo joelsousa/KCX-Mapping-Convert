@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>06</Month>
+<Day>03</Day>
+</Date>
+<Time>151258</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>HAMOLHAU</Transmitter>
+<Receiver>DE.YLO.PHA</Receiver>
+<Method>PORT</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>PORT</Procedure>
+<MessageName>PortDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>29150881</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<PortDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>HSE1305020563</ReferenceNumber>
+<PortSystem>ZAPP</PortSystem>
+<MessageFunction>9</MessageFunction>
+<DeclarationType>HDS</DeclarationType>
+<DeclarationMode>0</DeclarationMode>
+<Shipper>
+<CustomerIdentifier>DEZAG00001</CustomerIdentifier>
+<Address>
+<Name>ZINSSER ANALYTIC GMBH</Name>
+<Street>ESCHBORNER LANDSTRASSE 135</Street>
+<City>60489 FRANKFURT</City>
+<PostalCode>60489</PostalCode>
+<Country>DE</Country>
+</Address>
+<ContactPerson>
+<Name>ZINSSER ANALYTIC GMBH</Name>
+</ContactPerson>
+</Shipper>
+<Agent>
+<PortCode>SUDU</PortCode>
+</Agent>
+<VoyageDetails>
+<ShipReferenceNumber>3224</ShipReferenceNumber>
+<ShipName>RIO DE LA PLATA</ShipName>
+<ShippCallSign>DMQN</ShippCallSign>
+<ArrivalDate>20130711</ArrivalDate>
+<LoadingPort>DEHAM</LoadingPort>
+<DischargePort>PKKHI</DischargePort>
+<DestinationPlaceCode>PKKHI</DestinationPlaceCode>
+<IMONumber>9357951</IMONumber>
+</VoyageDetails>
+<AdditionInformation>
+<BillOfLadingNumber>NLHAM0002514</BillOfLadingNumber>
+</AdditionInformation>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<TarifCode>392330</TarifCode>
+<FirstGoodsLevel>
+<Quantity>1</Quantity>
+<PackingType>PB</PackingType>
+<GrossMass>80.0000</GrossMass>
+<Volume>0.7680</Volume>
+<Description>Plastic bottles</Description>
+<Marks>2013-10956</Marks>
+<DangerousGoods />
+</FirstGoodsLevel>
+</GoodsItem>
+</GoodsDeclaration>
+</PortDeclaration>
+</soap:Body>
+</soap:Envelope>

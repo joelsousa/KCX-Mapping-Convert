@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2013</Year>
+                    <Month>05</Month>
+                    <Day>14</Day>
+                </Date>
+                <Time>145111</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.BDP.TST</Transmitter>
+            <Receiver>DE.BDP.TST</Receiver>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>IMPORT</Procedure>
+                <MessageName>ImportDeclaration</MessageName>
+                <Release>2.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>0</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>BDP_KE_WORK_AWB_2</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+<Declaration>
+            <ReferenceNumber>BDP_IWA-Seller</ReferenceNumber>
+            <TypeOfPermit>IM</TypeOfPermit>
+            <Business>
+                <BusinessTypeCode>11</BusinessTypeCode>
+  <InvoicePrice>125.50</InvoicePrice>
+  <Currency>USD</Currency>
+            </Business>
+
+<CustomsOfficeOfDeclaration>8755</CustomsOfficeOfDeclaration>
+
+            <Traders>
+                <DeclarantAddress>
+                    <Name>SCHWAN DECLARANT COSMEITCS GMBH &amp; CO. KG</Name>
+                    <Street>SCHWANWEG 1</Street>
+<City>HEROLDSBERG, BAYERN, BY 91156</City>
+<PostalCode>91156</PostalCode>
+<Country>DE</Country>
+                </DeclarantAddress>
+
+                <RepresentativeTIN>
+                    <TIN>DE3486877</TIN>
+                </RepresentativeTIN>
+
+                <ConsignorAddress>
+                    <Name>REVLON Consignor PRODUCTS CORP.</Name>
+                    <Street>1501 WILIAMSBORO STREET</Street>
+<City>OXFORD, NORTH CAROL, NC 27565</City>
+<PostalCode>27656</PostalCode>
+<Country>US</Country>
+                </ConsignorAddress>
+
+                <AcquirerAddress>
+                    <Name>Acquirer . KG</Name>
+                    <Street>SCHWANWEG 1</Street>
+<City>HEROLDSBERG, BAYERN, BY 91156</City>
+<PostalCode>91156</PostalCode>
+<Country>DE</Country>
+
+                </AcquirerAddress>
+
+                <SellerAddress>
+                    <Name>REVLON Seller PRODUCTS CORP.</Name>
+                    <Street>1501 WILIAMSBORO STREET</Street>
+<City>OXFORD, NORTH CAROL, NC 27565</City>
+<PostalCode>27656</PostalCode>
+<Country>US</Country>
+                </SellerAddress>
+
+
+                <ConsigneeTIN>
+                    <TIN>DE9003827</TIN>
+                </ConsigneeTIN>
+                <ConsigneeAddress>
+                    <Name>Consignee Gmbh</Name>
+                    <Street>Louisenstrasse</Street>
+                    <HouseNumber>95</HouseNumber>
+                    <City>City</City>
+                    <PostalCode>1234</PostalCode>
+                    <Country>DE</Country>
+                </ConsigneeAddress>
+
+
+                <CustomsValueDeclarantAddress>
+                    <Name>SCHWAN CustomsValuerDecl-Adr  GMBH &amp; CO. KG</Name>
+                    <Street>SCHWANWEG 1</Street>
+<City>HEROLDSBERG, BAYERN, BY 91156</City>
+<PostalCode>91156</PostalCode>
+<Country>DE</Country>
+                </CustomsValueDeclarantAddress>
+
+                <RepresentativeOfCustomsValueDeclarantTIN>
+                    <TIN>DE5027624</TIN>
+                </RepresentativeOfCustomsValueDeclarantTIN>
+            </Traders>
+
+<DispatchCountry>US</DispatchCountry>
+<CustomsOfficeEntry>DE005876</CustomsOfficeEntry>   
+
+			
+
+<DestinationFederalState>06</DestinationFederalState>
+
+            <CustomsStatus>IM</CustomsStatus>
+            <StatisticalStatus>04</StatisticalStatus>
+
+<PreviousDocument>
+  <Type>ATNEU</Type>
+</PreviousDocument>
+
+            <MeansOfTransportBorder>
+<TransportMode>04</TransportMode>
+
+
+<TransportationType>04</TransportationType>
+
+                <TransportationNumber>8010</TransportationNumber>
+<TransportationCountry>DE</TransportationCountry>
+            </MeansOfTransportBorder>
+            <MeansOfTransportInland>
+
+<TransportMode>03</TransportMode>
+
+<TransportationType>03</TransportationType>
+
+                <TransportationNumber>8010</TransportationNumber>
+            </MeansOfTransportInland>
+
+ <MeansOfTransportArrival>
+  <TransportMode>03</TransportMode>
+  <TransportationType>04</TransportationType>
+  <TransportationNumber>TransportNummer</TransportationNumber>
+  <TransportationCountry>DE</TransportationCountry>
+ </MeansOfTransportArrival>
+
+
+
+
+            <ContactPerson>
+                <Name>Michael Potschatka</Name>
+                <Identity>CKEIL</Identity>
+                <Email>michael.potschatka@bdpinternational.com</Email>
+                <PhoneNumber>004991196522314</PhoneNumber>
+            </ContactPerson>
+            <IncoTerms>
+
+<Code>EXW</Code>
+
+
+                <Place>TOKYO, JAPAN</Place>
+            </IncoTerms>
+
+
+ <Invoice>
+   <InvoiceNumber>Nr N380</InvoiceNumber>
+   <InvoicePrice>18010.50</InvoicePrice>
+   <Currency>EUR</Currency>
+ </Invoice>
+
+<WriteOffSumAType>AWB</WriteOffSumAType>
+<WriteOffBonWarAvuvAuthNum>WriteOffB..</WriteOffBonWarAvuvAuthNum>
+<WriteOffBonWarRefNum>BE-Anteil Zolllager, Bezugsnummer </WriteOffBonWarRefNum>
+<CustomerOrderNumber>CustomerOrderNumber</CustomerOrderNumber>
+
+
+            <Document>
+                <Type>N380</Type>
+                <Number>COMM INV 1122</Number>
+  <IssueDate>20130502</IssueDate>
+
+            </Document>
+            <Document>
+                <Type>7HHP</Type>
+                <Number>BDP-12345678</Number>
+  <IssueDate>20130502</IssueDate>
+            </Document>
+            <Deferment>
+                <Type>10</Type>
+<TIN>DE9003827</TIN>
+            </Deferment>
+            <Deferment>
+                <Type>20</Type>
+<TIN>DE9003827</TIN>
+            </Deferment>
+            <DV1>
+                <BuyerSellerRelationship>0</BuyerSellerRelationship>
+ <BuyerSellerRelationshipDetails>BuyerSellerRelationshipDetails TEXT</BuyerSellerRelationshipDetails>
+ <RestrictionsCode>N</RestrictionsCode>
+  <RestrictionsText>RestrictionsText   </RestrictionsText>
+  <LicenseFeeDueCode>J</LicenseFeeDueCode>
+  <LicenseFeeText>LicenseFeeText  TEXT </LicenseFeeText>
+  <ResaleSurrenderUsageCode>J</ResaleSurrenderUsageCode>
+  <ResaleSurrenderUsageText>ResaleSurrenderUsageText TEXT </ResaleSurrenderUsageText>
+
+                <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+
+  <TermsServicesCode>N</TermsServicesCode>
+  <TermsServicesText>TermsServicesText TEXT </TermsServicesText>
+  <TextPreviousDecisions>TextPreviousDecisions TEXT</TextPreviousDecisions>
+
+            </DV1>
+            <GoodsItem>
+	<ItemNumber>1</ItemNumber>
+   <CommodityCode>
+       <TarifCode>82055910000</TarifCode>
+   </CommodityCode>
+	
+                <ProcedureCode>4000</ProcedureCode>
+
+ <Description>Werkzeuge LOCHBLECHE</Description>
+ <Amount>10.123</Amount>
+ <UnitOfMeasurementAmount>GRM</UnitOfMeasurementAmount>
+ <QualifierAmount>6</QualifierAmount>
+ <CountryOfOrigin>US</CountryOfOrigin>
+ <Quota>
+    <Number1>1000</Number1>
+ </Quota>
+ <PlaceOfIntroduction>NUE</PlaceOfIntroduction>
+ <PlaceOfDeparture>NYC</PlaceOfDeparture>
+
+                <OriginFederalState>USA</OriginFederalState>
+                <PlaceOfIntroduction>FRA</PlaceOfIntroduction>
+                <PlaceOfDeparture>NYC</PlaceOfDeparture>
+                <NetMass>8.123</NetMass>
+
+ <GrossMass>7.723</GrossMass>
+
+                <Package>
+                    <Quantity>5</Quantity>
+                    <Type>CT</Type>
+
+   <Marks>ADR.</Marks>
+
+                </Package>
+
+         <RequestedPrivilege>300</RequestedPrivilege>
+        <CustomsValue>8.444</CustomsValue>
+        <ImportTurnoverTax>2222.123</ImportTurnoverTax>
+        <Invoice>
+          <Amount>18010.50</Amount>
+          <ReductionSurcharge>0</ReductionSurcharge>
+          <Discount>0</Discount>
+        </Invoice>
+        <NetPrice>
+          <Rate>4.123</Rate>
+        </NetPrice>
+        <IndirectPayment>
+          <Amount>5.321</Amount>
+          <Rate>0</Rate>
+        </IndirectPayment>
+        <Statistic>
+
+          <Quantity>1</Quantity>
+<MeasuringUnit>NAR</MeasuringUnit>
+<QualifierMeasuringUnit>1</QualifierMeasuringUnit>
+          <StatisticalValue>5.123</StatisticalValue>
+        </Statistic>
+        <GoodsQuantityCustoms>
+
+          <Quantity>2</Quantity>
+<MeasuringUnit>NAR</MeasuringUnit>
+<QualifierMeasuringUnit>2</QualifierMeasuringUnit>
+        </GoodsQuantityCustoms>
+        <GoodsQuantityAgriculturalDuty>
+
+          <Quantity>3</Quantity>
+<MeasuringUnit>NAR</MeasuringUnit>
+<QualifierMeasuringUnit>3</QualifierMeasuringUnit>
+        </GoodsQuantityAgriculturalDuty>
+        <ProcessingFeeValueIncrease>0.123</ProcessingFeeValueIncrease>
+        <ExtraCostImportVAT>7.123</ExtraCostImportVAT>
+
+</GoodsItem>
+
+        </Declaration>
+    </soap:Body>
+</soap:Envelope>

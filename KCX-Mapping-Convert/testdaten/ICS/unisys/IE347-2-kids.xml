@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>04</Month>
+<Day>18</Day>
+</Date>
+<Time>08:21:00</Time>
+</SentAt>
+<Transmitter>AC.AIRCFRA.1507</Transmitter>
+<Receiver>DE.AIRCFRA.1507</Receiver>
+<Method>ARN</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSArrivalNotification</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>5720016010014130086327</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSArrivalNotification>
+<GoodsDeclaration>
+<ReferenceNumber>5720016010014130086327</ReferenceNumber>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+</MeansOfTransportBorder>
+<ConveyanceReference>AC846</ConveyanceReference>
+<DateOfPresentation>201104180821</DateOfPresentation>
+<DeclaredDateOfArrival>201104171005</DeclaredDateOfArrival>
+<CarrierTIN>
+<TIN>GB238595817000</TIN>
+</CarrierTIN>
+<CarrierAddress>
+<Address>
+<Name>AIR CANADA</Name>
+<Street>PO BOX 14000</Street>
+<City>MONTREAL</City>
+<PostalCode>H4Y 1H4</PostalCode>
+<Country>CA</Country>
+<CountrySubEntity>QC</CountrySubEntity>
+</Address>
+</CarrierAddress>
+<CarrierContact>
+<Clerk>AIR CANADA</Clerk>
+<PhoneNumber>(514) 422 5000</PhoneNumber>
+</CarrierContact>
+<CustomsOfficeFirstEntry>DE007650</CustomsOfficeFirstEntry>
+<CountryOfficeFirstEntry>DE</CountryOfficeFirstEntry>
+</GoodsDeclaration>
+</ICSArrivalNotification>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+            <To>DE01.DETEST.2158</To>
+            <From>DE01.CSFTEST.2158</From>
+            <MessageID>DE01DE0121582008091010000008</MessageID>
+            <SentAt>2008-09-10 12:18:45 +0200</SentAt>
+            <Act>inform</Act>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+            <Export>
+                <Declarant>
+                    <TIN>9000119</TIN>
+                </Declarant>
+                <AuthorisationID>DE5864ZA0002</AuthorisationID>
+                <ContainerIndicator>0</ContainerIndicator>
+                <CustomsOffices>
+                    <OfficeOfExport>DE005866</OfficeOfExport>
+                </CustomsOffices>
+                <DestinationCountry>CH</DestinationCountry>
+		<GrossMass>210000</GrossMass>
+		<Incoterms>
+                    <Code>CFR</Code>
+                    <City>zürich</City>>
+                </Incoterms>
+                <PackagesQuantity>001</PackagesQuantity>
+                <PlaceOfLoading>
+                    <Code>AA01</Code>
+                </PlaceOfLoading>
+                <ReferenceNumber>MS-080923-008</ReferenceNumber>
+                <Seals>
+                    <Quantity>0</Quantity>
+                    <SealsID/>
+                </Seals>
+                <Transaction>
+                    <Type>11</Type>
+                    <Amount>20278</Amount>
+                    <Currency>EUR</Currency>
+                </Transaction>
+                <TypeOfDeclaration>
+                    <RegionCode>EU</RegionCode>
+                    <ProcedureCode>e</ProcedureCode>
+                </TypeOfDeclaration>
+                <ReferenceNumber>MS-080923-008</ReferenceNumber>
+                <GoodsItem>
+                    <ItemNumber>001</ItemNumber>
+                    <CommodityCodeKN8>85013100</CommodityCodeKN8>
+                    <GoodsDescription>Gleichstrommotoren; Gleichstromgeneratoren mit einer Leistung von 750W oder weniger</GoodsDescription>
+                    <GrossMass>210000</GrossMass>
+                    <NetMass>200000</NetMass>
+                    <OriginRegion>06</OriginRegion>
+                    <Packaging>
+                        <Quantity>1</Quantity>
+                        <Number>01</Number>
+                        <Type>PX</Type>
+                        <MarksAndNumbers>00000000614069565001</MarksAndNumbers>
+                    </Packaging>
+                    <Procedure>
+                        <Declared>10</Declared>
+                        <Previous>00</Previous>
+                    </Procedure>
+                    <ProducedDocument>
+                        <Document>
+                            <Category>OHNE</Category>
+                        </Document>
+                    </ProducedDocument>
+                </GoodsItem>
+            </Export>
+        </Submit>
+    </soap:Body>
+</soap:Envelope>
+

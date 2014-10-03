@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<KIDSHeader>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>9</Month>
+<Day>02</Day>
+</Date>
+<Time>065013</Time>
+<TimeZone>-0500</TimeZone>
+</SentAt>
+<Transmitter>DE.BDP.TST</Transmitter>
+<Receiver>DE.BDP.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>NCTS</Procedure>
+<MessageName>NCTSDeclaration</MessageName>
+<Release>4.1.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>BDP_1815046849_2</MessageID>
+</KIDSHeader>
+</soap:Header>
+<soap:Body>
+<NCTSDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>1815046849_2</ReferenceNumber>
+<ShipmentNumber>1815046849</ShipmentNumber>
+<PlaceOfLoading>
+<Code>DA01</Code>
+</PlaceOfLoading>
+<DestinationCountry>DE</DestinationCountry>
+<DispatchCountry>JP</DispatchCountry>
+<MeansOfTransportBorder>
+<TransportMode>40</TransportMode>
+<TransportationType>30</TransportationType>
+<TransportationNumber>OF-VZ 250/ Sammelverkehr1</TransportationNumber>
+<TransportationCountry>DE</TransportationCountry>
+</MeansOfTransportBorder>
+<MeansOfTransportDeparture>
+<TransportationNumber>OF-VZ 250/ Sammelverkehr2</TransportationNumber>
+<TransportationCountry>DE</TransportationCountry>
+</MeansOfTransportDeparture>
+<Consignor>
+<Address>
+<Name>Fuji Flavor Co. LTD</Name>
+<City>Toky00000</City>
+<PostalCode>00000</PostalCode>
+<Country>JP</Country>
+</Address>
+</Consignor>
+<Consignee>
+<Address>
+<Name>JT International Germany GmbH</Name>
+<City>Trier</City>
+<PostalCode>54294</PostalCode>
+<Country>DE</Country>
+</Address>
+</Consignee>
+<PrincipalTIN>
+<TIN>DE5027624</TIN>
+</PrincipalTIN>
+<Principal />
+<Contact>
+<Identity>FSS</Identity>
+</Contact>
+<OfficeOfDeparture>DE002222</OfficeOfDeparture>
+<OfficeOfTransit>
+<Code>DE003333</Code>
+</OfficeOfTransit>
+<OfficeOfDestination>DE004444</OfficeOfDestination>
+<Guarantee>
+<TypeOfGuarantee>1</TypeOfGuarantee>
+<Reference>
+<GRN>13DE0000000059920</GRN>
+<Amounts>
+<Amount>175.37000000</Amount>
+<Currency>EUR</Currency>
+</Amounts>
+</Reference>
+</Guarantee>
+<TransportationRoute>
+<Country>JP</Country>
+</TransportationRoute>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<TypeOfDeclaration>T1</TypeOfDeclaration>
+<Description>FLAVORING JT-40043391</Description>
+<NetMass>140.700</NetMass>
+<GrossMass>141.000</GrossMass>
+<PreviousDocument>
+<Type>ATNEU</Type>
+</PreviousDocument>
+<Document>
+<Type>N380</Type>
+<Reference>FF13234 nach Statistic</Reference>
+<IssueDate>20130821</IssueDate>
+</Document>
+<Document>
+<Type>740</Type>
+<Reference>131-4710198 nach Statistic3</Reference>
+<IssueDate>20130822</IssueDate>
+</Document>
+<Package>
+<Quantity>3</Quantity>
+<Type>PK</Type>
+<Marks>gez. Adresse</Marks>
+</Package>
+</GoodsItem>
+</GoodsDeclaration>
+</NCTSDeclaration>
+</soap:Body>
+</soap:Envelope>

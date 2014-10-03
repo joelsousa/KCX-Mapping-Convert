@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE.SKGTST.4037</To>
+      <From>DE.SKGTST.4037</From>
+      <MessageID>1874d804-6458-41a5-a0be-af1368d39536</MessageID>
+      <SentAt>2011-12-07T13:22:19</SentAt>
+      <Act>inform</Act>
+      <Procedure>NCTS</Procedure>
+      <MessageType>NCTSDeclaration</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>4.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ncts/body/200911">
+      <NCTS>
+        <NCTSDeclaration>
+          <LocalReferenceNumber>EI0001D29</LocalReferenceNumber>
+          <TypeOfDeclaration>T1</TypeOfDeclaration>
+          <CountryOfDestination>PL</CountryOfDestination>
+          <CountryOfDispatch>TH</CountryOfDispatch>
+          <TransportAtBorder>
+            <Identity>SHIFF</Identity>
+            <Mode>1</Mode>
+            <Nationality>TH</Nationality>
+          </TransportAtBorder>
+          <TransportAtDeparture>
+            <Identity>LKW</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtDeparture>
+          <ContainerIndicator>0</ContainerIndicator>
+          <TotalNumberOfItems>1</TotalNumberOfItems>
+          <TotalNumberOfPackages>5</TotalNumberOfPackages>
+          <TotalGrossMass>1369000</TotalGrossMass>
+          <Consignor>
+            <Address>
+              <Name>KORAT DENKI LTD</Name>
+              <Street>149 M00 10 T. CHOCKCHAI</Street>
+              <PostalCode>30190</PostalCode>
+              <City>NAKHORNATCHASIMA</City>
+              <CountryCodeISO>TH</CountryCodeISO>
+            </Address>
+          </Consignor>
+          <Consignee>
+            <Address>
+              <Name>ORION ELECTRIC (POLAND) SP. Z O.O.</Name>
+              <Street>OSTASZEWO 57</Street>
+              <PostalCode>87-148</PostalCode>
+              <City>LYSOMICE</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignee>
+          <Principal>
+            <TIN>1876635</TIN>
+            <Address>
+              <Name>YUSEN LOGISTICS (POLSKA) SP. Z O.O.</Name>
+              <Street>RZYMOWSKIEGO 53</Street>
+              <PostalCode>02-679</PostalCode>
+              <City>WARSZAWA</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Principal>
+          <OfficeOfDeparture>DE005866</OfficeOfDeparture>
+          <OfficeOfDestination>DE005866</OfficeOfDestination>
+          <SimplifiedProcedureFlag>0</SimplifiedProcedureFlag>
+          <RepresentativeName>EI</RepresentativeName>
+          <RepresentativeCapacity>Zoll agent</RepresentativeCapacity>
+          <Guarantee>
+            <TypeOfGuarantee>1</TypeOfGuarantee>
+            <Reference>
+              <GRN>08PL440000T004769</GRN>
+              <AccessCode>8888</AccessCode>
+              <OtherNumber>08PL440000T004769</OtherNumber>
+              <OwnerTIN>PL521314521600000</OwnerTIN>
+              <NotValidForCountry>AD</NotValidForCountry>
+              <NotValidForCountry>SM</NotValidForCountry>
+              <Amounts>
+                <Amount>2397200</Amount>
+                <Currency>PLN</Currency>
+              </Amounts>
+            </Reference>
+          </Guarantee>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <CommodityCodeKN8>85229080</CommodityCodeKN8>
+            <GoodsDescription>TEILE FUR FERNSEHER DVD-Laufwerk</GoodsDescription>
+            <GrossMass>1369000</GrossMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>LCDMK11-Y01</Reference>
+            </ProducedDocuments>
+            <ContainerNumber>TCKU2505651</ContainerNumber>
+            <Packages>
+              <Quantity>5</Quantity>
+              <MarksAndNumbers>-</MarksAndNumbers>
+              <Type>PA</Type>
+            </Packages>
+            <WriteOffInfo>
+              <WriteOffSumA>
+                <Identification>FV</Identification>
+                <Reference>ATB151871581120114851</Reference>
+              </WriteOffSumA>
+            </WriteOffInfo>
+          </GoodsItem>
+        </NCTSDeclaration>
+      </NCTS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

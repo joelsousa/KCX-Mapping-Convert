@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>06</Day>
+                </Date>
+                <Time>104733</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>DIV</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSDiversionRequestRejected</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>AE-EK-TST000197060111</MessageID>
+            <InReplyTo>17617298584-JPE78H</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSDiversionRequestRejected>
+            <ReferenceNumber>17617298584-JPE78H</ReferenceNumber>
+            <DeclarationRejectionDateAndTime>201101061047</DeclarationRejectionDateAndTime>
+            <FunctionalError>
+                <ErrorType>EAS50023</ErrorType>
+                <ErrorPointer>EINFUHRVORGANG</ErrorPointer>
+                <ErrorReason>Es wurden nicht alle MRNs zum Beförderungsmittel EK0047 mit Ankunftsdatum 05.01.2011 angegeben.</ErrorReason>
+            </FunctionalError>
+        </ICSDiversionRequestRejected>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>12</Month>
+<Day>02</Day>
+</Date>
+<Time>12:20:16</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<ProcedureSpecification>NP</ProcedureSpecification>
+<MessageName>DeclarationResponse</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<CodeMapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</CodeMapping>
+</CustomsExchange>
+<MessageID>MsgID20080902</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<DeclarationResponse>
+<GoodsDeclaration>
+<AcceptanceTime>200812021219</AcceptanceTime>
+<ReceiveTime>200812021219</ReceiveTime>
+<StatusOfCompletion>14</StatusOfCompletion>
+<ReferenceNumber>KCX-081202-0043</ReferenceNumber>
+<Error>
+<Code>errcde</Code>
+<Text>errtxt                                                                                                                                                                                                                                                                                             errtxt</Text>
+<Pointer>errzeiger                                                                                                                                                                                                                                                                                                                                          errzeiger</Pointer>
+</Error>
+</GoodsDeclaration>
+</DeclarationResponse>
+</soap:Body>
+</soap:Envelope>

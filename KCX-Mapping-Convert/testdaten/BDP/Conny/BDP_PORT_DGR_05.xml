@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <KIDSHeader>
+            <SentAt>
+                <Date>
+                    <Year>2013</Year>
+                    <Month>8</Month>
+                    <Day>19</Day>
+                </Date>
+                <Time>104950</Time>
+                <TimeZone>-0600</TimeZone>
+            </SentAt>
+            <Transmitter>DE.BDP.TST</Transmitter>
+            <Receiver>DE.BDP.TST</Receiver>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>PORT</Procedure>
+                <MessageName>PortDeclaration</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>0</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>BDP_PORT_DGR_05</MessageID>
+        </KIDSHeader>
+    </soap:Header>
+    <soap:Body>
+        <Declaration>
+           <ReferenceNumber>BDP_PORT_DGR_05</ReferenceNumber> 
+            <PlaceOfLoading/>
+            <AreaCode>EX</AreaCode>
+            <TypeOfPermit>c</TypeOfPermit>
+            <DestinationCountry>CN</DestinationCountry>
+            <TransportationRoute>
+                <Country>CN</Country>
+            </TransportationRoute>
+            <Traders>
+                <DeclarantAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </DeclarantAddress>
+                <RepresentativeTIN>
+                    <TIN>DE9003827</TIN>
+                    <BO>0000</BO>
+                    <IdentificationType>0</IdentificationType>
+                </RepresentativeTIN>
+                <ConsignorAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </ConsignorAddress>
+                <ConsigneeAddress>
+                    <Name>SHANGHAI AUSPICIOUS IMPORT&amp; EXPORT CO. LTD</Name>
+                    <Street>ROOM 2202, FLOOR 22,</Street>
+                    <City>SHANGHAI</City>
+                    <PostalCode>200336</PostalCode>
+                    <Country>CN</Country>
+                </ConsigneeAddress>
+                <BuyerAddress>
+                    <Name>SHANGHAI AUSPICIOUS IMPORT&amp; EXPORT CO. LTD</Name>
+                    <Street>ROOM 2202, FLOOR 22,</Street>
+                    <City>SHANGHAI</City>
+                    <PostalCode>200336</PostalCode>
+                    <Country>CN</Country>
+                </BuyerAddress>
+                <SellerAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </SellerAddress>
+                <CustomsValueDeclarantAddress>
+                    <Name>Bluestar Silicones Germany GmbH</Name>
+                    <Street>Hans-Sachs-Str. 4A</Street>
+                    <City>Luebeck</City>
+                    <PostalCode>23566</PostalCode>
+                    <Country>DE</Country>
+                </CustomsValueDeclarantAddress>
+                <RepresentativeOfCustomsValueDeclarantTIN>
+                    <TIN>DE9003827</TIN>
+                    <BO>0000</BO>
+                    <IdentificationType>0</IdentificationType>
+                </RepresentativeOfCustomsValueDeclarantTIN>
+            </Traders>
+            <DispatchCountry>DE</DispatchCountry>
+            <DestinationFederalState>CN</DestinationFederalState>
+            <CustomsStatus>IM</CustomsStatus>
+            <MeansOfTransportBorder>
+                <TransportMode>10</TransportMode>
+                <TransportationType>10</TransportationType>
+                <TransportationNumber>015E</TransportationNumber>
+            </MeansOfTransportBorder>
+            <MeansOfTransportInland>
+                <TransportMode>30</TransportMode>
+            </MeansOfTransportInland>
+            <ContactPerson>
+                <Identity>FSS</Identity>
+            </ContactPerson>
+            <IncoTerms>
+                <Code>CIF</Code>
+            </IncoTerms>
+            <Container>
+                <Number>TBNU0000001</Number>
+            </Container>
+            <DV1>
+                <BuyerSellerRelationship>0</BuyerSellerRelationship>
+                <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+            </DV1>
+
+
+            <Port>
+                <PortSystem>ZAPP</PortSystem>
+                <MessageFunction>9</MessageFunction>
+                <DeclarationType>HDS</DeclarationType>
+                <DeclarationTypeSpecification>001</DeclarationTypeSpecification>
+                <TestMode>0</TestMode>
+                <ShipperReferenceNumber>1855037657</ShipperReferenceNumber>
+                <Shipper>
+                     <TerminalCustomerNumber>5280-0</TerminalCustomerNumber>
+                    <TIN>DE9003827</TIN>
+                    <BO>0000</BO>
+                    <Address>
+                        <Name>BLUESTAR SILICONES GERMANY GMBH</Name>
+                        <Street>HANS-SACHS-STRASSE 4A</Street>
+                        <City>LUBECK, SCHLESWIG-H</City>
+                        <PostalCode>23566</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                </Shipper>
+                <TerminalCode>HAM_CTA</TerminalCode>
+                <CustomsOfficeExport>DE004851</CustomsOfficeExport>
+                <Agent>
+                    <PortCode>HLF</PortCode>
+                    <Address>
+                        <Name>VLS GERMANY</Name>
+                        <Street>LINDLEYSTRASSE 19</Street>
+                        <City>FRANKFURT AM MAIN</City>
+                        <PostalCode>60314</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                    <ContactPerson>
+                        <Name>THORSTEN GENGNAGEL</Name>
+                    </ContactPerson>
+                </Agent>
+
+		 <Tally>
+                        <PortCode>XX</PortCode>
+                 </Tally>
+
+		<ContactPersonForDangerousGoods>
+                    <Name>Ansprechpartner Gefahrgut</Name>
+                    <PhoneNumber>Telefon Gefahrgut</PhoneNumber>
+               </ContactPersonForDangerousGoods>
+
+                <VoyageDetails>
+                    <ShipReferenceNumber>OOC0704</ShipReferenceNumber>
+                    <VoyageNumber>004E33</VoyageNumber>
+                    <ShipName>BASLE EXPRESS</ShipName>
+                    <ShippCallSign>DFGN2</ShippCallSign> 
+                    <ShipOwner>HLL</ShipOwner> 
+                    <ArrivalDate>20130824</ArrivalDate>
+                    <DepartureDate>20130907</DepartureDate>
+                    <LoadingPort>DEHAM</LoadingPort>
+                    <DischargePort>SAJED</DischargePort>
+                    <DestinationPlaceName>SHANGHAI, CHINA</DestinationPlaceName>
+                </VoyageDetails>
+              
+                <AdditionInformation>
+                    <BookingNumber>33565900</BookingNumber> 
+                   <BillOfLadingNumber></BillOfLadingNumber>  
+	        </AdditionInformation>
+
+                <PostCarriage>
+                    <TransportType> </TransportType> 
+	        </PostCarriage>
+
+                <ContainerDetails>
+                    <ContainerNumber>NYKU3499572</ContainerNumber> 
+                    <Type>22G0</Type> 
+                    <Owner>2</Owner> 
+                    <GrossMass>6382,800</GrossMass> 
+                    <SealNumber>ES4269342</SealNumber> 
+                    <Description>Chemicalien</Description> 
+	        </ContainerDetails>
+
+              	     <GoodsItem>
+                		<ItemNumber>1</ItemNumber>
+                                 
+                                <Text>SILBIONE</Text>
+          			<CommodityCode>
+					<TarifCode>123456</TarifCode>
+				</CommodityCode>
+
+                		<ProcedureCode>0000</ProcedureCode>
+                		<PlaceOfIntroduction>0000</PlaceOfIntroduction>
+                		<GrossMass>0000</GrossMass>
+                		<Package>
+                       		   	<Quantity>00</Quantity>
+                      	    		<Type>00</Type>
+                       			<Marks>00000000</Marks>
+                		</Package>
+                		<Invoice>
+                    				<Amount>0</Amount>
+                    				<ReductionSurcharge>15.15</ReductionSurcharge>
+                    				<Discount>0.5</Discount>
+                		</Invoice>
+                		<Statistic>
+                    			<StatisticalValue>13.13</StatisticalValue>
+                		</Statistic>
+                             <Port>
+                    		<CustomsDeclarationType>AES</CustomsDeclarationType>
+                    		<DeclarationTypeSpecification>001</DeclarationTypeSpecification>
+                    		<FirstGoodsLevel>
+                    			<Quantity>50</Quantity>
+    	        			<PackingType>4G</PackingType>
+                 			<GrossMass>1001.500</GrossMass>
+                 			<Volume>0.1230</Volume>
+            	        		<Description>Chemicalien</Description>
+           	 			<Marks>Jamjoom Company, Jeddah</Marks>           	            
+           	 			<MrnStatement>
+           	 			     <MRN>13DE510282104245E0</MRN>
+           	 			     <MRNComplete>1</MRNComplete>
+           	 			     <MRNPosition>
+                                              <PositionNumber>001</PositionNumber>
+                                              <PackageId>001</PackageId>
+           	 			     </MRNPosition>
+					
+					</MrnStatement>           	            
+          	    		</FirstGoodsLevel>
+                    		<SecondGoodsLevel>
+      	 			     <DangerousGoods>
+
+					<IMDGClass>6.1</IMDGClass>
+					<IMDGAmendments></IMDGAmendments>
+					<UNNumber>1593</UNNumber>
+					<TechnicalSpecification></TechnicalSpecification>
+					<DangerDescription></DangerDescription>
+					<DangerReleaser> </DangerReleaser>
+ 				        <Annotations> </Annotations>
+                                        <MarinePollutantFlag></MarinePollutantFlag>
+					<NetMass></NetMass>
+					<NetMassExplosive></NetMassExplosive>
+				        <ExplosiveGoodsCertificateFlag> </ExplosiveGoodsCertificateFlag>
+				        <DangerToleranceFlag> </DangerToleranceFlag>
+					<PackingSafetyGroup> </PackingSafetyGroup>
+					<PackingType></PackingType>
+					<limitedQuantitiesCode>TLQ</limitedQuantitiesCode>
+					<expectedQuantitiesCode></expectedQuantitiesCode>
+					<Flashpoint>-23</Flashpoint>
+					<FlashpointQualifier>CEL</FlashpointQualifier>
+
+			                <SeaTransportDetails>
+                                                <WatterPollutionClass> </WatterPollutionClass>
+                                                <EmsNumber>F-AS-A</EmsNumber>
+                                                <EmsSecondNumber> </EmsSecondNumber>
+                                                <MFAG1> </MFAG1>
+                                                <MFAG2> </MFAG2>
+                                                <DangerLabel1> </DangerLabel1>
+                                                <DangerLabel2> </DangerLabel2>
+                                                <DangeLabel3> </DangeLabel3>
+                                                <StuffingCategor> </StuffingCategor>
+                                                <StuffingDescription>Dichlormethan</StuffingDescription>
+                                                <Land> </Land>
+			                </SeaTransportDetails>
+
+					<LandTransportDetails>	
+                                                <LandTransportDangerFlag></LandTransportDangerFlag>
+						<UNNumberForLandTransport>0000</UNNumberForLandTransport>
+					</LandTransportDetails>	
+
+					<RadioactiveGoodsDetails>
+						<UNNumber> </UNNumber>
+                                                <Category> </Category>
+                                                <PackingType> </PackingType>
+                                                <RadioactivityLevel> </RadioactivityLevel>
+                                                <RadioactivityQualifier> </RadioactivityQualifier>
+                                                <BfsNumber> </BfsNumber>
+                                                <TransportIndex> </TransportIndex>
+                                                <CriticalHazardIndex> </CriticalHazardIndex>
+					</RadioactiveGoodsDetails>
+        			     </DangerousGoods>
+
+                    		</SecondGoodsLevel>
+                             </Port>
+                     </GoodsItem>
+              </Port>
+        </Declaration>
+    </soap:Body>
+</soap:Envelope>

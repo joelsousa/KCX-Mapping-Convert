@@ -1,0 +1,1896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd">
+
+	<!-- FREE TO ALTER -->
+	<!-- add new services to listen to queues in kcx-meg-to-bob-config.xml -->
+
+	<model name="megToBOBTransformModel">
+		<default-service-exception-strategy>
+			<vm:outbound-endpoint path="error.queue"/>
+			<vm:outbound-endpoint path="dlq.queue"/>
+		</default-service-exception-strategy>
+
+                <service name="megCSFFRAToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.csffra.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${kids.to.csffra.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.csffra.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDIEHTS2ToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.diehts2.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${kids.to.diehts2.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.diehts2.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+                
+                <service name="megDIEHPREToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.diehpre.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${kids.to.diehpre.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.diehpre.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+                
+                <service name="megDIEHTSTToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.diehtst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${kids.to.diehtst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.diehtst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+
+                <service name="megDeAimHbnToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deaimhbn.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deaimhbn.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deaimhbn.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeAldvHuToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dealdvhu.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dealdvhu.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dealdvhu.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeAllwRadToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deallwrad.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deallwrad.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deallwrad.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeArevNdtToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dearevndt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dearevndt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dearevndt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBadiMerToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debadimer.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debadimer.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debadimer.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBartMerToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debartmer.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debartmer.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debartmer.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBhtSaaToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debhtsaa.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debhtsaa.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debhtsaa.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBiesHamToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debiesham.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debiesham.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debiesham.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBiotBerToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debiotber.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debiotber.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debiotber.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBrthSgdToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debrthsgd.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debrthsgd.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debrthsgd.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBtagMueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debtagmue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debtagmue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debtagmue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBwfOffToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debwfoff.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debwfoff.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debwfoff.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeBwicSchToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.debwicsch.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${debwicsch.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.debwicsch.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCblhHorToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decblhhor.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decblhhor.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decblhhor.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeChdgBrhToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dechdgbrh.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dechdgbrh.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dechdgbrh.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeChirTutToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dechirtut.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dechirtut.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dechirtut.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCsbiMarToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decsbimar.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decsbimar.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decsbimar.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCslbMarToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decslbmar.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decslbmar.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decslbmar.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCyklCgnToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decyklcgn.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decyklcgn.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decyklcgn.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDawoObrToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dedawoobr.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dedawoobr.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dedawoobr.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDbgtUebToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dedbgtueb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dedbgtueb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dedbgtueb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDemaWieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dedemawie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dedemawie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dedemawie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDiaeUebToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dediaeueb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dediaeueb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dediaeueb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDiakWanToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dediakwan.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dediakwan.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dediakwan.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDmPegToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dedmpeg.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dedmpeg.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dedmpeg.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDscbAlfToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dedscbalf.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dedscbalf.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dedscbalf.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDuroNmtToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deduronmt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deduronmt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deduronmt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeEchwHamToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deechwham.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deechwham.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deechwham.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeEcolSieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deecolsie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deecolsie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deecolsie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeEddiAhrToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deeddiahr.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deeddiahr.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deeddiahr.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeElomMaiToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deelommai.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deelommai.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deelommai.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeEtagNueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deetagnue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deetagnue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deetagnue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeEtimTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deetimtst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deetimtst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deetimtst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeEtimDieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deetimdie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deetimdie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deetimdie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeFaceSteToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.defaceste.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${defaceste.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.defaceste.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeFackHerToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.defackher.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${defackher.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.defackher.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeGesdFdsToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.degesdfds.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${degesdfds.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.degesdfds.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeGkegTitToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.degkegtit.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${degkegtit.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.degkegtit.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeGkrgSalToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.degkrgsal.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${degkrgsal.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.degkrgsal.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeGrphAacToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.degrphaac.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${degrphaac.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.degrphaac.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeGwerMinToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.degwermin.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${degwermin.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.degwermin.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHaacEttToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehaacett.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehaacett.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehaacett.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHammTirToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehammtir.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehammtir.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehammtir.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHasbSoeToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehasbsoe.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehasbsoe.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehasbsoe.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHeidSchToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deheidsch.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deheidsch.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deheidsch.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHiacNecToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehiacnec.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehiacnec.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehiacnec.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHobaBriToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehobabri.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehobabri.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehobabri.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHobsBriToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehobsbri.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehobsbri.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehobsbri.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHoesSchToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehoessch.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehoessch.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehoessch.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeHubtFulToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dehubtful.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dehubtful.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dehubtful.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeInsaFreToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deinsafre.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deinsafre.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deinsafre.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeJovoManToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dejovoman.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dejovoman.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dejovoman.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeJuhoDueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dejuhodue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dejuhodue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dejuhodue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKaduUrbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekaduurb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekaduurb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekaduurb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKamaUlmToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekamaulm.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekamaulm.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekamaulm.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKappCobToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekappcob.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekappcob.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekappcob.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKiefFlgToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekiefflg.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekiefflg.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekiefflg.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKloeOwiToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekloeowi.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekloeowi.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekloeowi.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKoemPirToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekoempir.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekoempir.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekoempir.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKrtpWkbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekrtpwkb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekrtpwkb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekrtpwkb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKspoHaiToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekspohai.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekspohai.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekspohai.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKufaBarToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekufabar.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekufabar.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekufabar.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLandNueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delandnue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delandnue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delandnue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLearRemToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delearrem.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delearrem.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delearrem.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLecaSolToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delecasol.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delecasol.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delecasol.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLeimNusToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deleimnus.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deleimnus.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deleimnus.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLekuFueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delekufue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delekufue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delekufue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLmsmManToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delmsmman.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delmsmman.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delmsmman.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLogtKonToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delogtkon.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delogtkon.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delogtkon.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLooGzhToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deloogzh.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deloogzh.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deloogzh.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLucoSkmToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delucoskm.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delucoskm.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delucoskm.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeMabhGosToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.demabhgos.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${demabhgos.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.demabhgos.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeMahuLbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.demahulb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${demahulb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.demahulb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeManiTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.demanitst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${demanitst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.demanitst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeManiSwbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.demaniswb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${demaniswb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.demaniswb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+
+                <service name="megDeMiweArnToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.demiwearn.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${demiwearn.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.demiwearn.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeNegeBruToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.denegebru.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${denegebru.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.denegebru.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeNimaBghToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.denimabgh.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${denimabgh.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.denimabgh.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeObogBieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deobogbie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deobogbie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deobogbie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeOechAnsToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deoechans.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deoechans.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deoechans.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDePfeuNmtToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.depfeunmt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${depfeunmt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.depfeunmt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDePfhoGwdToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.depfhogwd.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${depfhogwd.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.depfhogwd.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDePfinNmtToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.depfinnmt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${depfinnmt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.depfinnmt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDePfseNmtToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.depfsenmt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${depfsenmt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.depfsenmt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDePrveFriToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deprvefri.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deprvefri.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deprvefri.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeRailNmtToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.derailnmt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${derailnmt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.derailnmt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeRefuMetToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.derefumet.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${derefumet.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.derefumet.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeReimRoeToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dereimroe.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dereimroe.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dereimroe.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeRoswMucToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deroswmuc.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deroswmuc.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deroswmuc.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeRuagWesToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deruagwes.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deruagwes.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deruagwes.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSccaHmrToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desccahmr.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desccahmr.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desccahmr.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSchoBadToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deschobad.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deschobad.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deschobad.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSchuSelToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deschusel.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deschusel.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deschusel.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeScmgTodToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.descmgtod.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${descmgtod.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.descmgtod.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeScpsAltToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.descpsalt.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${descpsalt.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.descpsalt.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeScweNeuToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.descweneu.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${descweneu.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.descweneu.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSdgfWkbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desdgfwkb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desdgfwkb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desdgfwkb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSeepBotToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deseepbot.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deseepbot.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deseepbot.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSestWalToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desestwal.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desestwal.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desestwal.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSewGraToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desewgra.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desewgra.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desewgra.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSfahBieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desfahbie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desfahbie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desfahbie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSgfwGotToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desgfwgot.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desgfwgot.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desgfwgot.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSimoKirToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desimokir.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desimokir.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desimokir.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSingKahToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desingkah.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desingkah.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desingkah.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSiteTraToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desitetra.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desitetra.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desitetra.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSmarKsToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desmarks.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desmarks.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desmarks.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSmasNieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desmasnie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desmasnie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desmasnie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSsiBetToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dessibet.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dessibet.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dessibet.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeStabMesToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.destabmes.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${destabmes.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.destabmes.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeStcoHtlToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.destcohtl.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${destcohtl.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.destcohtl.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeStocBieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.destocbie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${destocbie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.destocbie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSuedManToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desuedman.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desuedman.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desuedman.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSupaOchToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.desupaoch.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${desupaoch.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.desupaoch.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeTmopLtkToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.detmopltk.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${detmopltk.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.detmopltk.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeTtsWenToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dettswen.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dettswen.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dettswen.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeUnieEscToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deunieesc.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deunieesc.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deunieesc.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeVawiBieToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.devawibie.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${devawibie.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.devawibie.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeVoelWupToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.devoelwup.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${devoelwup.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.devoelwup.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeVsvsTbhToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.devsvstbh.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${devsvstbh.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.devsvstbh.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeVulkHerToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.devulkher.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${devulkher.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.devulkher.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWameLeiToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewamelei.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewamelei.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewamelei.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWefaWesToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewefawes.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewefawes.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewefawes.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWiduNwdToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewidunwd.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewidunwd.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewidunwd.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWielBamToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewielbam.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewielbam.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewielbam.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWigeWinToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewigewin.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewigewin.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewigewin.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWiloFdToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewilofd.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewilofd.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewilofd.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWolfMaiToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewolfmai.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewolfmai.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewolfmai.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeWomLudToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dewomlud.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dewomlud.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dewomlud.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeZapfRoeToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dezapfroe.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dezapfroe.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dezapfroe.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeZargWlhToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dezargwlh.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dezargwlh.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dezargwlh.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeZebaAicToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dezebaaic.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dezebaaic.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dezebaaic.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeZlbpMarToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dezlbpmar.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dezlbpmar.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dezlbpmar.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeZmdDrsToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dezmddrs.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dezmddrs.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dezmddrs.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeFlabNueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deflabnue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deflabnue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deflabnue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeFlabTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deflabtst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deflabtst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deflabtst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeImagTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deimagtst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deimagtst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deimagtst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeImagFueToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deimagfue.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deimagfue.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deimagfue.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSzmaTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deszmatst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deszmatst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deszmatst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeSzmaManToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deszmaman.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deszmaman.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deszmaman.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+ 
+                <service name="megDeKltrTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekltrtst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekltrtst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekltrtst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCargKreToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decargkre.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decargkre.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decargkre.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDiefTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dedieftst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dedieftst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dedieftst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeDiefEppToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dediefepp.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dediefepp.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dediefepp.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeNorsTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.denorstst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${denorstst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.denorstst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeNorsDuiToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.denorsdui.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${denorsdui.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.denorsdui.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeLogtTstToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.delogttst.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${delogttst.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.delogttst.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKuhoKwhToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekuhokwh.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekuhokwh.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekuhokwh.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeRiloUlmToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deriloulm.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deriloulm.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deriloulm.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCargHamToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decargham.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decargham.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decargham.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeCoteBerToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.decoteber.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${decoteber.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.decoteber.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeKltrSlbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.dekltrslb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${dekltrslb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.dekltrslb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+                <service name="megDeInprArbToBOBTransformService">
+                  <inbound>
+                    <vm:inbound-endpoint path="meg.deinprarb.to.bob.transform.queue"/>
+                   </inbound>
+                   <component class="${deinprarb.mapping.component}"/>
+                   <outbound>
+                     <pass-through-router>
+                       <vm:outbound-endpoint path="de.to.deinprarb.queue"/>
+                     </pass-through-router>
+                   </outbound>
+                </service>
+
+	</model>
+</mule>
+

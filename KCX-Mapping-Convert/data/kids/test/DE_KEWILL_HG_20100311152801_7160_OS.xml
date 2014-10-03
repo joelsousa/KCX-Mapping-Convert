@@ -1,0 +1,18 @@
+	<ExportDeclaration>
+		<GoodsDeclaration>
+			<UCRNumber>7160</UCRNumber>
+			<DispatchCountry>CH</DispatchCountry>
+			<DestinationCountry>US</DestinationCountry>
+			<SituationCode>1</SituationCode>
+			<TransportInContainer>1</TransportInContainer>
+			<NettMass>296540</NettMass>
+			<GrossMass>0</GrossMass>
+			<ReferenceNumber>7160</ReferenceNumber>
+			<OrderNumber>7160</OrderNumber>
+			<Language>DE</Language>
+		</GoodsDeclaration>
+		<GoodsItem>
+			<ItemNumber>0</ItemNumber> 
+  			<Description>BALLON AUF DEN SPUREN DER GEBRÜDER MONGOLFIER</Description> 
+		</GoodsItem>
+	</ExportDeclaration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Decln_Reason_Sec_Input" type="DECLN_REASON"/>
+	<xs:complexType name="DECLN_REASON">
+		<xs:sequence>
+			<xs:element name="DECLN_OID_NBR" type="xs:string" minOccurs="0"/>
+			<xs:element name="REASON_DESC" type="xs:string" minOccurs="0"/>
+                            <xs:element name="REASON_CD" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

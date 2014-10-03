@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:processIncomingMessageResponse xmlns:ns2="http://icis.externaldomain.services.ws">
+                <!-- Header added by Kewill KCX -->
+                <Header>
+                               <Sender>DE3486877</Sender>
+                               <Receiver>DE3486877</Receiver>
+                               <MessageID>MS-20110719-01</MessageID>
+                               <Direction>TO_CUSTOMER</Direction>
+                               <ReferenceNumber>MS-20110719-01</ReferenceNumber>
+                </Header>
+                <!-- Original message content starts here -->
+                <processIncomingMessageResults>
+                               <resultState>
+                                               <status>ValError</status>
+                                               <reasonCode>SyntacticValidationError</reasonCode>
+                                               <explanation>Validation Error.Syntactic Validation Error</explanation>
+                               </resultState>
+                               <ProcessingErrors>
+                                               <Error>
+                                                               <errorCode>1</errorCode>
+                                                               <errorDescription>Τελωνείο 1ης Εισόδου ( S11 ) : Το πεδίο Τελωνείο 1ης Εισόδου ( S11 ) δεν έχει έγκυρο ρόλο.</errorDescription>
+                                               </Error>
+                               </ProcessingErrors>
+                </processIncomingMessageResults>
+</ns2:processIncomingMessageResponse>

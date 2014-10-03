@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2011</Year>
+  <Month>08</Month>
+  <Day>19</Day>
+  </Date>
+  <Time>12:02:00</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE.CSF</Transmitter>
+  <Receiver>DE.CSF</Receiver>
+  <Method>EMCS</Method>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>EMCS</Procedure>
+  <MessageName>EMCSReminderMessage</MessageName>
+  <Release>2.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>EI20100519</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <EMCS>
+  <EMCSReminderMessage>
+  	<ReferenceNumber>ReferenceNumber</ReferenceNumber>
+  	<CustomerOrderNumber>CustomerOrderNumber</CustomerOrderNumber>
+  	<Clerk>Clerk</Clerk>
+  	<AadReferenceCode>AadReferenceCode</AadReferenceCode>  
+  	<SequenceNumber>9</SequenceNumber>  	
+  	<DateAndTimeOfIssuance>201005191455</DateAndTimeOfIssuance>
+  	<LimitDateAndTime>201005201455</LimitDateAndTime>  	  
+  	<ReminderInformation language="RI">ReminderInformation</ReminderInformation>
+  	<ReminderMessageType>ReminderMessageType</ReminderMessageType>  	
+  </EMCSReminderMessage>
+  </EMCS>
+  </soap:Body>
+  </soap:Envelope>
+  
+  

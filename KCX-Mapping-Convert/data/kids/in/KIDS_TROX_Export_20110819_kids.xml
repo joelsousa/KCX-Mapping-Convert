@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <KCX>
+  <Primary>CH</Primary>
+  <Secondary>EXPORT</Secondary>
+  <Audit_Id>No Mule Call</Audit_Id>
+  <Content>
+  <![CDATA[<?xml version="1.0"?>
+<soap:Envelope
+        xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+        <soap:Header>
+                <Header
+                        xmlns="http://www.eBiz.com/schemas/header/200310"
+                        soap:mustUnderstand="true">
+                        <SentAt>
+                                <Date>
+                                        <Year>2011</Year>
+                                        <Month>08</Month>
+                                        <Day>19</Day>
+                                </Date>
+                                <Time>11:51:49</Time>
+                                <TimeZone>+0100</TimeZone>
+                        </SentAt>
+                        <Transmitter>DE.TROX.CH</Transmitter>
+                        <Receiver>DE.TROX.CH</Receiver>
+                        <Method>Export</Method>
+                        <MessageTP>
+                                <CountryCode>CH</CountryCode>
+                                <Procedure>Export</Procedure>
+                                <MessageName>ExportDeclaration</MessageName>
+                                <Release>1.2</Release>
+                                <Direction>FROM_CUSTOMER</Direction>
+                        </MessageTP>
+                        <MessageID>DE_TROX_CH_20110819115149_176</MessageID>
+                        <CustomsExchange>
+                                <Map>0</Map>
+                                <MapFrom>CH</MapFrom>
+                                <MapTo>CH</MapTo>
+                        </CustomsExchange>
+                </Header>
+        </soap:Header>
+        <soap:Body>
+                <ExportDeclaration>
+                        <GoodsDeclaration>
+                                <KindOfDeclaration>I</KindOfDeclaration>
+                                <UCRNumber>176</UCRNumber>
+                                <DispatchCountry>CH</DispatchCountry>
+                                <DestinationCountry>FR</DestinationCountry>
+                                <TransportInContainer>0</TransportInContainer>
+                                <NetMass>51372</NetMass>
+                                <GrossMass>69372</GrossMass>
+                                <ReferenceNumber>176</ReferenceNumber>
+                                <OrderNumber>176</OrderNumber>
+                                <CorrectionCode>0</CorrectionCode>
+                                <Language>DE</Language>
+                                <TransferToTransitSystem>0</TransferToTransitSystem>
+                                <MeansOfTransportBorder>
+                                        <TransportMode>3</TransportMode>
+                                        <TransportationNumber>LKW</TransportationNumber>
+                                        <TransportationCountry>CH</TransportationCountry>
+                                </MeansOfTransportBorder>
+                                <PlaceOfLoading>
+                                        <AgreedLocationOfGoods>TROX HESCO Schweiz AG</AgreedLocationOfGoods>
+                                </PlaceOfLoading>
+                                <PlaceOfDeclaration>1</PlaceOfDeclaration>
+                                <DeclarationTime>1</DeclarationTime>
+                                <ConsignorTIN>
+                                        <TIN>CH2575</TIN>
+                                </ConsignorTIN>
+                                <Consignor>
+                                        <VATNumber>537693</VATNumber>
+                                        <Address>
+                                                <Name>TROX HESCO Schweiz AG</Name>
+                                                <Street>Walderstrasse 125</Street>
+                                                <City>8630 Rüti</City>
+                                                <PostalCode>8630</PostalCode>
+                                                <Country>CH</Country>
+                                        </Address>
+                                </Consignor>
+                                <DeclarantTIN>
+                                        <TIN>612</TIN>
+                                </DeclarantTIN>
+                                <DeclarantNumber>002</DeclarantNumber>
+                                <Consignee>
+                                        <Address>
+                                                <Name>MOLARD</Name>
+                                                <Street>11 RUE DES PETITS CHAMPS</Street>
+                                                <City>FR-35760 SAINT GREGOIRE</City>
+                                                <PostalCode>94150</PostalCode>
+                                                <Country>FR</Country>
+                                        </Address>
+                                </Consignee>
+                                <IncoTerms>
+                                        <IncoTerm>EXW</IncoTerm>
+                                        <Place>8630 Rüti</Place>
+                                </IncoTerms>
+                              <GoodsItem>
+                                        <ItemNumber>1</ItemNumber>
+                                        <Description>BSLGS361000x307P1Konstruktionszwecken hergerichtete Bleche, Stäbe, Stangen, Profile, Rohre</Description>
+                                        <PermitObligation>2</PermitObligation>
+                                        <NetMass>51372</NetMass>
+                                        <GrossMass>61372</GrossMass>
+                                        <KindOfArticle>2</KindOfArticle>
+                                        <TypeOfDeclaration>1</TypeOfDeclaration>
+                                        <ThirdQuantity>6</ThirdQuantity>
+                                        <CommodityCode>
+                                                <TarifCode>7610.9000</TarifCode>
+                                                <TarifAddition1>000</TarifAddition1>
+                                                <Confirmation>0</Confirmation>
+                                        </CommodityCode>
+                                        <Statistic>
+                                                <AdditionalUnit>123</AdditionalUnit>
+                                                <StatisticalValue>1879</StatisticalValue>
+                                                <StatisticalValueConfirmation>1</StatisticalValueConfirmation>
+                                                <Currency>CHF</Currency>
+                                        </Statistic>
+                                        <SpecialMention>
+                                                <TypeOfExport>DG2</TypeOfExport>
+                                                <ExportFromEU>0</ExportFromEU>
+                                                <ExportFromCountry>CH</ExportFromCountry>
+                                                <Text>  </Text>
+                                        </SpecialMention>
+                                        <Package>
+                                                <Quantity>1</Quantity>
+                                                <SequentialNumber>1</SequentialNumber>
+                                                <Type>CT</Type>
+                                                <Marks>2011081900000176002</Marks>
+                                        </Package>
+                                        <Package>
+                                                <Quantity>1</Quantity>
+                                                <SequentialNumber>2</SequentialNumber>
+                                                <Type>PX</Type>
+                                                <Marks>2011081900000176001</Marks>
+                                        </Package>
+                                        <Document>
+                                                <Type>380</Type>
+                                                <Reference>DRA 71012713</Reference>
+                                        </Document>
+                                        <GrossMassConfirmation>0</GrossMassConfirmation>
+                                        <NetMassConfirmation>0</NetMassConfirmation>
+                                </GoodsItem>
+                        </GoodsDeclaration>
+                </ExportDeclaration>
+        </soap:Body>
+</soap:Envelope>
+]]>
+  </Content>
+  </KCX>

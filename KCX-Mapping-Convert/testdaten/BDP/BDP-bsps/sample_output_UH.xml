@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>04</Month>
+<Day>16</Day>
+</Date>
+<Time>13:15:14</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>XXXXX.YYYYYY.ZZZZZ</Transmitter>
+<Receiver>DE.BDP.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>IMPORT</Procedure>
+<MessageName>ImportDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>1</Map>
+<MapFrom>XY</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>XY567890</MessageID>
+<InReplyTo>XY123456</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+
+<Declaration>
+    <ReferenceNumber xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1246000295_1</ReferenceNumber>
+    <AgentRepresentationCode>1</AgentRepresentationCode>
+    <Business>
+        <BusinessTypeCode>11</BusinessTypeCode>
+        <InvoicePrice>0</InvoicePrice>
+    </Business>
+    <CustomsOfficeOfDeclaration>8755</CustomsOfficeOfDeclaration>
+    <Traders>
+        <DeclarantAddress>
+            <Name>SCHWAN STABILO COSMEITCS GMBH &amp; CO. KG</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>ZWEITE ADRESSEZEILE TEST</City>
+            <Country>HEROLDSBERG, BAYERN, BY 91156</Country>
+        </DeclarantAddress>
+        <RepresentativeTIN>
+            <TIN>DE5027624</TIN>
+        </RepresentativeTIN>
+        <ConsignorAddress>
+            <Name>REVLON CONSUMER PRODUCTS CORP.</Name>
+            <Street>1501 WILIAMSBORO STREET</Street>
+            <City>OXFORD, NORTH CAROL, NC 27565</City>
+            <Country>UNITED STATES</Country>
+        </ConsignorAddress>
+        <AcquirerAddress>
+            <Name>SCHWAN STABILO COSMEITCS GMBH &amp; CO. KG</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>ZWEITE ADRESSEZEILE TEST</City>
+            <Country>HEROLDSBERG, BAYERN, BY 91156</Country>
+        </AcquirerAddress>
+        <ConsigneeAddress>
+            <Name>SCHWAN STABILO COSMEITCS GMBH &amp; CO. KG</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>HEROLDSBERG, BAYERN, BY</City>
+            <Country>GERMANY</Country>
+        </ConsigneeAddress>
+        <SellerAddress>
+            <Name>REVLON CONSUMER PRODUCTS CORP.</Name>
+            <Street>1501 WILIAMSBORO STREET</Street>
+            <City>OXFORD, NORTH CAROL, NC 27565</City>
+            <Country>UNITED STATES</Country>
+        </SellerAddress>
+        <CustomsValueDeclarantAddress>
+            <Name>SCHWAN STABILO COSMEITCS GMBH &amp; CO. KG</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>ZWEITE ADRESSEZEILE TEST</City>
+            <Country>HEROLDSBERG, BAYERN, BY 91156</Country>
+        </CustomsValueDeclarantAddress>
+        <RepresentativeOfCustomsValueDeclarantTIN>
+            <TIN>DE5027624</TIN>
+        </RepresentativeOfCustomsValueDeclarantTIN>
+    </Traders>
+    <DispatchCountry>US</DispatchCountry>
+    <CustomsOfficeEntry>8755</CustomsOfficeEntry>
+    <DestinationFederalState>NUERNBURG</DestinationFederalState>
+    <CustomsStatus>IM</CustomsStatus>
+    <StatisticalStatus>04</StatisticalStatus>
+    <MeansOfTransportBorder>
+        <TransportMode>4</TransportMode>
+        <TransportationType>4</TransportationType>
+        <TransportationNumber>123</TransportationNumber>
+    </MeansOfTransportBorder>
+    <MeansOfTransportInland>
+        <TransportMode>3</TransportMode>
+        <TransportationNumber>123</TransportationNumber>
+    </MeansOfTransportInland>
+    <ContactPerson>
+        <Clerk>Michael Potschatka</Clerk>
+        <Email>michael.potschatka@bdpinternational.com</Email>
+        <PhoneNumber>004991196522314</PhoneNumber>
+    </ContactPerson>
+    <IncoTerms>
+        <Code>EXW</Code>
+        <Place>OXFORD</Place>
+    </IncoTerms>
+    <Deferment>
+        <Type>E</Type>
+    </Deferment>
+    <DV1>
+        <BuyerSellerRelationship>0</BuyerSellerRelationship>
+        <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+    </DV1>
+</Declaration>
+</soap:Body>
+</soap:Envelope>

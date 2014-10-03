@@ -1,0 +1,7 @@
+0415-124603	H	UNSY	TST				SUPPLEMENT	5604503750047409332286					Der Versender ist in allen Positionen identisch. Wert wird auf Positionsebene gelöscht.	
+0415-124604	W	UNSY	TST	esupos.esupos_ldocde		00001	PLAUSI	5604503750047409332286			Ladeort	<CAYYZ>	Die Angabe des Ladeortes (CAYYZ) ist nur zulässig, wenn im Kopf kein Ladeort (CAYYZ) angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) leer oder ungleich (Post- und Express-Sendungen) ist.	EntrySummaryDeclarationItemDTO.loadingPlace.0001a
+0415-124604	W	UNSY	TST	esupos.esupos_elocde		00001	PLAUSI	5604503750047409332286			Entladeort	<DEFRA>	Die Angabe des Entladeortes (DEFRA) ist nur zulässig, wenn im Kopf kein Entladeort (DEFRA) angegeben wurde.	EntrySummaryDeclarationItemDTO.unloadingPlace.0001a
+0415-124604	W	UNSY	TST	consignee		00001	PLAUSI	5604503750047409332286				<consignee>	!EntrySummaryDeclarationItemDTO.consignee.0001a!	EntrySummaryDeclarationItemDTO.consignee.0001a
+0415-124604	H	UNSY	TST				LOGGING	5604503750047409332286					--- ENSDAT-Nachricht mit 3 Warnung(en) verarbeitet	
+0415-124604	H	UNSY	TST					5604503750047409332286					Datei wird gesichert	

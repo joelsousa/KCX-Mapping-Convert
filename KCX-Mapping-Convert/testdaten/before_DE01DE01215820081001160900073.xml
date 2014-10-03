@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+      <To>NO_TRAXON_2158</To>
+      <From>DE01.CSFTEST.2158</From>
+      <MessageID>DE01DE01215820081001160900073</MessageID>
+      <SentAt>2008-10-01T16:09:28 +0200</SentAt>
+      <Act>inform</Act>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+      <Export>
+        <Confirmation>
+          <DateOfReceipt>2008-10-01T16:08:00 +0200</DateOfReceipt>
+          <DocumentReferenceNumber>08DE586600082157E6</DocumentReferenceNumber>
+          <FunctionCode>0</FunctionCode>
+          <ReferenceNumber>KCX-080930-0010</ReferenceNumber>
+        </Confirmation>
+      </Export>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Crn_Decln_Sec_Input" type="CRNS"/>
+	<xs:complexType name="CRNS">
+		<xs:sequence>
+			<xs:element ref="DECLN_CRN" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DECLN_CRN">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CRN_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="DEST_LOCATION_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ARRIVAL_TMSTP" type="DateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="DateTime">
+		<xs:restriction base="xs:string">
+
+			<!-- dd/MM/yyyy HH:mm:ss.SSS OR "transaction" -->
+			<xs:pattern value="((0[1-9]|[12]\d|3[01])/(0[1-9]|1[0-2])/\d{4} ([01]\d|2[0-3])(:[0-5]\d){2}(\.\d{3})?)|transaction"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

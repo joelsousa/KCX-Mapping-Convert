@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:core="http://www.mulesource.org/schema/mule/core/2.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmi:id="_pH9McIZzEd2I_8HrvUO0WQ" type="Core" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_pjq4EIZzEd2I_8HrvUO0WQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_pjq4FYZzEd2I_8HrvUO0WQ" type="4047"/>
+    <children xmi:type="notation:Node" xmi:id="_pj0pEIZzEd2I_8HrvUO0WQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pj0pEYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_pj0pEoZzEd2I_8HrvUO0WQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pj0pE4ZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pj0pFIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pj0pFYZzEd2I_8HrvUO0WQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pj0pFoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_pj0pF4ZzEd2I_8HrvUO0WQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pj0pGIZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pj0pGYZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pnsccIZzEd2I_8HrvUO0WQ" type="2012">
+      <children xmi:type="notation:Node" xmi:id="_pn2NcIZzEd2I_8HrvUO0WQ" type="5006">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_pn2NcYZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_pn2NcoZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_pn2Nc4ZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_pn2NdIZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_pnsccYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_pnsccoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_pnscc4ZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:InboundCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.0/@inbound"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pnscdIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pn2NdYZzEd2I_8HrvUO0WQ" type="2024">
+      <children xmi:type="notation:Node" xmi:id="_pn2NeoZzEd2I_8HrvUO0WQ" type="5007">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_pn2Ne4ZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_pn2NfIZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_pn2NfYZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_pn2NfoZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_pn2NdoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_pn2Nd4ZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_pn2NeIZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:AsyncReplyCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.0/@asyncReply"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pn2NeYZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pn2Nf4ZzEd2I_8HrvUO0WQ" type="2028">
+      <children xmi:type="notation:Node" xmi:id="_pn2NhIZzEd2I_8HrvUO0WQ" type="5008">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_pn2NhYZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_pn2NhoZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_pn2Nh4ZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_pn2NiIZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_pn2NgIZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_pn2NgYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_pn2NgoZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:OutboundCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.0/@outbound"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pn2Ng4ZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_pjq4EYZzEd2I_8HrvUO0WQ"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_pjq4EoZzEd2I_8HrvUO0WQ"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_pjq4E4ZzEd2I_8HrvUO0WQ"/>
+    <element xmi:type="core:SedaServiceType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pjq4FIZzEd2I_8HrvUO0WQ"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_pj0pGoZzEd2I_8HrvUO0WQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_pj0pH4ZzEd2I_8HrvUO0WQ" type="4047"/>
+    <children xmi:type="notation:Node" xmi:id="_pj0pIIZzEd2I_8HrvUO0WQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pj0pIYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_pj0pIoZzEd2I_8HrvUO0WQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pj0pI4ZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pj0pJIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pj0pJYZzEd2I_8HrvUO0WQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pj0pJoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_pj0pJ4ZzEd2I_8HrvUO0WQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pj0pKIZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pj0pKYZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ppCgQIZzEd2I_8HrvUO0WQ" type="2012">
+      <children xmi:type="notation:Node" xmi:id="_ppCgRYZzEd2I_8HrvUO0WQ" type="5006">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_ppCgRoZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ppCgR4ZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ppCgSIZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ppCgSYZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ppCgQYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ppCgQoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ppCgQ4ZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:InboundCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.1/@inbound"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppCgRIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ppCgSoZzEd2I_8HrvUO0WQ" type="2024">
+      <children xmi:type="notation:Node" xmi:id="_ppCgT4ZzEd2I_8HrvUO0WQ" type="5007">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_ppCgUIZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ppCgUYZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ppCgUoZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ppCgU4ZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ppCgS4ZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ppCgTIZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ppCgTYZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:AsyncReplyCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.1/@asyncReply"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppCgToZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ppCgVIZzEd2I_8HrvUO0WQ" type="2028">
+      <children xmi:type="notation:Node" xmi:id="_ppCgWYZzEd2I_8HrvUO0WQ" type="5008">
+        <children xmi:type="notation:Node" xmi:id="_ppMRQIZzEd2I_8HrvUO0WQ" type="2029">
+          <children xmi:type="notation:Node" xmi:id="_ppMRQ4ZzEd2I_8HrvUO0WQ" type="4035"/>
+          <children xmi:type="notation:Node" xmi:id="_ppMRRIZzEd2I_8HrvUO0WQ" type="5009">
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_ppMRRYZzEd2I_8HrvUO0WQ" collapsed="true"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ppMRRoZzEd2I_8HrvUO0WQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ppMRR4ZzEd2I_8HrvUO0WQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ppMRQYZzEd2I_8HrvUO0WQ"/>
+          <element xmi:type="core:OutboundRouterType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.1/@outbound/@abstractOutboundRouterGroup.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppMRQoZzEd2I_8HrvUO0WQ"/>
+        </children>
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_ppCgWoZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ppCgW4ZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ppCgXIZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ppCgXYZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ppCgVYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ppCgVoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ppCgV4ZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:OutboundCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.1/@outbound"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppCgWIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_pj0pG4ZzEd2I_8HrvUO0WQ"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_pj0pHIZzEd2I_8HrvUO0WQ"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_pj0pHYZzEd2I_8HrvUO0WQ"/>
+    <element xmi:type="core:SedaServiceType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pj0pHoZzEd2I_8HrvUO0WQ" x="326"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_pj0pKoZzEd2I_8HrvUO0WQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_pj0pL4ZzEd2I_8HrvUO0WQ" type="4047"/>
+    <children xmi:type="notation:Node" xmi:id="_pj0pMIZzEd2I_8HrvUO0WQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pj0pMYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_pj0pMoZzEd2I_8HrvUO0WQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pj0pM4ZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pj0pNIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pj0pNYZzEd2I_8HrvUO0WQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pj0pNoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_pj0pN4ZzEd2I_8HrvUO0WQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pj0pOIZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pj0pOYZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ppVbMIZzEd2I_8HrvUO0WQ" type="2012">
+      <children xmi:type="notation:Node" xmi:id="_ppVbNYZzEd2I_8HrvUO0WQ" type="5006">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_ppVbNoZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ppVbN4ZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ppVbOIZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ppVbOYZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ppVbMYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ppVbMoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ppVbM4ZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:InboundCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.2/@inbound"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppVbNIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ppVbOoZzEd2I_8HrvUO0WQ" type="2024">
+      <children xmi:type="notation:Node" xmi:id="_ppVbP4ZzEd2I_8HrvUO0WQ" type="5007">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_ppVbQIZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ppVbQYZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ppVbQoZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ppVbQ4ZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ppVbO4ZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ppVbPIZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ppVbPYZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:AsyncReplyCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.2/@asyncReply"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppVbPoZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ppVbRIZzEd2I_8HrvUO0WQ" type="2028">
+      <children xmi:type="notation:Node" xmi:id="_ppfMMIZzEd2I_8HrvUO0WQ" type="5008">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_ppfMMYZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ppfMMoZzEd2I_8HrvUO0WQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_ppfMM4ZzEd2I_8HrvUO0WQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_ppfMNIZzEd2I_8HrvUO0WQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ppVbRYZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ppVbRoZzEd2I_8HrvUO0WQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ppVbR4ZzEd2I_8HrvUO0WQ"/>
+      <element xmi:type="core:OutboundCollectionType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.2/@outbound"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ppVbSIZzEd2I_8HrvUO0WQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_pj0pK4ZzEd2I_8HrvUO0WQ"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_pj0pLIZzEd2I_8HrvUO0WQ"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_pj0pLYZzEd2I_8HrvUO0WQ"/>
+    <element xmi:type="core:SedaServiceType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0/@abstractServiceGroup.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pj0pLoZzEd2I_8HrvUO0WQ" x="653"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_pH9McYZzEd2I_8HrvUO0WQ"/>
+  <element xmi:type="core:DefaultModelType" href="../../../../../conf/BOB-DE/kcx-client-to-bob-transform-config.xml#//@mule/@group.0"/>
+</notation:Diagram>

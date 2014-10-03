@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>12</Month>
+<Day>23</Day>
+</Date>
+<Time>2011-12-23 12:12:418</Time>
+</SentAt>
+<Transmitter>DE.KEX.TST</Transmitter>
+<Receiver>DE.KEX.TST</Receiver>
+<Method>KEX</Method>
+<MessageTP>
+<CountryCode>GB</CountryCode>
+<Procedure>EXPORT</Procedure>
+<MessageName>ExportDeclaration</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+</Codemapping>
+</CustomsExchange>
+<MessageID>0611201120111223-1225</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ExportDeclaration>
+<GoodsDeclaration>
+<TypeOfPermit>D</TypeOfPermit>
+<DispatchCountry>GB</DispatchCountry>
+<PaymentType>Y</PaymentType>
+<GrossMass>2300</GrossMass>
+<TotalNumberPositions>2</TotalNumberPositions>
+<MeansOfTransportBorder>
+<TransportationType>1</TransportationType>
+<TransportationNumber>SEAFREIGHT</TransportationNumber>
+</MeansOfTransportBorder>
+<GoodsItem>
+<Description>EXPORT PRODUCT  12X24 UNITS</Description>
+<OriginCountry>GB</OriginCountry>
+<NetMass>250</NetMass>
+<GrossMass>300</GrossMass>
+<Package>
+<Quantity>0</Quantity>
+<Type>PT</Type>
+</Package>
+<PreviousDocument>
+<Type>380</Type>
+<Marks>23434532</Marks>
+</PreviousDocument>
+</GoodsItem>
+<GoodsItem>
+<Description>EXPORT PRODUCT  12X24 UNITS</Description>
+<OriginCountry>GB</OriginCountry>
+<NetMass>1500</NetMass>
+<GrossMass>2000</GrossMass>
+<Package>
+<Quantity>0</Quantity>
+<Type>PT</Type>
+<Marks>FULLY ADDRESSED</Marks>
+</Package>
+<PreviousDocument>
+<Type>380</Type>
+<Marks>5ER455443</Marks>
+</PreviousDocument>
+</GoodsItem>
+</GoodsDeclaration>
+</ExportDeclaration>
+</soap:Body>
+</soap:Envelope>

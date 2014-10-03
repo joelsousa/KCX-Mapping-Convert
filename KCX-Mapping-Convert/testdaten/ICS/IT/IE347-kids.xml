@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+        <soap:Header>
+        <Header>
+        <SentAt><Date><Year>2012</Year><Month>1</Month><Day>24</Day></Date><Time>14:15:40</Time><TimeZone>+0100</TimeZone></SentAt>
+        <Transmitter>AE.EK.TST</Transmitter>
+        <Receiver>AE.EK.TST</Receiver><Method>ARN</Method><MessageTP>
+        <CountryCode>IT</CountryCode><Procedure>ICS</Procedure>
+        <MessageName>ICSArrivalNotification</MessageName>
+        <Release>1.0.00</Release>
+        <Direction>FROM_CUSTOMER</Direction>
+        </MessageTP><MessageID>9999999</MessageID>
+        </Header>
+        </soap:Header>
+ <soap:Body>
+ <ICSArrivalNotification>
+ <GoodsDeclaration>
+ <ReferenceNumber>TEST-IWA</ReferenceNumber>
+        <TotalNumberPositions>1</TotalNumberPositions>
+        <TotalNumberPositions>2</TotalNumberPositions>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>IWA6767</TransportationNumber>
+</MeansOfTransportBorder>
+<DeclaredDateOfArrival>201101271555</DeclaredDateOfArrival>
+<CarrierTIN>
+<TIN>DE9008454</TIN>
+</CarrierTIN>
+<CarrierAddress />
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<EsumaDataReference>
+<MRN>11DE58660000837599</MRN>
+</EsumaDataReference>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>2</ItemNumber>
+<EsumaDataReference>
+<MRN>11DE58660000837699</MRN>
+</EsumaDataReference>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSArrivalNotification>
+</soap:Body>
+</soap:Envelope>
+

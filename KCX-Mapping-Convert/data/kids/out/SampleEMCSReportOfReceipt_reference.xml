@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2010</Year>
+  <Month>05</Month>
+  <Day>19</Day>
+  </Date>
+  <Time>12:02:00</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE01.CSFALT.2144</Transmitter>
+  <Receiver>DE.CSF.ALT</Receiver>
+  <Method>EMCS</Method>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>EMCS</Procedure>
+  <MessageName>EMCSReportOfReceipt</MessageName>
+  <Release>1.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <CodeMapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </CodeMapping>
+  </CustomsExchange>
+  <MessageID>EI20100519</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <EMCS>
+  <EMCSReportOfReceipt>
+  	<ReferenceNumber>ReferenceNumber</ReferenceNumber>
+  	<AadReferenceCode>AadReferenceCode</AadReferenceCode>  
+  	<SequenceNumber>6</SequenceNumber>  
+  	<DestinationOffice>DestinationOffice</DestinationOffice>  	
+  	<DateOfArrivalOfExciseProducts>20100525</DateOfArrivalOfExciseProducts>
+  	<GlobalConclusionOfReceipt>GlobalConclusionOfReceipt</GlobalConclusionOfReceipt>
+  	<ComplementaryInformation language="CH">HEADComplementaryInformation</ComplementaryInformation>
+  	<Consignee>
+		<CountryCodeISO>CE</CountryCodeISO>
+		<CustomerID>CustomerID-Consignee</CustomerID>
+		<VATID>VATID-Consignee</VATID>
+		<Name>Name-Consignee</Name>
+		<Street>StreetAndNumber-Consignee</Street>
+		<PostalCode>PostalCode-Consignee</PostalCode>
+		<City>City-Consignee</City>
+  	</Consignee>
+  	<GoodsItem>
+  		<ItemNumber>1</ItemNumber>
+  		<ExciseProductCode>A000</ExciseProductCode>
+  		<RefusedQuantity>RefusedQuantity</RefusedQuantity>
+  		<IndicatorOfShortageOrExcess>IndicatorOfShortageOrExcess</IndicatorOfShortageOrExcess>  		
+  		<ObservedShortageOrExcess>ObservedShortageOrExcess</ObservedShortageOrExcess>
+  		<UnsatisfactoryReason>
+	  			<UnsatisfactoryReasonCode>1UnsatisfactoryReasonCode</UnsatisfactoryReasonCode>
+	  			<ComplementaryInformation language="CI">1ComplementaryInformation</ComplementaryInformation>
+	  	</UnsatisfactoryReason>		
+  	</GoodsItem>
+  	<GoodsItem>
+	  		<ItemNumber>2</ItemNumber>
+	  		<ExciseProductCode>B000</ExciseProductCode>
+	  		<RefusedQuantity>RefusedQuantity</RefusedQuantity>
+	  		<IndicatorOfShortageOrExcess>IndicatorOfShortageOrExcess</IndicatorOfShortageOrExcess>  		
+	  		<ObservedShortageOrExcess>ObservedShortageOrExcess</ObservedShortageOrExcess>  
+	  		<UnsatisfactoryReason>
+	  			<UnsatisfactoryReasonCode>2UnsatisfactoryReasonCode</UnsatisfactoryReasonCode>
+	  			<ComplementaryInformation language="CI">2ComplementaryInformation</ComplementaryInformation>
+	  		</UnsatisfactoryReason>		
+  	</GoodsItem>
+  </EMCSReportOfReceipt>
+  </EMCS>
+  </soap:Body>
+  </soap:Envelope>

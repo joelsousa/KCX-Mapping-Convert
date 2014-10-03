@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>07</Month>
+                    <Day>02</Day>
+                </Date>
+                <Time>09:40:36</Time>
+                <TimeZone>+0200</TimeZone>
+            </SentAt>
+            <Transmitter>DE.DIEH.TST</Transmitter>
+            <Receiver>DE.DIEH.TST</Receiver>
+            <Method>EME</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EMCS</Procedure>
+                <MessageName>EMCSCancellation</MessageName>
+                <Direction>TO_CUSTOMER</Direction>
+                <Release>1.0.00</Release>
+            </MessageTP>
+            <MessageID>DE-DIEH-TST000173020710</MessageID>
+            <InReplyTo>DE01DE0121810000000000648445</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <EMCSCancellation>
+            <ReferenceNumber>0000000181/0090034841</ReferenceNumber>
+            <Clerk>FSS</Clerk>
+            <AadReferenceCode>10DE00600000000024770</AadReferenceCode>
+            <DateAndTimeOfValidationOfCancellation>201007020940</DateAndTimeOfValidationOfCancellation>
+            <CancellationReasonCode>3</CancellationReasonCode>
+        </EMCSCancellation>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>12</Month>
+                    <Day>08</Day>
+                </Date>
+                <Time>150647</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ARN</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSArrivalItemRejection</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-CSF006664081210</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSArrivalItemRejection>
+            <GoodsDeclaration>
+                <ReferenceNumber>QA-20101208-ARN</ReferenceNumber>
+                <RejectionDateTime>201012081506</RejectionDateTime>
+                <RejectionReasonHeader>TIN des Verbringers ATEO10000000033 ist falsch.</RejectionReasonHeader>
+                <ExpectedDateOfArrival>201012311210</ExpectedDateOfArrival>
+                <ConveyanceReference>LH2636</ConveyanceReference>
+                <MeansOfTransportBorder>
+                    <TransportMode>3</TransportMode>
+                </MeansOfTransportBorder>
+                <ImportDetails/>
+                <CarrierTIN>
+                    <TIN>ATEO10000000033</TIN>
+                    <CustomerIdentifier>2145</CustomerIdentifier>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+                <FunctionalError>
+                    <ErrorType>EAS10006</ErrorType>
+                    <ErrorPointer>VERBRINGER.Verbringer (TIN)</ErrorPointer>
+                    <ErrorReason>TIN des Verbringers ATEO10000000033 ist falsch.</ErrorReason>
+                </FunctionalError>
+            </GoodsDeclaration>
+        </ICSArrivalItemRejection>
+    </soap:Body>
+</soap:Envelope>

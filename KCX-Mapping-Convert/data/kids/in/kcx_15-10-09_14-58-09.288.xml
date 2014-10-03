@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Header>
+      <Header xmlns="http://www.eBiz.com/schemas/header/200310">
+         <SentAt>
+            <Date>
+               <Year>2009</Year>
+               <Month>10</Month>
+               <Day>15</Day>
+            </Date>
+            <Time>14:57:02</Time>
+            <TimeZone>+0200</TimeZone>
+         </SentAt>
+         <Transmitter>NL.NORS.TST</Transmitter>
+         <Receiver>NL01.NORSTST.2318</Receiver>
+         <Method>Export</Method>
+         <MessageTP>
+            <CountryCode>NL</CountryCode>
+            <Procedure>4</Procedure>
+            <MessageName>localAppResult</MessageName>
+            <Release>1.0.00</Release>
+         </MessageTP>
+         <MessageID>C2000000009</MessageID>
+         <InReplyTo>DE01NL0123180000000000644631</InReplyTo>
+      </Header>
+   </soap:Header>
+   <soap:Body>
+      <localAppResult>
+         <GoodsDeclaration>
+            <ReferenceNumber>pgr/0000001215</ReferenceNumber>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>79</ErrorCode>
+                  <ErrorText>Bericht [C2000000009] [     0] [DE01NL0123180000000000644631] [              0] [15-10-09] [14:57:01]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10011</ErrorCode>
+                  <ErrorText>Berichttype  = [CWWDOU] [SAGAIN]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10023</ErrorCode>
+                  <ErrorText>LRN-nummer   = [pgr/0000001215]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10007</ErrorCode>
+                  <ErrorText>Aangiftenr   = [      40]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>56</ErrorCode>
+                  <ErrorText>EDI dossiernummer     : [        9000016]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10007</ErrorCode>
+                  <ErrorText>Aangiftenr   = [      41]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>602698</ErrorCode>
+                  <ErrorText>Meerdere type berichten mogelijk</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10030</ErrorCode>
+                  <ErrorText>Douane controles niet OK</ErrorText>
+               </PositionError>
+            </GoodsItem>
+         </GoodsDeclaration>
+      </localAppResult>
+   </soap:Body>
+</soap:Envelope>

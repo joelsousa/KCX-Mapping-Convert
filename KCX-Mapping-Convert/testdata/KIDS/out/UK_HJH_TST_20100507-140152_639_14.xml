@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Header>
+      <Header xmlns="http://www.eBiz.com/schemas/header/200310">
+         <SentAt>
+            <Date>
+               <Year>2010</Year>
+               <Month>5</Month>
+               <Day>7</Day>
+            </Date>
+            <Time>14:01:52</Time>
+            <TimeZone>+0200</TimeZone>
+         </SentAt>
+         <Transmitter>UK.HJH.TST</Transmitter>
+         <Receiver>UK.HJH.TST</Receiver>
+         <Method>Export</Method>
+         <MessageTP>
+            <CountryCode>NL</CountryCode>
+            <Procedure>Export</Procedure>
+            <ProcedureSpecification>3</ProcedureSpecification>
+            <MessageName>localAppResult</MessageName>
+            <Release>1.0.00</Release>
+         </MessageTP>
+         <MessageID>C2000000187</MessageID>
+         <InReplyTo>UK_HJH_TST_201005071400_00015</InReplyTo>
+      </Header>
+   </soap:Header>
+   <soap:Body>
+      <localAppResult>
+         <GoodsDeclaration>
+            <ReferenceNumber>cktest/201005071400_00015</ReferenceNumber>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>79</ErrorCode>
+                  <ErrorText>Message [C2000000187] [     0] [UK_HJH_TST_201005071400_00015] [              0] [07-05-10] [14:01:52]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10011</ErrorCode>
+                  <ErrorText>Type of message     = [CWWDOU] [SAGAIN]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>56</ErrorCode>
+                  <ErrorText>EDI-filenumber         : [        9000049]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10007</ErrorCode>
+                  <ErrorText>Declaration number  = [      51]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10029</ErrorCode>
+                  <ErrorText>Customs checks passed</ErrorText>
+               </PositionError>
+            </GoodsItem>
+            <GoodsItem>
+               <ItemNumber>0</ItemNumber>
+               <PositionError>
+                  <KindOfError>0</KindOfError>
+                  <ErrorCode>10031</ErrorCode>
+                  <ErrorText>Sending ready status [1]</ErrorText>
+               </PositionError>
+            </GoodsItem>
+         </GoodsDeclaration>
+      </localAppResult>
+   </soap:Body>
+</soap:Envelope>

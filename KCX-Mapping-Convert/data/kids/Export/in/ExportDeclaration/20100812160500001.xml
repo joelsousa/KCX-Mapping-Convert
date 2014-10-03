@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope'>
+  <soap:Header>
+    <Header xmlns="http://www.eBiz.com/schemas/header/200310" >
+      <SentAt>
+        <Date>
+          <Year>2010</Year>
+          <Month>08</Month>
+          <Day>12</Day>
+        </Date>
+        <Time>160016</Time>
+      </SentAt>
+      <Transmitter>UK.HJH.TST</Transmitter>
+      <Receiver>UK.HJH.TST</Receiver>
+      <Method>Export</Method>
+      <MessageTP>
+        <CountryCode>NL</CountryCode>
+        <Procedure>Export</Procedure>
+        <ProcedureSpecification>3</ProcedureSpecification>
+        <MessageName>ExportDeclaration</MessageName>
+        <Release>1.0.00</Release>
+        <Direction>FROM_CUSTOMER</Direction>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>1</Map>
+          <MapFrom>KCX_CODE</MapFrom>
+          <MapTo>NL</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>HJH-1100101480-1008121459-MVO</MessageID>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <ExportDeclaration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+      <GoodsDeclaration>
+        <AreaCode>AE002</AreaCode>
+        <TypeOfPermit>AF001</TypeOfPermit>
+        <UCRNumber>1100101480</UCRNumber>
+        <FinalCode>AA002</FinalCode>
+        <DeclarationTime>201008121459</DeclarationTime>
+        <DispatchCountry>NL</DispatchCountry>
+        <DestinationCountry>CA</DestinationCountry>
+        <SituationCode>0</SituationCode>
+        <TransportInContainer>AA001</TransportInContainer>
+        <GrossMass>437.76</GrossMass>
+        <ShipmentNumber>110010148010081214590002</ShipmentNumber>
+        <ReferenceNumber>110010148010081214590002</ReferenceNumber>
+        <TotalNumberPositions>2</TotalNumberPositions>
+        <DeclarantIsConsignor>1</DeclarantIsConsignor>
+        <TypeOfRepresentation>1</TypeOfRepresentation>
+        <MeansOfTransport>
+          <PlaceOfLoading>6504 LH20</PlaceOfLoading>
+        </MeansOfTransport>
+        <MeansOfTransportInland>
+          <TransportMode>BA005</TransportMode>
+        </MeansOfTransportInland>
+        <MeansOfTransportDeparture>
+          <TransportationType>AD005</TransportationType>
+          <TransportationNumber>Container_2</TransportationNumber>
+          <TransportationCountry>NL</TransportationCountry>
+        </MeansOfTransportDeparture>
+        <MeansOfTransportBorder>
+          <TransportationCountry>NL</TransportationCountry>
+        </MeansOfTransportBorder>
+        <PlaceOfLoading>
+          <Street>Bijsterhuizen 20</Street>
+          <PostalCode>6504 LH</PostalCode>
+          <City>Wijchen</City>
+        </PlaceOfLoading>
+        <CustomsOfficeExport>NL566396</CustomsOfficeExport>
+        <IntendedOfficeOfExit>NL566396</IntendedOfficeOfExit>
+        <Business>
+          <BusinessTypeCode>AV001</BusinessTypeCode>
+          <InvoicePrice>4585.520</InvoicePrice>
+          <Currency>USD</Currency>
+        </Business>
+        <LoadingTime>
+          <BeginTime>201008111300</BeginTime>
+          <EndTime>201008111400</EndTime>
+        </LoadingTime>
+        <Consignor>
+          <Address>
+            <Name>HJ Heinz Nederland BV</Name>
+            <City>Zeist</City>
+            <PostalCode>3708 AH</PostalCode>
+            <Country>NL</Country>
+          </Address>
+        </Consignor>
+        <Declarant>
+          <Address>
+            <Name>HJ Heinz Nederland BV</Name>
+            <City>Zeist</City>
+            <PostalCode>3708 AH</PostalCode>
+            <Country>NL</Country>
+          </Address>
+        </Declarant>
+        <DeclarantContactPerson>
+          <Position>Co-Ordinator</Position>
+          <Clerk>Michelle</Clerk>
+          <Email>michelle.obama@nl.hjheinz.com</Email>
+          <PhoneNumber>18001234567</PhoneNumber>
+        </DeclarantContactPerson>
+        <Consignee>
+          <Address>
+            <Name>PRODICAM CAMEROON</Name>
+            <Street>BOITE POSTALE 5350</Street>
+            <City>DOUALA</City>
+            <PostalCode>A5A 3A2</PostalCode>
+            <Country>CA</Country>
+          </Address>
+        </Consignee>
+        <IncoTerms>
+          <IncoTerm>DDP</IncoTerm>
+          <Place>Nabuurs</Place>
+        </IncoTerms>
+        <GoodsItem>
+          <ItemNumber>1</ItemNumber>
+          <ArticleNumber>000000000072142400</ArticleNumber>
+          <Description>IG PREM. ESPAGNOLESAUCE</Description>
+          <NetMass>403.92</NetMass>
+          <GrossMass>437.76</GrossMass>
+          <CommodityBoard>MVO</CommodityBoard>
+          <AdditionalCommodityCoardCode>1</AdditionalCommodityCoardCode>
+          <CommodityCode>
+            <TarifCode>21039090</TarifCode>
+          </CommodityCode>
+          <CustomsApprovedTreatment>
+            <Declared>10</Declared>
+            <Previous>0</Previous>
+            <Current>0</Current>
+          </CustomsApprovedTreatment>
+          <Statistic>
+            <Value>1919.52</Value>
+            <Currency>USD</Currency>
+          </Statistic>
+          <SensitiveGoods>
+            <Type>BF001</Type>
+          </SensitiveGoods>
+          <Package>
+            <Quantity>72</Quantity>
+            <Type>CS</Type>
+            <Marks>ADR</Marks>
+          </Package>
+        </GoodsItem>
+      </GoodsDeclaration>
+    </ExportDeclaration>
+  </soap:Body>
+</soap:Envelope>

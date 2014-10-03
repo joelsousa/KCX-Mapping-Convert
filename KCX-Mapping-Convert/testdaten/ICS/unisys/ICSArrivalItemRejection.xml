@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>12</Month>
+                    <Day>07</Day>
+                </Date>
+                <Time>121245</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF.ALT</Transmitter>
+            <Receiver>DE.CSF.ALT</Receiver>
+            <Method>ARN</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSArrivalItemRejection</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-CSF006656071210</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSArrivalItemRejection>
+            <GoodsDeclaration>
+                <ReferenceNumber>QA-TEST_AAK</ReferenceNumber>
+                <RejectionDateTime>201012071212</RejectionDateTime>
+                <RejectionReasonHeader>TIN des Verbringers ATEO10000000033 ist falsch.</RejectionReasonHeader>
+                <MeansOfTransportBorder>
+                    <TransportMode>3</TransportMode>
+                    <TransportationNumber>LH8888</TransportationNumber>
+                </MeansOfTransportBorder>
+                <ImportDetails/>
+                <CarrierTIN>
+                    <TIN>ATEO10000000033</TIN>
+                    <CustomerIdentifier>2145</CustomerIdentifier>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+                <FunctionalError>
+                    <ErrorType>EAS10006</ErrorType>
+                    <ErrorPointer>VERBRINGER.Verbringer (TIN)</ErrorPointer>
+                    <ErrorReason>TIN des Verbringers ATEO10000000033 ist falsch.</ErrorReason>
+                </FunctionalError>
+            </GoodsDeclaration>
+        </ICSArrivalItemRejection>
+    </soap:Body>
+</soap:Envelope>

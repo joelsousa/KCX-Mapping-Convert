@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>11</Month>
+<Day>24</Day>
+</Date>
+<Time>10:54:05</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export Confirmation</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<ProcedureSpecification>NP</ProcedureSpecification>
+<MessageName>InternalStatusInformation</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>MsgID20080902</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<InternalStatusInformation>
+<GoodsDeclaration>
+<ReferenceNumber>0000002922/0090429894</ReferenceNumber>
+<CorrectionNumber>000</CorrectionNumber>
+<DateNewStatus>20081124</DateNewStatus>
+<TimeNewStatus>1054</TimeNewStatus>
+<NewStatus>92</NewStatus>
+</GoodsDeclaration>
+</InternalStatusInformation>
+</soap:Body>
+</soap:Envelope>

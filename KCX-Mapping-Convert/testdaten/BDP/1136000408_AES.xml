@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <KIDSHeader>
+            <SentAt>
+                <Date>
+                    <Year>2013</Year>
+                    <Month>5</Month>
+                    <Day>28</Day>
+                </Date>
+                <Time>154550</Time>
+                <TimeZone>-0600</TimeZone>
+            </SentAt>
+            <Transmitter>DE.BDP.TST</Transmitter>
+            <Receiver>DE.BDP.TST</Receiver>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EXPORT</Procedure>
+                <MessageName>ExportDeclaration</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>0</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>BDP_1136000408_1</MessageID>
+        </KIDSHeader>
+    </soap:Header>
+    <soap:Body>
+        <Declaration>
+            <ReferenceNumber>1136000408_1</ReferenceNumber>
+            <PlaceOfLoading>
+                <Code>SIG COMBIB-ET-7561</Code>
+            </PlaceOfLoading>
+            <AreaCode>EX</AreaCode>
+            <TypeOfPermit>EX</TypeOfPermit>
+            <DestinationCountry>KR</DestinationCountry>
+            <Traders>
+                <DeclarantAddress>
+                    <Name>Binder GmbH</Name>
+                    <Street>Im Mittleren Osch 5</Street>
+                    <City>Tuttlingen</City>
+                    <PostalCode>78532</PostalCode>
+                    <Country>DE</Country>
+                </DeclarantAddress>
+                <RepresentativeTIN>
+                    <TIN>DE9003827</TIN>
+                </RepresentativeTIN>
+                <ConsignorAddress>
+                    <Name>Binder GmbH</Name>
+                    <Street>Im Mittleren Osch 5</Street>
+                    <City>Tuttlingen</City>
+                    <PostalCode>78532</PostalCode>
+                    <Country>DE</Country>
+                </ConsignorAddress>
+                <ConsigneeAddress>
+                    <Name>Binder GmbH</Name>
+                    <Street>Im Mittleren Osch 5</Street>
+                    <City>Tuttlingen</City>
+                    <PostalCode>78532</PostalCode>
+                    <Country>DE</Country>
+                </ConsigneeAddress>
+                <BuyerAddress>
+                    <Name>Binder GmbH</Name>
+                    <Street>Im Mittleren Osch 5</Street>
+                    <City>Tuttlingen</City>
+                    <PostalCode>78532</PostalCode>
+                    <Country>DE</Country>
+                </BuyerAddress>
+                <SellerAddress>
+                    <Name>Binder GmbH</Name>
+                    <Street>Im Mittleren Osch 5</Street>
+                    <City>Tuttlingen</City>
+                    <PostalCode>78532</PostalCode>
+                    <Country>DE</Country>
+                </SellerAddress>
+                <CustomsValueDeclarantAddress>
+                    <Name>Binder GmbH</Name>
+                    <Street>Im Mittleren Osch 5</Street>
+                    <City>Tuttlingen</City>
+                    <PostalCode>78532</PostalCode>
+                    <Country>DE</Country>
+                </CustomsValueDeclarantAddress>
+                <RepresentativeOfCustomsValueDeclarantTIN>
+                    <TIN>DE9003827</TIN>
+                </RepresentativeOfCustomsValueDeclarantTIN>
+                <DeclarantForInvoiceAddress>
+                    <Name>BDP LOGISTICS KOREA</Name>
+                    <Street>11TH FL BUSAN MARINE CENTER BLDG 79-14,-JA, CHUNGANG-DONG, CHUNG-KU</Street>
+                    <City>BUSAN</City>
+                    <PostalCode>600715</PostalCode>
+                    <Country>KR</Country>
+                </DeclarantForInvoiceAddress>
+            </Traders>
+            <DispatchCountry>DE</DispatchCountry>
+            <DestinationFederalState>KR</DestinationFederalState>
+            <CustomsStatus>IM</CustomsStatus>
+            <ContactPerson>
+                <Identity>FSS</Identity>
+            </ContactPerson>
+            <IncoTerms>
+                <Code>COST AND FREIGHT</Code>
+            </IncoTerms>
+            <DV1>
+                <BuyerSellerRelationship>0</BuyerSellerRelationship>
+                <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+            </DV1>
+            <Port>
+                <PortSystem>ZAPP</PortSystem>
+                <MessageFunction>9</MessageFunction>
+                <TestMode>0</TestMode>
+                <Shipper>
+                    <Address>
+                        <Name>SIG COMBIBLOC GMBH</Name>
+                        <Street>RURSTRASSE 58, D-52441</Street>
+                        <City>LINNICH</City>
+                        <PostalCode>52441</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                </Shipper>
+                <CustomsOfficeExport>DEHAM</CustomsOfficeExport>
+                <VoyageDetails>
+                    <VoyageNumber>VOYAGE</VoyageNumber>
+                    <ShipName>MSC VANESSA</ShipName>
+                    <ArrivalDate>1130628</ArrivalDate>
+                    <DepartureDate>1130531</DepartureDate>
+                    <LoadingPort>DEHAM</LoadingPort>
+                    <DischargePort>KRPUS</DischargePort>
+                    <DestinationPlaceCode>KRPUS</DestinationPlaceCode>
+                    <DestinationPlaceName>BUSAN, SOUTH KOREA</DestinationPlaceName>
+                </VoyageDetails>
+            </Port>
+        </Declaration>
+    </soap:Body>
+</soap:Envelope>

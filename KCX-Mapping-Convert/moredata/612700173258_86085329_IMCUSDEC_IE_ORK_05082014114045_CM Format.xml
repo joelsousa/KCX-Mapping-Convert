@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><ImportCustomsDeclaration xmlns="http://www.ros.ie/schemas/customs/IM515/v1" xmlns:cus="http://www.ros.ie/schemas/customs/customstypes/v1" xmlns:xsi="http://www.w3.org/
+2001/XMLSchema-instance" xsi:schemaLocation="http://www.ros.ie/schemas/customs/IM515/v1 C:/Users/moredata8/Desktop/ImportDeclarationMapToIM515/IM515.xsd">
+        <Declaration>
+                <TypeCode>IMD</TypeCode>
+                <IEMessageSendingDate>20140806060000</IEMessageSendingDate>
+                <IEMessageType>X12</IEMessageType>
+                <GoodsItemQuantity>1</GoodsItemQuantity>
+                <InvoiceAmount>5712</InvoiceAmount>
+                <GoodsShipment>
+                        <ExportationCountryIdentifier>US</ExportationCountryIdentifier>
+                        <TransactionNatureCode>11</TransactionNatureCode>
+
+                        <TradeTerm>
+                                <ConditionCode>FOB</ConditionCode>
+                                <LocationNameText>SHARJAH AIRPORT FREE ZONE SAIF</LocationNameText>
+                                <CountryRelationshipCode>1</CountryRelationshipCode>
+                        </TradeTerm>
+                        <EntryCustomsOffice>
+                                <CodeIdentifier>IEORK400</CodeIdentifier>
+                        </EntryCustomsOffice>
+                        <DeliveryDestination>
+                                <CountryCode>IE</CountryCode>
+                        </DeliveryDestination>
+                        <CustomsGoodsItem>
+                                <GoodsPackaging>
+                                        <MarkNumberText>612700173258</MarkNumberText>
+                                        <QuantityQuantity>2</QuantityQuantity>
+                                        <TypeCode>CT</TypeCode>
+                                </GoodsPackaging>
+                                <IEUniqueLPRef>86085329</IEUniqueLPRef>
+                                <SequenceIdentifier>1</SequenceIdentifier>
+                                <Commodity>
+                                        <DescriptionText>OTHER LIFTING HANDLING LOADING OR UNLOADING MACHINERY FOR EXAMPLE LIFTS ESCALATO</DescriptionText>
+                                        <TariffClassificationCode>8428399090</TariffClassificationCode>
+                                        <EUDutyRegimeCode>100</EUDutyRegimeCode>
+                                </Commodity>
+                                <Origin>
+                                        <OriginCountryIdentifier>AE</OriginCountryIdentifier>
+                                </Origin>
+                                <GoodsMeasure>
+                                        <GrossMassMeasure>231.8</GrossMassMeasure>
+                                        <NetNetWeightMeasure>208.62</NetNetWeightMeasure>
+                                </GoodsMeasure>
+                                <CustomsProcedure>
+                                        <CurrentCode>40</CurrentCode>
+                                        <PreviousCode>00</PreviousCode>
+                                        <CategoryCode>000</CategoryCode>
+                                </CustomsProcedure>
+                                <PreviousCustomsDocument>
+                                        <ReferenceIdentifier>Y-CLE-140806</ReferenceIdentifier>
+                                </PreviousCustomsDocument>
+                                <EUCustomsValuation>
+                                        <MethodCode>1</MethodCode>
+                                </EUCustomsValuation>
+
+                        </CustomsGoodsItem>
+                        <Consignor>
+                                <NameText>MSSL MIDEAST FZE</NameText>
+                                <Address>
+                                        <LineText>H3 PLOT NO16 </LineText>
+                                        <CityName>SHARJAH AIRPORT FREE ZONE SAIF</CityName>
+                                        <PostcodeIdentifier>8510</PostcodeIdentifier>
+                                        <CountryCode>AE</CountryCode>
+                                </Address>
+                        </Consignor>
+                        <Consignment>
+                                <ArrivalTransportMeans>
+                                        <IdentificationText>4</IdentificationText>
+                                </ArrivalTransportMeans>
+                                <BorderTransportMeans>
+                                        <RegistrationNationalityIdentifier>CD8030</RegistrationNationalityIdentifier>
+                                        <ModeAndTypeCode>4</ModeAndTypeCode>
+                                </BorderTransportMeans>
+                                <GoodsLocation>
+                                        <LocationIdentifier>IEORK400</LocationIdentifier>
+                                </GoodsLocation>
+                        </Consignment>
+                        <Consignee>
+                                <IdentityIdentifier>9953025L</IdentityIdentifier>
+                                <NameText>MSSL MIDEAST FTG ICELAND</NameText>
+                                <Address>
+                                        <LineText>MOYAN LOWER OLD DUBLIN </LineText>
+                                        <CityName>CO WEXFORD</CityName>
+                                        <PostcodeIdentifier>x</PostcodeIdentifier>
+                                        <CountryCode>IE</CountryCode>
+                                </Address>
+                        </Consignee>
+                        <IEValueDetailsCode>A</IEValueDetailsCode>
+
+                        <AdditionalInformation>
+                                <StatementCode>1D24</StatementCode>
+                                <ContentText>201408060600</ContentText>
+                        </AdditionalInformation>
+                        <AdditionalDocument>
+                                <TypeCode>N380</TypeCode>
+                                <ReferenceIdentifier>612700173258</ReferenceIdentifier>
+                        </AdditionalDocument>
+                        <AdditionalDocument>
+                                <TypeCode>N740</TypeCode>
+                                <ReferenceIdentifier>612700173258</ReferenceIdentifier>
+                        </AdditionalDocument>
+                </GoodsShipment>
+                <CurrencyExchange>
+                        <CurrencyTypeIdentifier>EUR</CurrencyTypeIdentifier>
+                </CurrencyExchange>
+                <Agent>
+                        <StatusCode>1</StatusCode>
+
+                </Agent>
+        </Declaration>
+</ImportCustomsDeclaration>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>07</Month>
+                    <Day>05</Day>
+                </Date>
+                <Time>17:48:47</Time>
+                <TimeZone>+0200</TimeZone>
+            </SentAt>
+            <Transmitter>DE.DIEH.TST</Transmitter>
+            <Receiver>DE.DIEH.TST</Receiver>
+            <Method>EME</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EMCS</Procedure>
+                <MessageName>EMCSChangeOfDestination</MessageName>
+                <Direction>TO_CUSTOMER</Direction>
+                <Release>1.0.00</Release>
+            </MessageTP>
+            <MessageID>DE-DIEH-TST000241050710</MessageID>
+            <InReplyTo>DE01DE0121812010070100000006_2</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <EMCSChangeOfDestination>
+            <ReferenceNumber>TESTDEKLNR_04</ReferenceNumber>
+            <Clerk>FSS</Clerk>
+            <AadReferenceCode>10DE00600000000025170</AadReferenceCode>
+            <SequenceNumber>1</SequenceNumber>
+            <JourneyTime>D02</JourneyTime>
+            <ChangedTransportArrangement>0</ChangedTransportArrangement>
+            <TransportModeCode>0</TransportModeCode>
+            <InvoiceNumber>90034841</InvoiceNumber>
+            <InvoiceDate>20091216</InvoiceDate>
+            <DateAndTimeOfValidation>201007051748</DateAndTimeOfValidation>
+            <DestinationTypeCode>1</DestinationTypeCode>
+            <NewConsignee>
+                <CountryCodeISO>de</CountryCodeISO>
+                <ExciseTaxNumber>DE99000010201</ExciseTaxNumber>
+                <Name>Willibald</Name>
+                <Street>Mozartstr. 7</Street>
+                <PostalCode>1234</PostalCode>
+                <City>Salzburg</City>
+            </NewConsignee>
+            <DeliveryPlace>
+                <CountryCodeISO>de</CountryCodeISO>
+                <ExciseTaxNumber>DE99000010202</ExciseTaxNumber>
+                <Name>Willibald</Name>
+                <Street>Mozartstr. 7</Street>
+                <PostalCode>1234</PostalCode>
+                <City>Salzburg</City>
+            </DeliveryPlace>
+        </EMCSChangeOfDestination>
+    </soap:Body>
+</soap:Envelope>

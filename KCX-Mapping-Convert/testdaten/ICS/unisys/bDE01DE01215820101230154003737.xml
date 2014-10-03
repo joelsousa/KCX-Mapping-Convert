@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>12</Month>
+                    <Day>30</Day>
+                </Date>
+                <Time>153737</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>AC.DE.3938</Transmitter>
+            <Receiver>KEWILL.DE</Receiver>
+            <Method>ESU</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSEntrySummaryDeclarationAcknowledgment</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-CSF000776301210</MessageID>
+            <InReplyTo>6070624274047295267434-A</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSEntrySummaryDeclarationAcknowledgment>
+            <GoodsDeclaration>
+                <ReferenceNumber>60706242740472952674-A</ReferenceNumber>
+                <MRN>10DE587400004809I0</MRN>
+                <MeansOfTransportBorder>
+                    <TransportMode>4</TransportMode>
+                </MeansOfTransportBorder>
+                <ShipmentNumber>01474015174</ShipmentNumber>
+                <ConveyanceReference>AC844</ConveyanceReference>
+                <RegistrationDateAndTime>201012301537</RegistrationDateAndTime>
+                <PersonLodgingSumaTIN>
+                    <TIN>DE9000690</TIN>
+                    <IdentificationType>2</IdentificationType>
+                </PersonLodgingSumaTIN>
+                <PersonLodgingSumaAddress>
+                    <Address>
+                        <Name>AIR CANADA</Name>
+                        <Street>PO BOX 14000 - SAINT-LAURENT- QUEBE</Street>
+                        <City>MONTREAL</City>
+                        <PostalCode>H4Y 1H4</PostalCode>
+                        <Country>CA</Country>
+                    </Address>
+                </PersonLodgingSumaAddress>
+                <CustomsOfficeOfLodgement>FRA</CustomsOfficeOfLodgement>
+                <CustomsOfficeFirstEntry>DE005874</CustomsOfficeFirstEntry>
+                <DeclaredDateOfArrival>201012221115</DeclaredDateOfArrival>
+                <GoodsItem>
+                    <ItemNumber>1</ItemNumber>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </ICSEntrySummaryDeclarationAcknowledgment>
+    </soap:Body>
+</soap:Envelope>

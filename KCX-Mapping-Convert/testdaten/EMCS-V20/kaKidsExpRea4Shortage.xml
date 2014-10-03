@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>08</Month>
+<Day>19</Day>
+</Date>
+<Time>120200</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFALT.2144</Transmitter>
+<Receiver>DE.CSF.ALT</Receiver>
+<Method>EMCS</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EMCS</Procedure>
+<MessageName>EMCSExplanationOnReasonForShortage</MessageName>
+<Release>2.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>EI20100519</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<EMCS>
+<EMCSExplanationOnReasonForShortage>
+<ReferenceNumber>ReferenceNumber</ReferenceNumber>
+<AadReferenceCode>AadReferenceCode</AadReferenceCode>
+<DateAndTimeOfValidation>201108191212</DateAndTimeOfValidation>
+<SequenceNumber>5</SequenceNumber>
+<DispatchImportOffice>DispatchImportOffice</DispatchImportOffice>
+<SubmitterType>SubmitterType</SubmitterType>
+<DateOfAnalysis>20110819</DateOfAnalysis>
+<GlobalExplanation language="CI">GlobalExplanation</GlobalExplanation>
+<Consignee>
+<CountryCodeISO>DE</CountryCodeISO>
+<CustomerID>CustomerID</CustomerID>
+<VATID>VATID</VATID>
+<Name>Name</Name>
+<Street>StreetAndNumber</Street>
+<StreetNumber>1ce</StreetNumber>
+<PostalCode>PostalCode</PostalCode>
+<City>City</City>
+</Consignee>
+<Consignor>
+<CountryCodeISO>CR</CountryCodeISO>
+<CustomerID>CustomerID-Consignor</CustomerID>
+<VATID>VATID-Consignor</VATID>
+<Name>NameConsignor</Name>
+<Street>Street ohne Number-Consignor</Street>
+<PostalCode>PostalCode-Consignor</PostalCode>
+<City>City-Consignor</City>
+</Consignor>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<ExciseProductCode>A000</ExciseProductCode>
+<Quantity>Quantity</Quantity>
+<Explanation language="AA">Explanation</Explanation>
+</GoodsItem>
+</EMCSExplanationOnReasonForShortage>
+</EMCS>
+</soap:Body>
+</soap:Envelope>

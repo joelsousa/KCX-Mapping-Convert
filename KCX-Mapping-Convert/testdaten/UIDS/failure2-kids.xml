@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+<Primary>DECSFALT</Primary>
+<Secondary>ICS</Secondary>
+<Audit_Id>testfile</Audit_Id>
+<Content>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2012</Year>
+<Month>01</Month>
+<Day>01</Day>
+</Date>
+<Time>081520</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFALT.2144</Transmitter>
+<Receiver>DE.CSF.ALT</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>localAppResult</MessageName>
+<Release>1.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>d32e571e-0b66-48c3-a1b4-47334b05a817</MessageID>
+<InReplyTo>17660129812-GNXU6E4G</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<localAppResult>
+<GoodsDeclaration>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<PositionError>
+<ErrorText>00014 F: Antrag hat bereits eine MRN: 10DE290319387162E1 00014 F: Antrag konnte nicht geloescht werden 00014 H: --- ADA-Nachricht konnte nicht eingearbeitet werden 00014 H: Datei wird nach FSSFEHL verschoben</ErrorText>
+</PositionError>
+</GoodsItem>
+</GoodsDeclaration>
+</localAppResult>
+</soap:Body>
+</soap:Envelope>]]>
+</Content>
+</KCX>

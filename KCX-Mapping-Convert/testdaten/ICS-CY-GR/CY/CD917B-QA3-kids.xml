@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+<Primary>DECSF</Primary>
+<Secondary>ICS</Secondary>
+<Audit_Id>TestAuditId</Audit_Id>
+<Content>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>07</Month>
+<Day>12</Day>
+</Date>
+<Time>00:00:00:00</Time>
+</SentAt>
+<Transmitter>NICA.CY</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>CY</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>localAppResult</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>EU</MapFrom>
+<MapTo>CY</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>CYICS110034287</MessageID>
+<InReplyTo>KA-20110706-03</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<localAppResult>
+<GoodsDeclaration>
+<GoodsItem>
+<ItemNumber>0</ItemNumber>
+<PositionError>
+<KindOfError>XML</KindOfError>
+<Modul>Line 1, Column 1033>: XML-24534: (Error) Element 'StrAndNmCO122' not expected.</Modul>
+<ErrorCode>15</ErrorCode>
+<ErrorText>Not supported in this position</ErrorText>
+</PositionError>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<PositionError>
+<KindOfError>XML</KindOfError>
+<Modul>Line 1, Column 2621>: XML-24525: (Error) Invalid text 'Street com.kewill.kcx.component.mapping.countries.common.Address@587ccaee' in element: 'StrAndNumPLD1'</Modul>
+</PositionError>
+</GoodsItem>
+</GoodsDeclaration>
+</localAppResult>
+</soap:Body>
+</soap:Envelope>]]>
+</Content>
+</KCX>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jardesc>
+<jar path="C:/develop/Java/eclipse-kcx/KCX-Mapping-Convert/jars/XmlFromXsd.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/KCX-Mapping-Convert/jars/XmlFromXsd.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.test.testUtils{Config.java"/>
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.test.testUtils{XMLFromXSD.java"/>
+</selectedElements>
+</jardesc>

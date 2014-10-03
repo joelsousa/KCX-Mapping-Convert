@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header><Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true"><SentAt><Date>
+<Year>2010</Year><Month>12</Month><Day>16</Day></Date><Time>09:20:00</Time></SentAt><Transmitter>DE.UNSY.TST</Transmitter><Receiver>DE.UNSY.TST</Receiver><Method>ESU</Method><MessageTP><CountryCode>DE</CountryCode><Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationRejected</MessageName>
+<Release>1.0.00</Release></MessageTP><CustomsExchange><Codemapping><Map>0</Map><MapFrom>DE</MapFrom><MapTo>DE</MapTo></Codemapping></CustomsExchange>
+<MessageID>6070100566077286604593</MessageID></Header></soap:Header>
+<soap:Body>
+<ICSSummaryDeclarationRejected>
+<GoodsDeclaration>
+<ReferenceNumber>TEST-6604593</ReferenceNumber>
+<DeclarationRejectionDateAndTime>201012161616</DeclarationRejectionDateAndTime>
+<DeclarationRejectionReason>DeclarationRejectionReason</DeclarationRejectionReason>
+<FunctionalError>
+<ErrorType>1</ErrorType>
+<ErrorPointer>6593</ErrorPointer>
+<ErrorReason>ErrorReason</ErrorReason>
+<OriginalAttributeValue>OriginalAttributeValue</OriginalAttributeValue>
+</FunctionalError>
+</GoodsDeclaration>
+</ICSSummaryDeclarationRejected></soap:Body></soap:Envelope>
+
+

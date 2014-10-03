@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt><Date><Year>2009</Year><Month>04</Month><Day>30</Day></Date><Time>09:37:39</Time>
+<TimeZone>+0200</TimeZone></SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>DE.CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP><CountryCode>DE</CountryCode><Procedure>Export</Procedure>
+<MessageName>ExportDeclaration</MessageName>
+<Release>2.0.00</Release></MessageTP>
+<CustomsExchange>
+<CodeMapping><Map>0</Map><MapFrom>DE</MapFrom><MapTo>DE</MapTo></CodeMapping>
+</CustomsExchange>
+<MessageID>DE01DE0121860000000000642848</MessageID>
+</Header>
+</soap:Header>
+<soap:Body><ExportDeclaration><GoodsDeclaration><AreaCode>EX</AreaCode><TypeOfPermit>e</TypeOfPermit><DispatchCountry>DE</DispatchCountry><DestinationCountry>RU</DestinationCountry><SituationCode>A</SituationCode><PaymentType>D</PaymentType><TransportInContainer>0</TransportInContainer><GrossMass>22500</GrossMass><ShipmentNumber>80013549</ShipmentNumber><ReferenceNumber>cktest_beznr02</ReferenceNumber><AuthorizationNumber>DE5864ZA0098</AuthorizationNumber><DeclarantIsConsignor>0</DeclarantIsConsignor><MeansOfTransportInland><TransportMode>03</TransportMode></MeansOfTransportInland><MeansOfTransportBorder><TransportMode>04</TransportMode><TransportationType>40</TransportationType><TransportationCountry>QU</TransportationCountry></MeansOfTransportBorder><PlaceOfLoading><Code>AA01</Code></PlaceOfLoading><CustomsOfficeExport>DE008756</CustomsOfficeExport><IntendedOfficeOfExit>DE003302</IntendedOfficeOfExit><Business><BusinessTypeCode>11</BusinessTypeCode><InvoicePrice>76000</InvoicePrice><Currency>EUR</Currency></Business><TransportationRoute><Country>DE</Country><Country>RU</Country></TransportationRoute><Seal><UseOfTydenseals>0</UseOfTydenseals><UseOfTydensealStock>0</UseOfTydensealStock></Seal><DeclarantTIN><TIN>9002243</TIN><IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber></DeclarantTIN><DeclarantContactPerson><Position>Sachbearbeiter Export</Position><Clerk>Michael</Clerk><Email>michael.meier@diehl-informatik.de</Email><FaxNumber>0911/94772999</FaxNumber><PhoneNumber>0911/9472999</PhoneNumber></DeclarantContactPerson><Consignee><Address><Name>Metallexport Metallexport</Name><Street>Puskin Ul.</Street><City>Petersburg</City><PostalCode>444444</PostalCode><Country>RU</Country></Address></Consignee><IncoTerms><IncoTerm>EXW</IncoTerm><Place>NÃ¼rnberg</Place></IncoTerms><GoodsItem><ItemNumber>001</ItemNumber><Description>Festplatte, 20 GB / Flachgewalzte Erzeugnisse aus Eisen oder nicht legiertem Stahl, nur warmgewalzt, mit einer Dicke von weniger als 4,75mm, mit einer Breite von weniger als 600mm</Description><OriginFederalState>09</OriginFederalState><NetMass>17100</NetMass><GrossMass>22500</GrossMass><DangerousGoodsNumber>0000</DangerousGoodsNumber><CommodityCode><TarifCode>72111900</TarifCode></CommodityCode><CustomsApprovedTreatment><Declared>10</Declared><Previous>00</Previous></CustomsApprovedTreatment><Statistic><AdditionalUnit>0000</AdditionalUnit><StatisticalValue>494</StatisticalValue></Statistic><Package><Quantity>1</Quantity><SequentialNumber>01</SequentialNumber><Type>PX</Type><Marks>00112005670000010788</Marks></Package><Document><Type>Y901</Type><Value>000000000</Value><WritedownAmount><Value>0.0000000</Value></WritedownAmount></Document><PreviousDocument><Type>380</Type></PreviousDocument></GoodsItem></GoodsDeclaration></ExportDeclaration></soap:Body></soap:Envelope>
+

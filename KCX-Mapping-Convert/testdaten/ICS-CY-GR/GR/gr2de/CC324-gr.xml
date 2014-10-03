@@ -1,0 +1,25 @@
+<CC324A xmlns="http://www.eurodyn.com">
+   <MesSenMES3>DE3486877</MesSenMES3>
+   <MesRecMES6>DE3486877</MesRecMES6>
+   <DatOfPreMES9>110809</DatOfPreMES9>
+   <TimOfPreMES10>1056</TimOfPreMES10>
+   <MesIdeMES19>GRICS110034174</MesIdeMES19>
+   <MesTypMES20>CC324A</MesTypMES20>
+   <CorIdeMES25>IWA-COR-20110809-03</CorIdeMES25>
+   <HEAHEA>
+      <DivRefNumHEA119>KA-20110707-6</DivRefNumHEA119>
+      <RejDatTimHEA126>201107151156</RejDatTimHEA126>
+      <RejReaHEA127>DecRejReaHEA252</RejReaHEA127>
+   </HEAHEA>
+   <FUNERRER1>
+      <ErrTypER11>1</ErrTypER11>
+      <ErrPoiER12>MES.IOM(1).Document/Reference number</ErrPoiER12>
+   </FUNERRER1>
+   <FUNERRER1>
+         <ErrTypER11>21</ErrTypER11>
+         <ErrPoiER12>MES.IOM(1).Document/Reference number</ErrPoiER12>
+          <ErrReaER13>R827</ErrReaER13>
+          <OriAttValER14>19</OriAttValER14>
+   </FUNERRER1>
+</CC324A>
+

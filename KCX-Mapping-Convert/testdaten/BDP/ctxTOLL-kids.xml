@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>05</Month>
+<Day>27</Day>
+</Date>
+<Time>16:49:03</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>DE.TOLL.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>IMPORT</Procedure>
+<MessageName>ImportTaxAssessment</MessageName>
+<Release>2.0.01</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>testdaten\BDP\ctxTOLL.fss</MessageID>
+<InReplyTo>testdaten\BDP\ctxTOLL.fss</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<ImportTaxAssessment>
+<GoodsDeclaration>
+<ReferenceNumber>IWA-TOLL</ReferenceNumber>
+<UCR>ATC400001520520135876</UCR>
+<RegistrationCode>ATC00400001520520135876</RegistrationCode>
+<CustomsOfficeOfClearance>
+<Code>5876</Code>
+<Name>Hauptzollamt Probebetrieb Zollamt Luft</Name>
+<Officer>Hr. B. Pl"dt</Officer>
+<Phone>+49 (0)961 302-323</Phone>
+</CustomsOfficeOfClearance>
+<CustomsOfficeOfRemedies>Hauptzollamt Probebetrieb</CustomsOfficeOfRemedies>
+<CustomsOfficeOfPayment>
+<Name>Hauptzollamt Probebetrieb Zollamt Luft</Name>
+</CustomsOfficeOfPayment>
+<RegistrationDate>20130527</RegistrationDate>
+<TotalAmountOfExemption>00000021075</TotalAmountOfExemption>
+<TotalAmountOfSecurity>00000000000</TotalAmountOfSecurity>
+<TotalAmountOfCashSecurity>00000000000</TotalAmountOfCashSecurity>
+<TotalAmountOfNonCashSecurity>00000000000</TotalAmountOfNonCashSecurity>
+<TaxDeductionCode>J</TaxDeductionCode>
+<DefermentAccount>
+<PaymentType>B</PaymentType>
+<KindOfExemption>A0000</KindOfExemption>
+<AmountOfDuty>00000003332</AmountOfDuty>
+<DefermentAccountType>0</DefermentAccountType>
+</DefermentAccount>
+<DefermentAccount>
+<PaymentType>B</PaymentType>
+<KindOfExemption>B0000</KindOfExemption>
+<AmountOfDuty>00000017743</AmountOfDuty>
+<DefermentAccountType>0</DefermentAccountType>
+</DefermentAccount>
+<Traders>
+<RepresentativeTIN>
+<TIN>DE9003827</TIN>
+<BO>0000</BO>
+</RepresentativeTIN>
+</Traders>
+<CustomsOfficeOfClearanceAddress>
+<Name>Hauptzollamt Probebetrieb Zollamt Luft</Name>
+<Street>Teststr 100</Street>
+<City>Musterstadt</City>
+<PostalCode>12345</PostalCode>
+</CustomsOfficeOfClearanceAddress>
+<CustomsOfficeOfPaymentAddressAddress>
+<Name>Hauptzollamt Probebetrieb Zollamt Luft</Name>
+<Street>Teststr 100</Street>
+<City>Musterstadt</City>
+<PostalCode>12345</PostalCode>
+</CustomsOfficeOfPaymentAddressAddress>
+<CustomsOfficeOfRemediesAddressAddress>
+<Name>Hauptzollamt Probebetrieb</Name>
+<Street>Teststra 100</Street>
+<City>Musterstadt</City>
+<PostalCode>12345</PostalCode>
+</CustomsOfficeOfRemediesAddressAddress>
+<GoodsItem>
+<ItemNumber>00001</ItemNumber>
+<AcceptanceDate>20130527</AcceptanceDate>
+<GrantedBenefitCode>100</GrantedBenefitCode>
+<ExaminationCode>0</ExaminationCode>
+<DischargeCode>5</DischargeCode>
+<AcceptanceCode>J</AcceptanceCode>
+<VATValue>00000093382</VATValue>
+<AmountOfGarantee>00000000000</AmountOfGarantee>
+<ExchangeRate>00000000000000</ExchangeRate>
+<CustomsValue>00000090050</CustomsValue>
+<Duties>
+<Type>A0000</Type>
+<Amount>00000003332</Amount>
+<Rate>3.7</Rate>
+<Rate>000000370000</Rate>
+</Duties>
+<Duties>
+<Type>B0000</Type>
+<Amount>00000017743</Amount>
+<Rate>19.0</Rate>
+<Rate>000001900000</Rate>
+</Duties>
+</GoodsItem>
+</GoodsDeclaration>
+</ImportTaxAssessment>
+</soap:Body>
+</soap:Envelope>

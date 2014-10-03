@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header><Header soap:mustUnderstand="true" xmlns="http://www.eurtradenet.com/schemas/header/200310">
+<To>DE01.CSFTEST.2158</To>
+<From>XX01.CSFTEST.2158</From>
+<MessageID>DE01DE0121810000000000643195</MessageID><SentAt>2009-05-14T12:24:08 +0200</SentAt><Act>request</Act><MessageType>ExportDeclaration</MessageType><MessageVersion>1.0</MessageVersion></Header></soap:Header>
+<soap:Body><Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200809"><Export>
+<ExportDeclaration>
+<Consignee><Address><Name>Testfirma US-Export 2</Name><StreetAndNumber>West-Drive 120</StreetAndNumber><PostalCode>88888</PostalCode><City>Chicago</City><CountryCodeISO>US</CountryCodeISO></Address>
+</Consignee>
+<Contact>
+   <Function>Function</Function>
+   <Identity>identity</Identity>
+   <Name>name</Name>
+   <Fax>Fax</Fax>
+   <Phone>Phone</Phone>
+   <City>Ort</City>
+   <Date>2009-06-09</Date>
+</Contact>
+<Declarant><TIN>9002073</TIN><CustomsID>1</CustomsID>
+</Declarant>
+<AuthorisationID>DE5864ZA0054</AuthorisationID><ContainerIndicator>1</ContainerIndicator><CustomsOffices><OfficeOfExit>DE005872</OfficeOfExit><OfficeOfExport>DE005866</OfficeOfExport></CustomsOffices><DestinationCountry>US</DestinationCountry><GrossMass>87300</GrossMass><Incoterms><Code>EXW</Code><City>Nürnberg</City></Incoterms>
+<ItemsQuantity>003</ItemsQuantity>
+<MeansOfTransport TransportType="Inland"><Type>03</Type></MeansOfTransport><MeansOfTransport TransportType="Border"><Type>03</Type><Mode>33</Mode><Nationality>QU</Nationality></MeansOfTransport><ParticipantsCombination>0</ParticipantsCombination><PlaceOfLoading><Code>AA01</Code></PlaceOfLoading><ReferenceNumber>0000027247</ReferenceNumber><Remark>Vermerk aus Faktur 90034409</Remark><Transaction><Type>11</Type><Amount>802760</Amount><Currency>EUR</Currency></Transaction><TypeOfDeclaration><RegionCode>EX</RegionCode><ProcedureCode>e</ProcedureCode></TypeOfDeclaration><HeaderExtensions><TydenSealsFlag>0</TydenSealsFlag><TydenSealsStockFlag>0</TydenSealsStockFlag></HeaderExtensions><GoodsItem><ItemNumber>001</ItemNumber><ContainerRegistration>1258745699</ContainerRegistration><CommodityCodeKN8>84717070</CommodityCodeKN8><GoodsDescription>Slimline PC-Gehäuse / Plattenspeichereinheiten für automatische Datenverarbeitungsmaschinen (ausg. Plattenspeichereinheiten, optisch, einschl. magneto-optisch sowie Festplattenspeichereinheiten)</GoodsDescription><GrossMass>87300</GrossMass><NetMass>10450</NetMass><OriginRegion>14</OriginRegion><Packaging><Quantity>1</Quantity><MarksAndNumbers>00000000000000000552</MarksAndNumbers><Number>01</Number><Type>PX</Type></Packaging><Packaging><Quantity>1</Quantity><MarksAndNumbers>00112005670000002912</MarksAndNumbers><Number>02</Number><Type>PX</Type></Packaging><Packaging><Quantity>0</Quantity><MarksAndNumbers>00112005670000002912</MarksAndNumbers><Number>03</Number><Type>PX</Type></Packaging><Procedure><Declared>10</Declared><Previous>40</Previous></Procedure>
+<PreviousDocument>
+	<Type>AT-AV</Type>
+	<Document>
+		<Reference>Referenz  AT-AV</Reference>
+		<Remark>Zusatz AT-AV</Remark>
+	</Document>
+</PreviousDocument>
+<ProducedDocument><Document><Category>Y901</Category></Document></ProducedDocument><ProducedDocument><Document><Category>N380</Category><Reference>Referenz N380</Reference></Document></ProducedDocument><ProducedDocument><Document><Category>C052</Category><Reference>Referenz C052</Reference><Remark>ZUSATZ C052</Remark><DateOfCreation>2009-01-01</DateOfCreation><DateOfValidity>2009-12-31</DateOfValidity></Document></ProducedDocument><StatisticalValue>158</StatisticalValue><StatisticalQuantity>11000</StatisticalQuantity></GoodsItem><GoodsItem><ItemNumber>002</ItemNumber><ContainerRegistration>1258745699</ContainerRegistration><CommodityCodeKN8>84717070</CommodityCodeKN8><GoodsDescription>CD-ROM Laufwerk / Plattenspeichereinheiten für automatische Datenverarbeitungsmaschinen (ausg. Plattenspeichereinheiten, optisch, einschl. magneto-optisch sowie Festplattenspeichereinheiten)</GoodsDescription><GrossMass>0000</GrossMass><NetMass>9450</NetMass><OriginRegion>14</OriginRegion><Packaging><Quantity>0</Quantity><MarksAndNumbers>00112005670000002912</MarksAndNumbers><Number>01</Number><Type>PX</Type></Packaging><Procedure><Declared>10</Declared><Previous>40</Previous></Procedure><PreviousDocument><Type>AT-AV</Type><Document><Reference>Referenz AT-AV</Reference><Remark>Zusatz AT-AV</Remark></Document></PreviousDocument><ProducedDocument><Document><Category>Y901</Category></Document></ProducedDocument><ProducedDocument><Document><Category>N380</Category><Reference>Referenz N380</Reference></Document></ProducedDocument><ProducedDocument><Document><Category>C052</Category><Reference>Referenz C052</Reference><Remark>ZUSATZ C052</Remark><DateOfCreation>2009-01-01</DateOfCreation><DateOfValidity>2009-12-31</DateOfValidity></Document></ProducedDocument><StatisticalValue>1490</StatisticalValue><StatisticalQuantity>21000</StatisticalQuantity></GoodsItem><GoodsItem><ItemNumber>003</ItemNumber><ContainerRegistration>1258745699</ContainerRegistration><CommodityCodeKN8>84717070</CommodityCodeKN8><GoodsDescription>Festplatte, 20 GB / Plattenspeichereinheiten für automatische Datenverarbeitungsmaschinen (ausg. Plattenspeichereinheiten, optisch, einschl. magneto-optisch sowie Festplattenspeichereinheiten)</GoodsDescription><GrossMass>0000</GrossMass><NetMass>13950</NetMass><OriginRegion>14</OriginRegion><Packaging><Quantity>0</Quantity><MarksAndNumbers>00112005670000002912</MarksAndNumbers><Number>01</Number><Type>PX</Type></Packaging><Procedure><Declared>10</Declared><Previous>40</Previous></Procedure><PreviousDocument><Type>AT-AV</Type><Document><Reference>Referenz AT-AV</Reference><Remark>Zusatz AT-AV</Remark></Document></PreviousDocument><ProducedDocument><Document><Category>Y901</Category></Document></ProducedDocument><ProducedDocument><Document><Category>N380</Category><Reference>Referenz N380</Reference></Document></ProducedDocument>
+<ProducedDocument>
+	<Document>
+		<Type>TypeUIDS</Type>
+		<Category>C052</Category>
+		<Reference>Referenz C052</Reference>
+		<Remark>ZUSATZ C052</Remark>
+		<DateOfCreation>2009-01-01</DateOfCreation>
+		<DateOfValidity>2009-12-31</DateOfValidity>
+	</Document>
+</ProducedDocument>
+<StatisticalValue>5010</StatisticalValue><StatisticalQuantity>31000</StatisticalQuantity>
+</GoodsItem></ExportDeclaration></Export></Submit></soap:Body></soap:Envelope>

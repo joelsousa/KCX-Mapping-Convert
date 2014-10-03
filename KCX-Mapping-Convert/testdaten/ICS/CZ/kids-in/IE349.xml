@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>05</Day>
+                </Date>
+                <Time>091250</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ARN</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSArrivalItemRejection</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>AE-EK-TST000150050111</MessageID>
+            <InReplyTo>17677739631-JP9ZJ5</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSArrivalItemRejection>
+            <GoodsDeclaration>
+                <ReferenceNumber>17677739631-JP9ZJ5</ReferenceNumber>
+                <RejectionDateTime>201101050912</RejectionDateTime>
+                <RejectionReasonHeader>TIN des Verbringers DE2543184 ist falsch.</RejectionReasonHeader>
+                <DeclaredDateOfArrival>201101031800</DeclaredDateOfArrival>
+                <ConveyanceReference>EK0047</ConveyanceReference>
+                <MeansOfTransportBorder>
+                    <TransportMode>4</TransportMode>
+                </MeansOfTransportBorder>
+                <ImportDetails/>
+                <CarrierTIN>
+                    <TIN>DE2543184</TIN>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+                <FunctionalError>
+                    <ErrorType>EAS10006</ErrorType>
+                    <ErrorPointer>VERBRINGER.Verbringer (TIN)</ErrorPointer>
+                    <ErrorReason>TIN des Verbringers DE2543184 ist falsch.</ErrorReason>
+                </FunctionalError>
+            </GoodsDeclaration>
+        </ICSArrivalItemRejection>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Body>
+	<CustomsResponse>
+		<MessageHeader>
+			<MessageType>CUSCAN</MessageType>			
+			<MessageName>EK019102072013DXB-02A</MessageName>
+			<MessageFunction>RESPONSE</MessageFunction>
+			<MessageDateTime>2013-07-04T14:38:34</MessageDateTime>
+			<MessageSender>
+				<Identity>FSS</Identity>
+			</MessageSender>
+			<MessageRecipient>
+				<Identity>DE.CSF</Identity>
+			</MessageRecipient>
+			<MessageVersion>1.0.00</MessageVersion>
+		</MessageHeader>
+		<MessageBody>
+			<DeclarationStatus>41</DeclarationStatus>
+			<CUSCAN>
+				<HeaderDetail>
+					<FlightNumber>EK0191</FlightNumber>
+					<AirportOfDeparture>DXB</AirportOfDeparture>
+					<DepartureDate>20130704</DepartureDate>
+					<AirportOfArrival>FRA</AirportOfArrival>
+					<ArrivalDate>20130704</ArrivalDate>
+					<CustomsRegistration>ATB150001550720135876</CustomsRegistration>
+				</HeaderDetail>				
+				<ItemDetails>
+					<LineItemNumber>0001</LineItemNumber>
+					<LineStatus>41</LineStatus>					
+					<CustodyDetails>
+						<Street>StreetName</Street>
+						<ZipCode>ZIP12345</ZipCode>
+						<City>Frankfurt</City>
+					</CustodyDetails>
+				</ItemDetails>				
+			</CUSCAN>
+		</MessageBody>
+	</CustomsResponse>
+</soap:Body>
+</soap:Envelope>

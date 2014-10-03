@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>DE01.CSFALT.2144</From>
+<MessageID>EI20100519</MessageID>
+<SentAt>2010-05-19 12:02:00 +0200</SentAt>
+<Act>request</Act>
+<MessageType>EMCSReminderMessageForExciseMovement</MessageType>
+<MessageVersion>1.0</MessageVersion>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+<EMCS>
+<EMCSReminderMessageForExciseMovement>
+	<LocalReferenceNumber>ReferenceNumber</LocalReferenceNumber>
+	<Attributes>
+		<DateAndTimeOfIssuanceOfReminder>2010-05-19 14:55:00 +0200</DateAndTimeOfIssuanceOfReminder>
+		<ReminderInformation language="RI">ReminderInformation</ReminderInformation>
+		<LimitDateAndTime>2010-05-20 14:55:00 +0200</LimitDateAndTime>
+		<ReminderMessageType>ReminderMessageType</ReminderMessageType>
+	</Attributes>
+	<ExciseMovementEaad>
+		<SequenceNumber>9</SequenceNumber>
+		<AadReferenceCode>AadReferenceCode</AadReferenceCode>
+	</ExciseMovementEaad>
+</EMCSReminderMessageForExciseMovement>
+</EMCS></Submit>
+</soap:Body>
+</soap:Envelope>
+

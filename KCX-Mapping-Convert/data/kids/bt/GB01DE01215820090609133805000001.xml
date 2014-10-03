@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+	  <Date>
+		  <Year>2008</Year>
+		  <Month>12</Month>
+		  <Day>16</Day>
+	  </Date>
+	  <Time>13:29:00</Time>
+	  <TimeZone>+0100</TimeZone>
+  </SentAt>
+  <Transmitter>GB.BTC.LHR</Transmitter>
+  <Receiver>GB.BTC.LHR</Receiver>
+  <Method>Export</Method>
+  <MessageTP>
+	  <CountryCode>DE</CountryCode>
+	  <Procedure>Export</Procedure>
+	  <MessageName>ExportDeclaration</MessageName>
+	  <Release>1.0.00</Release>
+  </MessageTP>
+  <MessageID>GB01DE01215820090609133805000001</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <ExportDeclaration>
+	  <GoodsDeclaration>
+		  <AreaCode>EX</AreaCode>
+		  <TypeOfPermit>a</TypeOfPermit>
+		  <DestinationCountry>US</DestinationCountry>
+		  <TransportInContainer>1</TransportInContainer>
+		  <GrossMass>1770000</GrossMass>
+		  <UCROtherSystem>REGNR FREMDSYSTEM</UCROtherSystem>
+		  <ReferenceNumber>T8rn_0100_z__dexpda</ReferenceNumber>
+		  <MeansOfTransportInland>
+			  <TransportMode>30</TransportMode>
+		  </MeansOfTransportInland>
+		  <MeansOfTransportBorder>
+			  <TransportMode>40</TransportMode>
+			  <TransportationType>40</TransportationType>
+			  <TransportationNumber>AIR 101</TransportationNumber>
+			  <TransportationCountry>DE</TransportationCountry>
+		  </MeansOfTransportBorder>
+		  <PlaceOfLoading>
+			  <Street>Hertzstr. 10</Street>
+			  <PostalCode>76187</PostalCode>
+			  <City>Karlsruhe</City>
+			  <AgreedLocationOfGoods>Halle 20</AgreedLocationOfGoods>
+		  </PlaceOfLoading>
+		  <CustomsOfficeExport>DE005866</CustomsOfficeExport>
+		  <IntendedOfficeOfExit>DE005876</IntendedOfficeOfExit>
+		  <Business>
+			  <BusinessTypeCode>11</BusinessTypeCode>
+			  <InvoicePrice>3055000</InvoicePrice>
+			  <Currency>EUR</Currency>
+		  </Business>
+		  <Consignor>
+			  <Address>
+				  <Name>Testfirma Ausführer</Name>
+				  <Street>Testfirma Ausführer Straße</Street>
+				  <City>Testfirma Ausführer Ort</City>
+				  <PostalCode>123456789</PostalCode>
+				  <Country>IT</Country>
+			  </Address>
+		  </Consignor>
+		  <DeclarantTIN>
+			  <TIN>9000119</TIN>
+			  <IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+		  </DeclarantTIN>
+		  <AgentTIN>
+		  	<TIN>9000119</TIN>
+		  	<IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+		  </AgentTIN>
+		  <SubcontractorTIN>
+			  <TIN>8999708</TIN>
+			  <IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+		  </SubcontractorTIN>
+		  <Consignee>
+			  <Address>
+				  <Name>Fa. Empfänger</Name>
+				  <Street>Straße Empfänger</Street>
+				  <City>Ort Empfänger</City>
+				  <PostalCode>665--0844</PostalCode>
+				  <Country>US</Country>
+			  </Address>
+		  </Consignee>
+		  <ConsigneeTIN>
+		  	<TIN>a12345678</TIN>
+		  </ConsigneeTIN>
+		  <IncoTerms>
+			  <IncoTerm>CFR</IncoTerm>
+			  <Place>Orlando</Place>
+		  </IncoTerms>
+		  <GoodsItem>
+			  <ItemNumber>1</ItemNumber>
+			  <Description>T-Shirts aus 100% BW, gewirkt</Description>
+			  <UCROtherSystem>AWB 12345678900</UCROtherSystem>
+			  <OriginFederalState>08</OriginFederalState>
+			  <NetMass>1500000</NetMass>
+			  <GrossMass>1700000</GrossMass>
+			  <CommodityCode>
+				  <TarifCode>61091000</TarifCode>
+			  </CommodityCode>
+			  <CustomsApprovedTreatment>
+				  <Declared>10</Declared>
+				  <Previous>00</Previous>
+			  </CustomsApprovedTreatment>
+			  <Statistic>
+				  <AdditionalUnit>4500000</AdditionalUnit>
+				  <StatisticalValue>32000</StatisticalValue>
+			  </Statistic>
+			  <Package>
+				  <Quantity>100</Quantity>
+				  <SequentialNumber>1</SequentialNumber>
+				  <Type>CH</Type>
+				  <Marks>1-100</Marks>
+			  </Package>
+			  <Containers>
+				  <Number>C 301</Number>
+			  </Containers>
+			  <Document>
+				  <Type>N380</Type>
+				  <Reference>Rechn. 123 v. 1.1.06</Reference>
+			  </Document>
+			  <PreviousDocument>
+				  <Type>OHNE</Type>
+			  </PreviousDocument>
+		  </GoodsItem>
+	  </GoodsDeclaration>
+  </ExportDeclaration>
+  </soap:Body>
+  </soap:Envelope>

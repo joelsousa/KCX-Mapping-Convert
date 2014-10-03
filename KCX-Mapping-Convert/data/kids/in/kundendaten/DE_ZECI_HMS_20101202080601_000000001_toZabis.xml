@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xsi:schemaLocation="http://www.w3.org/2003/05/soap-envelope EMCSDeclaration-soap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Header>
+			<SentAt>
+				<Date>
+					<Year>2010</Year>
+					<Month>12</Month>
+					<Day>1</Day>
+				</Date>
+				<Time>080601</Time>
+				<TimeZone>+1</TimeZone>
+			</SentAt>
+			<Transmitter>DE.ZECI.HMS</Transmitter>
+			<Receiver>DE.ZECI.HMS</Receiver>
+			<Method>EME</Method>
+			<MessageTP>
+				<CountryCode>DE</CountryCode>
+				<Procedure>EMCS</Procedure>
+				<MessageName>EMCSDeclaration</MessageName>
+				<Release>1.0.00</Release>
+				<Direction>FROM_CUSTOMER</Direction>
+			</MessageTP>
+			<MessageID>101130_9672HGEO9/03</MessageID>
+		</Header>
+	</soap:Header>
+	<soap:Body>
+		<EMCSDeclaration xsi:noNamespaceSchemaLocation="EMCSDeclaration.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<ReferenceNumber>101130_9672HGEO9/03</ReferenceNumber>
+			<Clerk>ASCONA</Clerk>
+			<DeferredSubmissionFlag>0</DeferredSubmissionFlag>
+			<SubmissionMessageType>2</SubmissionMessageType>
+			<DeliveryPlaceCustomsOffice>DE004851</DeliveryPlaceCustomsOffice>
+			<CompetentAuthorityDispatchOffice>DE004850</CompetentAuthorityDispatchOffice>
+			<JourneyTime>D10</JourneyTime>
+			<DestinationTypeCode>6</DestinationTypeCode>
+			<TransportArrangement>1</TransportArrangement>
+			<DateOfDispatch>20101130</DateOfDispatch>
+			<OriginTypeCode>1</OriginTypeCode>
+			<InvoiceNumber>007538099</InvoiceNumber>
+			<InvoiceDate>20101130</InvoiceDate>
+			<TransportModeCode>3</TransportModeCode>
+			<GuarantorTypeCode>1</GuarantorTypeCode>
+			<PreviousProcedure>000</PreviousProcedure>
+			<Consignor>
+				<CountryCodeISO>DE</CountryCodeISO>
+				<CustomerID>3709</CustomerID>
+				<ExciseTaxNumber>DE00001434772</ExciseTaxNumber>
+				<VATID/>
+				<Name>Hanseatic Marine Service</Name>
+				<Street>Neuhöfer Brückenstra&#223;e</Street>
+				<StreetNumber>8</StreetNumber>
+				<PostalCode>21107</PostalCode>
+				<City>Hamburg</City>
+			</Consignor>
+			<PlaceOfDispatch>
+				<CountryCodeISO>DE</CountryCodeISO>
+				<CustomerID>2</CustomerID>
+				<ExciseTaxNumber>DE0000062197</ExciseTaxNumber>
+				<VATID/>
+				<Name>Hanseatic Marine Service GmbH &amp; CoKG</Name>
+				<Street>Neuhöfer Brückenstra&#223;e 8</Street>
+				<StreetNumber/>
+				<PostalCode>21107</PostalCode>
+				<City>Hamburg</City>
+			</PlaceOfDispatch>
+			<GoodsItem>
+				<ItemNumber>1</ItemNumber>
+				<ExciseProductCode>S200</ExciseProductCode>
+				<CnCode>22082029</CnCode>
+				<CommercialDescription language="de">Metaxa 5 Stars 38%            1,0l /    60,00  FL</CommercialDescription>
+				<Quantity>60.00</Quantity>
+				<NetWeight>55.20</NetWeight>
+				<GrossWeight>105.00</GrossWeight>
+				<Package>
+					<KindOfPackages>St</KindOfPackages>
+					<NumberOfPackages>60</NumberOfPackages>
+				</Package>
+			</GoodsItem>
+			<GoodsItem>
+				<ItemNumber>2</ItemNumber>
+				<ExciseProductCode>S200</ExciseProductCode>
+				<CnCode>22089041</CnCode>
+				<CommercialDescription language="de">Ouzo 12  40%                  1,0l /    24,00  FL</CommercialDescription>
+				<Quantity>24.00</Quantity>
+				<NetWeight>22.08</NetWeight>
+				<GrossWeight>37.20</GrossWeight>
+				<Package>
+					<KindOfPackages>St</KindOfPackages>
+					<NumberOfPackages>24</NumberOfPackages>
+				</Package>
+			</GoodsItem>
+			<GoodsItem>
+				<ItemNumber>3</ItemNumber>
+				<ExciseProductCode>S200</ExciseProductCode>
+				<CnCode>22083071</CnCode>
+				<CommercialDescription language="de">Johnnie Walker Red 40%        1,0l /    24,00  FL</CommercialDescription>
+				<Quantity>24.00</Quantity>
+				<NetWeight>24.00</NetWeight>
+				<GrossWeight>36.39</GrossWeight>
+				<Package>
+					<KindOfPackages>St</KindOfPackages>
+					<NumberOfPackages>24</NumberOfPackages>
+				</Package>
+			</GoodsItem>
+			<GoodsItem>
+				<ItemNumber>4</ItemNumber>
+				<ExciseProductCode>S200</ExciseProductCode>
+				<CnCode>22083071</CnCode>
+				<CommercialDescription language="de">Clan Macgregor 40%            1,0l /    36,00  FL</CommercialDescription>
+				<Quantity>36.00</Quantity>
+				<NetWeight>32.76</NetWeight>
+				<GrossWeight>77.99</GrossWeight>
+				<Package>
+					<KindOfPackages>St</KindOfPackages>
+					<NumberOfPackages>36</NumberOfPackages>
+				</Package>
+			</GoodsItem>
+			<GoodsItem>
+				<ItemNumber>5</ItemNumber>
+				<ExciseProductCode>B000</ExciseProductCode>
+				<CnCode>22030009</CnCode>
+				<CommercialDescription language="de">Astra Premium 5,0% DS     24x0,33l  5,00Gd.Plato /    30,00  KT</CommercialDescription>
+				<Quantity>30.00</Quantity>
+				<DegreePlato>5.00</DegreePlato>
+				<NetWeight>237.60</NetWeight>
+				<GrossWeight>266.40</GrossWeight>
+				<Package>
+					<KindOfPackages>St</KindOfPackages>
+					<NumberOfPackages>30</NumberOfPackages>
+				</Package>
+			</GoodsItem>
+			<GoodsItem>
+				<ItemNumber>6</ItemNumber>
+				<ExciseProductCode>T200</ExciseProductCode>
+				<CnCode>24022090</CnCode>
+				<CommercialDescription language="de">ASSOS International red,KSF  200pc /    80,00  ST</CommercialDescription>
+				<Quantity>400.00</Quantity>
+				<NetWeight>80.00</NetWeight>
+				<GrossWeight>117.91</GrossWeight>
+				<Package>
+					<KindOfPackages>St</KindOfPackages>
+					<NumberOfPackages>400</NumberOfPackages>
+				</Package>
+			</GoodsItem>
+		</EMCSDeclaration>
+	</soap:Body>
+</soap:Envelope>

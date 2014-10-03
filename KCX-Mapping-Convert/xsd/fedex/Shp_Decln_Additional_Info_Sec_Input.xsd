@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Shp_Decln_Additional_Info_Sec_Input" type="SHP_DECLN_ADDITIONAL_INFO"/>
+	<xs:complexType name="SHP_DECLN_ADDITIONAL_INFO">
+		<xs:sequence>
+			<xs:element ref="ITEM_SHP_DECLN_ADDITIONAL_INFO" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ITEM_SHP_DECLN_ADDITIONAL_INFO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DECLN_AI_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="DECLN_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="SHPMT_DECLN_COMM_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="AI_STMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="AI_STMT_TXT" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

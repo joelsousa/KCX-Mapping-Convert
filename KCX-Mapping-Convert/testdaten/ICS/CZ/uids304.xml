@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>CZ01.EK.TST</To>
+      <From>CZ01.EK.TST</From>
+      <MessageID>a603247c-7689-41c8-8183-01df21ff5753</MessageID>
+      <InReplyTo>17677359844-2EVAF4X</InReplyTo>
+      <SentAt>2011-02-15T09:02:23</SentAt>
+      <Act>inform</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>ICSDeclarationAmendmentAccepted</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+      <ICS>
+        <ICSDeclarationAmendmentAccepted>       
+          <MRN>11CZ194400Q7BFJTC9</MRN>
+          <AmendmentDateAndTime>2011-02-15T09:01:44</AmendmentDateAndTime>
+          <PersonLodgingSumDec>
+            <TIN>CZ24682705</TIN>
+            <Address>
+              <Name>Emirates, organiza?ní složka</Name>
+              <StreetAndNumber>Olivova 2096/4</StreetAndNumber>
+              <PostalCode>11000</PostalCode>
+              <City>Praha</City>
+              <CountryCodeISO>CZ</CountryCodeISO>
+            </Address>
+          </PersonLodgingSumDec>
+          <OfficeOfFirstEntry>CZ194400</OfficeOfFirstEntry>
+        </ICSDeclarationAmendmentAccepted>
+      </ICS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

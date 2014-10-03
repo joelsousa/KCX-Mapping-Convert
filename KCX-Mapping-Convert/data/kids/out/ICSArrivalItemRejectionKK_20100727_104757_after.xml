@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+      <SentAt>
+        <Date>
+          <Year>2010</Year>
+          <Month>05</Month>
+          <Day>10</Day>
+        </Date>
+        <Time>12:02:00</Time>
+        <TimeZone>+0100</TimeZone>
+      </SentAt>
+      <Transmitter>DE01.CSFALT.2144</Transmitter>
+      <Receiver>DE.CSF</Receiver>
+      <Method>ICS</Method>
+      <MessageTP>
+        <CountryCode>DE</CountryCode>
+        <Procedure>ICS</Procedure>
+        <MessageName>ICSEntrySummaryDeclarationAcceptance</MessageName>
+        <Release>1.0.00</Release>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>0</Map>
+          <MapFrom>DE</MapFrom>
+          <MapTo>DE</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>DE01DE01214420100510120200000001</MessageID>
+    </Header>
+  </soap:Header>
+<soap:Body>
+<ICSArrivalItemRejection>
+  <LocalReferenceNumber>LocalReferenceNumber1</LocalReferenceNumber>
+  <RejectionDateAndTIme>2010-07-28T10:47:57 +0800</RejectionDateAndTIme>
+  <MRNDetails>
+    <MRN>MRN1</MRN>
+    <ItemNumber>ItemNumber1</ItemNumber>
+    <LocalReferenceNumber>LocalReferenceNumber2</LocalReferenceNumber>
+    <Reason>Reason1</Reason>
+  </MRNDetails>
+  <MRNDetails>
+    <MRN>MRN2</MRN>
+    <ItemNumber>ItemNumber2</ItemNumber>
+    <LocalReferenceNumber>LocalReferenceNumber3</LocalReferenceNumber>
+    <Reason>Reason2</Reason>
+  </MRNDetails>
+  <Error>
+    <Type>Type1</Type>
+    <Pointer>Pointer1</Pointer>
+    <Reason>Reason3</Reason>
+    <OriginalValue>OriginalValue1</OriginalValue>
+    <Description>Description1</Description>
+  </Error>
+  <Error>
+    <Type>Type2</Type>
+    <Pointer>Pointer2</Pointer>
+    <Reason>Reason4</Reason>
+    <OriginalValue>OriginalValue2</OriginalValue>
+    <Description>Description2</Description>
+  </Error>
+</ICSArrivalItemRejection>
+</soap:Body>
+</soap:Envelope>

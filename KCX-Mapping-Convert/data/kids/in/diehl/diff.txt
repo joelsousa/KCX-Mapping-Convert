@@ -1,0 +1,16 @@
+47,50c48,49
+< <AlternativeDocument>0</AlternativeDocument>
+< <TransportInContainer>0</TransportInContainer>
+< <GrossMass>00000210000</GrossMass>
+< <UCROtherSystem>08DE586600098842E0</UCROtherSystem>
+---
+> <TransportInContainer>0</TransportInContainer>
+> <GrossMass>00000210000</GrossMass>
+424a423,424
+> <CustomsOfficeExport>DE005866</CustomsOfficeExport>
+> <RealOfficeOfExit>DE005872</RealOfficeOfExit>
+475a476,479
+> <IncoTerms>
+> <IncoTerm>CFR</IncoTerm>
+> <Place>zuerich</Place>
+> </IncoTerms>

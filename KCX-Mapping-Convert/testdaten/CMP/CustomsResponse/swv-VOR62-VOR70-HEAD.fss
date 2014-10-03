@@ -1,0 +1,69 @@
+VORFORDTSTSU SWVA20121101134500DAIH032708          06.20lsempvmmsgidVOR
+SWV309320121128101100482              ATB150040891120127206                     20121128T1    12DE560429434105M5            Leipzig-Flughafen                             T
+SWP309320121128101100482              ATB150040891120127206                     000120121218ZZZNCTS-PosNr: 00001                           PKPackung/Packst_¦ck                  0000100000000000500TEILE FUER KFZ, HIER: KAROSSERIETEILE, SIEHE PR                                                                                                                                 200648000Autoterminal                       2006480201211281030230N RU
+SWA                                                        00012                                                                                                         Edsel-Ford-Str. 2-14               K_"ln                               50769                                                             awb zzz 2006480
+SWA                                                        00013                                                                                                         Wiesenstr               DUS                               50769                                                             adus zdus 333333
+NACFORDCGNSU SWVA0000100005
+
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+.....
+<MessageID>testdaten\CMP\swv-VOR.fss</MessageID>
+<InReplyTo>msgidVOR</InReplyTo>
+</Header>
+
+
+V70:
+VORFORDTSTSU SWVA20121101134500DAIH032708          07.00lsempvmmsgidVOR
+
+<MessageID>msgidVOR</MessageID>
+</Header>
+
+V70:
+HEAD001fssZAB_KD1CBEF057687070002145SWV20130711135555FORDTSTSUsmvmsgidHEADinreplytoHEAD000
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+....
+<MessageID>msgidHEAD</MessageID>
+<InReplyTo>inreplytoHEAD</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<
+
+//*********************************************************************************************************************
+//**************  NEU 20130712:
+
+VORFORDTSTSU SWVA20121101134500DAIH032708          06.20lsempvmmsgidVOR
+
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+.....
+<Release>1.0.00</Release>
+<MessageID>testdaten\CMP\swv-VOR62.fss</MessageID>
+<InReplyTo>msgidVOR</InReplyTo>
+
+VORFORDTSTSU SWVA20121101134500DAIH032708          07.00lsempvmmsgidVOR
+
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+<Primary>DEFORDTST</Primary>
+<Secondary>MANIFEST</Secondary>
+
+<Release>2.0.00</Release>
+.....
+<MessageID>testdaten\CMP\swv-ford.fss</MessageID>
+<InReplyTo>msgidVOR</InReplyTo>
+</Header>
+
+///
+HEAD001fssZAB_KD1CBEF057687070002145SWV20130711135555FORDTSTSUsmvmsgidHEADinreplytoHEAD000
+
+<?xml version="1.0" encoding="UTF-8"?>
+<KCX>
+.....
+<Release>2.0.00</Release>
+<MessageID>msgidHEAD</MessageID>
+<InReplyTo>inreplytoHEAD</InReplyTo>
+</Header>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CD917B xsi:schemaLocation="http://www.eurodyn.com CC315A.xsd" xmlns="http://www.eurodyn.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<MesSenMES3>NICA.CY</MesSenMES3>
+   <MesRecMES6>CY0000000071</MesRecMES6>
+   <DatOfPreMES9>110715</DatOfPreMES9>
+   <TimOfPreMES10>0941</TimOfPreMES10>
+   <PriMES15>a</PriMES15>
+   <TesIndMES18>0</TesIndMES18>
+   <MesIdeMES19>CYICS110034287</MesIdeMES19>
+   <MesTypMES20>CD917B</MesTypMES20>
+   <CorIdeMES25>KA-20110706-03</CorIdeMES25>
+   <XMLERR805>
+      <ErrLocXMLER803>Line 1, Column 1033>: XML-24534: (Error) Element 'StrAndNmCO122' not expected.</ErrLocXMLER803>
+      <ErrLinNumXMLER800>1</ErrLinNumXMLER800>
+      <ErrColNumXMLER801>1033</ErrColNumXMLER801>
+      <ErrReaXMLER802>Not supported in this position</ErrReaXMLER802>
+      <ErrCodXMLER806>15</ErrCodXMLER806>
+   </XMLERR805>
+   <XMLERR805>
+      <ErrLocXMLER803>Line 1, Column 2621>: XML-24525: (Error) Invalid text 'Street com.kewill.kcx.component.mapping.countries.common.Address@587ccaee' in element: 'StrAndNumPLD1'</ErrLocXMLER803>
+      <ErrLinNumXMLER800>1</ErrLinNumXMLER800>
+
+   </XMLERR805>
+  </CD917B>

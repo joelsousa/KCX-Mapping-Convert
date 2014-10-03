@@ -1,0 +1,46 @@
+<CC305A xmlns="http://www.eurodyn.com">
+  <MesSenMES3>DE3486877</MesSenMES3>
+     <MesRecMES6>DE3486877</MesRecMES6>
+     <DatOfPreMES9>110809</DatOfPreMES9>
+     <TimOfPreMES10>1056</TimOfPreMES10>
+     <MesIdeMES19>GRICS110034174</MesIdeMES19>
+     <MesTypMES20>CC305A</MesTypMES20>
+   <CorIdeMES25>IWA-COR-20110809-01</CorIdeMES25>
+      <HEAHEA>   
+         <DocNumHEA5>11GR000305</DocNumHEA5>   
+         <DatTimAmeHEA113>201106141651</DatTimAmeHEA113>   
+         <AmeRejDatTimHEA112>201107131240</AmeRejDatTimHEA112>   
+      </HEAHEA>   
+      <FUNERRER1>   
+         <ErrTypER11>11</ErrTypER11>   
+         <ErrPoiER12>MES.HEA.Identity of means of transport crossing border</ErrPoiER12>   
+         <ErrReaER13>C011</ErrReaER13>   
+         <OriAttValER14>OO-THB</OriAttValER14>   
+      </FUNERRER1>   
+      <FUNERRER1>   
+               <ErrTypER11>12</ErrTypER11>   
+               <ErrPoiER12>MES.HEA.Identity of means of transport crossing border</ErrPoiER12>   
+               <ErrReaER13>C012</ErrReaER13>   
+               <OriAttValER14>OO-THB</OriAttValER14>   
+      </FUNERRER1> 
+      <TRAREP>
+      <NamTRE1>NamREP</NamTRE1>
+      <StrAndNumTRE1>8TH FLOOR TRAC BUILDING</StrAndNumTRE1>
+      <PosCodTRE1>10320</PosCodTRE1>
+      <CitTRE1>BANGKOK</CitTRE1>
+      <CouCodTRE1>TH</CouCodTRE1>
+      <TINTRE1>TIN</TINTRE1>
+      </TRAREP>
+      <PERLODSUMDEC>
+      <NamPLD1>Address</NamPLD1>
+      <StrAndNumPLD1>Street</StrAndNumPLD1>
+      <PosCodPLD1>Postcode</PosCodPLD1>
+      <CitPLD1>City</CitPLD1>
+      <CouCodPLD1>DE</CouCodPLD1>
+      <TINPLD1>CY0000000071</TINPLD1>
+      </PERLODSUMDEC>
+      <CUSOFFFENT730>
+      <RefNumCUSOFFFENT731>CY000440</RefNumCUSOFFFENT731>
+      <ExpDatOfArrFIRENT733>201107131059</ExpDatOfArrFIRENT733>
+	</CUSOFFFENT730>
+</CC305A>  

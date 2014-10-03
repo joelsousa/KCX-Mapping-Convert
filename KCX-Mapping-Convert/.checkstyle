@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileset-config file-format-version="1.2.0" simple-config="true">
+    <local-check-config name="CSF-Checks" location="checkstyle/CSF_Checkstyle_Configuration.xml" type="project" description="SUN-Checks mit kleineren Anpassungen">
+        <additional-data name="protect-config-file" value="false"/>
+    </local-check-config>
+    <local-check-config name="Kewill-Checks" location="checkstyle/Kewill_Checkstyle_Configuration.xml" type="project" description="Configuration im Format für Checkstyle 5.x">
+        <additional-data name="protect-config-file" value="false"/>
+    </local-check-config>
+    <fileset name="Alle" enabled="true" check-config-name="CSF-Checks" local="true">
+        <file-match-pattern match-pattern="." include-pattern="true"/>
+    </fileset>
+</fileset-config>

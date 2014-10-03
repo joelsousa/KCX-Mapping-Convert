@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageOperateur>
+    <Messages>
+        <Message>
+            <EnveloppeMessage>
+                <schemaID>MessageIE315</schemaID>
+                <schemaVersion>TBD</schemaVersion>
+                <partyId>DE.FDX.TST</partyId>
+                <transactionId>3514195</transactionId>
+                <numseq>0</numseq>
+            </EnveloppeMessage>
+            <MessageBody>
+                <CC315A>
+                    <MesSenMES3>DE.FDX.TST</MesSenMES3>
+                    <MesRecMES6>DE.FDX.TST</MesRecMES6>
+                    <DatOfPreMES9>110929</DatOfPreMES9>
+                    <TimOfPreMES10>2049</TimOfPreMES10>
+                    <MesIdeMES19>CGN3514195</MesIdeMES19>
+                    <MesTypMES20>CC315A</MesTypMES20>
+                    <HEAHEA>
+                        <RefNumHEA4>1DE3514195</RefNumHEA4>
+                        <TraModAtBorHEA76>4</TraModAtBorHEA76>
+                        <TotNumOfIteHEA305>1</TotNumOfIteHEA305>
+                        <TotGroMasHEA307>0.227</TotGroMasHEA307>
+                        <DecPlaHEA394>CGN</DecPlaHEA394>
+                        <DecPlaHEA394LNG>EN</DecPlaHEA394LNG>
+                        <SpeCirIndHEA1>A</SpeCirIndHEA1>
+                        <TraChaMetOfPayHEA1>A</TraChaMetOfPayHEA1>
+                        <ComRefNumHEA>168912881919</ComRefNumHEA>
+                        <ConRefNumHEA>FDX4848</ConRefNumHEA>
+                        <PlaLoaGOOITE334>US Memphis TN</PlaLoaGOOITE334>
+                        <PlaLoaGOOITE334LNG>EN</PlaLoaGOOITE334LNG>
+                        <PlaUnlGOOITE334>DE CGN</PlaUnlGOOITE334>
+                        <CodPlUnHEA357LNG>EN</CodPlUnHEA357LNG>
+                        <DecDatTimHEA114>201109292049</DecDatTimHEA114>
+                    </HEAHEA>
+                    <TRACONCO1>
+                        <NamCO17>MOELLER CO S.A. CUIT 30529767664 AR</NamCO17>
+                        <StrAndNumCO122>AV. LEANDRO N. ALEM 1134 PISO 10   </StrAndNumCO122>
+                        <PosCodCO123>18876</PosCodCO123>
+                        <CitCO124>CAPITAL FEDERAL</CitCO124>
+                        <CouCO125>AR</CouCO125>
+                        <NADLNGCO>EN</NADLNGCO>
+                    </TRACONCO1>
+                    <NOTPAR670>
+                        <NamNOTPAR672>ROXIE DE TESTING ROXIE JF</NamNOTPAR672>
+                        <StrNumNOTPAR673>45 TEST LANE   </StrNumNOTPAR673>
+                        <PosCodNOTPAR676>40547</PosCodNOTPAR676>
+                        <CitNOTPAR674>DUSSELDORF</CitNOTPAR674>
+                        <CouCodNOTPAR675>DE</CouCodNOTPAR675>
+                        <NOTPAR670LNG>EN</NOTPAR670LNG>
+                    </NOTPAR670>
+                    <GOOITEGDS>
+                        <IteNumGDS7>1</IteNumGDS7>
+                        <GooDesGDS23>BUSINESS DOCUMENTS</GooDesGDS23>
+                        <GooDesGDS23LNG>EN</GooDesGDS23LNG>
+                        <SPEMENMT2>
+                            <AddInfCodMT23>10600</AddInfCodMT23>
+                        </SPEMENMT2>
+                    </GOOITEGDS>
+                    <ITI>
+                        <CouOfRouCodITI1>US</CouOfRouCodITI1>
+                    </ITI>
+                    <ITI>
+                        <CouOfRouCodITI1>DE</CouOfRouCodITI1>
+                    </ITI>
+                    <PERLODSUMDEC>
+                        <TINPLD1>DE9008454</TINPLD1>
+                    </PERLODSUMDEC>
+                    <CUSOFFFENT730>
+                        <RefNumCUSOFFFENT731>DE005866</RefNumCUSOFFFENT731>
+                        <ExpDatOfArrFIRENT733>201109291400</ExpDatOfArrFIRENT733>
+                    </CUSOFFFENT730>
+                    <TRACARENT601>
+                        <TINTRACARENT602>DE9008454</TINTRACARENT602>
+                    </TRACARENT601>
+                </CC315A>
+            </MessageBody>
+        </Message>
+    </Messages>
+</MessageOperateur>
+ 

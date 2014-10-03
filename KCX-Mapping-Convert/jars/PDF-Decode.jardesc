@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jardesc>
+<jar path="C:/develop/Java/eclipse-kcx/KCX-Mapping-Convert/jars/PDF-Decode.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/KCX-Mapping-Convert/jars/PDF-Decode.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.util{Prop.java"/>
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.util{Utils.java"/>
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.util{FssRuntimeException.java"/>
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.tools.XLSReader{PdfDecode.java"/>
+<javaElement handleIdentifier="=KCX-Mapping-Convert/src&lt;com.kewill.kcx.component.mapping.db"/>
+</selectedElements>
+</jardesc>

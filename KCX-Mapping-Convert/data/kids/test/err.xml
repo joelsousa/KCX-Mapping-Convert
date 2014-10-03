@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2008</Year>
+<Month>12</Month>
+<Day>04</Day>
+</Date>
+<Time>13:43:09</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<ProcedureSpecification>NP</ProcedureSpecification>
+<MessageName>localAppResult</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>MsgID20080902</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<localAppResult>
+<GoodsDeclaration>
+<ReferenceNumber>KCX-081204-0053</ReferenceNumber>
+<CorrectionNumber>000</CorrectionNumber>
+<FileName>DE01DE01215820081204</FileName>
+<ProcedureType>ERR</ProcedureType>
+<GoodsItem>
+<ItemNumber>0000</ItemNumber>
+<KindOfError>04</KindOfError>
+<OriginOfError>07</OriginOfError>
+<Modul>06</Modul>
+<ErrorText>00003                          H: Adresstyp Anmelder: Flag deutsche Zollnr. wurde gesetzt.</ErrorText>
+<DateOfErrorMessage>20081204</DateOfErrorMessage>
+<TimeOfErrorMessage>134308</TimeOfErrorMessage>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>0000</ItemNumber>
+<KindOfError>04</KindOfError>
+<OriginOfError>07</OriginOfError>
+<Modul>06</Modul>
+<ErrorText>00003                          H: Ladeort wird angelegt</ErrorText>
+<DateOfErrorMessage>20081204</DateOfErrorMessage>
+<TimeOfErrorMessage>134308</TimeOfErrorMessage>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>0000</ItemNumber>
+<KindOfError>04</KindOfError>
+<OriginOfError>07</OriginOfError>
+<Modul>06</Modul>
+<ErrorText>00000                          H: Antrag wurde gesendet</ErrorText>
+<DateOfErrorMessage>20081204</DateOfErrorMessage>
+<TimeOfErrorMessage>134309</TimeOfErrorMessage>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>0000</ItemNumber>
+<KindOfError>04</KindOfError>
+<OriginOfError>07</OriginOfError>
+<Modul>06</Modul>
+<ErrorText>00000                          H: --- ADA-Nachricht fehlerfrei eingearbeitet</ErrorText>
+<DateOfErrorMessage>20081204</DateOfErrorMessage>
+<TimeOfErrorMessage>134309</TimeOfErrorMessage>
+</GoodsItem>
+</GoodsDeclaration>
+</localAppResult>
+</soap:Body>
+</soap:Envelope>

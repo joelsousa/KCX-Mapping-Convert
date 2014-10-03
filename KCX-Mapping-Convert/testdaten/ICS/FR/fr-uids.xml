@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310">
+      <To>DE.CSF.ALT</To>
+      <From>DE.CSF.ALT</From>
+      <MessageID>17676009710-X0P3J8</MessageID>
+      <InReplyTo>17676009710-X0P3J5</InReplyTo>
+      <SentAt>2011-02-01 12:04:34</SentAt>
+      <Act>inform</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>ICSDeclarationAccepted</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Revoke xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+      <ICS>
+        <ICSDeclarationAccepted>
+          <LocalReferenceNumber>17676009710-X0P3J5</LocalReferenceNumber>
+          <CommercialReferenceNumber>17676009710</CommercialReferenceNumber>
+          <MRN>11FRS0308000230732</MRN>
+          <TransportAtBorder>
+            <Mode>4</Mode>
+          </TransportAtBorder>
+          <ConveyanceNumber>EK0077</ConveyanceNumber>
+          <RegistrationDateAndTime>201102010730</RegistrationDateAndTime>
+          <PersonLodgingSumDec>
+            <TIN>FR38798674800052</TIN>
+            <Address>
+              <Name>Address</Name>
+              <StreetAndNumber>Street</StreetAndNumber>
+              <PostalCode>Postcode</PostalCode>
+              <City>City</City>
+              <CountryCodeISO>DE</CountryCodeISO>
+            </Address>
+          </PersonLodgingSumDec>
+          <EntryCarrier>
+            <TIN>FR38798674800052</TIN>
+          </EntryCarrier>
+          <OfficeOfFirstEntry>FR003080</OfficeOfFirstEntry>
+          <ExpectedArrivalDateAndTime>201102011305</ExpectedArrivalDateAndTime>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <Documents>
+              <Type>N703</Type>
+              <Reference>YPH00034031</Reference>
+            </Documents>
+          </GoodsItem>
+        </ICSDeclarationAccepted>
+      </ICS>
+    </Revoke>
+  </soap:Body>
+</soap:Envelope>

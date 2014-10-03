@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+      <To>DE01.DETEST.2158</To>
+      <From>DE01.CSFTEST.2158</From>
+      <MessageID>DE01DE01215820081001174200012</MessageID>
+      <SentAt>2008-09-10 12:18:45 +0200</SentAt>
+      <Act>request</Act>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+      <Export>
+        <ExportDeclaration>
+          <AuthorisationID>DE5864ZA0002</AuthorisationID>
+          <ContainerIndicator>0</ContainerIndicator>
+          <DestinationCountry>CH</DestinationCountry>
+          <GrossMass>210000</GrossMass>
+          <Incoterms>
+            <Code>CFR</Code>
+            <City>zürich</City>
+          </Incoterms>
+          <MeansOfTransport TransportType="Inland">
+            <Type>03</Type>
+          </MeansOfTransport>
+          <PackagesQuantity>001</PackagesQuantity>
+          <ParticipantsCombination>0</ParticipantsCombination>
+          <PlaceOfLoading>
+            <Code>AA01</Code>
+          </PlaceOfLoading>
+          <ReferenceNumber>KCX-081001-0012</ReferenceNumber>
+          <Transaction>
+            <Type>11</Type>
+            <Amount>20278</Amount>
+            <Currency>EUR</Currency>
+          </Transaction>
+          <TypeOfDeclaration>
+            <RegionCode>EU</RegionCode>
+            <ProcedureCode>e</ProcedureCode>
+          </TypeOfDeclaration>
+          <HeaderExtensions>
+            <TydensealsFlag>0</TydensealsFlag>
+            <TydensealsStockFlag>0</TydensealsStockFlag>
+          </HeaderExtensions>
+          <GoodsItem>
+            <ItemNumber>001</ItemNumber>
+            <CommodityCodeKN8>85013100</CommodityCodeKN8>
+            <GoodsDescription>Gleichstrommotoren; Gleichstromgeneratoren mit einer Leistung von 750W oder weniger</GoodsDescription>
+            <GrossMass>210000</GrossMass>
+            <NetMass>200000</NetMass>
+            <OriginRegion>06</OriginRegion>
+            <Packaging>
+              <Quantity>1</Quantity>
+              <MarksAndNumbers>00000000614069565001</MarksAndNumbers>
+              <Number>01</Number>
+              <Type>PX</Type>
+            </Packaging>
+            <Procedure>
+              <Declared>10</Declared>
+            <Previous>00</Previous>
+            </Procedure>
+            <PreviousDocument>
+              <Document/>
+              <Type>OHNE</Type>
+            </PreviousDocument>
+          </GoodsItem>
+        </ExportDeclaration>
+      </Export>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

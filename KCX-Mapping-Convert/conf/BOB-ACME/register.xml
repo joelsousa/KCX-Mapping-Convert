@@ -1,0 +1,16 @@
+<register>
+	<route primary="CSFFRA" secondary="EXPORT" externalQueueName="CSFFRA.EXPORT" 
+		networkVirtualName="JMSCloud1" internalQueueName="meg.csffra.export.to.bob.transform.queue" internalTopic="false"/>
+
+	<route primary="ACME" secondary="EXPORT" externalQueueName="ACME.EXPORT" 
+		networkVirtualName="JMSCloud1" internalQueueName="meg.acme.export.to.bob.transform.queue" internalTopic="false"/>
+
+	<route inbound="false" primary="AUDIT" secondary="QUEUE" externalRegisterName="AUDIT.QUEUE" 
+		networkVirtualName="JMSCloud1" />
+
+	<route inbound="false" primary="RECEIPT" secondary="QUEUE" externalRegisterName="RECEIPT.QUEUE" 
+		networkVirtualName="JMSCloud1" />
+
+	<route inbound="false" primary="STORAGE" secondary="QUEUE" externalRegisterName="STORAGE.QUEUE" 
+		networkVirtualName="JMSCloud1"/>
+</register>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>17</Day>
+                </Date>
+                <Time>175611</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ESU</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSEntrySummaryDeclarationRejected</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>AE-EK-TST002065170111</MessageID>
+            <InReplyTo>17679035784-OPW6CH</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSEntrySummaryDeclarationRejected>
+            <ReferenceNumber>17679035784-OPW6CH</ReferenceNumber>
+            <DeclarationRejectionDateAndTime>201101171756</DeclarationRejectionDateAndTime>
+            <FunctionalError>
+                <ErrorType>EAS20087</ErrorType>
+                <ErrorPointer>KOPF.Erste Eingangszollstelle (Datum und Uhrzeit der Ankunft)</ErrorPointer>
+                <ErrorReason>Das Ankunftsdatum an der ersten Eingangszollstelle ist kleiner als das Anmeldedatum.</ErrorReason>
+            </FunctionalError>
+        </ICSEntrySummaryDeclarationRejected>
+    </soap:Body>
+</soap:Envelope>

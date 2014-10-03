@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageOperateur>
+    <Messages>
+        <Message>
+            <EnveloppeMessage>
+                <schemaID>MessageIE315</schemaID>
+                <schemaVersion>TBD</schemaVersion>
+                <partyId>DE23238787</partyId>
+                <transactionId>3266330</transactionId>
+                <numseq>0</numseq>
+            </EnveloppeMessage>
+            <MessageBody>
+                <CC315A>
+                    <MesSenMES3>DE23238787</MesSenMES3>
+                    <MesRecMES6>DE.CSF.ALT</MesRecMES6>
+                    <DatOfPreMES9>101203</DatOfPreMES9>
+                    <TimOfPreMES10>1507</TimOfPreMES10>
+                    <MesIdeMES19>FRA3266330</MesIdeMES19>
+                    <MesTypMES20>CC315A</MesTypMES20>
+                    <HEAHEA>
+                        <RefNumHEA4>0DE3266330</RefNumHEA4>
+                        <TraModAtBorHEA76>4</TraModAtBorHEA76>
+                        <TotNumOfIteHEA305>1</TotNumOfIteHEA305>
+                        <TotGroMasHEA307>5.000</TotGroMasHEA307>
+                        <DecPlaHEA394>FRA</DecPlaHEA394>
+                        <DecPlaHEA394LNG>EN</DecPlaHEA394LNG>
+                        <SpeCirIndHEA1>A</SpeCirIndHEA1>
+                        <TraChaMetOfPayHEA1>A</TraChaMetOfPayHEA1>
+                        <ConRefNumHEA>FDX5555</ConRefNumHEA>
+                        <PlaLoaGOOITE334>US Memphis TN</PlaLoaGOOITE334>
+                        <PlaLoaGOOITE334LNG>EN</PlaLoaGOOITE334LNG>
+                        <PlaUnlGOOITE334>DE FRA</PlaUnlGOOITE334>
+                        <CodPlUnHEA357LNG>EN</CodPlUnHEA357LNG>
+                        <DecDatTimHEA114>201012031507</DecDatTimHEA114>
+                    </HEAHEA>
+                    <TRACONCO1>
+                        <NamCO17> GARY</NamCO17>
+                        <StrAndNumCO122>0980   </StrAndNumCO122>
+                        <PosCodCO123>80921</PosCodCO123>
+                       <CitCO124>MEMPHIS</CitCO124>
+                        <CouCO125>US</CouCO125>
+                        <NADLNGCO>EN</NADLNGCO>
+                    </TRACONCO1>
+                    <TRACONCE1>
+                        <NamCE17> GARY DREC</NamCE17>
+                        <StrAndNumCE122>97F ME   </StrAndNumCE122>
+                        <PosCodCE123>8932</PosCodCE123>
+                        <CitCE124>FRANKFURT</CitCE124>
+                        <CouCE125>DE</CouCE125>
+                        <NADLNGCE>EN</NADLNGCE>
+                    </TRACONCE1>
+                    <GOOITEGDS>
+                        <IteNumGDS7>1</IteNumGDS7>
+                        <GooDesGDS23>TEST BOOK</GooDesGDS23>
+                        <GooDesGDS23LNG>EN</GooDesGDS23LNG>
+                    </GOOITEGDS>
+                    <ITI>
+                        <CouOfRouCodITI1>US</CouOfRouCodITI1>
+                    </ITI>
+                    <ITI>
+                        <CouOfRouCodITI1>DE</CouOfRouCodITI1>
+                    </ITI>
+                    <PERLODSUMDEC>
+                        <TINPLD1>DE123456789</TINPLD1>
+                    </PERLODSUMDEC>
+                    <CUSOFFFENT730>
+                        <RefNumCUSOFFFENT731>DE123456</RefNumCUSOFFFENT731>
+                        <ExpDatOfArrFIRENT733>201012031500</ExpDatOfArrFIRENT733>
+                    </CUSOFFFENT730>
+                    <TRACARENT601>
+                        <TINTRACARENT602>DE123456789</TINTRACARENT602>
+                    </TRACARENT601>
+                </CC315A>
+            </MessageBody>
+        </Message>
+    </Messages>
+</MessageOperateur>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<ExportDeclaration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="G:\dat\develop\Projekte\OK\customsXchange\Countries\Implementation_Manual\KIDS\Export\Version1_1\xsd\ExportDeclaration.xsd">
+	<GoodsDeclaration>
+		<KindOfDeclaration>I</KindOfDeclaration>
+		<UCRNumber>7171</UCRNumber>
+		<DispatchCountry>CH</DispatchCountry>
+		<DestinationCountry>DE</DestinationCountry>
+		<SituationCode>2</SituationCode>
+		<TransportInContainer>0</TransportInContainer>
+		<NetMass>901520</NetMass>
+		<GrossMass>938720</GrossMass>
+		<ReferenceNumber>7171</ReferenceNumber>
+		<OrderNumber>7171</OrderNumber>
+		<CorrectionCode>1</CorrectionCode>
+		<Language>DE</Language>
+		<TransferToTransitSystem>0</TransferToTransitSystem>
+		<MeansOfTransportBorder>
+			<TransportMode>3</TransportMode>
+			<TransportationNumber>LKW</TransportationNumber>
+			<TransportationCountry>DE</TransportationCountry>
+		</MeansOfTransportBorder>
+		<PlaceOfLoading>
+			<AgreedLocationOfGoods>Ladeort Schweiz</AgreedLocationOfGoods>
+		</PlaceOfLoading>
+		<CustomsOfficeExport>CH001001</CustomsOfficeExport>
+		<PlaceOfDeclaration>1</PlaceOfDeclaration>
+		<ConsignorTIN>
+			<TIN>9000623</TIN>
+		</ConsignorTIN>
+		<Consignor>
+			<Address>
+				<Name>Distribution Testfirma</Name>
+				<Street>Untertürkheimer Str.24</Street>
+				<City>66117 Zürch</City>
+				<PostalCode>66117</PostalCode>
+				<Country>CH</Country>
+			</Address>
+		</Consignor>
+		<DeclarantTIN>
+			<TIN>612</TIN>
+		</DeclarantTIN>
+		<Consignee>
+			<Address>
+				<Name>Kewill GmbH</Name>
+				<Street>Data Norsk Str. 1</Street>
+				<City>12345 Bad Homburg</City>
+				<PostalCode>12345</PostalCode>
+				<Country>DE</Country>
+			</Address>
+		</Consignee>
+		<IncoTerms>
+			<IncoTerm>EXW</IncoTerm>
+			<Place>66117 Saarbrücken</Place>
+		</IncoTerms>
+		<PreviousDocument>
+			<Type>OHNE</Type>
+		</PreviousDocument>
+		<GoodsItem>
+			<ItemNumber>1</ItemNumber>
+			<Description>Getriebe elektr. gesteuert     / Schaltgetriebe und Teile davon, für die industrielle Montage von Einachsschleppern, PKWs und LKWs mit</Description>
+			<NetMass>293520</NetMass>
+			<GrossMass>294720</GrossMass>
+			<ThirdQuantity>0</ThirdQuantity>
+			<CommodityCode>
+				<TarifCode>87084020</TarifCode>
+				<TarifAddition1>8708</TarifAddition1>
+			</CommodityCode>
+			<Statistic>
+				<AdditionalUnit>123</AdditionalUnit>
+				<StatisticalValue>5700000</StatisticalValue>
+				<StatisticalValueConfirmation>1</StatisticalValueConfirmation>
+				<Currency>EUR</Currency>
+			</Statistic>
+			<SpecialMention>
+				<TypeOfExport>DG2</TypeOfExport>
+				<ExportFromEU>true</ExportFromEU>
+				<ExportFromCountry>IT</ExportFromCountry>
+				<Text>bla</Text>
+			</SpecialMention>
+			<NonCustomsLaw>
+				<NonCustomsLawType>0</NonCustomsLawType>
+			</NonCustomsLaw>
+			<Package>
+				<Quantity>1</Quantity>
+				<SequentialNumber>1</SequentialNumber>
+				<Type>CH</Type>
+				<Marks>2010032300007171001</Marks>
+			</Package>
+			<Document>
+				<Type>ZZZ</Type>
+				<Reference>Sonstige</Reference>
+				<AdditionalInformation>Sonstige</AdditionalInformation>
+			</Document>
+		</GoodsItem>
+	</GoodsDeclaration>
+</ExportDeclaration>

@@ -1,0 +1,20 @@
+<CC305A xmlns="http://www.eurodyn.com">
+   <MesSenMES3>CY0000000071</MesSenMES3>
+   <MesRecMES6>CY0000000071</MesRecMES6>
+   <DatOfPreMES9>110713</DatOfPreMES9>
+   <TimOfPreMES10>1223</TimOfPreMES10>
+   <MesIdeMES19>CYICS110034356</MesIdeMES19>
+   <MesTypMES20>CC305A</MesTypMES20>
+   <CorIdeMES25>KA-20110713-05</CorIdeMES25>      
+      <HEAHEA305>   
+         <DocNumHEA5>11CY00051030016582</DocNumHEA5>   
+         <DatTimAmeHEA113>201106141651</DatTimAmeHEA113>   
+         <AmeRejDatTimHEA112>201107131240</AmeRejDatTimHEA112>   
+      </HEAHEA305>   
+      <FUNERRER1305>   
+         <ErrTypER11>15</ErrTypER11>   
+         <ErrPoiER12>MES.HEA.Identity of means of transport crossing border</ErrPoiER12>   
+         <ErrReaER13>C017</ErrReaER13>   
+         <OriAttValER14>OO-THB</OriAttValER14>   
+      </FUNERRER1305>        
+</CC305A>  

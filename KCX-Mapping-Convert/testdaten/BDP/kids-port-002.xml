@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>11</Month>
+<Day>11</Day>
+</Date>
+<Time>08:52:21</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>DE.BDP.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>PORT</Procedure>
+<MessageName>PortDeclaration</MessageName>
+<Release>2.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>test-Port-bdp</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<Declaration>
+<GoodsDeclaration>
+<ReferenceNumber>BDP-IWA-002</ReferenceNumber>
+<PlaceOfLoading>
+<Code>ABC</Code>
+<Street>Street</Street>
+</PlaceOfLoading>
+<Container>
+<Number>Cont.1</Number>
+</Container>
+<Container>
+<Number>Cont.2</Number>
+</Container>
+<bla>bla.single</bla>
+<bla>
+	<PortSystem>hier kommt der parser rein, obwohl er bla nicht kennt, und belegt PortSystem, weil es in Enum ist,</PortSystem>
+	<PortSystem>da aber PORT kommt danach, werden die Werte hier ueberschrieben von dem richtigen PORT.PortSystem</PortSystem>
+	<PortSystem>gefaerlich ist es trotzdem, weil in PORT kann PortSystem fehlen. Dann wird das hier in output erscheinen</PortSystem>
+</bla>
+<PORT>
+<ReferenceNumber>BDP-IWA-XXX</ReferenceNumber>
+<PortSystem>ZAPP</PortSystem>
+<MessageFunction>4</MessageFunction>
+<DeclarationType>HDS</DeclarationType>
+<DeclarationTypeSpecification>001</DeclarationTypeSpecification>
+<DeclarationMode>0</DeclarationMode>
+<Shipper>
+<CustomerIdentifier>COSU</CustomerIdentifier>
+<Address>
+<Name>CUSTOMER A</Name>
+</Address>
+<ContactPerson>
+<Position>YWANG</Position>
+<Clerk>CUSTOMER A</Clerk>
+<FaxNumber>210345678</FaxNumber>
+<PhoneNumber>210345678</PhoneNumber>
+</ContactPerson>
+</Shipper>
+<CustomsOfficeExport>DE003302</CustomsOfficeExport>
+<VoyageDetails>
+<LoadingPort>DEMM4</LoadingPort>
+<DischargePort>THBKK</DischargePort>
+<DestinationPlaceCode>TH6UL</DestinationPlaceCode>
+<DestinationPlaceName>PATTANI</DestinationPlaceName>
+</VoyageDetails>
+<PreCarrige>
+<ForwarderCode>test A</ForwarderCode>
+</PreCarrige>
+<AdditionInformation>
+<BillOfLadingNumber>TOLLTEST0003056</BillOfLadingNumber>
+</AdditionInformation>
+<ContainerDetails>
+<Number>Cont.D1</Number>
+</ContainerDetails>
+<ContainerDetails>
+<Number>Cont.D2</Number>
+</ContainerDetails>
+</PORT>
+
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<PORT>
+<ContainerNumber>AAAA1234567</ContainerNumber>
+<TarifCode>82055980</TarifCode>
+<FirstGoodsLevel>
+<Quantity>20</Quantity>
+<PackingType>PCS</PackingType>
+<GrossMass>20.0000</GrossMass>
+<Volume>20.0000</Volume>
+<GoodsRemark>Marks:The item is from DEFRA</GoodsRemark>
+<DangerousGoods>
+<IMDGClass>0012</IMDGClass>
+<UnNumber>0012</UnNumber>
+<TechnicalDescription>CARTRIDGES FOR WEAPONS, INERT PROJECTILE</TechnicalDescription>
+<PackagingClass>-</PackagingClass>
+</DangerousGoods>
+</FirstGoodsLevel>
+<SecondGoodsLevel>
+<SequenceNumber>1</SequenceNumber>
+<Quantity>10.0000</Quantity>
+<PackingType>PCS</PackingType>
+</SecondGoodsLevel>
+</PORT>
+</GoodsItem>
+
+<GoodsItem>
+<ItemNumber>2</ItemNumber>
+<Container>
+	<Number>CCCC22222</Number>
+</Container>
+<CommodityCode>
+	<TarifCode>9222222</TarifCode>
+</CommodityCode>
+<PORT>
+<FirstGoodsLevel>
+<Quantity>45</Quantity>
+<PackingType>PCS</PackingType>
+<GrossMass>30.0000</GrossMass>
+<Volume>30.0000</Volume>
+<GoodsRemark>maks of 90262080</GoodsRemark>
+<DangerousGoods>
+<IMDGClass>0012</IMDGClass>
+<UnNumber>0012</UnNumber>
+<TechnicalDescription>CARTRIDGES FOR WEAPONS, INERT PROJECTILE</TechnicalDescription>
+<PackagingClass>-</PackagingClass>
+</DangerousGoods>
+</FirstGoodsLevel>
+<SecondGoodsLevel>
+<SequenceNumber>1</SequenceNumber>
+<Quantity>20.0000</Quantity>
+<PackingType>PCS</PackingType>
+</SecondGoodsLevel>
+</PORT>
+</GoodsItem>
+
+</GoodsDeclaration>
+</Declaration>
+</soap:Body>
+</soap:Envelope>

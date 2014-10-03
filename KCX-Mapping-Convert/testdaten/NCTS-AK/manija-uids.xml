@@ -1,0 +1,145 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310">
+      <To>DE01.CSFTEST.2158</To>
+      <From>DE</From>
+      <MessageID>XK66239877P010023</MessageID>
+      <SentAt>2011-05-02T10:26:27+02:00</SentAt>
+      <Act>request</Act>
+      <Procedure>NCTS</Procedure>
+      <MessageType>NCTSDeclaration</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>4.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ncts/body/200911">
+      <NCTS>
+        <NCTSDeclaration>
+          <LocalReferenceNumber>XK66239877P010023</LocalReferenceNumber>
+          <CommercialReferenceNumber>XK66239877</CommercialReferenceNumber>
+          <TypeOfDeclaration>TIR</TypeOfDeclaration>
+          <CountryOfDestination>RU</CountryOfDestination>
+          <CountryOfDispatch>DE</CountryOfDispatch>
+          <InlandTransport>
+            <Identity>AA11,BB22</Identity>
+            <Mode>3</Mode>
+            <Nationality>FR</Nationality>
+          </InlandTransport>
+          <TransportAtBorder>
+            <Identity>AA11,BB22</Identity>
+            <Mode>3</Mode>
+            <Nationality>FR</Nationality>
+            <Type>33</Type>
+          </TransportAtBorder>
+          <TransportAtDeparture>
+            <Identity>AA11,BB22</Identity>
+            <Mode>3</Mode>
+            <Nationality>FR</Nationality>
+          </TransportAtDeparture>
+          <ContainerIndicator>1</ContainerIndicator>
+          <NCTSDocumentLanguage>DE</NCTSDocumentLanguage>
+          <TotalNumberOfItems>1</TotalNumberOfItems>
+          <TotalNumberOfPackages>100</TotalNumberOfPackages>
+          <TotalGrossMass>10000.000</TotalGrossMass>
+          <DeclarationDate>2011-05-02</DeclarationDate>
+          <DeclarationPlace>Geneva</DeclarationPlace>
+          <SpecificCircumstanceIndicator>C</SpecificCircumstanceIndicator>
+          <TransportMethodOfPayment>Z</TransportMethodOfPayment>
+          <SecurityIndicator>1</SecurityIndicator>
+          <Consignor>
+            <TIN>FR33261697800018</TIN>
+            <Address>
+              <Name>Societe A</Name>
+              <Street>10 rue de l espoir</Street>
+              <PostalCode>95111</PostalCode>
+              <City>Cergy</City>
+              <CountryCodeISO>FR</CountryCodeISO>
+            </Address>
+          </Consignor>
+          <Consignee>
+            <TIN>BE0401883866</TIN>
+            <Address>
+              <Name>Societe B</Name>
+              <Street>10 rue de la france</Street>
+              <PostalCode>11111</PostalCode>
+              <City>Varsovie</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignee>
+          <Principal>
+            <TIRHolderID>FRA019256</TIRHolderID>
+            <Address>
+              <Name>TESTholder certif</Name>
+              <Street>Adresse Geneve</Street>
+              <PostalCode>1205</PostalCode>
+              <City>Geneve</City>
+              <CountryCodeISO>CH</CountryCodeISO>
+            </Address>
+          </Principal>
+          <CarnetID>FRA019256</CarnetID>
+          <OfficeOfDeparture>DE007054</OfficeOfDeparture>
+          <OfficeOfDestination>HU724000</OfficeOfDestination>
+          <Guarantee>
+            <TypeOfGuarantee>B</TypeOfGuarantee>
+            <Reference>
+              <OtherNumber>XK66239877</OtherNumber>
+            </Reference>
+          </Guarantee>
+          <Security>
+            <PlaceOfLoading>DE007054</PlaceOfLoading>
+            <PlaceOfUnloading>RU Unloading</PlaceOfUnloading>
+            <Itinerary>DE</Itinerary>
+            <Itinerary>HU</Itinerary>
+            <Itinerary>UA</Itinerary>
+            <Itinerary>RU</Itinerary>
+          </Security>
+          <ConsignorSecurity>
+            <TIN>FR33261697800018</TIN>
+            <Address>
+              <Name>Societe A</Name>
+              <HouseNumber>10 rue de l espoir</HouseNumber>
+              <PostalCode>95111</PostalCode>
+              <City>Cergy</City>
+              <CountryCodeISO>FR</CountryCodeISO>
+            </Address>
+          </ConsignorSecurity>
+          <ConsigneeSecurity>
+            <TIN>BE0401883866</TIN>
+            <Address>
+              <Name>Societe B</Name>
+              <HouseNumber>10 rue de la france</HouseNumber>
+              <PostalCode>11111</PostalCode>
+              <City>Varsovie</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </ConsigneeSecurity>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <CommodityCodeKN8>99310000</CommodityCodeKN8>
+            <GoodsDescription>Machines</GoodsDescription>
+            <GrossMass>10000.000</GrossMass>
+            <NetMass>10000.000</NetMass>
+ <ProducedDocuments>
+              <Type>952</Type>
+              <Reference>XK66239877</Reference>
+            </ProducedDocuments>
+            <ProducedDocuments>
+              <Type>730</Type>
+              <Reference>121212</Reference>
+            </ProducedDocuments>
+            <ContainerNumber>AB123456</ContainerNumber>
+            <Packages>
+              <Number>1</Number>
+              <Quantity>100</Quantity>
+              <MarksAndNumbers>marks</MarksAndNumbers>
+              <Type>BX</Type>
+            </Packages>
+          </GoodsItem>
+        </NCTSDeclaration>
+      </NCTS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>
+
+

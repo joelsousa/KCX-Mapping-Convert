@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>08</Month>
+<Day>09</Day>
+</Date>
+<Time>10:56:00</Time>
+</SentAt>
+<Transmitter>DE3486877</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationRejected</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>EU</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>GRICS110034174</MessageID>
+<InReplyTo>IWA-COR-20110809-01</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclarationRejected>
+<GoodsDeclaration>
+<ReferenceNumber>IWA-20110809-01</ReferenceNumber>
+<DeclarationRejectionDateAndTime>201107041956</DeclarationRejectionDateAndTime>
+<DeclarationRejectionReason>DecRejReaHEA252</DeclarationRejectionReason>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.HEA.Identity of means of transport crossing border</ErrorPointer>
+<ErrorReason>MES.HEA.Identity of means of transport crossing border, Value: OO-THB, Type: C017/15</ErrorReason>
+<OriginalAttributeValue>OO-THB</OriginalAttributeValue>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.HEA.Nationality of means of transport crossing border</ErrorPointer>
+<ErrorReason>MES.HEA.Nationality of means of transport crossing border, Value: BE, Type: C024/15</ErrorReason>
+<OriginalAttributeValue>BE</OriginalAttributeValue>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.HEA.Total number of packages</ErrorPointer>
+<ErrorReason>MES.HEA.Total number of packages, Value: 19, Type: R105/15</ErrorReason>
+<OriginalAttributeValue>19</OriginalAttributeValue>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.LON</ErrorPointer>
+<ErrorReason>MES.LON, Type: R827/15</ErrorReason>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.SUM.TIN</ErrorPointer>
+<ErrorReason>MES.SUM.TIN, Value: DE9008144, Type: R837/15</ErrorReason>
+<OriginalAttributeValue>DE9008144</OriginalAttributeValue>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.GDS(1).MTI(1)</ErrorPointer>
+<ErrorReason>MES.GDS(1).MTI(1), Type: C019/15</ErrorReason>
+</FunctionalError>
+<FunctionalError>
+<ErrorType>15</ErrorType>
+<ErrorPointer>MES.GDS(2).MTI(1)</ErrorPointer>
+<ErrorReason>MES.GDS(2).MTI(1), Type: C019/15</ErrorReason>
+</FunctionalError>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclarationRejected>
+</soap:Body>
+</soap:Envelope>

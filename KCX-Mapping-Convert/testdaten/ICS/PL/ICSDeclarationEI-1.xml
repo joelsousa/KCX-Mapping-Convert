@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+			<To>PL01.EK.TST</To>
+			<From>PL01.EK.TST</From>
+			<MessageID>SK2-1</MessageID>
+			<SentAt>2011-03-16T15:00:00+01:00</SentAt>
+			<Act>request</Act>
+			<Procedure>ICS</Procedure>
+			<MessageType>ICSDeclaration</MessageType>
+			<Direction>FROM_CUSTOMER</Direction>
+			<MessageVersion>1.0</MessageVersion>
+		</Header>
+	</soap:Header>
+	<soap:Body>
+		<Submit xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+			<ICS>
+				<ICSDeclaration>
+					<LocalReferenceNumber>EI-1</LocalReferenceNumber>
+					<CommercialReferenceNumber>CRNSK1-1</CommercialReferenceNumber>
+					<TotalNumberOfItems>1</TotalNumberOfItems>
+					<TotalNumberOfPackages>1</TotalNumberOfPackages>
+					<TotalGrossMass>1</TotalGrossMass>
+					<TransportAtBorder>						
+						<Mode>4</Mode>						
+					</TransportAtBorder>
+					<ConveyanceNumber>LHA1020A</ConveyanceNumber>
+					<PlaceOfLoading>PL Bielsko-Bia?a</PlaceOfLoading>
+					<PlaceOfUnloading>PL Bielsko-Bia?a</PlaceOfUnloading>					
+					<TransportMethodOfPayment>A</TransportMethodOfPayment>
+					<DeclarationDateAndTime>2011-01-28T15:00:00</DeclarationDateAndTime>
+					<DeclarationPlace>Praha</DeclarationPlace>
+					<Consignor>
+						<TIN>PL638109414100000</TIN>
+						<Address>
+							<Name>SKG S.A.</Name>
+							<StreetAndNumber>Al. Armii Krajowej 336</StreetAndNumber>
+							<PostalCode>43-309</PostalCode>
+							<City>Bielsko-Biala</City>
+							<CountryCodeISO>PL</CountryCodeISO>
+						</Address>
+					</Consignor>					
+					<NotifyParty>
+						<TIN>PL547125793600000</TIN>
+						<Address>
+							<Name>SKG S.A.</Name>
+							<StreetAndNumber>Al. Armii Krajowej 336</StreetAndNumber>
+							<PostalCode>43-309</PostalCode>
+							<City>Bielsko-Biala</City>
+							<CountryCodeISO>PL</CountryCodeISO>
+						</Address>
+					</NotifyParty>
+					<PersonLodgingSumDec>
+						<CustomerID>CustomerID4</CustomerID>
+						<TIN>PL638109414100000</TIN>
+						<Address>
+							<Name>SKG S.A.</Name>
+							<StreetAndNumber>Al. Armii Krajowej 336</StreetAndNumber>
+							<PostalCode>43-309</PostalCode>
+							<City>Bielsko-Biala</City>
+							<CountryCodeISO>PL</CountryCodeISO>
+						</Address>
+					</PersonLodgingSumDec>
+					<Representative>
+						<TIN>PL547125793600000</TIN>
+						<Address>
+							<Name>SKG S.A.</Name>
+							<StreetAndNumber>Al. Armii Krajowej 336</StreetAndNumber>
+							<PostalCode>43-309</PostalCode>
+							<City>Bielsko-Biala</City>
+							<CountryCodeISO>PL</CountryCodeISO>
+						</Address>
+					</Representative>
+					<EntryCarrier>
+						<TIN>PL638109414100000</TIN>
+						<Address>
+							<Name>SKG S.A.</Name>
+							<StreetAndNumber>Al. Armii Krajowej 336</StreetAndNumber>
+							<PostalCode>43-309</PostalCode>
+							<City>Bielsko-Biala</City>
+							<CountryCodeISO>PL</CountryCodeISO>
+						</Address>
+					</EntryCarrier>					
+					<OfficeOfFirstEntry>PL351010</OfficeOfFirstEntry>
+					<ExpectedArrivalDateAndTime>2011-03-17T15:11:00Z</ExpectedArrivalDateAndTime>					
+					<SealsIdentity>SI1</SealsIdentity>
+					<SealsIdentity>SI2</SealsIdentity>
+					<Itinerary>DE</Itinerary>
+					<Itinerary>RU</Itinerary>
+					<GoodsItem>
+						<ItemNumber>1</ItemNumber>
+						<GoodsDescription>Girls</GoodsDescription>
+						<GrossMass>1</GrossMass>						
+						<ContainerNumber>CN1</ContainerNumber>
+						<ContainerNumber>CN2</ContainerNumber>						
+						<Packaging>
+							<Quantity>1</Quantity>
+							<MarksAndNumbers>PK1</MarksAndNumbers>
+							<Type>PK</Type>
+						</Packaging>						
+						<SpecialMentions>
+							<Code>10600</Code>
+						</SpecialMentions>
+					</GoodsItem>
+				</ICSDeclaration>
+			</ICS>
+		</Submit>
+	</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,145 @@
+=====================
+=====================
+	hea-315
+=====================
+HEAHEA 315                   ICSEntrySummaryDeclaration  
+
+RefNumHEA4                   <ReferenceNumber>
+TraModAtBorHEA76             <MeansOfTransportBorder><TransportMode> 
+IdeOfMeaOfTraCroHEA85        <MeansOfTransportBorder><TransportationNumber>
+IdeOfMeaOfTraCroHEA85LNG
+NatOfMeaOfTraCroHEA87
+TotNumOfIteHEA305
+TotNumOfPacHEA306
+TotGroMasHEA307
+DecPlaHEA394
+DecPlaHEA394LNG
+SpeCirIndHEA1
+TraChaMetOfPayHEA1
+ComRefNumHEA               <ShipmentNumber>          
+ConRefNumHEA               <ConveyanceReference>
+
+PlaLoaGOOITE334
+
+PlaLoaGOOITE334LNG
+PlaUnlGOOITE334
+CodPlUnHEA357LNG
+DecDatTimHEA114
+
+----------------
+HEAHEA 316                  ICSEntrySummaryDeclarationRejected
+
+RefNumHEA4                  <ReferenceNumber>
+DecRejReaHEA252
+DecRejReaHEA252LNG
+DecRejDatTimHEA116
+
+-----------------
+HEAHEA 328                  ICSEntrySummaryDeclarationAcknowledgemen
+
+RefNumHEA4                  <ReferenceNumber>
+DocNumHEA5                  <MRN>
+TraModAtBorHEA76            <MeansOfTransportBorder><TransportMode>
+NatHEA001
+IdeOfMeaOfTraCroHEA85       <MeansOfTransportBorder><TransportationNumber>
+IdeOfMeaOfTraCroHEA85LNG
+ComRefNumHEA               <ShipmentNumber>
+ConRefNumHEA               <ConveyanceReference>
+DecRegDatTimHEA115         <RegistrationDateTime>
+
+=====================
+=====================
+	hea-304
+=====================
+
+HEAHEA 304               ICSEntrySummaryDeclarationAmendmentRejected
+
+DocNumHEA5                  <MRN>
+TraModAtBorHEA76
+IdeOfMeaOfTraCroHEA85
+IdeOfMeaOfTraCroHEA85LNG
+NatOfMeaOfTraCroHEA87
+ComRefNumHEA               <ReferenceNumber>
+ConRefNumHEA               <ConveyanceReference>
+AmeAccDatTimHEA111
+DatTimAmeHEA113
+
+-------------------------
+
+HEAHEA305              ICSEntrySummaryDeclarationAmendmentRejected   
+
+DocNumHEA5             <MRN>   
+AmeRejMotCodHEA604
+AmeRejMotTexHEA605
+AmeRejMotTexHEA605LNG
+DatTimAmeHEA113
+AmeRejDatTimHEA112
+
+=====================
+=====================
+	hea-313
+=====================
+HEAHEA 313                   ICSDeclarationAmendment
+
+DocNumHEA5                  <MRN>
+TraModAtBorHEA76	    <ReferenceNumber>
+IdeOfMeaOfTraCroHEA85
+IdeOfMeaOfTraCroHEA85LNG
+NatOfMeaOfTraCroHEA87
+TotNumOfIteHEA305
+TotNumOfPacHEA306
+TotGroMasHEA307
+AmdPlaHEA598
+DecPlaHEA394
+SpeCirIndHEA1
+TraChaMetOfPayHEA1
+ComRefNumHEA                 <ShipmentNumber>
+ConRefNumHEA                 <ShipmentNumber>
+PlaLoaGOOITE334
+PlaLoaGOOITE334LNG
+PlaUnlGOOITE334
+CodPlUnHEA357LNG
+DatTimAmeHEA113
+
+=====================
+=====================
+	hea-323
+=====================
+HEAHEA 323                  ICSDiversionRequest
+
+TraModAtBorHEA76
+CouCodOffFirEntDecHEA100
+InfTypHEA122
+DivRefNumHEA119  	   <ReferenceNumber>
+UniIdeDivHEA132
+ExpDatArrHEA701
+
+-----------------
+HEAHEA 325/324             ICSDiversionRequestAcknowledgement 
+
+DivRefNumHEA119  	   <ReferenceNumber>
+RegDatTimHEA125            <RegistrationDateTime>
+
+RejDatTimHEA126
+RejReaHEA127
+RejReaHEA128LNG
+
+=====================
+=====================
+	hea 351
+=====================
+
+HEAHEA 351                 ICSAdvancedInterventionNot
+
+RefNumHEA4                 <MRN>
+DocNumHEA5                 <ReferenceNumber>
+TraModAtBorHEA76
+NatHEA001
+IdeOfMeaOfTraCroHEA85
+TotNumOfIteHEA305
+ComRefNumHEA
+ConRefNumHEA
+NotDatTimHEA104
+DecRegDatTimHEA115         <RegistrationDateTime>
+DecSubDatTimHEA118
+

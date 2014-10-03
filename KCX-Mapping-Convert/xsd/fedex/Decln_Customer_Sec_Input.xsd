@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Decln_Customer_Sec_Input" type="DECLN_CUSTMS"/>
+	<xs:complexType name="DECLN_CUSTMS">
+		<xs:sequence>
+			<xs:element ref="DECLN_CUST" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DECLN_CUST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VAT_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="CUSTOMER_NM" type="xs:string" minOccurs="0"/>
+				<xs:element name="CUSTOMER_COMPANY_NM" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADDR_STREET_1_NM" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADDR_COUNTRY_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADDR_ZIP_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADDR_CITY_NM" type="xs:string" minOccurs="0"/>
+				<xs:element name="STATE_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="TRADER_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="ACCOUNT_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="CUSTOMER_TYPE_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="PROFILE_OID_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="GCON_TURN" type="xs:string" minOccurs="0"/>
+				<xs:element name="RCNSGE_TURN" type="xs:string" minOccurs="0"/>
+				<xs:element name="CUST_AI2_CANA" type="xs:string" minOccurs="0"/>
+				<xs:element name="CUST_MENT_SPL_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="REPRESENTATION_TYP_CD" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

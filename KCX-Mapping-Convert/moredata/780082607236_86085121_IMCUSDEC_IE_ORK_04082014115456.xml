@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DECLN_INPUT>
+    <Decln_Sec_Input>
+        <DECLN_OID_NBR>86085121</DECLN_OID_NBR>
+        <DECLN_STATUS_CD>T</DECLN_STATUS_CD>
+        <DECLN_IN_OUT>O</DECLN_IN_OUT>
+        <DECLN_SUBTYPE_CD>144DEC</DECLN_SUBTYPE_CD>
+        <DECLN_TYP_CD>IMS</DECLN_TYP_CD>
+        <DECLN_ROUTE_ARR_TMSTP>05/08/2014 06:00:00</DECLN_ROUTE_ARR_TMSTP>
+        <ROUTE_NBR>CD8030</ROUTE_NBR>
+        <LOCATION_CD>ORK</LOCATION_CD>
+        <COUNTRY_CD>IE</COUNTRY_CD>
+        <LOC_SEQ_NBR>4</LOC_SEQ_NBR>
+    </Decln_Sec_Input>
+    <Shp_Decln_Sec_Input>
+        <AWB_NBR>780082607236</AWB_NBR>
+        <LOCAL_SHIPMENT_OID_NBR>153871579</LOCAL_SHIPMENT_OID_NBR>
+        <COMMODITY_COUNT>1</COMMODITY_COUNT>
+        <GCON_TURN>0155</GCON_TURN>
+        <GDS_LOC_CD>ORK</GDS_LOC_CD>
+        <INV_TOT_AMT>700</INV_TOT_AMT>
+        <INV_CUR_CD>USD</INV_CUR_CD>
+        <TOT_PKG_NBR>1</TOT_PKG_NBR>
+        <DEST_LOCATION_CD>ORK</DEST_LOCATION_CD>
+        <ORIGIN_LOCATION_CD>SLW</ORIGIN_LOCATION_CD>
+        <SHIPMENT_DT>01/08/2014</SHIPMENT_DT>
+        <INPUT_DT>01/08/2014</INPUT_DT>
+        <SHIPMENT_OID_NBR>7800826072361140801</SHIPMENT_OID_NBR>
+        <NAT_OF_TRANS>11</NAT_OF_TRANS>
+        <INCOTERM_CD>FOB</INCOTERM_CD>
+        <INCOTERM_CITY>SALTILLO</INCOTERM_CITY>
+        <TRPT_MOD_CD>4</TRPT_MOD_CD>
+        <TRPT_MOD_IN_LND_CD>4</TRPT_MOD_IN_LND_CD>
+        <TRPT_CTRY_CD>US</TRPT_CTRY_CD>
+        <TDR_OWN_REF_ENT>C-SUM FEDEX</TDR_OWN_REF_ENT>
+        <DISP_CNTRY_CD>MX</DISP_CNTRY_CD>
+        <TRPT_ID>FEDERAL EXPRESS</TRPT_ID>
+        <TRPRT_BILL_TO_CD>O</TRPRT_BILL_TO_CD>
+        <TRPRT_BILL_TO_ACCT_NBR>201123798</TRPRT_BILL_TO_ACCT_NBR>
+        <DUTY_BILL_TO_CD>O</DUTY_BILL_TO_CD>
+        <DUTY_BILL_TO_ACCT_NBR>201123798</DUTY_BILL_TO_ACCT_NBR>
+        <Shp_Decln_Cmdty_Doc_Sec_Input/>
+    </Shp_Decln_Sec_Input>
+    <Shp_Decln_Cmdty_Sec_Input>
+        <ITEM_SHP_DECLN_COMDTY>
+            <PKG_KIND>CT</PKG_KIND>
+            <PKG_MARKS>780082607236</PKG_MARKS>
+            <PKG_COUNT>1</PKG_COUNT>
+            <ITEM_NBR>1</ITEM_NBR>
+            <TARIC_CMDTY_CD>8428399090</TARIC_CMDTY_CD>
+            <GOODS_DESC>OTHER LIFTING HANDLING LOADING OR UNLOADING MACHINERY FOR EXAMPLE LIFTS ESCALATORS CONVEYORS TELEFERICSOther continuousaction elevators and conveyors for goods or materialsOther</GOODS_DESC>
+            <ITEM_NET_WT>4.086</ITEM_NET_WT>
+            <ITEM_GROSS_WT>4.54</ITEM_GROSS_WT>
+            <ITEM_ORG_CTRY_CD>MX</ITEM_ORG_CTRY_CD>
+            <CPC_CD>4000000</CPC_CD>
+            <PREF_NBR>100</PREF_NBR>
+            <ITEM_VALUE>520</ITEM_VALUE>
+            <LOC_SEQ_NBR>4</LOC_SEQ_NBR>
+            <LOC_CD>ORK</LOC_CD>
+            <SEQUENCE_NBR>1</SEQUENCE_NBR>
+            <ITEM_SUPP_UNITS/>
+            <ITEM_STAT_VALUE>520</ITEM_STAT_VALUE>
+            <ITEM_THRD_QTY>0</ITEM_THRD_QTY>
+            <ITEM_CSTMS_VAL>520</ITEM_CSTMS_VAL>
+            <ITEM_LCNC_VAL>700</ITEM_LCNC_VAL>
+            <EC_SUPPLEMENT/>
+            <EC_SUPPLEMENT_2/>
+            <PREV_DOC_CLASS_CD>Y</PREV_DOC_CLASS_CD>
+            <PREV_DOC_TYP_CD>CLE</PREV_DOC_TYP_CD>
+            <PREV_DOC_REF>140805</PREV_DOC_REF>
+            <Decln_Cmdty_Tax_Sec_Input>
+                <ITEM_DECLN_COMDTY_TAX>
+                    <COMMODITY_OID_NBR>1</COMMODITY_OID_NBR>
+                    <LOC_SEQ_NBR>4</LOC_SEQ_NBR>
+                    <LOC_CD>ORK</LOC_CD>
+                    <TTY_CD>B00</TTY_CD>
+                    <ADDL_CD/>
+                    <PAYMENT_METHOD_CD/>
+                    <ITLN_BASE_AMT>0</ITLN_BASE_AMT>
+                    <ITLN_BASE_QTY>0</ITLN_BASE_QTY>
+                </ITEM_DECLN_COMDTY_TAX>
+            </Decln_Cmdty_Tax_Sec_Input>
+            <Shp_Decln_Cmdty_Doc_Sec_Input/>
+            <Shp_Decln_Additional_Info_Sec_Input/>
+        </ITEM_SHP_DECLN_COMDTY>
+    </Shp_Decln_Cmdty_Sec_Input>
+    <Decln_Customer_Sec_Input>
+        <DECLN_CUST>
+            <VAT_NBR/>
+            <CUSTOMER_NM>COEUR MEDICAL PRODUCTS</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM/>
+            <ADDR_STREET_1_NM>CALLE 17AMP MORELOS 3820</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>MX</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>25013</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>SALTILLO</ADDR_CITY_NM>
+            <STATE_CD>CO</STATE_CD>
+            <TRADER_ID/>
+            <CUSTOMER_TYPE_CD>CZ</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR/>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+        <DECLN_CUST>
+            <VAT_NBR>9Z33717B</VAT_NBR>
+            <CUSTOMER_NM>HOWMEDICA INTERNATIONAL</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM>HOWMEDICA INTERNATIONAL</CUSTOMER_COMPANY_NM>
+            <ADDR_STREET_1_NM>RAHEEN INDUSTRIAL ESTATE</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>IE</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>X</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>LIMERICK</ADDR_CITY_NM>
+            <STATE_CD/>
+            <TRADER_ID>9Z33717B</TRADER_ID>
+            <CUSTOMER_TYPE_CD>IM</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR>4572883</PROFILE_OID_NBR>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+        <DECLN_CUST>
+            <VAT_NBR>IE9507146I</VAT_NBR>
+            <CUSTOMER_NM>Federal Express Europe Inc.</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM/>
+            <ADDR_STREET_1_NM>Unit 3 Constellation Road,     Airw</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>IE</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>C04001</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>Dublin 17</ADDR_CITY_NM>
+            <TRADER_ID>IE9507146I</TRADER_ID>
+            <CUSTOMER_TYPE_CD>AG</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR/>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+        <DECLN_CUST>
+            <VAT_NBR>9Z33717B</VAT_NBR>
+            <CUSTOMER_NM>HOWMEDICA INTERNATIONAL</CUSTOMER_NM>
+            <CUSTOMER_COMPANY_NM>HOWMEDICA INTERNATIONAL</CUSTOMER_COMPANY_NM>
+            <ADDR_STREET_1_NM>RAHEEN INDUSTRIAL ESTATE</ADDR_STREET_1_NM>
+            <ADDR_COUNTRY_CD>IE</ADDR_COUNTRY_CD>
+            <ADDR_ZIP_CD>X</ADDR_ZIP_CD>
+            <ADDR_CITY_NM>LIMERICK</ADDR_CITY_NM>
+            <STATE_CD/>
+            <TRADER_ID>9Z33717B</TRADER_ID>
+            <CUSTOMER_TYPE_CD>CN</CUSTOMER_TYPE_CD>
+            <PROFILE_OID_NBR>4572884</PROFILE_OID_NBR>
+            <GCON_TURN/>
+            <RCNSGE_TURN/>
+            <CUST_AI2_CANA/>
+            <CUST_MENT_SPL_CD/>
+            <REPRESENTATION_TYP_CD/>
+        </DECLN_CUST>
+    </Decln_Customer_Sec_Input>
+</DECLN_INPUT>

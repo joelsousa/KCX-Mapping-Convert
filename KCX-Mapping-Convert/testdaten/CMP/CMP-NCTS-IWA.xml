@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope/">
+	<soap:Header>
+		<Header>
+			<SentAt>
+				<Date>
+					<Year>2013</Year>
+					<Month>08</Month>
+					<Day>08</Day>
+				</Date>
+			</SentAt>
+			<Transmitter>DE.CSF</Transmitter>
+			<Receiver>DE.CSF</Receiver>
+			<Method>CMP</Method>
+			<MessageTP>
+				<CountryCode>DE</CountryCode>
+				<Procedure>NCTS-OUT</Procedure>
+				<MessageName>CMPCompleteDataFormat</MessageName>
+				<Release>1.0.0</Release>
+				<Direction>TO_CUSTOMER</Direction>
+			</MessageTP>
+			<MessageID>lcag-001</MessageID>
+		</Header>
+	</soap:Header>
+	<soap:Body>
+		<CMPCompleteDataFormat>
+			<PurposeCode>EXIT</PurposeCode>
+			<FlightManifestMessage>
+				<MessageHeaderDocument>
+					<ID>FFM</ID>
+					<Name>Transport Loading Report</Name>
+					<TypeCode listID="1001" listAgencyID="6" listVersionID="D09A">122</TypeCode>
+					<IssueDateTime>2013-08-09T19:55:20</IssueDateTime>
+					<PurposeCode>Creation</PurposeCode>
+					<VersionID>1</VersionID>
+					<ConversationID>FFM</ConversationID>
+					<SenderParty>
+						<PrimaryID>1</PrimaryID>
+					</SenderParty>
+					<RecipientParty>
+						<PrimaryID>1</PrimaryID>
+					</RecipientParty>
+				</MessageHeaderDocument>
+				<BusinessHeaderDocument>
+					<ID>FFM</ID>
+					<IncludedHeaderNote>
+						<ContentCode>001</ContentCode>
+						<Content>FlightManifest</Content>
+					</IncludedHeaderNote>
+				</BusinessHeaderDocument>
+				<LogisticsTransportMovement>
+					<StageCode>Main-Carriage</StageCode>
+					<ModeCode listID="Recommendation 19" listAgencyID="6" listVersionID="2">4</ModeCode>
+					<Mode>Robert H Schuller</Mode>
+					<ID>AV058A</ID>
+					<SequenceNumeric>1</SequenceNumeric>
+					<TotalGrossWeightMeasure unitCode="KGM">140.5</TotalGrossWeightMeasure>
+					<TotalGrossVolumeMeasure unitCode="MTQ">105.6</TotalGrossVolumeMeasure>
+					<TotalPackageQuantity>23</TotalPackageQuantity>
+					<TotalPieceQuantity>10</TotalPieceQuantity>
+					<UsedLogisticsTransportMeans>
+						<RegistrationCountry>
+							<ID schemeVersionID="second edition 2006">IN</ID>
+						</RegistrationCountry>
+					</UsedLogisticsTransportMeans>
+					<DepartureEvent>
+						<DepartureOccurrenceDateTime>2013-08-09T19:55:29</DepartureOccurrenceDateTime>
+						<DepartureDateTimeTypeCode>S</DepartureDateTimeTypeCode>
+						<OccurrenceDepartureLocation>
+							<ID>LHR</ID>
+							<Name>London Heathrow</Name>
+							<TypeCode>Freight Terminal</TypeCode>
+						</OccurrenceDepartureLocation>
+					</DepartureEvent>
+					<IncludedCustomsNote>
+						<ContentCode>A</ContentCode>
+						<Content>BCBP123</Content>
+						<SubjectCode>ISS</SubjectCode>
+						<CountryID schemeVersionID="second edition 2006">IN</CountryID>
+					</IncludedCustomsNote>
+					<RelatedConsignmentCustomsProcedure>
+						<GoodsStatusCode>T2</GoodsStatusCode>
+					</RelatedConsignmentCustomsProcedure>
+				</LogisticsTransportMovement>
+				<ArrivalEvent>
+					<ArrivalOccurrenceDateTime>2013-08-09T19:55:29</ArrivalOccurrenceDateTime>
+					<ArrivalDateTimeTypeCode>A</ArrivalDateTimeTypeCode>
+					<DepartureOccurrenceDateTime>2013-08-09T19:55:29</DepartureOccurrenceDateTime>
+					<DepartureDateTimeTypeCode>S</DepartureDateTimeTypeCode>
+					<OccurrenceArrivalLocation>
+						<ID>LHR</ID>
+						<Name>London Heathrow</Name>
+						<TypeCode>Airport</TypeCode>
+						<FirstArrivalCountryID>ISO 3166</FirstArrivalCountryID>
+					</OccurrenceArrivalLocation>
+					<AssociatedTransportCargo>
+						<TypeCode>ULD</TypeCode>
+						<UtilizedUnitLoadTransportEquipment>
+							<ID>1234</ID>
+							<CharacteristicCode>ULD</CharacteristicCode>
+							<OperatingParty>
+								<PrimaryID>TW</PrimaryID>
+							</OperatingParty>
+							<OnCarriageTransportMovement>
+								<ID>058A</ID>
+								<CarrierParty>
+									<PrimaryID>AV</PrimaryID>
+								</CarrierParty>
+								<ArrivalDestinationEvent>
+									<OccurrenceDestinationLocation>
+										<ID>SIN</ID>
+									</OccurrenceDestinationLocation>
+								</ArrivalDestinationEvent>
+							</OnCarriageTransportMovement>
+						</UtilizedUnitLoadTransportEquipment>
+						<IncludedMasterConsignment>
+							<TotalPieceQuantity>10</TotalPieceQuantity>
+							<SummaryDescription>GENERAL CARGO</SummaryDescription>
+							<TransportSplitDescription>T</TransportSplitDescription>
+							<TransportContractDocument>
+								<ID>13449352122</ID>
+							</TransportContractDocument>
+							<OriginLocation>
+								<ID>TRV</ID>
+							</OriginLocation>
+							<FinalDestinationLocation>
+								<ID>SIN</ID>
+							</FinalDestinationLocation>
+							<IncludedCustomsNote>
+								<ContentCode>IN</ContentCode>
+								<Content>FFM</Content>
+								<SubjectCode>FFM</SubjectCode>
+							</IncludedCustomsNote>
+							<AssociatedConsignmentCustomsProcedure>
+								<GoodsStatusCode>T2</GoodsStatusCode>
+							</AssociatedConsignmentCustomsProcedure>
+							<TransportLogisticsPackage>
+								<ItemQuantity>55</ItemQuantity>
+								<GrossWeightMeasure unitCode="K"/>
+								<LinearSpatialDimension>
+									<WidthMeasure unitCode="CMT">23</WidthMeasure>
+									<LengthMeasure unitCode="CMT">23</LengthMeasure>
+									<HeightMeasure unitCode="CMT">23</HeightMeasure>
+								</LinearSpatialDimension>
+							</TransportLogisticsPackage>
+							<OnCarriageTransportMovement>
+								<ID>058A</ID>
+								<CarrierParty>
+									<PrimaryID>AV</PrimaryID>
+								</CarrierParty>
+								<ArrivalDestinationEvent>
+									<OccurrenceDestinationLocation>
+										<ID>SIN</ID>
+									</OccurrenceDestinationLocation>
+								</ArrivalDestinationEvent>
+							</OnCarriageTransportMovement>
+						</IncludedMasterConsignment>
+					</AssociatedTransportCargo>
+				</ArrivalEvent>
+			</FlightManifestMessage>
+			<FreightWayBill>
+				<MessageHeaderDocument>
+					<ID>FFM</ID>
+					<Name>Transport Loading Report</Name>
+					<TypeCode listID="1001" listAgencyID="6" listVersionID="D09A">122</TypeCode>
+					<IssueDateTime>2013-08-09T19:55:20</IssueDateTime>
+					<PurposeCode>Creation</PurposeCode>
+					<VersionID>1</VersionID>
+					<ConversationID>FFM</ConversationID>
+					<SenderParty>
+						<PrimaryID>1</PrimaryID>
+					</SenderParty>
+					<RecipientParty>
+						<PrimaryID>1</PrimaryID>
+					</RecipientParty>
+				</MessageHeaderDocument>
+				<BusinessHeaderDocument>
+					<ID>FWB-FlugNr</ID>
+					<IncludedHeaderNote>
+						<ContentCode>001</ContentCode>
+						<Content>FlightManifest</Content>
+					</IncludedHeaderNote>
+				</BusinessHeaderDocument>
+				<MasterConsignment>					
+					<ID>AV058A</ID>
+					<GrossVolumeMeasure unitCode="MTQ">105.6</GrossVolumeMeasure>
+					<PackageQuantity>23</PackageQuantity>
+					<TotalPieceQuantity>10</TotalPieceQuantity>
+					<ConsignorParty>
+						<Name>ConsignorName</Name>
+						<PostalStructuredAddress>
+							<CityName>CityName</CityName>
+						</PostalStructuredAddress>
+						<DefinedTradeContact>
+							<PersonName>PersonName</PersonName>
+						</DefinedTradeContact>
+					</ConsignorParty>
+					<OriginLocation>
+						<ID>TRV</ID>
+					</OriginLocation>
+					<FinalDestinationLocation>
+						<ID>SIN</ID>
+					</FinalDestinationLocation>					
+					<IncludedCustomsNote>
+						<ContentCode>A</ContentCode>
+						<Content>BCBP123</Content>
+						<SubjectCode>ISS</SubjectCode>
+						<CountryID schemeVersionID="second edition 2006">IN</CountryID>
+					</IncludedCustomsNote>
+					<IncludedCustomsNote>
+						<ContentCode>A</ContentCode>
+						<Content>VUB-VubContent</Content>
+						<SubjectCode>ISS</SubjectCode>
+						<CountryID schemeVersionID="second edition 2006">IN</CountryID>
+					</IncludedCustomsNote>					
+					<ApplicableRating>
+						<IncludedMasterConsignmentItem>
+							<NatureIdentificationTransportCargo>
+								<Identification>Description</Identification>
+							</NatureIdentificationTransportCargo>
+						</IncludedMasterConsignmentItem>
+					</ApplicableRating>									
+				</MasterConsignment>				
+			</FreightWayBill>			
+		</CMPCompleteDataFormat>
+	</soap:Body>
+</soap:Envelope>

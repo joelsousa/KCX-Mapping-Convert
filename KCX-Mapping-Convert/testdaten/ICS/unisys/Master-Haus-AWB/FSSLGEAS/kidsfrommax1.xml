@@ -1,0 +1,18 @@
+0411-122919	H	UNSY	TST				SUPPLEMENT	6070350520037399002791					Zur EORI GB238595817000 existiert kein Kundensatz, daher können keine Kunden-Daten zu dieser EORI vorbelegt werden.	
+0411-122919	H	UNSY	TST				SUPPLEMENT	6070350520037399002791					Die Gesamtrohmasse (315,000000) im Kopf stimmt nicht mit der tatsächlichen Gesamtrohmasse überein (358,000000)	
+0411-122919	W	UNSY	TST	esupos.esupos_ldocde		00001	PLAUSI	6070350520037399002791			Ladeort	<>	Die Angabe des Ladeortes ist erforderlich, wenn im Kopf kein Ladeort () angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) leer oder ungleich (Post- und Express-Sendungen) ist.	EntrySummaryDeclarationItemDTO.loadingPlace.0001b
+0411-122919	W	UNSY	TST	esupos.esupos_elocde		00001	PLAUSI	6070350520037399002791			Entladeort	<>	Die Angabe des Entladeortes ist erforderlich, wenn im Kopf kein Entladeort angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) keinen der Werte (Zugelassene Wirtschaftsbeteiligte oder "B") enthält.	EntrySummaryDeclarationItemDTO.unloadingPlace.0001b
+0411-122919	W	UNSY	TST	esupos.esupos_ldocde		00002	PLAUSI	6070350520037399002791			Ladeort	<>	Die Angabe des Ladeortes ist erforderlich, wenn im Kopf kein Ladeort () angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) leer oder ungleich (Post- und Express-Sendungen) ist.	EntrySummaryDeclarationItemDTO.loadingPlace.0001b
+0411-122919	W	UNSY	TST	esupos.esupos_elocde		00002	PLAUSI	6070350520037399002791			Entladeort	<>	Die Angabe des Entladeortes ist erforderlich, wenn im Kopf kein Entladeort angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) keinen der Werte (Zugelassene Wirtschaftsbeteiligte oder "B") enthält.	EntrySummaryDeclarationItemDTO.unloadingPlace.0001b
+0411-122919	W	UNSY	TST	esupos.esupos_ldocde		00003	PLAUSI	6070350520037399002791			Ladeort	<>	Die Angabe des Ladeortes ist erforderlich, wenn im Kopf kein Ladeort () angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) leer oder ungleich (Post- und Express-Sendungen) ist.	EntrySummaryDeclarationItemDTO.loadingPlace.0001b
+0411-122919	W	UNSY	TST	esupos.esupos_elocde		00003	PLAUSI	6070350520037399002791			Entladeort	<>	Die Angabe des Entladeortes ist erforderlich, wenn im Kopf kein Entladeort angegeben wurde 
+und das Kennzeichen für besondere Umstände ( ) keinen der Werte (Zugelassene Wirtschaftsbeteiligte oder "B") enthält.	EntrySummaryDeclarationItemDTO.unloadingPlace.0001b
+0411-122919	H	UNSY	TST	esupos.esupos_ldocde		00004	PLAUSI	6070350520037399002791			Ladeort	<>	Meldungen zum Fehlercode EntrySummaryDeclarationItemDTO.loadingPlace.0001b werden im Weiteren unterdrückt	EntrySummaryDeclarationItemDTO.loadingPlace.0001b
+0411-122919	H	UNSY	TST	esupos.esupos_elocde		00004	PLAUSI	6070350520037399002791			Entladeort	<>	Meldungen zum Fehlercode EntrySummaryDeclarationItemDTO.unloadingPlace.0001b werden im Weiteren unterdrückt	EntrySummaryDeclarationItemDTO.unloadingPlace.0001b
+0411-122919	H	UNSY	TST				LOGGING	6070350520037399002791					--- ENSDAT-Nachricht mit 6 Warnung(en) verarbeitet	
+0411-122919	H	UNSY	TST					6070350520037399002791					Datei wird gesichert	

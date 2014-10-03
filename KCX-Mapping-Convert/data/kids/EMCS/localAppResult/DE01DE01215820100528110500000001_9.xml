@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>06</Month>
+                    <Day>01</Day>
+                </Date>
+                <Time>11:59:54</Time>
+                <TimeZone>+0200</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>EME</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EMCS</Procedure>
+                <MessageName>localAppResult</MessageName>
+                <Direction>TO_CUSTOMER</Direction>
+                <Release>1.0.00</Release>
+            </MessageTP>
+            <MessageID>DE-CSF000036010610</MessageID>
+            <InReplyTo>DE01DE01215820100528110500000001</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <localAppResult>
+            <GoodsDeclaration>
+                <ReferenceNumber>567898/90034842</ReferenceNumber>
+                <CorrectionNumber>0</CorrectionNumber>
+                <ProcedureType>EME</ProcedureType>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmekpfDTO.vortvst.0001a</ErrorCode>
+                        <ErrorText>Bei Ausgangspunkt = 1 muss die Verbrauchsteuernummer des Ortes der Versendung angegeben werden. [Ort der Versendung (Steuerlager) Verbrauchsteuernummer (Reference of Tax Warehouse)]</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmekpfDTO.empfvst.0002a</ErrorCode>
+                        <ErrorText>Bei Bestimmungsort = 2 muss die Verbrauchsteuernummer des Empfängers angegeben werden.</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>BasglobChecks.versdst.0001</ErrorCode>
+                        <ErrorText>Die Versenderdienststelle DE007890 ist unbekannt. [Zuständige Dienststelle für den Versender (Reference Number)]</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmekpfDTO.versdat.0002</ErrorCode>
+                        <ErrorText>Das Versanddatum (09.02.2010) darf nicht kleiner als das Tagesdatum (01.06.2010) sein, da das Nachtrags-Kennzeichen (0) nicht auf 1 gesetzt ist. [Versanddatum (Date of Dispatch)]</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmcsglobChecks.befdauer.0001a</ErrorCode>
+                        <ErrorText>Die Beförderungsdauer (D3) muss genau 3 Stellen lang sein. [Beförderungsdauer in Tagen oder Stunden (Journey Time) (z.B. D02 für 2 Tage, H12 für 12 Stunden)]</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmekpfDTO.befdetails.0001a</ErrorCode>
+                        <ErrorText>Es muss mindestens ein Eintrag zu den Beförderungsdetails erfasst werden.</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>1</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmeposDTO.packages.0001a</ErrorCode>
+                        <ErrorText>Bitte geben Sie die Daten zu mindestens einem Packstück an.</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>2</ItemNumber>
+                    <PositionError>
+                        <KindOfError>ERR</KindOfError>
+                        <ErrorCode>EmeposDTO.packages.0001a</ErrorCode>
+                        <ErrorText>Bitte geben Sie die Daten zu mindestens einem Packstück an.</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>INF</KindOfError>
+                        <ErrorCode>REJECT</ErrorCode>
+                        <ErrorText>--- Abbruch mit 8 Fehler(n)</ErrorText>
+                        <DateOfErrorMessage>20100601</DateOfErrorMessage>
+                        <TimeOfErrorMessage>115954</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </localAppResult>
+    </soap:Body>
+</soap:Envelope>

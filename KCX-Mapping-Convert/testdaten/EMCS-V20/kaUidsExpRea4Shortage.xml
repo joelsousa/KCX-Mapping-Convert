@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>DE01.CSFALT.2144</From>
+<MessageID>EI20100519</MessageID>
+<SentAt>2011-08-19 12:02:00 +0200</SentAt>
+<Act>request</Act>
+<Method>EMCS</Method>
+<MessageVersion>2.0</MessageVersion>
+<MessageType>EMCSExplanationOnReasonForShortage</MessageType>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+<EMCS>
+<EMCSExplanationOnReasonForShortage>
+<LocalReferenceNumber>ReferenceNumber</LocalReferenceNumber>
+<ExciseMovementEaad>
+<SequenceNumber>5</SequenceNumber>
+<AadReferenceCode>AadReferenceCode</AadReferenceCode>
+<DateAndTimeOfValidation>2011-08-19T12:12:00+0200</DateAndTimeOfValidation>
+</ExciseMovementEaad>
+<DispatchImportOffice>DispatchImportOffice</DispatchImportOffice>
+<SubmitterType>SubmitterType</SubmitterType>
+<DateOfAnalysis>2011-08-19</DateOfAnalysis>
+<GlobalExplanation language="CI">GlobalExplanation</GlobalExplanation>
+<ConsigneeTrader>
+<CustomerID>CustomerID</CustomerID>
+<VATID>VATID</VATID>
+<Address>
+<Name>Name</Name>
+<Street>StreetAndNumber</Street>
+<HouseNumber>1ce</HouseNumber>
+<PostalCode>PostalCode</PostalCode>
+<City>City</City>
+<Language>DE</Language>
+</Address>
+</ConsigneeTrader>
+<ConsignorTrader>
+<CustomerID>CustomerID-Consignor</CustomerID>
+<VATID>VATID-Consignor</VATID>
+<Address>
+<Name>NameConsignor</Name>
+<Street>Street ohne Number-Consignor</Street>
+<PostalCode>PostalCode-Consignor</PostalCode>
+<City>City-Consignor</City>
+<Language>CR</Language>
+</Address>
+</ConsignorTrader>
+<BodyAnalysis>
+<BodyRecordUniqueReference>1</BodyRecordUniqueReference>
+<ExciseProductCode>A000</ExciseProductCode>
+<Quantity>Quantity</Quantity>
+<Explanation language="AA">Explanation</Explanation>
+</BodyAnalysis>
+</EMCSExplanationOnReasonForShortage>
+</EMCS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

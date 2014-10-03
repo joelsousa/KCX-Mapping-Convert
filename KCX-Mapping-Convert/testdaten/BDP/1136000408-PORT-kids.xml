@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<KIDSHeader>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>5</Month>
+<Day>28</Day>
+</Date>
+<Time>154550</Time>
+<TimeZone>-0600</TimeZone>
+</SentAt>
+<Transmitter>DE.BDP.TST</Transmitter>
+<Receiver>DE.BDP.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>PORT</Procedure>
+<MessageName>PortDeclaration</MessageName>
+<Release>2.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>BDP_1136000408_1</MessageID>
+</KIDSHeader>
+</soap:Header>
+<soap:Body>
+<PortDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>1136000408_1</ReferenceNumber>
+<PortSystem>ZAPP</PortSystem>
+<MessageFunction>9</MessageFunction>
+<TestMode>0</TestMode>
+<Shipper>
+<Address>
+<Name>SIG COMBIBLOC GMBH</Name>
+<Street>RURSTRASSE 58, D-52441</Street>
+<City>LINNICH</City>
+<PostalCode>52441</PostalCode>
+<Country>DE</Country>
+</Address>
+</Shipper>
+<CustomsOfficeExport>DEHAM</CustomsOfficeExport>
+<VoyageDetails>
+<VoyageNumber>VOYAGE</VoyageNumber>
+<ShipName>MSC VANESSA</ShipName>
+<ArrivalDate>1130628</ArrivalDate>
+<DepartureDate>1130531</DepartureDate>
+<LoadingPort>DEHAM</LoadingPort>
+<DischargePort>KRPUS</DischargePort>
+<DestinationPlaceCode>KRPUS</DestinationPlaceCode>
+<DestinationPlaceName>BUSAN, SOUTH KOREA</DestinationPlaceName>
+</VoyageDetails>
+</GoodsDeclaration>
+</PortDeclaration>
+</soap:Body>
+</soap:Envelope>

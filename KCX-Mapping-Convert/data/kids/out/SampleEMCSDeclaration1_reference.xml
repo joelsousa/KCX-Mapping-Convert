@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2010</Year>
+  <Month>05</Month>
+  <Day>10</Day>
+  </Date>
+  <Time>12:02:00</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE01.CSFALT.2144</Transmitter>
+  <Receiver>DE.CSF.ALT</Receiver>
+  <Method>EMCS</Method>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>EMCS</Procedure>
+  <MessageName>EMCSDeclaration</MessageName>
+  <Release>1.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <CodeMapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </CodeMapping>
+  </CustomsExchange>
+  <MessageID>DE01DE01214420100510120200000001</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <EMCS>
+  <EMCSDeclaration>
+  	<ReferenceNumber>LocalReferenceNumber</ReferenceNumber>
+  	<DeferredSubmissionFlag>0</DeferredSubmissionFlag>
+  	<SubmissionMessageType>1</SubmissionMessageType>
+  	<DispatchImportOffice>AA000000</DispatchImportOffice>
+  	<DeliveryPlaceCustomsOffice>AA000000</DeliveryPlaceCustomsOffice>
+  	<CompetentAuthorityDispatchOffice>AA000000</CompetentAuthorityDispatchOffice>
+  	<JourneyTime>H00</JourneyTime>
+  	<DestinationTypeCode>1</DestinationTypeCode>
+  	<TransportArrangement>1</TransportArrangement>
+  	<DateOfDispatch>19670813</DateOfDispatch>
+  	<TimeOfDispatch>142000</TimeOfDispatch>
+  	<OriginTypeCode>1</OriginTypeCode>
+  	<InvoiceNumber>InvoiceNumber</InvoiceNumber>
+  	<InvoiceDate>19670813</InvoiceDate>
+  	<ImportSad>ImportSad1</ImportSad>
+  	<ImportSad>ImportSad2</ImportSad>
+  	<ImportSad>ImportSa3</ImportSad>
+  	<ImportSad>ImportSad4</ImportSad>
+  	<ImportSad>ImportSad5</ImportSad>
+  	<ImportSad>ImportSad6</ImportSad>
+  	<ImportSad>ImportSad7</ImportSad>
+  	<ImportSad>ImportSad8</ImportSad>
+  	<ImportSad>ImportSad9</ImportSad>
+  	<TransportModeCode>0</TransportModeCode>
+  	<GuarantorTypeCode>1</GuarantorTypeCode>
+  	<Guarantor>
+  		<CountryCodeISO>DE</CountryCodeISO>
+  		<CustomerID>CustomerID</CustomerID>
+  		<VATID>VATID</VATID>
+  		<Name>Name</Name>
+  		<Street>StreetAndNumber</Street>
+  		<PostalCode>PostalCode</PostalCode>
+  		<City>City</City>
+  	</Guarantor>
+  	<Guarantor>
+  		<CountryCodeISO>DE2</CountryCodeISO>
+  		<CustomerID>CustomerID2</CustomerID>
+  		<VATID>VATID2</VATID>
+  		<Name>Name2</Name>
+  		<Street>StreetAndNumber2</Street>
+  		<PostalCode>PostalCode2</PostalCode>
+  		<City>City2</City>
+  	</Guarantor>
+  	<DocumentCertificate>
+  		<DocumentDescription language="AA">DocumentDescription</DocumentDescription>
+  		<DocumentReference language="AA">ReferenceOfDocument</DocumentReference>
+  	</DocumentCertificate>
+  	<Consignee>
+  		<CountryCodeISO>DE</CountryCodeISO>
+  		<CustomerID>CustomerID</CustomerID>
+  		<VATID>VATID</VATID>
+  		<Name>Name</Name>
+  		<Street>StreetAndNumber</Street>
+  		<PostalCode>PostalCode</PostalCode>
+  		<City>City</City>
+  	</Consignee>
+  	<ComplementConsignee>
+		<MemberStateCode>xc</MemberStateCode>
+		<CertificateOfExemption>CertificateOfExemption</CertificateOfExemption>
+  	</ComplementConsignee>
+  	<Consignor>
+  		<CountryCodeISO>CTDE</CountryCodeISO>
+  		<CustomerID>CTCustomerID</CustomerID>
+  		<VATID>CTVATID</VATID>
+  		<Name>CTName</Name>
+  		<Street>CTStreetAndNumber</Street>
+  		<PostalCode>CTPostalCode</PostalCode>
+  		<City>CTCity</City>
+  	</Consignor>
+  	<PlaceOfDispatch>
+  		<CountryCodeISO>PDDE</CountryCodeISO>
+  		<CustomerID>PDCustomerID</CustomerID>
+  		<VATID>PDVATID</VATID>
+  		<Name>PDName</Name>
+  		<Street>PDStreetAndNumber</Street>
+  		<PostalCode>PDPostalCode</PostalCode>
+  		<City>PDCity</City>
+  	</PlaceOfDispatch>
+  	<DeliveryPlace>
+  		<CountryCodeISO>DE</CountryCodeISO>
+  		<CustomerID>CustomerID</CustomerID>
+  		<VATID>VATID</VATID>
+  		<Name>Name</Name>
+  		<Street>StreetAndNumber</Street>
+  		<PostalCode>PostalCode</PostalCode>
+  		<City>City</City>
+  	</DeliveryPlace>
+  	<TransportArranger>
+  		<CountryCodeISO>DE</CountryCodeISO>
+  		<CustomerID>CustomerID</CustomerID>
+  		<VATID>VATID</VATID>
+  		<Name>Name</Name>
+  		<Street>StreetAndNumber</Street>
+  		<PostalCode>PostalCode</PostalCode>
+  		<City>City</City>
+  	</TransportArranger>
+  	<FirstTransporter>
+  		<CountryCodeISO>DE</CountryCodeISO>
+  		<CustomerID>CustomerID</CustomerID>
+  		<VATID>VATID</VATID>
+  		<Name>Name</Name>
+  		<Street>StreetAndNumber</Street>
+  		<PostalCode>PostalCode</PostalCode>
+  		<City>City</City>
+  	</FirstTransporter>
+  	<TransportDetails>
+  		<TransportUnitCode>1</TransportUnitCode>
+  		<IdentityOfTransportUnits>IdentityOfTransportUnits</IdentityOfTransportUnits>
+  		<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  		<ComplementaryInformation language="AA">ComplementaryInformation</ComplementaryInformation>
+  		<SealInformation language="AA">SealInformation</SealInformation>
+  	</TransportDetails>
+  	<TransportDetails>
+  		<TransportUnitCode>2</TransportUnitCode>
+  		<IdentityOfTransportUnits>IdentityOfTransportUnits</IdentityOfTransportUnits>
+  		<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  		<ComplementaryInformation language="AA">ComplementaryInformation</ComplementaryInformation>
+  		<SealInformation language="AA">SealInformation</SealInformation>
+  	</TransportDetails>
+  	<TransportDetails>
+  		<TransportUnitCode>3</TransportUnitCode>
+  		<IdentityOfTransportUnits>IdentityOfTransportUnits</IdentityOfTransportUnits>
+  		<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  		<ComplementaryInformation language="AA">ComplementaryInformation</ComplementaryInformation>
+  		<SealInformation language="AA">SealInformation</SealInformation>
+  	</TransportDetails>
+  	<TransportDetails>
+  		<TransportUnitCode>4</TransportUnitCode>
+  		<IdentityOfTransportUnits>IdentityOfTransportUnits</IdentityOfTransportUnits>
+  		<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  		<ComplementaryInformation language="AA">ComplementaryInformation</ComplementaryInformation>
+  		<SealInformation language="AA">SealInformation</SealInformation>
+  	</TransportDetails>
+  		<TransportDetails>
+  		<TransportUnitCode>5</TransportUnitCode>
+  		<IdentityOfTransportUnits>IdentityOfTransportUnits</IdentityOfTransportUnits>
+  		<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  		<ComplementaryInformation language="AA">ComplementaryInformation</ComplementaryInformation>
+  		<SealInformation language="AA">SealInformation</SealInformation>
+  	</TransportDetails>
+  	<GoodsItem>
+  		<ItemNumber>1</ItemNumber>
+  		<ExciseProductCode>A000</ExciseProductCode>
+  		<CnCode>00000000</CnCode>
+  		<CommercialDescription language="AA">CommercialDescription</CommercialDescription>
+  		<DesignationOfOrigin language="AA">DesignationOfOrigin</DesignationOfOrigin>
+  		<BrandNameOfProducts language="AA">BrandNameOfProducts</BrandNameOfProducts>
+  		<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+  		<FiscalMark language="AA">FiscalMark</FiscalMark>
+  		<Quantity>0</Quantity>
+  		<AlcoholicStrength>0</AlcoholicStrength>
+  		<DegreePlato>0</DegreePlato>
+  		<SizeOfProducer>0</SizeOfProducer>
+  		<Density>0</Density>
+  		<NetWeight>0</NetWeight>
+  		<GrossWeight>0</GrossWeight>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>1</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>2</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>3</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>4</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<WineProduct>
+  			<WineGrowingZoneCode>0</WineGrowingZoneCode>
+  			<WineProductCategory>1</WineProductCategory>
+  			<ThirdCountryOfOrigin>AA</ThirdCountryOfOrigin>
+  			<OtherInformation language="AA">OtherInformation</OtherInformation>
+  			<WineOperationCode>0</WineOperationCode>
+  		</WineProduct>
+  	</GoodsItem>
+  	<GoodsItem>
+  		<ItemNumber>2</ItemNumber>
+  		<ExciseProductCode>A000</ExciseProductCode>
+  		<CnCode>00000000</CnCode>
+  		<CommercialDescription language="AA">CommercialDescription</CommercialDescription>
+  		<DesignationOfOrigin language="AA">DesignationOfOrigin</DesignationOfOrigin>
+  		<BrandNameOfProducts language="AA">BrandNameOfProducts</BrandNameOfProducts>
+  		<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+  		<FiscalMark language="AA">FiscalMark</FiscalMark>
+  		<Quantity>0</Quantity>
+  		<AlcoholicStrength>0</AlcoholicStrength>
+  		<DegreePlato>0</DegreePlato>
+  		<SizeOfProducer>0</SizeOfProducer>
+  		<Density>0</Density>
+  		<NetWeight>0</NetWeight>
+  		<GrossWeight>0</GrossWeight>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>1</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>2</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>3</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>4</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<WineProduct>
+  			<WineGrowingZoneCode>0</WineGrowingZoneCode>
+  			<WineProductCategory>1</WineProductCategory>
+  			<ThirdCountryOfOrigin>AA</ThirdCountryOfOrigin>
+  			<OtherInformation language="AA">OtherInformation</OtherInformation>
+  			<WineOperationCode>0</WineOperationCode>
+  		</WineProduct>
+  	</GoodsItem>
+  	<GoodsItem>
+  		<ItemNumber>3</ItemNumber>
+  		<ExciseProductCode>A000</ExciseProductCode>
+  		<CnCode>00000000</CnCode>
+  		<CommercialDescription language="AA">CommercialDescription</CommercialDescription>
+  		<DesignationOfOrigin language="AA">DesignationOfOrigin</DesignationOfOrigin>
+  		<BrandNameOfProducts language="AA">BrandNameOfProducts</BrandNameOfProducts>
+  		<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+  		<FiscalMark language="AA">FiscalMark</FiscalMark>
+  		<Quantity>0</Quantity>
+  		<AlcoholicStrength>0</AlcoholicStrength>
+  		<DegreePlato>0</DegreePlato>
+  		<SizeOfProducer>0</SizeOfProducer>
+  		<Density>0</Density>
+  		<NetWeight>0</NetWeight>
+  		<GrossWeight>0</GrossWeight>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>1</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>2</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>3</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<Package>
+  			<KindOfPackages>aa</KindOfPackages>
+  			<NumberOfPackages>4</NumberOfPackages>
+  			<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  			<SealInformation language="AA">SealInformation</SealInformation>
+  		</Package>
+  		<WineProduct>
+  			<WineGrowingZoneCode>0</WineGrowingZoneCode>
+  			<WineProductCategory>1</WineProductCategory>
+  			<ThirdCountryOfOrigin>AA</ThirdCountryOfOrigin>
+  			<OtherInformation language="AA">OtherInformation</OtherInformation>
+  			<WineOperationCode>0</WineOperationCode>  			
+  		</WineProduct>
+  		</GoodsItem>
+  		<GoodsItem>
+  			<ItemNumber>4</ItemNumber>
+  			<ExciseProductCode>A000</ExciseProductCode>
+  			<CnCode>00000000</CnCode>
+  			<CommercialDescription language="AA">CommercialDescription</CommercialDescription>
+  			<DesignationOfOrigin language="AA">DesignationOfOrigin</DesignationOfOrigin>
+  			<BrandNameOfProducts language="AA">BrandNameOfProducts</BrandNameOfProducts>
+  			<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+  			<FiscalMark language="AA">FiscalMark</FiscalMark>
+  			<Quantity>0</Quantity>
+  			<AlcoholicStrength>0</AlcoholicStrength>
+  			<DegreePlato>0</DegreePlato>
+  			<SizeOfProducer>0</SizeOfProducer>
+  			<Density>0</Density>
+  			<NetWeight>0</NetWeight>
+  			<GrossWeight>0</GrossWeight>
+  			<Package>
+  				<KindOfPackages>aa</KindOfPackages>
+  				<NumberOfPackages>1</NumberOfPackages>
+  				<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  				<SealInformation language="AA">SealInformation</SealInformation>
+  			</Package>
+  			<Package>
+  				<KindOfPackages>aa</KindOfPackages>
+  				<NumberOfPackages>2</NumberOfPackages>
+  				<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  				<SealInformation language="AA">SealInformation</SealInformation>
+  			</Package>
+  			<Package>
+  				<KindOfPackages>aa</KindOfPackages>
+  				<NumberOfPackages>3</NumberOfPackages>
+  				<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  				<SealInformation language="AA">SealInformation</SealInformation>
+  			</Package>
+  			<Package>
+  				<KindOfPackages>aa</KindOfPackages>
+  				<NumberOfPackages>4</NumberOfPackages>
+  				<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+  				<SealInformation language="AA">SealInformation</SealInformation>
+  			</Package>
+  			<WineProduct>
+  				<WineGrowingZoneCode>0</WineGrowingZoneCode>
+  				<WineProductCategory>1</WineProductCategory>
+  				<ThirdCountryOfOrigin>AA</ThirdCountryOfOrigin>
+  				<OtherInformation language="AA">OtherInformation</OtherInformation>
+  				<WineOperationCode>01</WineOperationCode>
+  				<WineOperationCode>02</WineOperationCode>
+  				<WineOperationCode>03</WineOperationCode>
+  				<WineOperationCode>04</WineOperationCode>
+  				<WineOperationCode>05</WineOperationCode>
+  			</WineProduct>
+  		</GoodsItem>
+  </EMCSDeclaration>
+  </EMCS>
+  </soap:Body>
+  </soap:Envelope>

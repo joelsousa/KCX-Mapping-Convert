@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>FR01.CSFALT.2144</From>
+<MessageID>AI-001-20110919</MessageID>
+<SentAt>2011-09-18 10:24:20 +0200</SentAt>
+<Act>request</Act>
+<Method>EMB</Method>
+<MessageVersion>2.0</MessageVersion>
+<MessageType>EMCSStatusResponse</MessageType>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+<EMCS>
+<EMCSStatusResponse>
+<LocalReferenceNumber>AI-001-20110919</LocalReferenceNumber>
+<AadReferenceCode>AadReferenceCode1</AadReferenceCode>
+<SequenceNumber>SequenceNumber1</SequenceNumber>
+<Status>Status1</Status>
+<LastReceivedMessageType>LastReceivedMessageType1</LastReceivedMessageType>
+</EMCSStatusResponse>
+</EMCS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

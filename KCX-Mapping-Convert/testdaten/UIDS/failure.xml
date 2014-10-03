@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE01.CSFALT.2144</To>
+      <From>DE01.CSFALT.2144</From>
+      <MessageID>d32e571e-0b66-48c3-a1b4-47334b05a817</MessageID>
+      <InReplyTo>17660129812-GNXU6E4G</InReplyTo>
+      <SentAt>2012-01-01T08:15:20</SentAt>
+      <Act>failure</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>Failure</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+      </soap:Code>
+      <soap:Reason>
+        <soap:Text xml:lang="en">#Code:50#Reason:XmlSchemaValidation; Unknown XML schema validation error: The 'http://www.w3.org/2000/09/xmldsig#:Signature' element is not declared.</soap:Text>
+      </soap:Reason>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>

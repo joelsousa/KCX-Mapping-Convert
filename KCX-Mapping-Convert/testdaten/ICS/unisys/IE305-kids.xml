@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header><Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true"><SentAt><Date><Year>2010</Year>
+<Month>12</Month><Day>16</Day></Date><Time>09:20:00</Time></SentAt>
+<Transmitter>DE.UNSY.TST</Transmitter><Receiver>DE.UNSY.TST</Receiver><Method>ESU</Method>
+<MessageTP><CountryCode>DE</CountryCode><Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclarationAmendmentRejection</MessageName><Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange><Codemapping><Map>0</Map><MapFrom>DE</MapFrom><MapTo>DE</MapTo></Codemapping>
+</CustomsExchange>
+<MessageID>6070100566077286604593</MessageID></Header></soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclarationAmendmentRejection>
+<GoodsDeclaration>
+<ReferenceNumber>TEST-6604593</ReferenceNumber>
+<MRN>DE3456789012345678</MRN>
+<AmendmentRejectionDateAndTime>201012150910</AmendmentRejectionDateAndTime>
+<CustomsOfficeFirstEntry>DE005876</CustomsOfficeFirstEntry>
+<PersonLodgingSumaTIN><TIN>DE123456789012345</TIN></PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address><Name>AGILITY LOGISTICS S.R.O.</Name><Street>UL. 1   PLUKU 8-10</Street><City>CZ-18630  PRAHA 8</City><Country>CZ</Country><CountrySubEntity>18630</CountrySubEntity>
+</Address>
+</PersonLodgingSumaAddress>
+<RepresentativeTIN><TIN>DE222256789012345</TIN></RepresentativeTIN>
+<RepresentativeAddress>
+<Address><Name>AGILITY LOGISTICS S.R.O.</Name><Street>UL. 1   PLUKU 8-10</Street><City>CZ-18630  PRAHA 8</City><Country>CZ</Country><CountrySubEntity>18630</CountrySubEntity>
+</Address>
+</RepresentativeAddress>
+<AmendmentDateAndTime>201012170910</AmendmentDateAndTime>
+<FunctionalError>
+<ErrorType>1</ErrorType>
+<ErrorPointer>6593</ErrorPointer>
+<ErrorReason>ErrorReason</ErrorReason>
+<OriginalAttributeValue>OriginalAttributeValue</OriginalAttributeValue>
+</FunctionalError>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclarationAmendmentRejection></soap:Body></soap:Envelope>
+

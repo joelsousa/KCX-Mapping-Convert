@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<KIDSHeader>
+<SentAt>
+<Date>
+<Year>2013</Year>
+<Month>7</Month>
+<Day>16</Day>
+</Date>
+<Time>104950</Time>
+<TimeZone>-0600</TimeZone>
+</SentAt>
+<Transmitter>DE.BDP.TST</Transmitter>
+<Receiver>DE.BDP.TST</Receiver>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>PORT</Procedure>
+<MessageName>PortDeclaration</MessageName>
+<Release>2.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>BDP_PORT_BHT_04</MessageID>
+</KIDSHeader>
+</soap:Header>
+<soap:Body>
+<PortDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>BDP_PORT_BFT_04</ReferenceNumber>
+<PortSystem>BHT</PortSystem>
+<MessageFunction>9</MessageFunction>
+<DeclarationType>LAS</DeclarationType>
+<DeclarationTypeSpecification>001</DeclarationTypeSpecification>
+<TestMode>0</TestMode>
+<ShipperReferenceNumber>1855037657</ShipperReferenceNumber>
+<Shipper>
+<TerminalCustomerNumber>5280-0</TerminalCustomerNumber>
+<TIN>DE9003827</TIN>
+<BO>0000</BO>
+<Address>
+<Name>BLUESTAR SILICONES GERMANY GMBH</Name>
+<Street>HANS-SACHS-STRASSE 4A</Street>
+<City>LUBECK, SCHLESWIG-H</City>
+<PostalCode>23566</PostalCode>
+<Country>DE</Country>
+</Address>
+</Shipper>
+<CustomsOfficeExport>DE002452</CustomsOfficeExport>
+<Agent>
+<PortCode>3028</PortCode>
+<Address>
+<Name>Habag Lloyd AG, 3028 GERMANY</Name>
+<Street>Bla 19</Street>
+<City>Stadt AM Wasser</City>
+<PostalCode>43314</PostalCode>
+<Country>DE</Country>
+</Address>
+<ContactPerson>
+<Name>THORSTEN GENGNAGEL</Name>
+</ContactPerson>
+</Agent>
+<Tally>
+<PortCode>XX</PortCode>
+</Tally>
+<ContactPerson>
+<Name>Ansprechpartner Gefahrgut</Name>
+<PhoneNumber>Telefon Gefahrgut</PhoneNumber>
+</ContactPerson>
+<VoyageDetails>
+<ShipReferenceNumber>HKLL</ShipReferenceNumber>
+<VoyageNumber>066826</VoyageNumber>
+<ShipName>BOX TRADER</ShipName>
+<ShipOwner>HLC</ShipOwner>
+<ArrivalDate>20130809</ArrivalDate>
+<DepartureDate>20130724</DepartureDate>
+<LoadingPort>DEBRV</LoadingPort>
+<DischargePort>MXVER</DischargePort>
+<IMONumber>9423035</IMONumber>
+</VoyageDetails>
+<AdditionInformation>
+<BookingNumber>93981190</BookingNumber>
+<BillOfLadingNumber>HLCUFRA130709526</BillOfLadingNumber>
+</AdditionInformation>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<CustomsDeclarationType>AES</CustomsDeclarationType>
+<ContainerNumber>123456</ContainerNumber>
+<TarifCode>123456</TarifCode>
+<FirstGoodsLevel>
+<Quantity>25</Quantity>
+<PackingType>PX</PackingType>
+<GrossMass>1334.000</GrossMass>
+<Volume>0.1230</Volume>
+<Description>Aseptic Sleeves. Faltkartons</Description>
+<Marks>Campbell's Canada</Marks>
+<MrnStatement>
+<MRN>13AT600000EVHRRDC3</MRN>
+<MRNComplete>1</MRNComplete>
+<MrnPosition>
+<PositionNumber>001</PositionNumber>
+<PackageId>001</PackageId>
+</MrnPosition>
+</MrnStatement>
+</FirstGoodsLevel>
+</GoodsItem>
+</GoodsDeclaration>
+</PortDeclaration>
+</soap:Body>
+</soap:Envelope>

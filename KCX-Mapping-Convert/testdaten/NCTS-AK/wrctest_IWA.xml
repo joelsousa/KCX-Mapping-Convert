@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE.SAPOTST.3996</To>
+      <From>PL.SAPOTST.3996</From>
+      <MessageID>8749f73f-0c6b-4435-8ccb-6ebfd166f2cc</MessageID>
+      <SentAt>2011-05-10T08:45:57</SentAt>
+      <Act>inform</Act>
+      <Procedure>NCTS</Procedure>
+      <MessageType>NCTSDeclaration</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>4.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ncts/body/200911">
+      <NCTS>
+        <NCTSDeclaration>
+          <LocalReferenceNumber>NCTS-SK-2-1</LocalReferenceNumber>
+          <TypeOfDeclaration>T1</TypeOfDeclaration>
+          <CountryOfDestination>PL</CountryOfDestination>
+          <CountryOfDispatch>DE</CountryOfDispatch>
+          <TransportAtBorder>
+            <Identity>WPT31730</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtBorder>
+          <TransportAtDeparture>
+            <Identity>WPT31730</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtDeparture>
+          <NCTSDocumentLanguage>DE</NCTSDocumentLanguage>
+          <TotalNumberOfItems>1</TotalNumberOfItems>
+          <TotalGrossMass>8518</TotalGrossMass>
+          <DeclarationDate>2011-05-10</DeclarationDate>
+          <DeclarationPlace>Hamburg</DeclarationPlace>
+          <Consignor>
+            <TIN>DE9001050</TIN>
+            <Address>
+              <Name>Sadi Polska Agencja Celna Spz o.o.</Name>
+              <Street>Konwojowa 51</Street>
+              <PostalCode>TCPost</PostalCode>
+              <City>43-346</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignor>
+          <Consignee>
+            <TIN>DE9001050</TIN>
+            <Address>
+              <Name>Sadi Polska Agencja Celna Spz o.o.</Name>
+              <Street>Konwojowa 51</Street>
+              <PostalCode>TCPost</PostalCode>
+              <City>43-346</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignee>
+          <Principal>
+            <TIN>DE9001050</TIN>
+            <Address>
+              <Name>Sadi Polska Agencja Celna Spz o.o.</Name>
+              <Street>Konwojowa 51</Street>
+              <PostalCode>TCPost</PostalCode>
+              <City>43-346</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Principal>
+          <OfficeOfDeparture>DE005872</OfficeOfDeparture>
+          <OfficeOfDestination>PL335010</OfficeOfDestination>
+          <Guarantee>
+            <TypeOfGuarantee>1</TypeOfGuarantee>
+            <Reference>
+              <GRN>07DE0000000003866</GRN>
+              <AccessCode>LSAA</AccessCode>
+              <Amounts>
+                <Amount>1010</Amount>
+              </Amounts>
+            </Reference>
+          </Guarantee>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <GoodsDescription>PIEKARNIKI DO ZABUDOWY - 264 SZT</GoodsDescription>
+            <GrossMass>8518</GrossMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>3023824461</Reference>
+            </ProducedDocuments>
+            <Packages>
+              <Quantity>264</Quantity>
+              <MarksAndNumbers>OFOLIOWANE</MarksAndNumbers>
+              <Type>SK</Type>
+            </Packages>
+          </GoodsItem>
+        </NCTSDeclaration>
+      </NCTS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

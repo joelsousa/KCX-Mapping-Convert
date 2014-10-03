@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header soap:mustUnderstand="true" xmlns="http://www.eurtradenet.com/schemas/header/200310">
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>11</Month>
+                    <Day>3</Day>
+                </Date>
+                <Time>111242</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.TOLL.TST</Transmitter>
+            <Receiver>DE.TOLL.TST</Receiver>
+            <Method>NCTS</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>NCTS</Procedure>
+                <MessageName>NCTSDeclaration</MessageName>
+                <Release>4.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>1</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>cktest-codes-2</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200809">
+        <NCTSDeclaration>
+            <GoodsDeclaration>
+                <ReferenceNumber>cktest-codes-2</ReferenceNumber>
+                <ShipmentNumber>TOLLTEST0003059</ShipmentNumber>
+                <TypeOfDeclaration>CK002</TypeOfDeclaration>
+                <PlaceOfLoading>
+                    <Code>AB01</Code>
+                </PlaceOfLoading>
+                <DestinationCountry>NL</DestinationCountry>
+                <DispatchCountry>DE</DispatchCountry>
+                <MeansOfTransportBorder>
+                    <TransportMode>BA016</TransportMode>
+                    <TransportationType>AD001</TransportationType>
+                    <TransportationNumber>number border</TransportationNumber>
+                    <TransportationCountry>DE</TransportationCountry>
+                </MeansOfTransportBorder>
+                <MeansOfTransportDeparture>
+                    <TransportationNumber>number departure</TransportationNumber>
+                    <TransportationCountry>DE</TransportationCountry>
+                </MeansOfTransportDeparture>
+                <TransportInContainer>1</TransportInContainer>
+                <TotalNumberPositions>2</TotalNumberPositions>
+                <ConsignorTIN>
+                    <IsTINGermanApprovalNumber>AA002</IsTINGermanApprovalNumber>
+                </ConsignorTIN>
+                <Consignor>
+                    <Address>
+                        <Name>CUSTOMER A</Name>
+                        <Street>company address1 company</Street>
+                        <HouseNumber>no123</HouseNumber>
+                        <City>HEUSDEN (GEM ASTEN)</City>
+                        <PostalCode>23241323</PostalCode>
+                        <Country>NL</Country>
+                    </Address>
+                </Consignor>
+                <ConsigneeTIN>
+                    <IsTINGermanApprovalNumber>AA002</IsTINGermanApprovalNumber>
+                </ConsigneeTIN>
+                <Consignee>
+                    <Address>
+                        <Name>ACME INDUSTRIES CO LTD</Name>
+                        <Street>ACME GROUP BLDG str str</Street>
+                        <HouseNumber>house</HouseNumber>
+                        <City>BRUNN (B NEUSTADT / DOOSE)</City>
+                        <PostalCode>10540</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                </Consignee>
+                <Clerk>
+                    <Identity>KEILI</Identity>
+                </Clerk>
+                <CarrierTIN>
+                    <TIN>DE9008810</TIN>
+                    <IsTINGermanApprovalNumber>AA002</IsTINGermanApprovalNumber>
+                </CarrierTIN>
+                <GoodsItem>
+                    <ItemNumber>1</ItemNumber>
+                    <CommodityCode>
+                        <TarifCode>82070000</TarifCode>
+                    </CommodityCode>
+                    <Description>Description: The item full with the pear.(82055980)</Description>
+                    <DestinationCountry>NL</DestinationCountry>
+                    <NetMass>10.230</NetMass>
+                    <GrossMass>20.444</GrossMass>
+                    <Document>
+                        <Type>CM007</Type>
+                        <Reference>Invoice_01</Reference>
+                    </Document>
+                    <Container>
+                        <Number>AAAA1234567</Number>
+                    </Container>
+                    <Package>
+                        <Quantity>10</Quantity>
+                        <Type>CN180</Type>
+                        <Marks>Marks:The item is from DEFRA </Marks>
+                    </Package>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>2</ItemNumber>
+                    <CommodityCode>
+                        <TarifCode>8207130000</TarifCode>
+                    </CommodityCode>
+                    <Description>items of tarrif no  90262080</Description>
+                    <DestinationCountry>NL</DestinationCountry>
+                    <NetMass>20.340</NetMass>
+                    <GrossMass>30.556</GrossMass>
+                    <Document>
+                        <Type>CM007</Type>
+                        <Reference>Invoice_02</Reference>
+                    </Document>
+                    <Container>
+                        <Number>CCCC1234567</Number>
+                    </Container>
+                    <Package>
+                        <Quantity>20</Quantity>
+                        <Type>CN180</Type>
+                        <Marks>maks of 90262080</Marks>
+                    </Package>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </NCTSDeclaration>
+    </soap:Body>
+</soap:Envelope>

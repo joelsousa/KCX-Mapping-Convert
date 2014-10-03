@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>06</Day>
+                </Date>
+                <Time>125902</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ARN</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSArrivalNotificationValidation</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>AE-EK-TST000220060111</MessageID>
+            <InReplyTo>17675562465-NL8ILD</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSArrivalNotificationValidation>
+            <GoodsDeclaration>
+                <ReferenceNumber>17675562465-NL8ILD</ReferenceNumber>
+                <MRN>11DE586600000544Z8</MRN>
+                <RegistrationDateTime>201101061258</RegistrationDateTime>
+                <CarrierTIN>
+                    <TIN>DE9008144</TIN>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+            </GoodsDeclaration>
+        </ICSArrivalNotificationValidation>
+    </soap:Body>
+</soap:Envelope>

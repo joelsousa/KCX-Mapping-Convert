@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2010</Year>
+  <Month>05</Month>
+  <Day>10</Day>
+  </Date>
+  <Time>12:02:00</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE01.CSFALT.2144</Transmitter>
+  <Receiver>DE.CSF.ALT</Receiver>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>NCTS</Procedure>
+  <MessageName>NCTSDeclaration</MessageName>
+  <Release>4.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>DE01DE01214420100510120200000001</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <NCTSDeclaration>
+  <GoodsDeclaration>
+  <ReferenceNumber>XX12345678P010001</ReferenceNumber>
+  <TypeOfDeclaration>TIR</TypeOfDeclaration>
+  <PlaceOfLoading />
+  <DestinationCountry>RU</DestinationCountry>
+  <DispatchCountry>DE</DispatchCountry>
+  <MeansOfTransportInland>
+  <TransportMode>33</TransportMode>
+  <TransportationNumber>AA12345</TransportationNumber>
+  <TransportationCountry>RU</TransportationCountry>
+  </MeansOfTransportInland>
+  <MeansOfTransportBorder>
+  <TransportMode>33</TransportMode>
+  <TransportationNumber>AA12345</TransportationNumber>
+  <TransportationCountry>RU</TransportationCountry>
+  </MeansOfTransportBorder>
+  <MeansOfTransportDeparture>
+  <TransportMode>33</TransportMode>
+  <TransportationNumber>AA12345</TransportationNumber>
+  <TransportationCountry>RU</TransportationCountry>
+  </MeansOfTransportDeparture>
+  <TransportInContainer>0</TransportInContainer>
+  <NCTSDocumentLanguage>DE</NCTSDocumentLanguage>
+  <TotalNumberPositions>1</TotalNumberPositions>
+  <TotalNumberPackages>123</TotalNumberPackages>
+  <TotalGrossMass>123</TotalGrossMass>
+  <DeclarationDate>2010-10-19</DeclarationDate>
+  <DeclarationPlace>GENEVA</DeclarationPlace>
+  <PaymentType>A</PaymentType>
+  <SecurityIndicator>1</SecurityIndicator>
+  <Consignor>
+  <Address>
+  <Name>CON NAME</Name>
+  <Street>CON STREET</Street>
+  <PostalCode>123</PostalCode>
+  <City>CON City</City>
+  <Country>DE</Country>
+  </Address>
+  </Consignor>
+  <Consignee>
+  <Address>
+  <Name>CONEE Name</Name>
+  <Street>CONEE Street</Street>
+  <PostalCode>123</PostalCode>
+  <City>RU</City>
+  <Country>RU</Country>
+  </Address>
+  </Consignee>
+  <PrincipalTIN>
+  <TIN>BGEORINUMBER</TIN>
+  </PrincipalTIN>
+  <Principal>
+  <Address>
+  <Name>HOLDER Name</Name>
+  <Street>Holder Street</Street>
+  <PostalCode>RU123</PostalCode>
+  <City>Holder City</City>
+  <Country>RU</Country>
+  </Address>
+  </Principal>
+  <OfficeOfDeparture>DE002101</OfficeOfDeparture>
+  <OfficeOfDestination>PL301040</OfficeOfDestination>
+  <SimplifiedProcedureIndicator>0</SimplifiedProcedureIndicator>
+  <Guarantee>
+  <TypeOfGuarantee>B</TypeOfGuarantee>
+  <Reference>
+  <OtherNumber>XX12345678</OtherNumber>
+  </Reference>
+  </Guarantee>
+  <TransportationRoute />
+  <Security>
+  <PlaceOfLoading>DE Berlin</PlaceOfLoading>
+  <PlaceOfUnloading>RU Moscow</PlaceOfUnloading>
+  <Itinerary>DE</Itinerary>
+  <Itinerary>PL</Itinerary>
+  <Itinerary>RU</Itinerary>
+  </Security>
+  <ConsignorSecurityTIN />
+  <ConsigneeSecurityTIN />
+  <GoodsItem>
+  <ItemNumber>1</ItemNumber>
+  <CommodityCode>
+  <TarifCode>01011010</TarifCode>
+  </CommodityCode>
+  <Description>Horses</Description>
+  <NetMass>123</NetMass>
+  <GrossMass>123</GrossMass>
+  <Document>
+  <Qualifier>952</Qualifier>
+  <Reference>XX12345678</Reference>
+  </Document>
+  <Package>
+  <Quantity>123</Quantity>
+  <SequentialNumber>1</SequentialNumber>
+  <Type>PX</Type>
+  <Marks>No marks</Marks>
+  </Package>
+  </GoodsItem>
+  </GoodsDeclaration>
+  </NCTSDeclaration>
+  </soap:Body>
+  </soap:Envelope>

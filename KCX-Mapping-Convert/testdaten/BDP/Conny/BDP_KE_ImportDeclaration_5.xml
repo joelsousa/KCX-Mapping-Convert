@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2013</Year>
+                    <Month>4</Month>
+                    <Day>25</Day>
+                </Date>
+                <Time>145111</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.BDP.TST</Transmitter>
+            <Receiver>DE.BDP.TST</Receiver>
+            <Method>IMPORT</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>IMPORT</Procedure>
+                <MessageName>ImportDeclaration</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>0</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>BDP_KE_ImportDeclaration_5</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+<Declaration>
+    <ReferenceNumber>BDP_KE_ImpDel_05</ReferenceNumber>
+    <DeclarantIsConsignor>1</DeclarantIsConsignor>
+    <AgentRepresentationCode>1</AgentRepresentationCode>
+    <Business>
+        <BusinessTypeCode>11</BusinessTypeCode>
+        <InvoicePrice>125.50</InvoicePrice>
+       <Currency>USD</Currency>
+    </Business>
+    <CustomsOfficeOfDeclaration>5866</CustomsOfficeOfDeclaration>
+    <Traders>
+        <DeclarantAddress>
+            <Name>SCHWAN STABILO DeclarantAddress</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>HEROLDSBERG, BAYERN, BY 91156</City>
+            <PostalCode>91156</PostalCode>
+            <Country>DE</Country>
+        </DeclarantAddress>
+        <RepresentativeTIN>
+            <TIN>DE9003827</TIN>
+        </RepresentativeTIN>
+        <ConsignorAddress>
+            <Name>REVLON CONSUMER ConsignorAddress</Name>
+            <Street>1501 WILIAMSBORO STREET</Street>
+            <City>OXFORD, NORTH CAROL, NC 27565</City>
+            <PostalCode>91156</PostalCode>
+            <Country>US</Country>
+        </ConsignorAddress>
+        <ConsigneeAddress>
+            <Name>SCHWAN STABILO ConsigneeAddress</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>HEROLDSBERG, BAYERN, BY</City>
+            <PostalCode>91156</PostalCode>
+            <Country>DE</Country>
+        </ConsigneeAddress>
+        <SellerAddress>
+            <Name>REVLON CONSUMER SellerAddress</Name>
+            <Street>1501 WILIAMSBORO STREET</Street>
+            <City>OXFORD, NORTH CAROL, NC 27565</City>
+            <PostalCode>91156</PostalCode>
+            <Country>US</Country>
+        </SellerAddress>
+        <CustomsValueDeclarantAddress>
+            <Name>SCHWAN STABILO CustomsValueDeclarantAddress</Name>
+            <Street>SCHWANWEG 1</Street>
+            <City>HEROLDSBERG, BAYERN, BY 91156</City>
+            <PostalCode>91156</PostalCode>
+            <Country>DE</Country>
+        </CustomsValueDeclarantAddress>
+        <RepresentativeOfCustomsValueDeclarantTIN>
+            <TIN>DE5027624</TIN>
+        </RepresentativeOfCustomsValueDeclarantTIN>
+    </Traders>
+    <DispatchCountry>US</DispatchCountry>
+    <CustomsOfficeEntry>DE005876</CustomsOfficeEntry>
+    <DestinationFederalState>06</DestinationFederalState>
+    <CustomsStatus>IM</CustomsStatus>
+    <StatisticalStatus>04</StatisticalStatus>
+    <GrossMass>333.333</GrossMass>
+     <PreviousDocument>
+        <Type>ATNEU</Type>
+        <Number>Vorpapierart/Nr. Text</Number>
+    </PreviousDocument>
+    <MeansOfTransportBorder>
+        <TransportMode>04</TransportMode>
+        <TransportationType>04</TransportationType>
+        <TransportationNumber>TBB_Nummer</TransportationNumber>
+        <TransportationCountry>DE</TransportationCountry>
+    </MeansOfTransportBorder>
+    <MeansOfTransportInland>
+        <TransportMode>03</TransportMode>
+        <TransportationType>04</TransportationType>
+        <TransportationNumber>TBI_Nummer</TransportationNumber>
+        <TransportationCountry>DE</TransportationCountry>
+    </MeansOfTransportInland>
+    <MeansOfTransportArrival>
+        <TransportMode>03</TransportMode>
+        <TransportationType>04</TransportationType>
+        <TransportationNumber>TransportNummer</TransportationNumber>
+        <TransportationCountry>DE</TransportationCountry>
+    </MeansOfTransportArrival>
+    <ContactPerson>
+        <Clerk>CKEIL</Clerk>
+        <Identity>CKEIL</Identity>
+        <PhoneNumber>004991196522314</PhoneNumber>
+    </ContactPerson>
+    <IncoTerms>
+        <Code>EXW</Code>
+        <Place>OXFORD</Place>
+    </IncoTerms>
+    <Invoice>
+     	<InvoiceNumber>Nr N380</InvoiceNumber>
+        <InvoicePrice>18010.50</InvoicePrice>
+        <Currency>EUR</Currency>
+    </Invoice>
+     <Document>
+        <Type>7HHP</Type>
+        <Number>NR 7HHP</Number>
+        <IssueDate>20130502</IssueDate>
+    </Document>
+    <Deferment>
+        <Type>10</Type>
+        <TIN>DE9003827</TIN>
+    </Deferment>
+    <Deferment>
+        <Type>20</Type>
+        <TIN>DE9003827</TIN>
+    </Deferment>
+    <DV1>
+        <BuyerSellerRelationship>0</BuyerSellerRelationship>
+        <BuyerSellerRelationshipDetails>BuyerSellerRelationshipDetails TEXT</BuyerSellerRelationshipDetails>
+        <RestrictionsCode>Y</RestrictionsCode>
+        <RestrictionsText>RestrictionsText   </RestrictionsText>
+        <LicenseFeeDueCode>Y</LicenseFeeDueCode>
+        <LicenseFeeText>LicenseFeeText  TEXT </LicenseFeeText>
+        <ResaleSurrenderUsageCode>Y</ResaleSurrenderUsageCode>
+        <ResaleSurrenderUsageText>ResaleSurrenderUsageText TEXT </ResaleSurrenderUsageText>
+        <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+        <TermsServicesCode>Y</TermsServicesCode>
+        <TermsServicesText>TermsServicesText TEXT </TermsServicesText>
+        <TextPreviousDecisions>TextPreviousDecisions TEXT</TextPreviousDecisions>
+ 
+    </DV1>
+      <GoodsItem>
+                <ItemNumber>1</ItemNumber>
+                <CommodityCode>
+                    <TarifCode>3210123990</TarifCode>
+                </CommodityCode>
+                <ProcedureCode>4000</ProcedureCode>
+                 <DutyControlCode>02</DutyControlCode>
+                 <Description>Toys</Description>
+                 <Amount>22.22</Amount>
+                 <UnitOfMeasurementAmount>123</UnitOfMeasurementAmount>
+                 <QualifierAmount>1</QualifierAmount>
+                <CountryOfOrigin>US</CountryOfOrigin>
+                <Quota>
+                    <Number1>1000</Number1>
+                </Quota>
+               <PlaceOfIntroduction>NUE</PlaceOfIntroduction>
+                <PlaceOfDeparture>NYC</PlaceOfDeparture>
+                <NetMass>250.00</NetMass>
+                <GrossMass>900000</GrossMass>
+                <Package>
+                    <Quantity>1</Quantity>
+                    <Type>CT</Type>
+                    <Marks>Mark and Numbers Line 1</Marks>
+                </Package>
+                <RequestedPrivilege>100</RequestedPrivilege>
+                <Invoice>
+                    <Amount>88.88</Amount>
+                </Invoice>
+
+            </GoodsItem>
+</Declaration>
+</soap:Body>
+</soap:Envelope>

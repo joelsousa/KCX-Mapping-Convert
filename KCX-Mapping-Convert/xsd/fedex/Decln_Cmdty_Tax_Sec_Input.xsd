@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Decln_Cmdty_Tax_Sec_Input" type="DECLN_COMDTY_TAX"/>
+	<xs:complexType name="DECLN_COMDTY_TAX">
+		<xs:sequence>
+			<xs:element ref="ITEM_DECLN_COMDTY_TAX" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ITEM_DECLN_COMDTY_TAX">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SHPMT_DECLN_COMM_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="DECLN_COMMODITY_TAX_OID_NBR" type="xs:double" minOccurs="0"/>
+				<xs:element name="COMMODITY_OID_NBR" type="xs:int" minOccurs="0"/>
+				<xs:element name="LOC_SEQ_NBR" type="xs:int" minOccurs="0"/>
+				<xs:element name="LOC_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="TAX_RATE_SEQ_NBR" type="xs:int" minOccurs="0"/>
+				<xs:element name="ITLN_DECL_TAX_AMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="TTY_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="LOCAL_ENTRY_TAX_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="LOCAL_TAX_CD_TYPE" type="xs:string" minOccurs="0"/>
+				<xs:element name="TTY_OVR_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADDL_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="TAX_RATE_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="PAYMENT_METHOD_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITLN_BASE_AMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITLN_BASE_QTY" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITLN_BASE_QTY_CD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ITLN_CHGE_TAX_AMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="FNL_ADJ_AMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="FNL_CHRG_AMT" type="xs:string" minOccurs="0"/>
+				<xs:element name="TARIFF_RATE_OID_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="TARIFF_RATE_SEQ_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="TAX_OVERRULE_OID_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="AGRI_TAX_CD_OID_NBR" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

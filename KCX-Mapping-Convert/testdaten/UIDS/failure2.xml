@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE01.CSFALT.2144</To>
+      <From>DE01.CSFALT.2144</From>
+      <MessageID>d32e571e-0b66-48c3-a1b4-47334b05a817</MessageID>
+      <InReplyTo>17660129812-GNXU6E4G</InReplyTo>
+      <SentAt>2012-01-01T08:15:20</SentAt>
+      <Act>failure</Act>
+      <Procedure>EXPORT</Procedure>
+      <MessageType>Failure</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <soap:Code>
+        <soap:Value>soap:Sender</soap:Value>
+      </soap:Code>
+      <soap:Reason>
+        	<soap:Text xml:lang="de">00014 F: Antrag hat bereits eine MRN: 10DE290319387162E1</soap:Text> 
+          	<soap:Text xml:lang="de">00014 F: Antrag konnte nicht geloescht werden</soap:Text> 
+              	<soap:Text xml:lang="de">00014 H: --- ADA-Nachricht konnte nicht eingearbeitet werden</soap:Text> 
+        	<soap:Text xml:lang="de">00014 H: Datei wird nach FSSFEHL verschoben</soap:Text>
+      </soap:Reason>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>

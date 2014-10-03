@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE.SKGTST.4037</To>
+      <From>DE.SKGTST.4037</From>
+      <MessageID>77712357-8241-4f0d-8b6a-d928d09bdc63</MessageID>
+      <SentAt>2011-12-08T11:03:48</SentAt>
+      <Act>inform</Act>
+      <Procedure>NCTS</Procedure>
+      <MessageType>NCTSDeclaration</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>4.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ncts/body/200911">
+      <NCTS>
+        <NCTSDeclaration>
+          <LocalReferenceNumber>11S00003D9</LocalReferenceNumber>
+          <AuthorisationID>DE5864ZV0279</AuthorisationID>
+          <TypeOfDeclaration>T1</TypeOfDeclaration>
+          <CountryOfDestination>PL</CountryOfDestination>
+          <CountryOfDispatch>DE</CountryOfDispatch>
+          <PlaceOfLoading>AB01</PlaceOfLoading>
+          <TransportAtBorder>
+            <Identity>SB89897</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtBorder>
+          <TransportAtDeparture>
+            <Identity>SB99809</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtDeparture>
+          <ContainerIndicator>0</ContainerIndicator>
+          <TotalNumberOfItems>2</TotalNumberOfItems>
+          <TotalNumberOfPackages>223</TotalNumberOfPackages>
+          <TotalGrossMass>8965000</TotalGrossMass>
+          <Consignor>
+            <Address>
+              <Name>NADAWCA SPZ O.O.</Name>
+              <Street>Nadawcow 10/1</Street>
+              <PostalCode>43-300</PostalCode>
+              <City>Bielsko-Biala</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignor>
+          <Consignee>
+            <Address>
+              <Name>ODBIORCA SPZ O.O.</Name>
+              <Street>Odbiorcow 99m2</Street>
+              <PostalCode>43-346</PostalCode>
+              <City>Bielsko-Biala</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignee>
+          <Principal>
+            <TIN>9002758</TIN>
+            <TIRHolderID>PL1234</TIRHolderID>
+          </Principal>
+          <OfficeOfDeparture>DE005866</OfficeOfDeparture>
+          <OfficeOfDestination>DE005876</OfficeOfDestination>
+          <ControlResultCode>A3</ControlResultCode>
+          <SimplifiedProcedureFlag>1</SimplifiedProcedureFlag>
+          <RepresentativeName>Jan Kowalski</RepresentativeName>
+          <RepresentativeCapacity>agent celny</RepresentativeCapacity>
+          <Guarantee>
+            <TypeOfGuarantee>1</TypeOfGuarantee>
+            <Reference>
+              <GRN>07DE0000000003204</GRN>
+              <AccessCode>NNNZ</AccessCode>
+              <Amounts>
+                <Amount>2762300</Amount>
+                <Currency>EUR</Currency>
+              </Amounts>
+            </Reference>
+          </Guarantee>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <GoodsDescription>Piekarniki do zabudowy Simens</GoodsDescription>
+            <GrossMass>1298000</GrossMass>
+            <NetMass>876000</NetMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>FV89089</Reference>
+            </ProducedDocuments>
+            <Packages>
+              <Quantity>100</Quantity>
+              <MarksAndNumbers>Brak</MarksAndNumbers>
+              <Type>NE</Type>
+            </Packages>
+            <WriteOffInfo>
+              <WriteOffSumA>
+                <Identification>FV</Identification>
+                <Reference>34234</Reference>
+              </WriteOffSumA>
+            </WriteOffInfo>
+          </GoodsItem>
+          <GoodsItem>
+            <ItemNumber>2</ItemNumber>
+            <GoodsDescription>Kuchenki mikrofalowe SHARP</GoodsDescription>
+            <GrossMass>7667000</GrossMass>
+            <NetMass>6709000</NetMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>FV876456</Reference>
+            </ProducedDocuments>
+            <ContainerNumber>ASD45354</ContainerNumber>
+            <Packages>
+              <Quantity>123</Quantity>
+              <MarksAndNumbers>ROZNE</MarksAndNumbers>
+              <Type>SK</Type>
+            </Packages>
+            <WriteOffInfo>
+              <WriteOffSumA>
+                <Identification>FV</Identification>
+                <Reference>ATB87923</Reference>
+              </WriteOffSumA>
+            </WriteOffInfo>
+          </GoodsItem>
+        </NCTSDeclaration>
+      </NCTS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt><Date><Year>2010</Year><Month>12</Month><Day>13</Day></Date><Time>09:20:00</Time></SentAt>
+<Transmitter>DE.CSF</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP><CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure><MessageName>ICSEntrySummaryDeclaration</MessageName><Release>1.0.00</Release>
+</MessageTP><CustomsExchange><Codemapping><Map>0</Map><MapFrom>DE</MapFrom><MapTo>DE</MapTo></Codemapping></CustomsExchange>
+<MessageID>6070100566077286604593</MessageID></Header></soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclaration><GoodsDeclaration><ReferenceNumber>TEST-6604593</ReferenceNumber><ShipmentNumber>TEST-6604593</ShipmentNumber><TotalNumberPositions>1</TotalNumberPositions><TotalNumberPackages>1</TotalNumberPackages><MeansOfTransportBorder><TransportMode>4</TransportMode></MeansOfTransportBorder><ConveyanceReference>AC844</ConveyanceReference><DeclarationTime>201012130920</DeclarationTime><DeclarationPlace>FRA</DeclarationPlace><PersonLodgingSumaTIN><TIN>DE123456789012345</TIN></PersonLodgingSumaTIN><PersonLodgingSumaAddress><Address><Name>AIR CANADA</Name><Street>PO BOX 14000 SAINT-LAURENT-QUEBEC</Street><City>MONTREAL</City><PostalCode>H4Y 1H4</PostalCode><Country>CA</Country><CountrySubEntity>QC</CountrySubEntity></Address></PersonLodgingSumaAddress><CustomsOfficeFirstEntry>DE005876</CustomsOfficeFirstEntry><DeclaredDateOfArrival>201012121115</DeclaredDateOfArrival><CountryOfRouting>CA</CountryOfRouting><CountryOfRouting>DE</CountryOfRouting><CountryOfRouting>CZ</CountryOfRouting>
+<GoodsItem><ItemNumber>1</ItemNumber><Description>CONSOLIDATION AS PER ATTACHED MANIFEST 1 226X69X119CMS DISPENSER CAED 01B920WC84532010200061 NO GOODS FROM YEMEN OR SOMALIA CONTAINED</Description><GrossMass>327.0</GrossMass><LoadingPlace>CAYYC</LoadingPlace><UnloadingPlace>DEFRA</UnloadingPlace><ConsignorAddress><Address><Name>AGILITY LOGISTICS CO</Name><Street>1761 WELLINGTON AVE</Street><City>WINNIPEG</City><PostalCode>R3H 0G1</PostalCode><Country>CA</Country><CountrySubEntity>MB</CountrySubEntity></Address></ConsignorAddress><ConsigneeAddress><Address><Name>AGILITY LOGISTICS S.R.O.</Name><Street>UL. 1   PLUKU 8-10</Street><City>CZ-18630  PRAHA 8</City><Country>CZ</Country><CountrySubEntity>18630</CountrySubEntity></Address></ConsigneeAddress><Containers>PMC07702AC</Containers><Packages><Type>NE</Type><Number>1</Number></Packages>
+<MeansOfTransportBorder><TransportMode>4</TransportMode><TransportationNumber>AC844121210</TransportationNumber><TransportationCountry>DE</TransportationCountry></MeansOfTransportBorder></GoodsItem>
+</GoodsDeclaration></ICSEntrySummaryDeclaration></soap:Body></soap:Envelope>
+

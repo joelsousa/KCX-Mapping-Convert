@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+  <To>DE01.DIEHTST.2181</To>
+  <From>DE.DIEH.TST</From>
+  <MessageID>DE-DIEH-TST000173020710</MessageID>
+  <InReplyTo>DE01DE0121810000000000648445</InReplyTo>
+  <SentAt>2010-07-02 09:40:36 +0200</SentAt>
+  <Act>inform</Act>
+  <Procedure>EMCS</Procedure>
+  <Method>EME</Method>
+  <Direction>TO_CUSTOMER</Direction>
+  <MessageVersion>1.0</MessageVersion>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+  <EMCS>
+  <EMCSCancellationEAAD>
+  <LocalReferenceNumber>0000000181/0090034841</LocalReferenceNumber>
+  <AadReferenceCode>10DE00600000000024770</AadReferenceCode>
+  <DateAndTimeOfValidationOfCancellation>2010-07-02 09:40:00 +0200</DateAndTimeOfValidationOfCancellation>
+  <CancellationReasonCode>3</CancellationReasonCode>
+  </EMCSCancellationEAAD>
+  </EMCS>
+  </Submit>
+  </soap:Body>
+  </soap:Envelope>

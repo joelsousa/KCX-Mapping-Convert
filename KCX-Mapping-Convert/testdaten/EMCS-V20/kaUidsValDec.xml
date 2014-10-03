@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>DE.CSF</From>
+<MessageID>EI20100519</MessageID>
+<SentAt>2011-08-18 12:02:00 +0200</SentAt>
+<Act>request</Act>
+<Method>EMCS</Method>
+<MessageVersion>2.0</MessageVersion>
+<MessageType>EMCSValidDeclaration</MessageType>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+<EMCS>
+<EMCSValidDeclaration>
+<LocalReferenceNumber>ReferenceNumber</LocalReferenceNumber>
+<ExciseMovementEaad>
+<AadReferenceCode>AadReferenceCode</AadReferenceCode>
+<DateAndTimeOfValidation>2010-05-19T14:55:00+0200</DateAndTimeOfValidation>
+</ExciseMovementEaad>
+<DispatchImportOffice>AA000000</DispatchImportOffice>
+<DeliveryPlaceCustomsOffice>AA000000</DeliveryPlaceCustomsOffice>
+<CompetentAuthorityDispatchOffice>CompetentAuthorityDispatchOffice</CompetentAuthorityDispatchOffice>
+<HeaderEaad>
+<SequenceNumber>8</SequenceNumber>
+<DateOfUpdateValidation>2010-05-19</DateOfUpdateValidation>
+<DestinationTypeCode>1</DestinationTypeCode>
+<JourneyTime>H00</JourneyTime>
+<TransportArrangement>1</TransportArrangement>
+</HeaderEaad>
+<EaadDraft>
+<InvoiceNumber>InvoiceNumber</InvoiceNumber>
+<InvoiceDate>1967-08-13</InvoiceDate>
+<OriginTypeCode>1</OriginTypeCode>
+<DateOfDispatch>1967-08-13</DateOfDispatch>
+<TimeOfDispatch>14:20:00</TimeOfDispatch>
+<ImportSad>ImportSad1</ImportSad>
+<ImportSad>ImportSad2</ImportSad>
+</EaadDraft>
+<UpstreamARC>V20-UpstreamARC</UpstreamARC>
+<ConsignorTrader>
+<CustomerID>CustomerID-Consignor</CustomerID>
+<VATID>VATID-Consignor</VATID>
+<Address>
+<Name>NameConsignor</Name>
+<Street>Street</Street>
+<HouseNumber>StreetNumber-Co</HouseNumber>
+<PostalCode>PostalCode-Consignor</PostalCode>
+<City>City-Consignor</City>
+<Language>CR</Language>
+</Address>
+</ConsignorTrader>
+<PlaceOfDispatchTrader>
+<CustomerID>CustomerID-PD</CustomerID>
+<VATID>VATID-PD</VATID>
+<Address>
+<Name>Name-PD</Name>
+<Street>Street-PD</Street>
+<HouseNumber>StreetNumber-Pd</HouseNumber>
+<PostalCode>PostalCode-PD</PostalCode>
+<City>City-PD</City>
+<Language>PD</Language>
+</Address>
+</PlaceOfDispatchTrader>
+<ConsigneeTrader>
+<CustomerID>CustomerID-Consignee</CustomerID>
+<VATID>VATID-Consignee</VATID>
+<Address>
+<Name>Name-Consignee</Name>
+<Street>Street-Consignee</Street>
+<HouseNumber>StreetNumber-Ce</HouseNumber>
+<PostalCode>PostalCode-Consignee</PostalCode>
+<City>City-Consignee</City>
+<Language>CE</Language>
+</Address>
+</ConsigneeTrader>
+<ComplementConsigneeTrader>
+<MemberStateCode>MSC</MemberStateCode>
+<CertificateOfExemption>CertificateOfExemption</CertificateOfExemption>
+</ComplementConsigneeTrader>
+<DeliveryPlaceTrader>
+<CustomerID>CustomerID-DP</CustomerID>
+<VATID>VATID-DP</VATID>
+<Address>
+<Name>Name</Name>
+<Street>Street-DP</Street>
+<HouseNumber>StreetNumber-Dp</HouseNumber>
+<PostalCode>PostalCode-DP</PostalCode>
+<City>City-DP</City>
+<Language>DP</Language>
+</Address>
+</DeliveryPlaceTrader>
+<MovementGuarantee>
+<GuarantorTypeCode>0</GuarantorTypeCode>
+<GuarantorTrader>
+<CustomerID>CustomerID2</CustomerID>
+<ExciseTaxNumber>ExciseTaxNumber</ExciseTaxNumber>
+<VATID>VATID-Guarantor</VATID>
+<Address>
+<Name>Name2</Name>
+<Street>Street</Street>
+<HouseNumber>StreetNumber-G</HouseNumber>
+<PostalCode>PostalCode2</PostalCode>
+<City>City2</City>
+<Language>DE2</Language>
+</Address>
+</GuarantorTrader>
+</MovementGuarantee>
+<Transport>
+<TransportModeCode>0</TransportModeCode>
+<ComplementaryInformation language="DE">V20-ComplementaryInformation</ComplementaryInformation>
+</Transport>
+<TransportArrangerTrader>
+<CustomerID>CustomerID-TA</CustomerID>
+<VATID>VATID-TA</VATID>
+<Address>
+<Name>Name-TA</Name>
+<Street>Street-TA</Street>
+<HouseNumber>StreetNumber-Ta</HouseNumber>
+<PostalCode>PostalCode-TA</PostalCode>
+<City>City-TA</City>
+<Language>TA</Language>
+</Address>
+</TransportArrangerTrader>
+<FirstTransporterTrader>
+<CustomerID>CustomerID-FT</CustomerID>
+<VATID>VATID-FT</VATID>
+<Address>
+<Name>Name-FT</Name>
+<Street>Street-FT</Street>
+<HouseNumber>StreetNumber-Ft</HouseNumber>
+<PostalCode>PostalCode-FT</PostalCode>
+<City>City-FT</City>
+<Language>FT</Language>
+</Address>
+</FirstTransporterTrader>
+<TransportDetails>
+<TransportUnitCode>1</TransportUnitCode>
+<IdentityOfTransportUnits>IdentityOfTransportUnits1</IdentityOfTransportUnits>
+<CommercialSealIdentification>CommercialSealIdentification1</CommercialSealIdentification>
+<ComplementaryInformation language="AA">ComplementaryInformation1</ComplementaryInformation>
+<SealInformation language="AA">SealInformation1</SealInformation>
+</TransportDetails>
+<TransportDetails>
+<TransportUnitCode>2</TransportUnitCode>
+<IdentityOfTransportUnits>IdentityOfTransportUnits2</IdentityOfTransportUnits>
+<CommercialSealIdentification>CommercialSealIdentification2</CommercialSealIdentification>
+<ComplementaryInformation language="AA">ComplementaryInformation2</ComplementaryInformation>
+<SealInformation language="AA">SealInformation2</SealInformation>
+</TransportDetails>
+<BodyEaad>
+<ItemNumber>1</ItemNumber>
+<ExciseProductCode>A000</ExciseProductCode>
+<CnCode>00000000</CnCode>
+<CommercialDescription language="AA">CommercialDescription</CommercialDescription>
+<DesignationOfOrigin language="AA">DesignationOfOrigin</DesignationOfOrigin>
+<BrandNameOfProducts language="AA">BrandNameOfProducts</BrandNameOfProducts>
+<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+<FiscalMark language="AA">FiscalMark</FiscalMark>
+<Quantity>0</Quantity>
+<AlcoholicStrength>0</AlcoholicStrength>
+<DegreePlato>0</DegreePlato>
+<SizeOfProducer>0</SizeOfProducer>
+<Density>0</Density>
+<NetWeight>0</NetWeight>
+<GrossWeight>0</GrossWeight>
+<Package>
+<KindOfPackages>aa</KindOfPackages>
+<NumberOfPackages>1</NumberOfPackages>
+<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+<SealInformation language="AA">SealInformation</SealInformation>
+</Package>
+<Package>
+<KindOfPackages>aa</KindOfPackages>
+<NumberOfPackages>2</NumberOfPackages>
+<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+<SealInformation language="AA">SealInformation</SealInformation>
+</Package>
+<Package>
+<KindOfPackages>aa</KindOfPackages>
+<NumberOfPackages>3</NumberOfPackages>
+<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+<SealInformation language="AA">SealInformation</SealInformation>
+</Package>
+<Package>
+<KindOfPackages>aa</KindOfPackages>
+<NumberOfPackages>4</NumberOfPackages>
+<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+<SealInformation language="AA">SealInformation</SealInformation>
+</Package>
+<WineProduct>
+<WineProductCategory>1</WineProductCategory>
+<WineGrowingZoneCode>0</WineGrowingZoneCode>
+<ThirdCountryOfOrigin>AA</ThirdCountryOfOrigin>
+<OtherInformation language="AA">OtherInformation</OtherInformation>
+<WineOperation>0</WineOperation>
+</WineProduct>
+</BodyEaad>
+<BodyEaad>
+<ItemNumber>2</ItemNumber>
+<ExciseProductCode>A000</ExciseProductCode>
+<CnCode>00000000</CnCode>
+<CommercialDescription language="AA">CommercialDescription</CommercialDescription>
+<DesignationOfOrigin language="AA">DesignationOfOrigin</DesignationOfOrigin>
+<BrandNameOfProducts language="AA">BrandNameOfProducts</BrandNameOfProducts>
+<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+<FiscalMark language="AA">FiscalMark</FiscalMark>
+<Quantity>0</Quantity>
+<AlcoholicStrength>0</AlcoholicStrength>
+<DegreePlato>0</DegreePlato>
+<SizeOfProducer>0</SizeOfProducer>
+<Density>0</Density>
+<NetWeight>0</NetWeight>
+<GrossWeight>0</GrossWeight>
+<Package>
+<KindOfPackages>aa</KindOfPackages>
+<NumberOfPackages>1</NumberOfPackages>
+<CommercialSealIdentification>CommercialSealIdentification</CommercialSealIdentification>
+<SealInformation language="AA">SealInformation</SealInformation>
+</Package>
+<WineProduct>
+<WineProductCategory>1</WineProductCategory>
+<WineGrowingZoneCode>0</WineGrowingZoneCode>
+<ThirdCountryOfOrigin>AA</ThirdCountryOfOrigin>
+<OtherInformation language="AA">OtherInformation</OtherInformation>
+<WineOperation>0</WineOperation>
+</WineProduct>
+</BodyEaad>
+<DocumentCertificate>
+<DocumentDescription language="AA">DocumentDescription1</DocumentDescription>
+<ReferenceOfDocument language="AA">ReferenceOfDocument1</ReferenceOfDocument>
+</DocumentCertificate>
+<DocumentCertificate>
+<DocumentDescription language="BB">DocumentDescription2</DocumentDescription>
+<ReferenceOfDocument language="BB">ReferenceOfDocument2</ReferenceOfDocument>
+</DocumentCertificate>
+<PDF>
+<Name>name</Name>
+<Directory>Directory</Directory>
+<SubDirectory>NewDirectory</SubDirectory>
+</PDF>
+</EMCSValidDeclaration>
+</EMCS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>24</Day>
+                </Date>
+                <Time>195918</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>DIV</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSDiversionRequestAcknowledgment</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-FDX-TST000122240111</MessageID>
+            <InReplyTo>3368986</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSDiversionRequestAcknowledgment>
+            <GoodsDeclaration>
+                <ReferenceNumber>3368986</ReferenceNumber>
+                <RegistrationDateTime>201101241959</RegistrationDateTime>
+                <SubmitterTIN>
+                    <CustomerIdentifier>3936</CustomerIdentifier>
+                    <IdentificationType>2</IdentificationType>
+                </SubmitterTIN>
+                <CustomsOfficeOfFirstEntry>FR00677A</CustomsOfficeOfFirstEntry>
+            </GoodsDeclaration>
+        </ICSDiversionRequestAcknowledgment>
+    </soap:Body>
+</soap:Envelope>

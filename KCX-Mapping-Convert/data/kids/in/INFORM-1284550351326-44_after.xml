@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2010</Year>
+<Month>09</Month>
+<Day>15</Day>
+</Date>
+<Time>013200</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>UK.HJHEINZ.NL01</Transmitter>
+<Receiver>UK.HJHEINZ.NL01</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>NL</CountryCode>
+<Procedure>Export</Procedure>
+<ProcedureSpecification>3</ProcedureSpecification>
+<MessageName>DeclarationResponse</MessageName>
+<Release>2.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>11001006621009141415</MessageID>
+<InReplyTo>HJH-1100100662-1009141415-HPA</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<DeclarationResponse>
+<GoodsDeclaration>
+<ReceiveTime>201009150132</ReceiveTime>
+<Reason>Declaration rejected by customs.</Reason>
+<StatusOfCompletion>AH004</StatusOfCompletion>
+<ReferenceNumber>11001006621009141415</ReferenceNumber>
+<Error>
+<UniqueNumber>0</UniqueNumber>
+<Text>
+Niet geaccepteerde aangifte-informatie :
+Datum en tijd mededeling           : 15-09-2010 / 10:45
+Dagtekening                        : 15-09-2010
+Douanenummer                       : NL001095675.00
+Aangiftenummer                     : 44
+Datum van aanmaak</Text>
+</Error>
+</GoodsDeclaration>
+</DeclarationResponse>
+</soap:Body>
+</soap:Envelope>

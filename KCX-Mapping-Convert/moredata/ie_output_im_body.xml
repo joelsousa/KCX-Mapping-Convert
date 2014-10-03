@@ -1,0 +1,102 @@
+
+<ImportDeclaration>
+	<GoodsDeclaration>
+		<ReferenceNumber>86082621</ReferenceNumber>
+		<DeclarationTime>201407240600</DeclarationTime>
+		<AgentRepresentationCode>1</AgentRepresentationCode>
+		<Business>
+			<BusinessTypeCode>11</BusinessTypeCode>
+		</Business>
+		<Traders>
+			<DeclarantAddress>
+				<Name>Federal Express Europe Inc.</Name>
+				<Street>Unit 3 Constellation Road, Airw</Street>
+				<City>Dublin 17</City>
+				<PostalCode>C04001</PostalCode>
+				<Country>IE</Country>
+			</DeclarantAddress>
+			<ConsigneeTIN>
+				<TIN>9U65665U</TIN>
+				<BO>0000</BO>
+			</ConsigneeTIN>
+			<ConsigneeAddress>
+				<Name>STANLEY FERGUSON SHEELIN</Name>
+				<Street>UNIT 1 GREEHILLS BUSINESS PARK</Street>
+				<City>COUNTY LOUTH</City>
+				<PostalCode>X</PostalCode>
+				<Country>IE</Country>
+			</ConsigneeAddress>
+		</Traders>
+		<DispatchCountry>US</DispatchCountry>
+		<CustomsOfficeEntry>IEORK400</CustomsOfficeEntry>
+		<GoodsLocation>IEORK400</GoodsLocation>
+		<DestinationCountry>IE</DestinationCountry>
+		<CustomsStatus>IMD</CustomsStatus>
+		<TotalNumberPositions>1</TotalNumberPositions>
+		<PreviousDocument>
+			<Number>Y-CLE-140724</Number>
+		</PreviousDocument>
+		<MeansOfTransportBorder>
+			<TransportationType>4</TransportationType>
+			<TransportationNumber>CD8030</TransportationNumber>
+		</MeansOfTransportBorder>
+		<MeansOfTransportArrival>
+			<TransportationType>4</TransportationType>
+		</MeansOfTransportArrival>
+		<IncoTerms>
+			<Code>FOB</Code>
+			<Place>NORTHRIDGE</Place>
+		</IncoTerms>
+		<Invoice>
+			<Amount>1000</Amount>
+			<Currency>USD</Currency>
+		</Invoice>
+		<CustomerOrderNumber>152817634</CustomerOrderNumber>
+		<Document>
+			<Type>1D24</Type>
+			<Number>201407240600</Number>
+		</Document>
+		<DV1>
+			<BuyerSellerRelationship>A</BuyerSellerRelationship>
+		</DV1>
+		<GoodsItem>
+			<ItemNumber>1</ItemNumber>
+			<CommodityCode>
+				<TarifCode>6210400000</TarifCode>
+			</CommodityCode>
+			<ProcedureCode>4000</ProcedureCode>
+			<Description>GARMENTS MADE UP OF FABRICS OF HEADING 5602 5603 5903
+				5906 OR 5907Other mens or boys garmentsTEXT 078
+			</Description>
+			<CountryOfOrigin>US</CountryOfOrigin>
+			<NetMass>11.025</NetMass>
+			<GrossMass>12.25</GrossMass>
+			<Package>
+				<Quantity>1</Quantity>
+				<Type>CT</Type>
+				<Marks>804301427503</Marks>
+			</Package>
+			<Invoice>
+				<Amount>1000</Amount>
+			</Invoice>
+			<Preference>
+				<PreferenceCertificate>100</PreferenceCertificate>
+			</Preference>
+			<Document>
+				<Type>N740</Type>
+				<Number>804301427503</Number>
+				<IssueDate>20140722</IssueDate>
+			</Document>
+			<Document>
+				<Type>N935</Type>
+				<Number>804301427503</Number>
+				<IssueDate>20140722</IssueDate>
+			</Document>
+			<Document>
+				<Type>N380</Type>
+				<Number>804301427503</Number>
+				<IssueDate>20140722</IssueDate>
+			</Document>
+		</GoodsItem>
+	</GoodsDeclaration>
+</ImportDeclaration>

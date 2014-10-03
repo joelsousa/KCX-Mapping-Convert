@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Header>
+			<SentAt>
+				<Date>
+					<Year>2014</Year>
+					<Month>07</Month>
+					<Day>05</Day>
+				</Date>
+			</SentAt>
+			<Transmitter>DE.FEDEX.TST</Transmitter>
+			<Receiver>DE.FEDEX.TST</Receiver>
+			<Method>NCTS</Method>
+			<MessageTP>
+				<CountryCode>IE</CountryCode>
+				<Procedure>NCTS</Procedure>
+				<MessageName>NCTSDeclaration</MessageName>
+				<Release>4.1.00</Release>
+				<Direction>FROM_CUSTOMER</Direction>
+			</MessageTP>
+			<CustomsExchange>
+				<Codemapping>
+					<Map>0</Map>
+					<MapFrom>IE</MapFrom>
+					<MapTo>IE</MapTo>
+				</Codemapping>
+			</CustomsExchange>
+			<MessageID>86079334</MessageID>
+		</Header>
+	</soap:Header>
+	<soap:Body>
+		<NCTSDeclaration>
+			<GoodsDeclaration>
+				<TypeOfDeclaration>TT</TypeOfDeclaration>
+				<DestinationCountry>IE</DestinationCountry>
+				<DispatchCountry>IE</DispatchCountry>
+				<TotalNumberPositions>1</TotalNumberPositions>
+				<TotalNumberPackages>1</TotalNumberPackages>
+				<ConveyanceNumber>151483719</ConveyanceNumber>
+				<Consignor>
+					<Address>
+						<Street>TALLAGHT BUSINESS PARK</Street>
+						<City>DUBLIN 24</City>
+						<PostalCode>D06101</PostalCode>
+						<Country>IE</Country>
+					</Address>
+				</Consignor>
+				<ConsignorContact>
+					<Clerk>MERIDIAN VAT LTD</Clerk>
+				</ConsignorContact>
+				<Consignee>
+					<Address>
+						<Street>8/13 MOMS</Street>
+						<City>TONDER</City>
+						<PostalCode>6270</PostalCode>
+						<Country>DK</Country>
+					</Address>
+				</Consignee>
+				<ConsigneeContact>
+					<Clerk>SKATTECENTER TOENDER</Clerk>
+				</ConsigneeContact>
+				<SimplifiedProcedureIndicator>A</SimplifiedProcedureIndicator>
+				<GoodsItem>
+					<ItemNumber>1</ItemNumber>
+					<CommodityCode>
+						<TarifCode>3822000099</TarifCode>
+					</CommodityCode>
+					<Description>Export Tariff</Description>
+					<NetMass>10.8</NetMass>
+					<GrossMass>12</GrossMass>
+					<Document>
+						<Type>N740</Type>
+						<Reference>804301427503</Reference>
+					</Document>
+					<Package>
+						<Quantity>1</Quantity>
+						<Marks>600082541581</Marks>
+					</Package>
+				</GoodsItem>
+				<GoodsItem>
+					<ItemNumber>1</ItemNumber>
+					<CommodityCode>
+						<TarifCode>3822000099</TarifCode>
+					</CommodityCode>
+					<Description>Export Tariff</Description>
+					<NetMass>10.8</NetMass>
+					<GrossMass>12</GrossMass>
+					<Package>
+						<Quantity>1</Quantity>
+						<Marks>600082541581</Marks>
+					</Package>
+				</GoodsItem>
+			</GoodsDeclaration>
+		</NCTSDeclaration>
+	</soap:Body>
+</soap:Envelope>

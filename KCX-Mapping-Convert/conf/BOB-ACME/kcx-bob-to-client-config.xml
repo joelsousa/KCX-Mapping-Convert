@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:file="http://www.mulesource.org/schema/mule/file/2.1"
+	xmlns:xm="http://www.mulesource.org/schema/mule/xml/2.1"
+	xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.1"
+	xmlns:jms="http://www.mulesource.org/schema/mule/jms/2.1"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/file/2.1 http://www.mulesource.org/schema/mule/file/2.1/mule-file.xsd
+		http://www.mulesource.org/schema/mule/xml/2.1 http://www.mulesource.org/schema/mule/xml/2.1/mule-xml.xsd
+		http://www.mulesource.org/schema/mule/vm/2.1 http://www.mulesource.org/schema/mule/vm/2.1/mule-vm.xsd
+		http://www.mulesource.org/schema/mule/jms/2.0 http://www.mulesource.org/schema/mule/jms/2.1/mule-jms.xsd">
+
+	<!-- FREE TO ALTER -->
+	<!-- this is fully editable to get data out of the solution into the client, subscribe to data from the outputs of 
+		kcx-bob-to-client-transform-config.xml -->
+
+	<model name="bobToClientModel">
+		<default-service-exception-strategy>
+			<vm:outbound-endpoint path="error.queue"/>
+		</default-service-exception-strategy>
+
+                <service name="deExportToCsffraService">
+                  <inbound>
+                    <vm:inbound-endpoint path="de.export.to.csffra.queue"/>
+                  </inbound>
+                  <outbound>
+		  	<multicasting-router>
+                                <file:outbound-endpoint path="${file.outbound.de.export.csffra.address}" connector-ref="fileConnector" remoteSync="true">
+                                        <xm:dom-to-xml-transformer />
+                                </file:outbound-endpoint>
+			    <vm:outbound-endpoint path="protocol.receipt.queue"/>
+		  	</multicasting-router>
+                  </outbound>
+                </service>
+
+		<service name="deExportToClientService">
+		  <inbound>
+		    <vm:inbound-endpoint path="de.export.to.client.queue"/>
+		  </inbound>
+		  <outbound>
+		  	<multicasting-router>
+				<file:outbound-endpoint path="${file.outbound.de.export.address}" connector-ref="fileConnector" remoteSync="true"/>
+			    <vm:outbound-endpoint path="protocol.receipt.queue"/>
+			    <!-- if below is enable then you will force a synthetic functional acknowledgement i.e. the client cannot create there own-->
+			    <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+		  	</multicasting-router>
+		  </outbound>
+		</service>
+		
+		<service name="FromClientFunctionalAcknowledgementService">
+		  <inbound>
+		    <file:inbound-endpoint path="${file.inbound.de.export.functional.acknowledgement.address}" connector-ref="fileConnector"/>
+		  </inbound>
+		  <component class="com.kewill.kcx.component.receipt.AnalyseFunctionalAcknowledgementComponent"/>
+		  <outbound>
+		  	<pass-through-router>
+			    <vm:outbound-endpoint path="functional.acknowledgement.queue"/>
+		  	</pass-through-router>
+		  </outbound>
+		</service>
+	</model>
+</mule>

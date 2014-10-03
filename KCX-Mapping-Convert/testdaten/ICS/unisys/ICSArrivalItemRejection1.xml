@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>11</Month>
+                    <Day>29</Day>
+                </Date>
+                <Time>14:55:04</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ARN</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSArrivalItemRejection</MessageName>
+                <Direction>TO_CUSTOMER</Direction>
+                <Release>1.0.00</Release>
+            </MessageTP>
+            <MessageID>DE-CSF006356291110</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSArrivalItemRejection>
+            <GoodsDeclaration>
+                <ReferenceNumber>TEST-DOPPELT</ReferenceNumber>
+                <RejectionDateTime>201011251647</RejectionDateTime>
+                <MeansOfTransportBorder>
+                    <TransportMode>4</TransportMode>
+                </MeansOfTransportBorder>
+                <ImportDetails>
+                    <MRN>10DE587600003111I0</MRN>
+                    <ItemNumber>1</ItemNumber>
+                    <ReferenceNumber>HP20101125-02B</ReferenceNumber>
+                    <RejectionReasonPos>ESumA-Position befindet sich in einem unzulässigen Bearbeitungsstatus</RejectionReasonPos>
+                </ImportDetails>
+                <CarrierTIN>
+                    <TIN>DE9000119</TIN>
+                    <CustomerIdentifier>2145</CustomerIdentifier>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+            </GoodsDeclaration>
+        </ICSArrivalItemRejection>
+    </soap:Body>
+</soap:Envelope>

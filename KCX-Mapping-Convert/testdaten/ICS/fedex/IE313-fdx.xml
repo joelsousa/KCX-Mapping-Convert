@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageOperateur>
+    <Messages>
+        <Message>
+            <EnveloppeMessage>
+                <schemaID>MessageIE313</schemaID>
+                <schemaVersion>TBD</schemaVersion>
+                <partyId>DE23238787</partyId>
+                <transactionId>2332736</transactionId>
+                <numseq>0</numseq>
+            </EnveloppeMessage>
+            <MessageBody>
+                <CC313A>
+                    <MesSenMES3>DE23238787</MesSenMES3>
+                    <MesRecMES6>DE.FDXFKB.0725</MesRecMES6>
+                    <DatOfPreMES9>110105</DatOfPreMES9>
+                    <TimOfPreMES10>1806</TimOfPreMES10>
+                    <MesIdeMES19>FRA2332736</MesIdeMES19>
+                    <MesTypMES20>CC313A</MesTypMES20>
+                    <HEAHEA>
+                        <DocNumHEA5>11DE587600005059I2</DocNumHEA5>
+                        <TraModAtBorHEA76>4</TraModAtBorHEA76>
+                        <TotNumOfIteHEA305>1</TotNumOfIteHEA305>
+                        <TotGroMasHEA307>0.227</TotGroMasHEA307>
+                        <AmdPlaHEA598>FRA</AmdPlaHEA598>
+                        <AmdPlaHEA598LNG>EN</AmdPlaHEA598LNG>
+                        <SpeCirIndHEA1>A</SpeCirIndHEA1>
+                        <TraChaMetOfPayHEA1>A</TraChaMetOfPayHEA1>
+                        <ConRefNumHEA>FDX4040</ConRefNumHEA>
+                        <PlaLoaGOOITE334>US Memphis TN</PlaLoaGOOITE334>
+                        <PlaLoaGOOITE334LNG>EN</PlaLoaGOOITE334LNG>
+                        <PlaUnlGOOITE334>DE FRA</PlaUnlGOOITE334>
+                        <CodPlUnHEA357LNG>EN</CodPlUnHEA357LNG>
+                        <DatTimAmeHEA113>201101051806</DatTimAmeHEA113>
+                    </HEAHEA>
+                    <TRACONCO1>
+                        <NamCO17>POSTAL ZONE DAN FITZPATRICK</NamCO17>
+                        <StrAndNumCO122>2916 S 132ND ST   </StrAndNumCO122>
+                        <PosCodCO123>68144</PosCodCO123>
+                        <CitCO124>MEMPHIS</CitCO124>
+                        <CouCO125>US</CouCO125>
+                        <NADLNGCO>EN</NADLNGCO>
+                    </TRACONCO1>
+                    <TRACONCE1>
+                        <NamCE17>PRO TRACU CONSTUING PRILATE LTD </NamCE17>
+                        <StrAndNumCE122>NO 7 SRIST PALACE   17 EVK SAMPATH </StrAndNumCE122>
+                        <PosCodCE123>60007</PosCodCE123>
+                        <CitCE124>FRANKFURT</CitCE124>
+                        <CouCE125>DE</CouCE125>
+                        <NADLNGCE>EN</NADLNGCE>
+                    </TRACONCE1>
+                    <GOOITEGDS>
+                        <IteNumGDS7>1</IteNumGDS7>
+                        <GooDesGDS23>TELEPHONES AND COMPUTERS</GooDesGDS23>
+                        <GooDesGDS23LNG>EN</GooDesGDS23LNG>
+                    </GOOITEGDS>
+                    <ITI>
+                        <CouOfRouCodITI1>US</CouOfRouCodITI1>
+                    </ITI>
+                    <ITI>
+                        <CouOfRouCodITI1>DE</CouOfRouCodITI1>
+                    </ITI>
+                    <PERLODSUMDEC>
+                        <TINPLD1>DE9000690</TINPLD1>
+                    </PERLODSUMDEC>
+                    <CUSOFFFENT730>
+                        <RefNumCUSOFFFENT731>DE005876</RefNumCUSOFFFENT731>
+                        <ExpDatOfArrFIRENT733>201101052100</ExpDatOfArrFIRENT733>
+                    </CUSOFFFENT730>
+                    <TRACARENT601>
+                        <TINTRACARENT602>DE9000690</TINTRACARENT602>
+                    </TRACARENT601>
+                </CC313A>
+            </MessageBody>
+        </Message>
+    </Messages>
+</MessageOperateur>
+ 
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2010</Year>
+  <Month>05</Month>
+  <Day>10</Day>
+  </Date>
+  <Time>12:02:00</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE01.CSFALT.2144</Transmitter>
+  <Receiver>DE.CSF.ALT</Receiver>
+  <Method>EMCS</Method>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>EMCS</Procedure>
+  <MessageName>EMCSDeclaration</MessageName>
+  <Release>1.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <CodeMapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </CodeMapping>
+  </CustomsExchange>
+  <MessageID>DE01DE01214420100510120200000001</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <EMCS>
+  <EMCSDeclaration>
+  	<ReferenceNumber>ReferenceNumber</ReferenceNumber>
+  	<Guarantor>
+  	
+  	</Guarantor>
+	<Guarantor>
+  	
+  	</Guarantor>  	
+  	<DocumentCertificate>
+  	</DocumentCertificate>
+	<DocumentCertificate>
+  	</DocumentCertificate>  	
+  	<Consignee>
+  	</Consignee>
+	<ComplementConsignee>
+	</ComplementConsignee>
+	<Consignor>
+	
+  	</Consignor>
+  	<PlaceOfDispatch>
+	  	</PlaceOfDispatch> 
+		<DeliveryPlace>
+	  	</DeliveryPlace>
+	  	<TransportArranger>
+	  	</TransportArranger>
+	  	<FirstTransporter>
+	</FirstTransporter>
+  	<TransportDetails>
+  	</TransportDetails>
+  	<TransportDetails>
+  	
+  	</TransportDetails>  	
+  	<GoodsItem>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>  		
+  		<WineProduct>
+  	
+  		</WineProduct>
+  	</GoodsItem>
+  	<GoodsItem>
+  		<ItemNumber>2</ItemNumber>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>
+  		<WineProduct>
+  		</WineProduct>
+  	</GoodsItem>
+  	<GoodsItem>
+  		<CommercialDescription language="AA"></CommercialDescription>
+  		<DesignationOfOrigin language="AA">a</DesignationOfOrigin>
+  		<BrandNameOfProducts language="AA"></BrandNameOfProducts>
+  		<FiscalMarkUsedFlag>0</FiscalMarkUsedFlag>
+  		<FiscalMark language="AA"></FiscalMark>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>
+  		<Package>
+  		</Package>
+  		<WineProduct>
+  		</WineProduct>
+  		</GoodsItem>
+  		<GoodsItem>
+  			<Package>
+  			</Package>
+  			<Package>
+  			</Package>
+  			<Package>
+  			</Package>
+  			<Package>
+  			</Package>
+  			<WineProduct>
+  			</WineProduct>
+  		</GoodsItem>
+  </EMCSDeclaration>
+  </EMCS>
+  </soap:Body>
+  </soap:Envelope>

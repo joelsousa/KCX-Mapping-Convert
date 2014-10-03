@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>FR01.CSFALT.2144</From>
+<MessageID>AI-20110919-05</MessageID>
+<SentAt>2011-09-18 10:24:20 +0200</SentAt>
+<Act>request</Act>
+<Method>EMB</Method>
+<MessageVersion>2.0</MessageVersion>
+<MessageType>EMCSRejectionOfEAADForExport</MessageType>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+<EMCS>
+<EMCSRejectionOfEAADForExport>
+<DateAndTimeOfIssuance>2000-01-01T00:00:00+0100</DateAndTimeOfIssuance>
+<ExportCrossCheckingDiagnoses>
+<LocalReferenceNumber>AI-20110919-05</LocalReferenceNumber>
+<DocumentReferenceNumber>DocumentReferenceNumber1</DocumentReferenceNumber>
+<CancelExportFlag>CancelExport1</CancelExportFlag>
+<Diagnosis>
+<AadReferenceCode>AadReferenceCode1</AadReferenceCode>
+<BodyRecordUniqueReference>ItemNumber1</BodyRecordUniqueReference>
+<DiagnosisCode>DiagnosisCode1</DiagnosisCode>
+</Diagnosis>
+<Diagnosis>
+<AadReferenceCode>AadReferenceCode2</AadReferenceCode>
+<BodyRecordUniqueReference>ItemNumber2</BodyRecordUniqueReference>
+<DiagnosisCode>DiagnosisCode2</DiagnosisCode>
+</Diagnosis>
+</ExportCrossCheckingDiagnoses>
+<Rejection>
+<RejectionDateAndTime>2000-01-02T00:00:00+0100</RejectionDateAndTime>
+<RejectionReasonCode>RejectionReasonCode1</RejectionReasonCode>
+</Rejection>
+<CAadVal>
+<AadReferenceCode>AadReferenceCode3</AadReferenceCode>
+<SequenceNumber>SequenceNumber1</SequenceNumber>
+</CAadVal>
+<CAadVal>
+<AadReferenceCode>AadReferenceCode4</AadReferenceCode>
+<SequenceNumber>SequenceNumber2</SequenceNumber>
+</CAadVal>
+<ConsigneeTrader>
+<CustomerID>CustomerID1</CustomerID>
+<ExciseTaxNumber>ExciseTaxNumber1</ExciseTaxNumber>
+<VATID>VATID1</VATID>
+<Address>
+<Name>Name1</Name>
+<Street>Street1</Street>
+<StreetNumber>StreetNumber1</StreetNumber>
+<PostalCode>PostalCode1</PostalCode>
+<City>City1</City>
+<Language>CountryCodeISO1</Language>
+</Address>
+</ConsigneeTrader>
+</EMCSRejectionOfEAADForExport>
+</EMCS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

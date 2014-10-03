@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2011</Year>
+                    <Month>01</Month>
+                    <Day>24</Day>
+                </Date>
+                <Time>170129</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.CSF</Transmitter>
+            <Receiver>DE.CSF</Receiver>
+            <Method>ESU</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>ICS</Procedure>
+                <MessageName>ICSEntrySummaryDeclarationAmendmentAcceptance</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-FDX-TST000120240111</MessageID>
+            <InReplyTo>3368975</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <ICSEntrySummaryDeclarationAmendmentAcceptance>
+            <GoodsDeclaration>
+                <ReferenceNumber>1DE3368968</ReferenceNumber>
+                <MRN>11DE586600007289I0</MRN>
+                <MeansOfTransportBorder>
+                    <TransportMode>4</TransportMode>
+                    <PlaceOfLoading>Memphis TN</PlaceOfLoading>
+                    <PlaceOfLoadingCode>US</PlaceOfLoadingCode>
+                </MeansOfTransportBorder>
+                <ShipmentNumber>FRA3368975</ShipmentNumber>
+                <ConveyanceReference>FDX7777</ConveyanceReference>
+                <AmendmentDateAndTime>201101241639</AmendmentDateAndTime>
+                <PersonLodgingSumaTIN>
+                    <TIN>DE9008454</TIN>
+                    <CustomerIdentifier>3936</CustomerIdentifier>
+                    <IdentificationType>2</IdentificationType>
+                </PersonLodgingSumaTIN>
+                <PersonLodgingSumaAddress>
+                    <Address>
+                        <Name>AICHELIN SERVICE</Name>
+                        <Street>Schultheiß-Köhle-Str. 7</Street>
+                        <City>Ludwigsburg</City>
+                        <PostalCode>71636</PostalCode>
+                        <Country>DE</Country>
+                    </Address>
+                </PersonLodgingSumaAddress>
+                <CarrierTIN>
+                    <TIN>DE9008454</TIN>
+                    <IdentificationType>2</IdentificationType>
+                </CarrierTIN>
+                <CustomsOfficeOfLodgement>FRA</CustomsOfficeOfLodgement>
+                <CustomsOfficeFirstEntry>DE005866</CustomsOfficeFirstEntry>
+                <DeclaredDateOfArrival>201101242200</DeclaredDateOfArrival>
+                <GoodsItem>
+                    <ItemNumber>1</ItemNumber>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </ICSEntrySummaryDeclarationAmendmentAcceptance>
+    </soap:Body>
+</soap:Envelope>

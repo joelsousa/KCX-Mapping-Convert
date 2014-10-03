@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <KCX>
+  <Primary>CH</Primary>
+  <Secondary>EXPORT</Secondary>
+  <Audit_Id>No Mule Call</Audit_Id>
+  <Content>
+  <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2010</Year>
+  <Month>06</Month>
+  <Day>21</Day>
+  </Date>
+  <Time>17:09:15</Time>
+  <TimeZone>+0100</TimeZone>
+  </SentAt>
+  <Transmitter>DE.TROX.CH</Transmitter>
+  <Receiver>DE.TROX.CH</Receiver>
+  <Method>Export</Method>
+  <MessageTP>
+  <CountryCode>CH</CountryCode>
+  <Procedure>Export</Procedure>
+  <MessageName>ExportDeclaration</MessageName>
+  <Release>2.0</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>CH</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>CH_KEWILL_HG_20100621170915_7195_TEST4</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <ExportDeclaration>
+  <GoodsDeclaration>
+  <UCRNumber>7195</UCRNumber>
+  <DeclarationTime>1</DeclarationTime>
+  <DispatchCountry>CH</DispatchCountry>
+  <DestinationCountry>US</DestinationCountry>
+  <SituationCode>2</SituationCode>
+  <NetMass>79000</NetMass>
+  <GrossMass>91000</GrossMass>
+  <ReferenceNumber>7195</ReferenceNumber>
+  <OrderNumber>7195</OrderNumber>
+  <TransferToTransitSystem>0</TransferToTransitSystem>
+  <MeansOfTransportDeparture>
+  <TransportationNumber>Schiff</TransportationNumber>
+  <TransportationCountry>US</TransportationCountry>
+  </MeansOfTransportDeparture>
+  <MeansOfTransportBorder>
+  <TransportMode>10</TransportMode>
+  </MeansOfTransportBorder>
+  <PlaceOfDeclaration>2</PlaceOfDeclaration>
+  <ConsignorTIN>
+  <TIN>1234567</TIN>
+  </ConsignorTIN>
+  <Consignor>
+  <Address>
+  <Name>Distribution Testfirma</Name>
+  <Street>Untert�rkheimer Str.24</Street>
+  <City>66117 Saarbr�cken</City>
+  <PostalCode>66117</PostalCode>
+  <Country>DE</Country>
+  </Address>
+  </Consignor>
+  <DeclarantTIN>
+  <TIN>0612</TIN>
+  </DeclarantTIN>
+  <Consignee>
+  <Address>
+  <Name>Capitol Insurance LLC</Name>
+  <Street>Bernd-Stromberg-Road 12a</Street>
+  <City>Atlanta</City>
+  <PostalCode>1234</PostalCode>
+  <Country>US</Country>
+  </Address>
+  </Consignee>
+  <IncoTerms>
+  <IncoTerm>EXW</IncoTerm>
+  <Place>66117 Saarbr�cken</Place>
+  </IncoTerms>
+  <PreviousDocument>
+  <Type>OHNE</Type>
+  </PreviousDocument>
+  <GoodsItem>
+  <ItemNumber>1</ItemNumber>
+  <Description>Getriebe hydraul. gesteuert    / Schaltgetriebe f�r Zugmaschinen und Kraftwagen, einschl. Kraftwagen zu besonderen Zwecken, nicht f�r die</Description>
+  <NetMass>79000</NetMass>
+  <GrossMass>91000</GrossMass>
+  <ThirdQuantity>0</ThirdQuantity>
+  <CommodityCode>
+  <TarifCode>8708.4050</TarifCode>
+  <TarifAddition1>000</TarifAddition1>
+  </CommodityCode>
+  <Statistic>
+  <AdditionalUnit>123</AdditionalUnit>
+  <StatisticalValue>1900000</StatisticalValue>
+  <Currency>USD</Currency>
+  </Statistic>
+  <SpecialMention>
+  <ExportFromEU>0</ExportFromEU>
+  <ExportFromCountry>CH</ExportFromCountry>
+  </SpecialMention>
+  <Package>
+  <Quantity>1</Quantity>
+  <SequentialNumber>1</SequentialNumber>
+  <Type>PX</Type>
+  <Marks>2010062100007194001</Marks>
+  </Package>
+  <Document>
+  <Reference>Genehmigung 4711</Reference>
+  <AdditionalInformation>Zusatz</AdditionalInformation>
+  </Document>
+  </GoodsItem>
+  </GoodsDeclaration>
+  </ExportDeclaration>
+  </soap:Body>
+  </soap:Envelope>]]>
+  </Content>
+  </KCX>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+  <To>DE01.CSF.2158</To>
+  <From>DE.CSF</From>
+  <MessageID>DE-CSF000036010610</MessageID>
+  <InReplyTo>DE01DE01215820100528110500000001</InReplyTo>
+  <SentAt>2010-06-01 11:59:54 +0200</SentAt>
+  <Act>failure</Act>
+  <Procedure>EMCS</Procedure>
+  <Method>EME</Method>
+  <MessageType>Failure</MessageType>
+  <Direction>TO_CUSTOMER</Direction>
+  <MessageVersion>1.0</MessageVersion>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <soap:Fault>
+  <soap:Code>
+  <soap:Value>soap:Server</soap:Value>
+  </soap:Code>
+  <soap:Reason>
+  <soap:Text xml:lang="de">Bei Ausgangspunkt = 1 muss die Verbrauchsteuernummer des Ortes der Versendung angegeben werden. [Ort der Versendung (Steuerlager) Verbrauchsteuernummer (Reference of Tax Warehouse)]</soap:Text>
+  <soap:Text xml:lang="de">Bei Bestimmungsort = 2 muss die Verbrauchsteuernummer des Empf�ngers angegeben werden.</soap:Text>
+  <soap:Text xml:lang="de">Die Versenderdienststelle DE007890 ist unbekannt. [Zust�ndige Dienststelle f�r den Versender (Reference Number)]</soap:Text>
+  <soap:Text xml:lang="de">Das Versanddatum (09.02.2010) darf nicht kleiner als das Tagesdatum (01.06.2010) sein, da das Nachtrags-Kennzeichen (0) nicht auf 1 gesetzt ist. [Versanddatum (Date of Dispatch)]</soap:Text>
+  <soap:Text xml:lang="de">Die Bef�rderungsdauer (D3) muss genau 3 Stellen lang sein. [Bef�rderungsdauer in Tagen oder Stunden (Journey Time) (z.B. D02 f�r 2 Tage, H12 f�r 12 Stunden)]</soap:Text>
+  <soap:Text xml:lang="de">Es muss mindestens ein Eintrag zu den Bef�rderungsdetails erfasst werden.</soap:Text>
+  <soap:Text xml:lang="de">Bitte geben Sie die Daten zu mindestens einem Packst�ck an.</soap:Text>
+  <soap:Text xml:lang="de">Bitte geben Sie die Daten zu mindestens einem Packst�ck an.</soap:Text>
+  <soap:Text xml:lang="de">--- Abbruch mit 8 Fehler(n)</soap:Text>
+  </soap:Reason>
+  </soap:Fault>
+  </soap:Body>
+  </soap:Envelope>

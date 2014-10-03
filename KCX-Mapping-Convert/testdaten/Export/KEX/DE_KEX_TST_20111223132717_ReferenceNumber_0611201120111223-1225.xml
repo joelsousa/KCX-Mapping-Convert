@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Header>
+<ns2:Header xmlns:ns2="http://www.eBiz.com/schemas/header/200310/ ">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>12</Month>
+<Day>23</Day>
+</Date>
+<Time>2011-12-23 12:12:418</Time>
+</SentAt>
+<Transmitter>DE.KEX.TST</Transmitter>
+<Receiver>DE.KEX.TST</Receiver>
+<Method>EFD</Method>
+<MessageTP>
+<CountryCode>GB</CountryCode>
+<Procedure>EXPORT</Procedure>
+<MessageName>ExportDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>0611201120111223-1225</MessageID>
+</ns2:Header>
+<ns2:shheader xmlns:ns2="http://www.kewill.com/schema/shipment1">
+<shdeclarations>
+<declarationUnid>84725</declarationUnid>
+<declarationtype>INVOICE</declarationtype>
+<declarationcode>Origin</declarationcode>
+<declarationtext>WE HEREBY CERTIFY THAT THE GOODS ENUMERATED ON THIS INVOICE ARE OF UNITED KINGDOM ORIGIN AND MANUFACTURE. MANUFACTURED BY KEWILL PLC, BRAMLEY HOUSE, GUILDFORD, GU3 1LR.
+WE ALSO CERTIFY THAT THIS INVOICE IS TRUE AND CORRECT AND MATERIALS ARE IN ACCORDANCE WITH OUR RECORDED SPECIFICATIONS.
+FOR KEWILL PLC
+
+SIGNATORY</declarationtext>
+</shdeclarations>
+<shdeclarations>
+<declarationUnid>84726</declarationUnid>
+<declarationtype>PACKING</declarationtype>
+<declarationcode>Pack1</declarationcode>
+<declarationtext>WE CERTIFY THAT THE PACKING MATERIALS ARE FREE FROM BARK AND UNTREATED WOOD.
+FOR KEWIL PLC
+
+SIGNATORY</declarationtext>
+</shdeclarations>
+<shsignatures>
+<signatureUnid>84727</signatureUnid>
+<signatorytype>INVOICE</signatorytype>
+<signatorycode>SJH</signatorycode>
+<signaturecompanyname>KEWILL PLC</signaturecompanyname>
+<signatoryname>S.J. HOWSON</signatoryname>
+<signatoryplaceofissue>GUILDFORD</signatoryplaceofissue>
+<signatoryphoneno>+44 1483 406000</signatoryphoneno>
+<signatoryfaxno>+44 1483 406001</signatoryfaxno>
+<signatoryemailid>steve.howson@kewill.com</signatoryemailid>
+<signatorytitleposition>CHIEF ADMINISTRATOR</signatorytitleposition>
+</shsignatures>
+<shtermses>
+<termsUnid>84729</termsUnid>
+<termtypecode>PAYMENT</termtypecode>
+<termcode>30</termcode>
+<termtext>30 days</termtext>
+</shtermses>
+<shtermses>
+<termsUnid>84730</termsUnid>
+<termtypecode>DELIVERY</termtypecode>
+<termcode>CFR</termcode>
+<termtext>CFR SINGAPORE</termtext>
+<deliverytermincoterm>CFR</deliverytermincoterm>
+<deliverytermintrastat>CFR</deliverytermintrastat>
+</shtermses>
+<shintrastats>
+<unid>84742</unid>
+</shintrastats>
+<shuscustoms>
+<uscustomsUnid>84745</uscustomsUnid>
+<sedtransactrelatedyn>false</sedtransactrelatedyn>
+<sedroutedyn>false</sedroutedyn>
+<sedcontainerizedyn>false</sedcontainerizedyn>
+<sedsoldenrouteyn>false</sedsoldenrouteyn>
+<sedresponsereceived>false</sedresponsereceived>
+<sedbgjobnohandsfree>0</sedbgjobnohandsfree>
+<sedmixedflag>false</sedmixedflag>
+</shuscustoms>
+<sheucustoms>
+<eucustomsUnid>84741</eucustomsUnid>
+<officeofdespatchsadboxa>GB000051</officeofdespatchsadboxa>
+<saddeclarationdivision2>D</saddeclarationdivision2>
+<xeuducr>1GBGB6088818070-28</xeuducr>
+<ducrpart>refnr-part</ducrpart>
+<eumucr>iwa-mucr</eumucr>
+<mucrpart>mucr-part</mucrpart>
+<transportidatbord>SEAFREIGHT</transportidatbord>
+<declarationtype>EFD</declarationtype>
+<methodofpayment>Y</methodofpayment>
+<singletransportcontract>true</singletransportcontract>
+<transportmotborder>1</transportmotborder>
+</sheucustoms>
+<shdocumentgrid>
+<unid>84740</unid>
+</shdocumentgrid>
+<shtaxes>
+<taxUnid>84728</taxUnid>
+<totamntpertaxrate>27500</totamntpertaxrate>
+<tottaxpertaxrate>0</tottaxpertaxrate>
+<categoryoftax>I</categoryoftax>
+<taxratecode>0</taxratecode>
+<taxratepercent>0</taxratepercent>
+<currencycode>GBP</currencycode>
+</shtaxes>
+<shbankcollect>
+<unid>84739</unid>
+</shbankcollect>
+<shaddresses>
+<addressUnid>84721</addressUnid>
+<shipmentaddresstypecode>EXPORTER</shipmentaddresstypecode>
+<addresscode>Kewill</addresscode>
+<shortname>Kewill</shortname>
+<vattaxregistrationcode>GB608881807</vattaxregistrationcode>
+<freeformataddress>Kewill plc	
+Bramley House	
+The Guildway
+Artington
+Giuldford
+GU3 1LR</freeformataddress>
+<eorino>GB608881807</eorino>
+<eoribranch>000</eoribranch>
+</shaddresses>
+<shaddresses>
+<addressUnid>84722</addressUnid>
+<shipmentaddresstypecode>AGENTS</shipmentaddresstypecode>
+<addresscode>FWDR</addresscode>
+<shortname>UKFWDER</shortname>
+<freeformataddress>FORWARDERS INTERNATIONAL LTD, 5 PORT ROAD, TERMINAL TERRACE, SOUTHAMPTON, HANTS.</freeformataddress>
+</shaddresses>
+<shaddresses>
+<addressUnid>84723</addressUnid>
+<shipmentaddresstypecode>CONSIGNEE</shipmentaddresstypecode>
+<addresscode>Importers</addresscode>
+<shortname>Importers</shortname>
+<freeformataddress>IMPORTERS INCORPORATED INC
+70 UBI CRESCENT
+1-10 UBI TECHPARK
+SINGAPORE</freeformataddress>
+</shaddresses>
+<shaddresses>
+<addressUnid>84724</addressUnid>
+<shipmentaddresstypecode>FORWARDER</shipmentaddresstypecode>
+<addresscode>FWDR</addresscode>
+<shortname>UKFWDER</shortname>
+<freeformataddress>FORWARDERS INTERNATIONAL LTD, 5 PORT ROAD, TERMINAL TERRACE, SOUTHAMPTON, HANTS.</freeformataddress>
+</shaddresses>
+<shsli>
+<deliverytermincoterm>CFR</deliverytermincoterm>
+<unid>84744</unid>
+</shsli>
+<sicommercialitems>
+<commercialitemUnid>84731</commercialitemUnid>
+<countryoforigincode>GB</countryoforigincode>
+<commercialitemSno>2</commercialitemSno>
+<deleteflag>false</deleteflag>
+<productcodesku>PROD123</productcodesku>
+<descriptioninvoiceline>EXPORT PRODUCT  12X24 UNITS</descriptioninvoiceline>
+<quantityconversionsign>*</quantityconversionsign>
+<quantityconversionfactor>1</quantityconversionfactor>
+<quantityinvoiceline>250</quantityinvoiceline>
+<quantityuom>1</quantityuom>
+<unitpriceinvoiceline>20</unitpriceinvoiceline>
+<unitpriceuom>EACH</unitpriceuom>
+<totalpriceforline>5000</totalpriceforline>
+<grossweightinvoiceline>300</grossweightinvoiceline>
+<netweightinvoiceline>250</netweightinvoiceline>
+<noofpackagesfrominvoiceline>0</noofpackagesfrominvoiceline>
+<uomnetweightper>1</uomnetweightper>
+<natureoftransivl>10</natureoftransivl>
+<taxratecodeforinvoiceivl>0</taxratecodeforinvoiceivl>
+<taxrateercent>0</taxrateercent>
+<commoditycodeinvoice>48176000</commoditycodeinvoice>
+<customsregimeivl>1000001</customsregimeivl>
+<licenceexceptionflag>0</licenceexceptionflag>
+<currencycode>GBP</currencycode>
+</sicommercialitems>
+<sicommercialitems>
+<commercialitemUnid>84732</commercialitemUnid>
+<countryoforigincode>GB</countryoforigincode>
+<commercialitemSno>1</commercialitemSno>
+<deleteflag>false</deleteflag>
+<productcodesku>PROD123</productcodesku>
+<descriptioninvoiceline>EXPORT PRODUCT  12X24 UNITS</descriptioninvoiceline>
+<quantityconversionsign>*</quantityconversionsign>
+<quantityconversionfactor>1</quantityconversionfactor>
+<quantityinvoiceline>1500</quantityinvoiceline>
+<quantityuom>1</quantityuom>
+<unitpriceinvoiceline>15</unitpriceinvoiceline>
+<unitpriceuom>EACH</unitpriceuom>
+<totalpriceforline>22500</totalpriceforline>
+<grossweightinvoiceline>2000</grossweightinvoiceline>
+<netweightinvoiceline>1500</netweightinvoiceline>
+<noofpackagesfrominvoiceline>0</noofpackagesfrominvoiceline>
+<palletnumberfrominvoiceline>1</palletnumberfrominvoiceline>
+<palletnumbertoinvoicelist>1</palletnumbertoinvoicelist>
+<uomnetweightper>1</uomnetweightper>
+<natureoftransivl>10</natureoftransivl>
+<taxratecodeforinvoiceivl>0</taxratecodeforinvoiceivl>
+<taxrateercent>0</taxrateercent>
+<commoditycodeinvoice>85086000</commoditycodeinvoice>
+<customsregimeivl>1000001</customsregimeivl>
+<licenceexceptionflag>0</licenceexceptionflag>
+<currencycode>GBP</currencycode>
+</sicommercialitems>
+<sicustomitems>
+<sicustomsdocs>
+<sidocumentUnid>84734</sidocumentUnid>
+<prevdoctype>380</prevdoctype>
+<prevdocref>23434532</prevdocref>
+<prevdocclass>Z</prevdocclass>
+</sicustomsdocs>
+<customitemUnid>84733</customitemUnid>
+<sicustomsmessage>
+<customsmessageUnid>84735</customsmessageUnid>
+</sicustomsmessage>
+<originatinginvoicelinenumber>10</originatinginvoicelinenumber>
+<noofpackagesfromcustoms>0</noofpackagesfromcustoms>
+<kindofpackagescodecustoms>PT</kindofpackagescodecustoms>
+<descriptionofgoodscustoms>EXPORT PRODUCT  12X24 UNITS</descriptionofgoodscustoms>
+<commoditycode>48176000</commoditycode>
+<grossweightcustoms>300</grossweightcustoms>
+<netweightcustoms>250</netweightcustoms>
+<legalweightcustomsitem>0</legalweightcustomsitem>
+<volumecustomsitem>0</volumecustomsitem>
+<customscurrency>GBP</customscurrency>
+<statisticsvaluecustomsitem>5000</statisticsvaluecustomsitem>
+<fiscalvaluecustomsitem>0</fiscalvaluecustomsitem>
+<customsregimecus>1000001</customsregimecus>
+<supplementaryunitscustomsq2>0</supplementaryunitscustomsq2>
+<quantity3>0</quantity3>
+<countryoforigincode>GB</countryoforigincode>
+<transactioncodenot>10</transactioncodenot>
+<sedlicenseexemptionindicator>0</sedlicenseexemptionindicator>
+</sicustomitems>
+<sicustomitems>
+<sicustomsdocs>
+<sidocumentUnid>84737</sidocumentUnid>
+<prevdoctype>380</prevdoctype>
+<prevdocref>5ER455443</prevdocref>
+<prevdocclass>Z</prevdocclass>
+</sicustomsdocs>
+<customitemUnid>84736</customitemUnid>
+<sicustomsmessage>
+<customsmessageUnid>84738</customsmessageUnid>
+</sicustomsmessage>
+<originatinginvoicelinenumber>20</originatinginvoicelinenumber>
+<noofpackagesfromcustoms>0</noofpackagesfromcustoms>
+<kindofpackagescodecustoms>PT</kindofpackagescodecustoms>
+<marksnoscustoms>FULLY ADDRESSED</marksnoscustoms>
+<descriptionofgoodscustoms>EXPORT PRODUCT  12X24 UNITS</descriptionofgoodscustoms>
+<commoditycode>85086000</commoditycode>
+<grossweightcustoms>2000</grossweightcustoms>
+<netweightcustoms>1500</netweightcustoms>
+<legalweightcustomsitem>0</legalweightcustomsitem>
+<volumecustomsitem>0</volumecustomsitem>
+<customscurrency>GBP</customscurrency>
+<statisticsvaluecustomsitem>22500</statisticsvaluecustomsitem>
+<fiscalvaluecustomsitem>0</fiscalvaluecustomsitem>
+<customsregimecus>1000001</customsregimecus>
+<supplementaryunitscustomsq2>0</supplementaryunitscustomsq2>
+<quantity3>0</quantity3>
+<countryoforigincode>GB</countryoforigincode>
+<transactioncodenot>10</transactioncodenot>
+<sedlicenseexemptionindicator>0</sedlicenseexemptionindicator>
+</sicustomitems>
+<shpackingconfig>
+<unid>84743</unid>
+<packbysernum>true</packbysernum>
+<packbylotnum>true</packbylotnum>
+<rulelevel>None</rulelevel>
+</shpackingconfig>
+<unid>84720</unid>
+<ownerid>testGroup</ownerid>
+<transactionref>06112011</transactionref>
+<orderdate>2011-12-12T00:00:00Z</orderdate>
+<createdate>2011-12-12T15:12:05Z</createdate>
+<despatchdate>2011-12-14T00:00:00Z</despatchdate>
+<customerporef>PO34323</customerporef>
+<exporterref>06112011</exporterref>
+<invoicenumber>123453240</invoicenumber>
+<salesordernumber>234DG54545</salesordernumber>
+<portofloading>FELIXSTOWE</portofloading>
+<portofloadingcode>FXT</portofloadingcode>
+<portofdischarge>SINGAPORE</portofdischarge>
+<portofdischargecode>SCT</portofdischargecode>
+<placeofdelivery>SINGAPORE</placeofdelivery>
+<placeofdeliverycode>SIN</placeofdeliverycode>
+<countryofdespatch>UNITED KINGDOM</countryofdespatch>
+<countryofdespatchcode>GB</countryofdespatchcode>
+<containerprefix>CTIU</containerprefix>
+<containernumber>12343332</containernumber>
+<sealnumber1>12ER5587</sealnumber1>
+<totnoofpackagesheader>2</totnoofpackagesheader>
+<descofpackheader>PALLETS</descofpackheader>
+<descofgoodsheader>DOMESTIC APPLIANCES</descofgoodsheader>
+<weightunitindicatorkglb>KG</weightunitindicatorkglb>
+<deleteflag>false</deleteflag>
+<totnoivl>2</totnoivl>
+<totnocus>2</totnocus>
+<totalgrossweightinvoice>2300</totalgrossweightinvoice>
+<totalnetweightinvoice>1750</totalnetweightinvoice>
+<totalgrossweightcustoms>2300</totalgrossweightcustoms>
+<totalnetweightcustoms>1750</totalnetweightcustoms>
+<totalgrossweightpacking>1764</totalgrossweightpacking>
+<invinvoicelinestotal>27500</invinvoicelinestotal>
+<invinvoiceamounttotal>27500</invinvoiceamounttotal>
+<headercurrency>GBP</headercurrency>
+<motcode>1</motcode>
+<containersize>20ft general</containersize>
+</ns2:shheader>
+</Header>

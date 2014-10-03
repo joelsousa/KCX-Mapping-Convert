@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>05</Month>
+<Day>05</Day>
+</Date>
+<Time>00:10:00</Time>
+</SentAt>
+<Transmitter>AC.AIRCFRA.1507</Transmitter>
+<Receiver>DE.UNSY.TST</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>5555555555-iwa</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntrySummaryDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>5555555555-iw</ReferenceNumber>
+<ShipmentNumber>01465180264</ShipmentNumber>
+<TotalNumberPositions>6</TotalNumberPositions>
+<TotalNumberPackages>26</TotalNumberPackages>
+<TotalGrossMass>315.0</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+</MeansOfTransportBorder>
+<ConveyanceReference>AC844</ConveyanceReference>
+<LoadingPlace>CAYYC</LoadingPlace>
+<UnloadingPlace>DEFRA</UnloadingPlace>
+<DeclarationTime>201105050010</DeclarationTime>
+<DeclarationPlace>FRA</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>KUEHNE NAGEL INC</Name>
+<Street>18900 8TH AVENUE SOUTH SUITE 1300</Street>
+<City>SEA-TAC</City>
+<PostalCode>98148</PostalCode>
+<Country>US</Country>
+<CountrySubEntity>WA</CountrySubEntity>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>KUEHNE   NAGEL AG   CO KG</Name>
+<Street>CARGOCITY SUED GEB 554</Street>
+<City>KELSTERBACH</City>
+<PostalCode>65451</PostalCode>
+<Country>DE</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>DE9008691</TIN>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>AIR CANADA</Name>
+<Street>PO BOX 14000</Street>
+<City>MONTREAL</City>
+<PostalCode>H4Y 1H4</PostalCode>
+<Country>CA</Country>
+<CountrySubEntity>QC</CountrySubEntity>
+</Address>
+</PersonLodgingSumaAddress>
+<PersonLodgingSumaContact>
+<Clerk>AIR CANADA</Clerk>
+<PhoneNumber>(514) 422 5000</PhoneNumber>
+</PersonLodgingSumaContact>
+<CustomsOfficeFirstEntry>DE005876</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201105061120</DeclaredDateOfArrival>
+<CountryOfRouting>US</CountryOfRouting>
+<CountryOfRouting>CA</CountryOfRouting>
+<CountryOfRouting>DE</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>1-CIVIL AIRCRAFT PARTS</Description>
+<GrossMass>8.0</GrossMass>
+<Packages>
+<Type>NE</Type>
+<Number>5</Number>
+</Packages>
+<Document>
+<Type>N703</Type>
+<Reference>SEA47054082</Reference>
+</Document>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>2</ItemNumber>
+<Description>2-CIVIL AIRCRAFT PARTS</Description>
+<GrossMass>2.0</GrossMass>
+<Packages>
+<Type>NE</Type>
+<Number>2</Number>
+</Packages>
+<Document>
+<Type>N703</Type>
+<Reference>SEA47054083</Reference>
+</Document>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>3</ItemNumber>
+<Description>3-BLACK SCREW COVER CAPS W ADHESIVE</Description>
+<GrossMass>30.0</GrossMass>
+<Packages>
+<Type>NE</Type>
+<Number>2</Number>
+</Packages>
+<Document>
+<Type>N703</Type>
+<Reference>SEA47054096</Reference>
+</Document>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>4</ItemNumber>
+<Description>4-MAPLE SCREW COVER CAPS W ADHESIVE</Description>
+<GrossMass>9.0</GrossMass>
+<Packages>
+<Type>NE</Type>
+<Number>1</Number>
+</Packages>
+<Document>
+<Type>N703</Type>
+<Reference>SEA47054095</Reference>
+</Document>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>5</ItemNumber>
+<Description>5-SILVER SEAL SILICONE ERGO COMPUTER MOU</Description>
+<GrossMass>32.0</GrossMass>
+<Packages>
+<Type>NE</Type>
+<Number>3</Number>
+</Packages>
+<Document>
+<Type>N703</Type>
+<Reference>SEA47054094</Reference>
+</Document>
+</GoodsItem>
+<GoodsItem>
+<ItemNumber>6</ItemNumber>
+<Description>6-DOUGH WORKING EQUIPMENT</Description>
+<GrossMass>277.0</GrossMass>
+<Packages>
+<Type>NE</Type>
+<Number>13</Number>
+</Packages>
+<Document>
+<Type>N703</Type>
+<Reference>SEA47054097</Reference>
+</Document>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclaration>
+</soap:Body>
+</soap:Envelope>

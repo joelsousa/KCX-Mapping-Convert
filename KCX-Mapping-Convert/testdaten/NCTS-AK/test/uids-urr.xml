@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+<To>DE01.FORDTST.3087</To>
+<From>DE</From>
+<MessageID>testdaten/NCTS/test/fss.urr</MessageID>
+<SentAt>2011-05-27T13:00:18Z</SentAt>
+<Act>inform</Act>
+<Procedure>NCTS</Procedure>
+<Method>NCTS</Method>
+<MessageType>NCTSUnloadingRemarksRejection</MessageType>
+<Direction>TO_CUSTOMER</Direction>
+<MessageVersion>4.0</MessageVersion>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit>
+<NCTS>
+<NCTSUnloadingRemarksRejection>
+<LocalReferenceNumber>beznr</LocalReferenceNumber>
+<MRN>regnr</MRN>
+<ArrivalRejectionDate>2011-01-01</ArrivalRejectionDate>
+<FunctionalError>
+<Type>errcd</Type>
+<Pointer>1</Pointer>
+<Reason>errtext</Reason>
+</FunctionalError>
+<FunctionalError>
+<Type>errcd</Type>
+<Pointer>2</Pointer>
+<Reason>errtext</Reason>
+</FunctionalError>
+</NCTSUnloadingRemarksRejection>
+</NCTS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

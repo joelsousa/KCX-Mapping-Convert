@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+      <SentAt>
+        <Date>
+          <Year>2010</Year>
+          <Month>05</Month>
+          <Day>10</Day>
+        </Date>
+        <Time>12:02:00</Time>
+        <TimeZone>+0100</TimeZone>
+      </SentAt>
+      <Transmitter>DE01.CSFALT.2144</Transmitter>
+      <Receiver>DE.CSF</Receiver>
+      <Method>ICS</Method>
+      <MessageTP>
+        <CountryCode>DE</CountryCode>
+        <Procedure>ICS</Procedure>
+        <MessageName>ICSDiversionRequestRejected</MessageName>
+        <Release>1.0.00</Release>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>1</Map>
+          <MapFrom>KCX_CODE</MapFrom>
+          <MapTo>DE</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>DE01DE01214420100510120200000001</MessageID>
+    </Header>
+  </soap:Header>
+<soap:Body>
+<ICSDiversionRequestRejected>
+  <ReferenceNumber>AAAAAAAAAAAAAAAAAAAAA</ReferenceNumber>
+  <DeclarationRejectionDateAndTime>200001010000</DeclarationRejectionDateAndTime>
+  <DeclarationRejectionReason>AA</DeclarationRejectionReason>
+  <DeclarationRejectionReasonLNG>AAAAAAAA</DeclarationRejectionReasonLNG>
+  <FunctionalError>
+    <ErrorType>AAAAAAAAA</ErrorType>
+    <ErrorPointer>AAAAAAAAAAAA</ErrorPointer>
+    <ErrorReason>AAAAAAAAAAA</ErrorReason>
+    <OriginalAttributeValue>AAAAAAAAAAAAAAAAAAAAAA</OriginalAttributeValue>
+  </FunctionalError>
+  <FunctionalError>
+    <ErrorType>AAAAAAAAB</ErrorType>
+    <ErrorPointer>AAAAAAAAAAAB</ErrorPointer>
+    <ErrorReason>AAAAAAAAAAB</ErrorReason>
+    <OriginalAttributeValue>AAAAAAAAAAAAAAAAAAAAAB</OriginalAttributeValue>
+  </FunctionalError>
+</ICSDiversionRequestRejected>
+</soap:Body>
+</soap:Envelope>

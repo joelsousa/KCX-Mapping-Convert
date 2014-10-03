@@ -1,0 +1,103 @@
+package com.kewill.kcx.component.mapping.countries.de.aes21.fss2kids;
+
+import java.io.StringWriter;
+
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+
+import com.kewill.kcx.component.mapping.EDirections;
+import com.kewill.kcx.component.mapping.common.CommonFieldsDTO;
+import com.kewill.kcx.component.mapping.countries.de.aes.msg.MsgExpNck;
+import com.kewill.kcx.component.mapping.formats.fss.base.messages.MsgSTI;
+import com.kewill.kcx.component.mapping.formats.kids.base.BodyInternalStatus;
+import com.kewill.kcx.component.mapping.formats.kids.common.KidsHeader;
+import com.kewill.kcx.component.mapping.formats.kids.common.KidsMessage;
+import com.kewill.kcx.component.mapping.util.Utils;
+
+/**
+ * Module		: Export/AES21<br>
+ * Created		: 05.10.2012<br>
+ * Description	: Mapping of FSS-Format STI into KIDS-Format of InternalStatusInformation.
+ *              : New in AES21:  Header MessageID and InReplyTo will be filled from TsVOR (and TsVOR from TsHEAD)
+ *               
+ * @author iwaniuk
+ * @version 2.1.00
+ */
+
+public class MapSTIToExpNck extends KidsMessage {
+	
+	private MsgSTI msgSTI;
+	private MsgExpNck msgExpNck;
+	
+	public MapSTIToExpNck() {
+		msgExpNck = new MsgExpNck();
+	}
+
+	public void setMsgSTI(MsgSTI msgSTI) {
+   	this.msgSTI = msgSTI;
+   	this.setMsgFields();
+   }
+	
+	public void setMsgFields() {
+   	    if (msgSTI.getStiSubset() != null) {    //EI20110527
+		msgExpNck.setCorrectionNumber(msgSTI.getStiSubset().getKorant());
+		msgExpNck.setReferenceNumber(msgSTI.getStiSubset().getBeznr());
+		msgExpNck.setDateNewStatus(msgSTI.getStiSubset().getDatum());
+		msgExpNck.setNewStatus(msgSTI.getStiSubset().getStatus());
+		if (msgSTI.getAnrSubset() != null) {
+			msgExpNck.setOrderNumber(msgSTI.getAnrSubset().getAufnr());
+		}
+		msgExpNck.setTemporaryUCR(msgSTI.getStiSubset().getArbnr());
+		msgExpNck.setTimeNewStatus(msgSTI.getStiSubset().getZeit());
+   	    }
+   }
+	
+	public String getMessage() {
+		StringWriter xmlOutputString = new StringWriter();
+   
+		XMLOutputFactory factory = XMLOutputFactory.newInstance();
+	    try {
+	        writer = factory.createXMLStreamWriter(xmlOutputString);
+	
+	        writeStartDocument(encoding, "1.0");
+	        openElement("soap:Envelope");
+	        setAttribute("xmlns:soap", "http://www.w3.org/2003/05/soap-envelope");
+	        
+	        KidsHeader header = new KidsHeader(writer);
+	        //header.setHeaderFields(msgSTI.getVorSubset());
+	        header.setHeaderFieldsFromHead(msgSTI.getVorSubset(), msgSTI.getHeadSubset());     //EI20121005
+	        header.setMessageName("InternalStatusInformation");
+	        
+	        CommonFieldsDTO commonFieldsDTO = new CommonFieldsDTO();
+	        commonFieldsDTO.setKcxId(header.getReceiver());
+	        commonFieldsDTO.setCountryCode(header.getCountryCode());
+	        commonFieldsDTO.setDirection(EDirections.CountryToCustomer);
+	        header.setCommonFieldsDTO(commonFieldsDTO);
+	        
+	        header.writeHeader();
+	        
+	        BodyInternalStatus body   = new BodyInternalStatus(writer);
+	        body.setMsgExpNck(msgExpNck);
+	        body.setKidsHeader(header);
+
+            getCommonFieldsDTO().setReferenceNumber(msgExpNck.getReferenceNumber());
+	        body.writeBody();
+	        
+	        closeElement();  // soap:Envelope
+	        writer.writeEndDocument();
+	        
+	        writer.flush();
+	        writer.close();
+	        
+	        Utils.log("(MsgInternalStatus getMessage) Msg = " + xmlOutputString.toString());
+   	
+	    } catch (XMLStreamException e) {
+	        
+	        e.printStackTrace();
+	    }
+	
+	    
+	    return xmlOutputString.toString();
+	}
+
+}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <KIDSHeader>
+            <SentAt>
+                <Date>
+                    <Year>2013</Year>
+                    <Month>6</Month>
+                    <Day>10</Day>
+                </Date>
+                <Time>093850</Time>
+                <TimeZone>-0600</TimeZone>
+            </SentAt>
+            <Transmitter>DE.BDP.TST</Transmitter>
+            <Receiver>DE.BDP.TST</Receiver>
+            <Method>EXPORT</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EXPORT</Procedure>
+                <MessageName>ExportDeclaration</MessageName>
+                <Release>1.0.00</Release>
+                <Direction>FROM_CUSTOMER</Direction>
+            </MessageTP>
+            <CustomsExchange>
+                <Codemapping>
+                    <Map>0</Map>
+                    <MapFrom>KCX_CODE</MapFrom>
+                    <MapTo>DE</MapTo>
+                </Codemapping>
+            </CustomsExchange>
+            <MessageID>KE_BDP_03</MessageID>
+        </KIDSHeader>
+    </soap:Header>
+    <soap:Body>
+        <Declaration>
+            <ReferenceNumber>KE_BDP_03</ReferenceNumber>
+            <ShipmentNumber>ShipmentNumber</ShipmentNumber>
+            <PlaceOfLoading>
+                <Street>Lindenstr. 50</Street>
+                <PostalCode>61250</PostalCode>
+                <City>Usingen</City>
+                <AgreedLocationOfGoods>Medronic</AgreedLocationOfGoods>
+            </PlaceOfLoading>
+
+            <AreaCode>EX</AreaCode>
+            <TypeOfPermit>c</TypeOfPermit>
+            <DestinationCountry>SA</DestinationCountry>
+
+              <CustomsOfficeExport>DE005866</CustomsOfficeExport>
+              <IntendedOfficeOfExit>DE005876</IntendedOfficeOfExit>
+
+           <TransportationRoute>
+                <Country>DE</Country>
+                <Country>SA</Country>
+           </TransportationRoute>
+
+            <LoadingTime>
+                <BeginTime>201306101730</BeginTime>
+                <EndTime>201306111736</EndTime>
+            </LoadingTime>
+			<AddressCombination>2</AddressCombination>
+
+            <Business>
+                <BusinessTypeCode>11</BusinessTypeCode>
+                <InvoicePrice>40545.00</InvoicePrice>
+                <Currency>EUR</Currency>
+            </Business>
+            <Traders>
+                <DeclarantAddress>
+                    <Name>Declarant Division</Name>
+                    <Street/>
+                    <City>Riyadh</City>
+                    <PostalCode>11421</PostalCode>
+                    <Country>SA</Country>
+                </DeclarantAddress>
+                <RepresentativeTIN>
+                    <TIN>DE9003827</TIN>
+                </RepresentativeTIN>
+                <ConsignorAddress>
+                    <Name>Consignor Division</Name>
+                    <Street/>
+                    <City>Riyadh</City>
+                    <PostalCode>11421</PostalCode>
+                    <Country>SA</Country>
+                </ConsignorAddress>
+                <ConsigneeAddress>
+                    <Name>Consignee Division</Name>
+                    <Street/>
+                    <City>Riyadh</City>
+                    <PostalCode>11421</PostalCode>
+                    <Country>SA</Country>
+                </ConsigneeAddress>
+                <BuyerAddress>
+                    <Name>Byer Division</Name>
+                    <Street/>
+                    <City>Riyadh</City>
+                    <PostalCode>11421</PostalCode>
+                    <Country>SA</Country>
+                </BuyerAddress>
+                <SellerAddress>
+                    <Name>Seller Division</Name>
+                    <Street/>
+                    <City>Riyadh</City>
+                    <PostalCode>11421</PostalCode>
+                    <Country>SA</Country>
+                </SellerAddress>
+                <CustomsValueDeclarantAddress>
+                    <Name>CustomsValueDeclarantAddress  Division</Name>
+                    <Street/>
+                    <City>Riyadh</City>
+                    <PostalCode>11421</PostalCode>
+                    <Country>SA</Country>
+                </CustomsValueDeclarantAddress>
+                <RepresentativeOfCustomsValueDeclarantTIN>
+                    <TIN>DE9003827</TIN>
+                </RepresentativeOfCustomsValueDeclarantTIN>
+                <DeclarantForInvoiceAddress>
+                    <Name>DeclarantForInvoiceAddress</Name>
+                    <Street>TEL966 2 263 2816 POBOX 812 - KILO 7 MADINAH</Street>
+                    <City>JEDDAH</City>
+                    <PostalCode>21421</PostalCode>
+                    <Country>SA</Country>
+                </DeclarantForInvoiceAddress>
+            </Traders>
+            <DispatchCountry>DE</DispatchCountry>
+            <DestinationFederalState>DE</DestinationFederalState>
+            <CustomsStatus>IM</CustomsStatus>
+            <MeansOfTransportBorder>
+                <TransportMode>30</TransportMode>
+                <TransportationType>40</TransportationType>
+                <TransportationNumber>Kennzeichen</TransportationNumber>
+                <TransportationCountry>DE</TransportationCountry>      
+            </MeansOfTransportBorder>
+            <ContactPerson>
+                <Name>KE</Name>
+                <Identity>FSS</Identity>
+            </ContactPerson>
+
+            <IncoTerms>
+                <Code>FCA</Code>
+                <Place>Usingen</Place>
+            </IncoTerms>
+            <DV1>
+                <BuyerSellerRelationship>0</BuyerSellerRelationship>
+                <AgentRepresentationDV1Code>1</AgentRepresentationDV1Code>
+            </DV1>
+            <GoodsItem>
+                <ItemNumber>1</ItemNumber>
+				 <CommodityCode>
+                    <TarifCode>90184980</TarifCode>
+                </CommodityCode>
+                <Description>Dental Schläuche</Description>
+ 			    <CustomsApprovedTreatment>
+           			 <Declared>10</Declared>
+      			      <Previous>00</Previous>
+        	     </CustomsApprovedTreatment>
+
+                   <Statistic>
+                        <Quantity>1.1</Quantity>
+                        <MeasuringUnit>35585.50</MeasuringUnit>
+    					<QualifierMeasuringUnit>2</QualifierMeasuringUnit>
+                        <StatisticalValue>2</StatisticalValue>
+                    </Statistic>
+                <ProcedureCode>1000</ProcedureCode>
+                <PlaceOfIntroduction>JED</PlaceOfIntroduction>
+                <PlaceOfDeparture>NUE</PlaceOfDeparture>
+                <NetMass>52.300</NetMass>
+                <GrossMass>81.300</GrossMass>
+                <Package>
+                    <Quantity>6</Quantity>
+                    <Type>PX</Type>
+                    <Marks>gez. Adresse</Marks>
+                </Package>
+                <Invoice>
+                    <Amount>15723</Amount>
+                </Invoice>
+                <Statistic>
+                    <StatisticalValue>0</StatisticalValue>
+                </Statistic>
+                <Document>
+                    <Type>N380</Type>
+                    <Number>diverse</Number>
+                </Document>
+                <Document>
+                    <Type>Y901</Type>
+                </Document>
+                <Document>
+                    <Type>Y903</Type>
+                </Document>
+                <Document>
+                    <Type>3LNA</Type>
+             <WriteOffQualifierMeasuringUnit>51</WriteOffQualifierMeasuringUnit>
+                </Document>
+                <Document>
+                    <Type>Nzzz</Type>
+                </Document>
+                <Port>
+                    <FirstGoodsLevel>
+                        <Quantity>2</Quantity>
+                        <PackingType>PX</PackingType>
+                        <GrossMass>248.6000</GrossMass>
+                        <Volume>1.296</Volume>
+                        <DangerousGoods>
+                            <NetMass>211</NetMass>
+                        </DangerousGoods>
+                    </FirstGoodsLevel>
+                </Port>
+            </GoodsItem>
+
+        </Declaration>
+    </soap:Body>
+</soap:Envelope>

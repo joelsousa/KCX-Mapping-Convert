@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200310">
+      <To>CZ01.EK.TST</To>
+      <From>CZ01.EK.TST</From>
+      <MessageID>000074</MessageID>
+      <InReplyTo>17619504575-X0XIXT</InReplyTo>
+      <SentAt>2011-02-07 12:12:04</SentAt>
+      <Act>inform</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>ICSDeclarationRejected</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>  
+   <soap:Body>
+      <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+        <ICS>
+          <ICSDeclarationRejected>
+            <LocalReferenceNumber>17678649071-X10C2P</LocalReferenceNumber>
+            <RejectionDateAndTime>2011-02-09 07:29:00</RejectionDateAndTime>
+            <Error>
+              <Type>8</Type>
+              <Pointer>/CZ315A/H/H44</Pointer>
+              <Reason>R105_ESD_a</Reason>
+              <OriginalValue>333</OriginalValue>              
+            </Error>
+            <Error>
+	       <Type>8</Type>
+	       <Pointer>/CZ315A/TCE/TCE03</Pointer>
+	       <Reason>C501_TCE</Reason>
+	    </Error>
+          </ICSDeclarationRejected>
+        </ICS>
+      </Submit>
+    </soap:Body>
+</soap:Envelope>

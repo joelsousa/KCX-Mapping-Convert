@@ -1,0 +1,468 @@
+<register>
+	<route compositeName="DECSFFRA" targetQueue="DE.CSF.FRA" targetLogicalNetwork="JMSCloud2" 
+		internalQueueName="meg.csffra.to.bob.transform.queue" internalTopic="false"/>
+	<route compositeName="DEDIEHTS2" targetQueue="DE.DIEH.TS2" targetLogicalNetwork="JMSCloud2" 
+		internalQueueName="meg.diehts2.to.bob.transform.queue" internalTopic="false"/>
+	<route compositeName="DEDIEHPRE" targetQueue="DE.DIEH.PRE" targetLogicalNetwork="JMSCloud2" 
+		internalQueueName="meg.diehpre.to.bob.transform.queue" internalTopic="false"/>	
+	<route compositeName="DEDIEHTST" targetQueue="DE.DIEH.TST" targetLogicalNetwork="JMSCloud2" 
+		internalQueueName="meg.diehtst.to.bob.transform.queue" internalTopic="false"/>	
+
+        <route compositeName="DEAIMHBN" targetQueue="DE.AIM.HBN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deaimhbn.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEALDVHU" targetQueue="DE.ALDV.HU" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dealdvhu.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEALLWRAD" targetQueue="DE.ALLW.RAD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deallwrad.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEAREVNDT" targetQueue="DE.AREV.NDT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dearevndt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBADIMER" targetQueue="DE.BADI.MER" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debadimer.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBARTMER" targetQueue="DE.BART.MER" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debartmer.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBHTSAA" targetQueue="DE.BHT.SAA" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debhtsaa.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBIESHAM" targetQueue="DE.BIES.HAM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debiesham.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBIOTBER" targetQueue="DE.BIOT.BER" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debiotber.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBRTHSGD" targetQueue="DE.BRTH.SGD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debrthsgd.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBTAGMUE" targetQueue="DE.BTAG.MUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debtagmue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBWFOFF" targetQueue="DE.BWF.OFF" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debwfoff.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEBWICSCH" targetQueue="DE.BWIC.SCH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.debwicsch.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECBLHHOR" targetQueue="DE.CBLH.HOR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decblhhor.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECHDGBRH" targetQueue="DE.CHDG.BRH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dechdgbrh.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECHIRTUT" targetQueue="DE.CHIR.TUT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dechirtut.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECSBIMAR" targetQueue="DE.CSBI.MAR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decsbimar.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECSLBMAR" targetQueue="DE.CSLB.MAR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decslbmar.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECYKLCGN" targetQueue="DE.CYKL.CGN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decyklcgn.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDAWOOBR" targetQueue="DE.DAWO.OBR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dedawoobr.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDBGTUEB" targetQueue="DE.DBGT.UEB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dedbgtueb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDEMAWIE" targetQueue="DE.DEMA.WIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dedemawie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDIAEUEB" targetQueue="DE.DIAE.UEB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dediaeueb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDIAKWAN" targetQueue="DE.DIAK.WAN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dediakwan.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDMPEG" targetQueue="DE.DM.PEG" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dedmpeg.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDSCBALF" targetQueue="DE.DSCB.ALF" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dedscbalf.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDURONMT" targetQueue="DE.DURO.NMT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deduronmt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEECHWHAM" targetQueue="DE.ECHW.HAM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deechwham.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEECOLSIE" targetQueue="DE.ECOL.SIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deecolsie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEEDDIAHR" targetQueue="DE.EDDI.AHR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deeddiahr.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEELOMMAI" targetQueue="DE.ELOM.MAI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deelommai.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEETAGNUE" targetQueue="DE.ETAG.NUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deetagnue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEETIMTST" targetQueue="DE.ETIM.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deetimtst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEETIMDIE" targetQueue="DE.ETIM.DIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deetimdie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEFACESTE" targetQueue="DE.FACE.STE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.defaceste.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEFACKHER" targetQueue="DE.FACK.HER" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.defackher.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEGESDFDS" targetQueue="DE.GESD.FDS" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.degesdfds.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEGKEGTIT" targetQueue="DE.GKEG.TIT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.degkegtit.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEGKRGSAL" targetQueue="DE.GKRG.SAL" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.degkrgsal.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEGRPHAAC" targetQueue="DE.GRPH.AAC" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.degrphaac.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEGWERMIN" targetQueue="DE.GWER.MIN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.degwermin.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHAACETT" targetQueue="DE.HAAC.ETT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehaacett.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHAMMTIR" targetQueue="DE.HAMM.TIR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehammtir.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHASBSOE" targetQueue="DE.HASB.SOE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehasbsoe.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHEIDSCH" targetQueue="DE.HEID.SCH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deheidsch.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHIACNEC" targetQueue="DE.HIAC.NEC" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehiacnec.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHOBABRI" targetQueue="DE.HOBA.BRI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehobabri.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHOBSBRI" targetQueue="DE.HOBS.BRI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehobsbri.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHOESSCH" targetQueue="DE.HOES.SCH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehoessch.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEHUBTFUL" targetQueue="DE.HUBT.FUL" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dehubtful.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEINSAFRE" targetQueue="DE.INSA.FRE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deinsafre.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEJOVOMAN" targetQueue="DE.JOVO.MAN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dejovoman.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEJUHODUE" targetQueue="DE.JUHO.DUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dejuhodue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKADUURB" targetQueue="DE.KADU.URB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekaduurb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKAMAULM" targetQueue="DE.KAMA.ULM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekamaulm.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKAPPCOB" targetQueue="DE.KAPP.COB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekappcob.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKIEFFLG" targetQueue="DE.KIEF.FLG" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekiefflg.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKLOEOWI" targetQueue="DE.KLOE.OWI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekloeowi.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKOEMPIR" targetQueue="DE.KOEM.PIR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekoempir.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKRTPWKB" targetQueue="DE.KRTP.WKB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekrtpwkb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKSPOHAI" targetQueue="DE.KSPO.HAI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekspohai.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKUFABAR" targetQueue="DE.KUFA.BAR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekufabar.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELANDNUE" targetQueue="DE.LAND.NUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delandnue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELEARREM" targetQueue="DE.LEAR.REM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delearrem.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELECASOL" targetQueue="DE.LECA.SOL" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delecasol.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELEIMNUS" targetQueue="DE.LEIM.NUS" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deleimnus.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELEKUFUE" targetQueue="DE.LEKU.FUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delekufue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELMSMMAN" targetQueue="DE.LMSM.MAN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delmsmman.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELOGTKON" targetQueue="DE.LOGT.KON" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delogtkon.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELOOGZH" targetQueue="DE.LOO.GZH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deloogzh.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELUCOSKM" targetQueue="DE.LUCO.SKM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delucoskm.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEMABHGOS" targetQueue="DE.MABH.GOS" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.demabhgos.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEMAHULB" targetQueue="DE.MAHU.LB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.demahulb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEMANISWB" targetQueue="DE.MANI.SWB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.demaniswb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEMANITST" targetQueue="DE.MANI.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.demanitst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEMIWEARN" targetQueue="DE.MIWE.ARN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.demiwearn.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DENEGEBRU" targetQueue="DE.NEGE.BRU" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.denegebru.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DENIMABGH" targetQueue="DE.NIMA.BGH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.denimabgh.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEOBOGBIE" targetQueue="DE.OBOG.BIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deobogbie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEOECHANS" targetQueue="DE.OECH.ANS" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deoechans.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEPFEUNMT" targetQueue="DE.PFEU.NMT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.depfeunmt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEPFHOGWD" targetQueue="DE.PFHO.GWD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.depfhogwd.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEPFINNMT" targetQueue="DE.PFIN.NMT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.depfinnmt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEPFSENMT" targetQueue="DE.PFSE.NMT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.depfsenmt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEPRVEFRI" targetQueue="DE.PRVE.FRI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deprvefri.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DERAILNMT" targetQueue="DE.RAIL.NMT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.derailnmt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEREFUMET" targetQueue="DE.REFU.MET" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.derefumet.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEREIMROE" targetQueue="DE.REIM.ROE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dereimroe.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEROSWMUC" targetQueue="DE.ROSW.MUC" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deroswmuc.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DERUAGWES" targetQueue="DE.RUAG.WES" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deruagwes.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESCCAHMR" targetQueue="DE.SCCA.HMR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desccahmr.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESCHOBAD" targetQueue="DE.SCHO.BAD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deschobad.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESCHUSEL" targetQueue="DE.SCHU.SEL" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deschusel.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESCMGTOD" targetQueue="DE.SCMG.TOD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.descmgtod.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESCPSALT" targetQueue="DE.SCPS.ALT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.descpsalt.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESCWENEU" targetQueue="DE.SCWE.NEU" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.descweneu.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESDGFWKB" targetQueue="DE.SDGF.WKB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desdgfwkb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESEEPBOT" targetQueue="DE.SEEP.BOT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deseepbot.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESESTWAL" targetQueue="DE.SEST.WAL" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desestwal.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESEWGRA" targetQueue="DE.SEW.GRA" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desewgra.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESFAHBIE" targetQueue="DE.SFAH.BIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desfahbie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESGFWGOT" targetQueue="DE.SGFW.GOT" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desgfwgot.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESIMOKIR" targetQueue="DE.SIMO.KIR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desimokir.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESINGKAH" targetQueue="DE.SING.KAH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desingkah.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESITETRA" targetQueue="DE.SITE.TRA" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desitetra.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESMARKS" targetQueue="DE.SMAR.KS" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desmarks.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESMASNIE" targetQueue="DE.SMAS.NIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desmasnie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESSIBET" targetQueue="DE.SSI.BET" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dessibet.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESTABMES" targetQueue="DE.STAB.MES" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.destabmes.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESTCOHTL" targetQueue="DE.STCO.HTL" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.destcohtl.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESTOCBIE" targetQueue="DE.STOC.BIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.destocbie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESUEDMAN" targetQueue="DE.SUED.MAN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desuedman.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESUPAOCH" targetQueue="DE.SUPA.OCH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.desupaoch.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DETMOPLTK" targetQueue="DE.TMOP.LTK" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.detmopltk.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DETTSWEN" targetQueue="DE.TTS.WEN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dettswen.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEUNIEESC" targetQueue="DE.UNIE.ESC" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deunieesc.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEVAWIBIE" targetQueue="DE.VAWI.BIE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.devawibie.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEVOELWUP" targetQueue="DE.VOEL.WUP" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.devoelwup.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEVSVSTBH" targetQueue="DE.VSVS.TBH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.devsvstbh.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEVULKHER" targetQueue="DE.VULK.HER" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.devulkher.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWAMELEI" targetQueue="DE.WAME.LEI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewamelei.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWEFAWES" targetQueue="DE.WEFA.WES" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewefawes.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWIDUNWD" targetQueue="DE.WIDU.NWD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewidunwd.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWIELBAM" targetQueue="DE.WIEL.BAM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewielbam.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWIGEWIN" targetQueue="DE.WIGE.WIN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewigewin.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWILOFD" targetQueue="DE.WILO.FD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewilofd.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWOLFMAI" targetQueue="DE.WOLF.MAI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewolfmai.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEWOMLUD" targetQueue="DE.WOM.LUD" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dewomlud.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEZAPFROE" targetQueue="DE.ZAPF.ROE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dezapfroe.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEZARGWLH" targetQueue="DE.ZARG.WLH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dezargwlh.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEZEBAAIC" targetQueue="DE.ZEBA.AIC" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dezebaaic.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEZLBPMAR" targetQueue="DE.ZLBP.MAR" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dezlbpmar.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEZMDDRS" targetQueue="DE.ZMD.DRS" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dezmddrs.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEFLABNUE" targetQueue="DE.FLAB.NUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deflabnue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEFLABTST" targetQueue="DE.FLAB.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deflabtst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEIMAGTST" targetQueue="DE.IMAG.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deimagtst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEIMAGFUE" targetQueue="DE.IMAG.FUE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deimagfue.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESZMATST" targetQueue="DE.SZMA.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deszmatst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DESZMAMAN" targetQueue="DE.SZMA.MAN" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deszmaman.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKLTRTST" targetQueue="DE.KLTR.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekltrtst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECARGKRE" targetQueue="DE.CARG.KRE" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decargkre.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDIEFEPP" targetQueue="DE.DIEF.EPP" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dediefepp.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEDIEFTST" targetQueue="DE.DIEF.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dedieftst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DENORSTST" targetQueue="DE.NORS.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.denorstst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DENORSDUI" targetQueue="DE.NORS.DUI" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.denorsdui.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DELOGTTST" targetQueue="DE.LOGT.TST" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.delogttst.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKUHOKWH" targetQueue="DE.KUHO.KWH" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekuhokwh.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DERILOULM" targetQueue="DE.RILO.ULM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deriloulm.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECARGHAM" targetQueue="DE.CARG.HAM" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decargham.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DECOTEBER" targetQueue="DE.COTE.BER" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.decoteber.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEKLTRSLB" targetQueue="DE.KLTR.SLB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.dekltrslb.to.bob.transform.queue" internalTopic="false"/>
+
+        <route compositeName="DEINPRARB" targetQueue="DE.INPR.ARB" targetLogicalNetwork="JMSCloud2"
+                internalQueueName="meg.deinprarb.to.bob.transform.queue" internalTopic="false"/>
+
+</register>
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <KCX>
+  <Primary>DE</Primary>
+  <Secondary>NCTS</Secondary>
+  <Audit_Id>No Mule Call</Audit_Id>
+  <Content>
+  <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2010</Year>
+  <Month>05</Month>
+  <Day>10</Day>
+  </Date>
+  <Time>12:02:00</Time>
+  <TimeZone>+0200</TimeZone>
+  </SentAt>
+  <Transmitter>DE.CSF</Transmitter>
+  <Receiver>DE.CSF</Receiver>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>NCTS</Procedure>
+  <MessageName>NCTSDeclaration</MessageName>
+  <Release>4.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>DE01DE01214420100510120200000001</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <NCTSDeclaration>
+  <GoodsDeclaration>
+  <ReferenceNumber>XX12345678P010001</ReferenceNumber>
+  <TypeOfDeclaration>TIR</TypeOfDeclaration>
+  <PlaceOfLoading />
+  <DestinationCountry>RU</DestinationCountry>
+  <DispatchCountry>DE</DispatchCountry>
+  <MeansOfTransportInland>
+  <TransportMode>3</TransportMode>
+  <TransportationNumber>XX123,XXD123</TransportationNumber>
+  <TransportationCountry>RU</TransportationCountry>
+  </MeansOfTransportInland>
+  <MeansOfTransportBorder>
+  <TransportMode>3</TransportMode>
+  <TransportationNumber>XX123,XXD123</TransportationNumber>
+  <TransportationCountry>RU</TransportationCountry>
+  </MeansOfTransportBorder>
+  <MeansOfTransportDeparture>
+  <TransportMode>Mode3</TransportMode>
+  <TransportationNumber>XX123,XXD123</TransportationNumber>
+  <TransportationCountry>RU</TransportationCountry>
+  </MeansOfTransportDeparture>
+  <TransportInContainer>0</TransportInContainer>
+  <NCTSDocumentLanguage>DE</NCTSDocumentLanguage>
+  <TotalNumberPositions>1</TotalNumberPositions>
+  <TotalNumberPackages>123</TotalNumberPackages>
+  <TotalGrossMass>123</TotalGrossMass>
+  <DeclarationDate>2010-08-30</DeclarationDate>
+  <DeclarationPlace>GENEVA</DeclarationPlace>
+  <PresentationTime>2010-09-25 00:00:00 +0200</PresentationTime>
+  <ConsignorTIN>
+  <TIN>DE123456</TIN>
+  </ConsignorTIN>
+  <Consignor>
+  <Address>
+  <Name>GErman Consignor</Name>
+  <Street>Unter den Linden</Street>
+  <HouseNumber>123</HouseNumber>
+  <PostalCode>123456</PostalCode>
+  <City>Berlin</City>
+  <Country>DE</Country>
+  </Address>
+  </Consignor>
+  <Consignee>
+  <Address>
+  <Name>Russian Consignee</Name>
+  <Street>Tverskaya str</Street>
+  <HouseNumber>123</HouseNumber>
+  <PostalCode>123</PostalCode>
+  <City>Moscow</City>
+  <Country>RU</Country>
+  </Address>
+  </Consignee>
+  <PrincipalTIN>
+  <TIN>BGEORINUMBER</TIN>
+  </PrincipalTIN>
+  <Principal>
+  <Address>
+  <Name>RUS trans</Name>
+  <Street>Tverskaya</Street>
+  <HouseNumber>123</HouseNumber>
+  <PostalCode>1234</PostalCode>
+  <City>Moscow</City>
+  <Country>RU</Country>
+  </Address>
+  </Principal>
+  <OfficeOfDeparture>DE002101</OfficeOfDeparture>
+  <OfficeOfDestination>PL301040</OfficeOfDestination>
+  <SimplifiedProcedureIndicator>false</SimplifiedProcedureIndicator>
+  <Seals>
+  <SealNumbers>
+  <Number>CHKSealsIdentity1</Number>
+  </SealNumbers>
+  <SealNumbers>
+  <Number>CHKSealsIdentity2</Number>
+  </SealNumbers>
+  </Seals>
+  <Guarantee>
+  <TypeOfGuarantee>B</TypeOfGuarantee>
+  <Reference>
+  <OtherNumber>XX12345678</OtherNumber>
+  </Reference>
+  </Guarantee>
+  <TransportationRoute />
+  <GoodsItem>
+  <ItemNumber>1</ItemNumber>
+  <TypeOfDeclaration>TIR</TypeOfDeclaration>
+  <CommodityCode>
+  <TarifCode>010110</TarifCode>
+  </CommodityCode>
+  <Description>horses</Description>
+  <NetMass>123</NetMass>
+  <GrossMass>123</GrossMass>
+  <Document>
+  <Type>952</Type>
+  <Reference>XX12345678</Reference>
+  </Document>
+  <Package>
+  <Quantity>123</Quantity>
+  <SequentialNumber>1</SequentialNumber>
+  <Type>PX</Type>
+  <Marks>no marks</Marks>
+  </Package>
+  </GoodsItem>
+  </GoodsDeclaration>
+  </NCTSDeclaration>
+  </soap:Body>
+  </soap:Envelope>
+]]>
+  </Content>
+  </KCX>

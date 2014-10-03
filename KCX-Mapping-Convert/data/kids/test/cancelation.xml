@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8'?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header><Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt><Date><Year>2008</Year><Month>09</Month><Day>13</Day></Date><Time>14:29:00</Time><TimeZone>+0200</TimeZone></SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA</Receiver><Method>Export</Method>
+<MessageTP><CountryCode>DE</CountryCode><Procedure>EXPORT</Procedure><MessageName>Cancellation</MessageName><Release>1.0.00</Release></MessageTP><MessageID>MsgID20080902</MessageID>
+</Header></soap:Header>
+<soap:Body><Cancellation>
+<GoodsDeclaration>
+<AreaCode>AreaCode fexeda_artaus</AreaCode>
+<TypeOfPermit>TypeOfPermit fexeda_artueb</TypeOfPermit>
+<KindOfDeclaration>KindOfDeclaration</KindOfDeclaration>
+<UCRNumber>UCRNumber</UCRNumber>
+<DispatchCountry>DispatchCountry</DispatchCountry>
+<DestinationCountry>DestinationCountry fexeda_ldbe</DestinationCountry>
+<SituationCode>SituationCode</SituationCode>
+<PaymentType>PaymentType</PaymentType>
+<TransportInContainer>TransportInContainer fexeda_conkz </TransportInContainer>
+<GrossMass>11111111.12</GrossMass>
+<UCROtherSystem>UCROtherSystem fexeda_fregnr</UCROtherSystem>
+<Annotation>Annotation fexeda_verm</Annotation>
+<ShipmentNumber>ShipmentNumber</ShipmentNumber>
+<ReferenceNumber>ReferenceNumber</ReferenceNumber>
+<OrderNumber>123</OrderNumber>
+<AuthorizationNumber>AuthorizationNumber fexeda_bewnr</AuthorizationNumber>
+<PreviousProcedure>PreviousProcedure fexdat_quelkz </PreviousProcedure>
+<ReceiverCustomerNumber>ReceiverCustomerNumber fexdat_vekan</ReceiverCustomerNumber>
+<DeclarantIsConsignor>DeclarantIsConsignor fexeda_kzanau</DeclarantIsConsignor>
+<CorrectionCode>33</CorrectionCode>
+<BunchNumber>BunchNumber</BunchNumber>
+<Language>Language</Language>
+<TransferToTransitSystem>TransferToTransitSystem</TransferToTransitSystem>
+<Clerk>Clerk fexdat_sb</Clerk>
+<MeansOfTransportInland>
+<TransportMode>MeansOfTransportInland TransportMode fexeam_bfvkzi</TransportMode>
+<TransportationType>MeansOfTransportInland TransportationType</TransportationType>
+<TransportTime>MeansOfTransportInland TransportTime</TransportTime>
+<TransportationNumber>MeansOfTransportInland TransportationNumber</TransportationNumber>
+<TransportationCountry>MeansOfTransportInland TransportationCountry</TransportationCountry>
+<PlaceOfLoading>MeansOfTransportInland PlaceOfLoading</PlaceOfLoading>
+</MeansOfTransportInland>
+<MeansOfTransportDeparture>
+<TransportMode>MeansOfTransportDeparture TransportMode</TransportMode>
+<TransportationType>MeansOfTransportDeparture TransportationType</TransportationType>
+<TransportTime>MeansOfTransportDeparture TransportTime</TransportTime>
+<TransportationNumber>MeansOfTransportDeparture TransportationNumber</TransportationNumber>
+<TransportationCountry>MeansOfTransportDeparture TransportationCountry</TransportationCountry>
+<PlaceOfLoading>MeansOfTransportDeparture PlaceOfLoading</PlaceOfLoading>
+</MeansOfTransportDeparture>
+<MeansOfTransportBorder>
+<TransportMode>MeansOfTransportBorder TransportMode fexeam_bfvkzg</TransportMode>
+<TransportationType>MeansOfTransportBorder TransportationType fexeam_bfartg</TransportationType>
+<TransportTime>MeansOfTransportBorder TransportTime</TransportTime>
+<TransportationNumber>MeansOfTransportBorder TransportationNumber fexeam_bfkzg</TransportationNumber>
+<TransportationCountry>MeansOfTransportBorder TransportationCountry fexeam_bfnatg</TransportationCountry>
+</MeansOfTransportBorder>
+<PlaceOfLoading>
+<Code>fexeda_ldocde</Code>
+<Street>fexeda_beostr</Street>
+<PostalCode>fexeda_beoplz</PostalCode>
+<City>fexeda_beoort</City>
+<AgreedLocationOfGoods>fexeda_beozus</AgreedLocationOfGoods>
+</PlaceOfLoading>
+<CustomsOfficeExport>fexdat_expdst</CustomsOfficeExport>
+<CustomsOfficeForCompletion>fexdat_eamdst</CustomsOfficeForCompletion>
+<IntendedOfficeOfExit>IntendedOfficeOfExit fexeda_extdst</IntendedOfficeOfExit>
+<Business>
+<BusinessTypeCode>BusinessTypeCode fexeam_gesart</BusinessTypeCode>
+<InvoicePrice>22.34 fexeam_gesprs</InvoicePrice>
+<Currency>Currency fexeam_geswrg</Currency>
+</Business>
+<TransportationRoute>
+<Country>Country</Country>
+</TransportationRoute>
+<Seal>
+<Kind>Kind fexeda_vsart</Kind>
+<Number>Number 95 fexeda_anzve</Number>
+<UseOfTydenseals>UseOfTydenseals fexeda_kztyd</UseOfTydenseals>
+<UseOfTydensealStock>UseOfTydensealStock fexeda_kzstock</UseOfTydensealStock>
+<SealNumber>SealNumber1</SealNumber>
+<SealNumber>SealNumber2</SealNumber>
+<SealNumber>SealNumber3</SealNumber>
+</Seal>
+<ExportRefundHeader>
+<Text>Text</Text>
+<PaymentType>1</PaymentType>
+<BankNumber>2</BankNumber>
+<Assignee>3</Assignee>
+<Guarantee>4</Guarantee>
+<ReservationCode>5</ReservationCode>
+<DestinationCountry>DestinationCountry</DestinationCountry>
+</ExportRefundHeader>
+<LoadingTime>
+<BeginTime>BeginTime 200810301240 fexeda_gststr</BeginTime>
+<EndTime>EndTime 200810301241 fexeda_gstend</EndTime>
+</LoadingTime>
+<Forwarder>
+<VATNumber>ForwarderVATNumber</VATNumber>
+<ETNAdress>fexdat_etnsp LEER</ETNAdress>
+<Address>
+<Name>ForwarderName</Name>
+<Street>ForwarderStreet</Street>
+<City>ForwarderCity</City>
+<PostalCode>ForwarderPostalCode</PostalCode>
+<Country>ForwarderCountry</Country>
+</Address>
+</Forwarder>
+<ForwarderTIN>
+<TIN>12332</TIN>
+<IsTINGermanApprovalNumber>IsTINGermanApprovalNumber</IsTINGermanApprovalNumber>
+<CustomerIdentifier>fexdat_kdnrsp LEER</CustomerIdentifier>
+</ForwarderTIN>
+<Consignor>
+<VATNumber>ConsignorVATNumber</VATNumber>
+<ETNAdress>ConsignorETNAdress</ETNAdress>
+<Address>
+<Name>ConsignorName</Name>
+<Street>ConsignorStreet</Street>
+<City>ConsignorCity</City>
+<PostalCode>ConsignorPostalCode</PostalCode>
+<Country>ConsignorCountry</Country>
+</Address>
+</Consignor>
+<ConsignorTIN>
+<TIN>ConsignorTIN TIN fexeda_tinau</TIN>
+<IsTINGermanApprovalNumber>IsTINGermanApprovalNumber fexeda_dtzoau</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier fexeda_kdnrau</CustomerIdentifier>
+</ConsignorTIN>
+<ConsignorContactPerson>
+<Position>ConsignorContactPersonPosition</Position>
+<Clerk>ConsignorContactPersonClerk</Clerk>
+<Email>ConsignorContactPersonEmail</Email>
+<FaxNumber>ConsignorContactPersonFaxNumber</FaxNumber>
+<PhoneNumber>ConsignorContactPersonPhoneNumber</PhoneNumber>
+</ConsignorContactPerson>
+<Declarant>
+<VATNumber>Declarant VATNumber</VATNumber>
+<ETNAdress>Declarant ETNAdress</ETNAdress>
+<Address>
+<Name>DeclarantName</Name>
+<Street>DeclarantStreet</Street>
+<City>DeclarantCity</City>
+<PostalCode>DeclarantPostalCode</PostalCode>
+<Country>DeclarantCountry</Country>
+</Address>
+</Declarant>
+<DeclarantTIN>
+<TIN>fexdat_tinan</TIN>
+<IsTINGermanApprovalNumber>IsTINGermanApprovalNumber</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier</CustomerIdentifier>
+</DeclarantTIN>
+<DeclarantContactPerson>
+<Position>DeclarantContactPerson Position</Position>
+<Clerk>DeclarantContactPerson Clerk</Clerk>
+<Email>DeclarantContactPerson Email</Email>
+<FaxNumber>DeclarantContactPerson Number</FaxNumber>
+<PhoneNumber>DeclarantContactPerson Number</PhoneNumber>
+</DeclarantContactPerson>
+<Agent>
+<VATNumber>AgentVATNumber</VATNumber>
+<ETNAdress>AgentETNAdress ETNAdress  LEER</ETNAdress>
+<Address>
+<Name>Agent Name</Name>
+<Street>Agent Street</Street>
+<City>Agent City</City>
+<PostalCode>Agent PostalCode</PostalCode>
+<Country>Agent Country</Country>
+</Address>
+</Agent>
+<AgentTIN>
+<TIN>AgentTIN TIN fexeda_tinva</TIN>
+<IsTINGermanApprovalNumber>IsTINGermanApprovalNumber fexeda_dtzova</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier fexeda_kdnrva</CustomerIdentifier>
+</AgentTIN>
+<Subcontractor>
+<VATNumber>Subcontractor VATNumber</VATNumber>
+<ETNAdress>Subcontractor ETNAdress</ETNAdress>
+<Address>
+<Name>Subcontractor Name</Name>
+<Street>Subcontractor Street</Street>
+<City>Subcontractor City</City>
+<PostalCode>Subcontractor PostalCode</PostalCode>
+<Country>Subcontractor Country</Country>
+</Address>
+</Subcontractor>
+<SubcontractorTIN>
+<TIN>SubcontractorTIN TIN fexeda_tinsu</TIN>
+<IsTINGermanApprovalNumber>IsTINGermanApprovalNumber fexeda_dtzosu</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier fexeda_kdnrsu</CustomerIdentifier>
+<ETNAdress>ETNAdress fexeda_etnsu  LEER</ETNAdress>
+</SubcontractorTIN>
+<Consignee>
+<VATNumber>kopf Consignee VATNumber</VATNumber>
+<ETNAdress>kopf Consignee ETNAdress</ETNAdress>
+<Address>
+<Name>kopf Consignee Name</Name>
+<Street>kopf Consignee Street</Street>
+<City>kopf Consignee City</City>
+<PostalCode>kopf Consignee PostalCode</PostalCode>
+<Country>kopf Consignee Country</Country>
+</Address>
+</Consignee>
+<ConsigneeTIN>
+<TIN>fexdat_tinem</TIN>
+<IsTINGermanApprovalNumber>kopf ConsigneeTIN IsTINGermanApprovalNumber</IsTINGermanApprovalNumber>
+<CustomerIdentifier>fexdat_kdnrem</CustomerIdentifier>
+</ConsigneeTIN>
+<IncoTerms>
+<IncoTerm>IncoTerm fexeam_libart </IncoTerm>
+<Text>IncoTerms Text fexeam_libinc</Text>
+<Place>IncoTerms Place fexeam_libort</Place>
+</IncoTerms>
+<Document>
+<Qualifier>Qualifier Kopf</Qualifier>
+<Type>Type</Type>
+<Reference>Reference</Reference>
+<AdditionalInformation>AdditionalInformation</AdditionalInformation>
+<Detail>Detail</Detail>
+<IssueDate>20081010</IssueDate>
+<ExpirationDate>20081111</ExpirationDate>
+<Value>1234</Value>
+<WritedownAmount>
+<Qualifier>WritedownAmount Qualifier</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement</UnitOfMeasurement>
+<Value>4711</Value>
+</WritedownAmount>
+</Document>
+<Container>
+<Number>11</Number>
+<Number>12</Number>
+<Number>13</Number>
+</Container>
+<PreviousDocument>
+<Type>PreviousDocument Type fexazv_vptyp</Type>
+<Marks>PreviousDocument Marks fexazv_azvref</Marks>
+<AdditionalInformation>PreviousDocument AdditionalInformation fexazv_azvzus</AdditionalInformation>
+</PreviousDocument>
+<GoodsItem>
+<ItemNumber>001</ItemNumber>
+<ArticleNumber>ArticleNumber fexapo_artnr</ArticleNumber>
+<Description>Description fexapo_wbsch</Description>
+<UCROtherSystem>UCROtherSystem fexapo_fregnr</UCROtherSystem>
+<Annotation>Annotation fexapo_verm</Annotation>
+<ShipmentNumber>ShipmentNumber</ShipmentNumber>
+<OriginFederalState>OriginFederalState fexapo_ubland</OriginFederalState>
+<NetMass>55.22 fexapo_eigmas</NetMass>
+<NetMassConfirmation>NetMassConfirmation</NetMassConfirmation>
+<GrossMass>66.22 fexapo_rohmas</GrossMass>
+<DangerousGoodsNumber>3223</DangerousGoodsNumber>
+<PaymentType>PaymentType</PaymentType>
+<KindOfArticle>45</KindOfArticle>
+<TypeOfArticle>6666</TypeOfArticle>
+<TypeOfDeclaration>23312</TypeOfDeclaration>
+<CommodityCode>
+<TarifCode>213 fexapo_tnr</TarifCode>
+<EUTarifCode>CommodityCode EUTarifCode fexapo_tnrtrc</EUTarifCode>
+<TarifAddition1>CommodityCode TarifAddition1 fexapo_tnrzu1</TarifAddition1>
+<TarifAddition2>CommodityCode TarifAddition1 fexapo_tnrzu2</TarifAddition2>
+<Addition>CommodityCode Addition fexapo_tnrnat</Addition>
+</CommodityCode>
+<ExportRefundItem>
+<Addition1>Addition1</Addition1>
+<Addition2>Addition2</Addition2>
+<OriginCountry>OriginCountry</OriginCountry>
+<AmountCode>AmountCode</AmountCode>
+<Amount>45.67</Amount>
+<TypeOfRefund>1234</TypeOfRefund>
+<AmountCoefficient>AmountCoefficient</AmountCoefficient>
+<PartA>PartA</PartA>
+<PartB>PartB</PartB>
+<PartC>PartC</PartC>
+<PartD>PartD</PartD>
+<UnitOfMeasurement>UnitOfMeasurement</UnitOfMeasurement>
+<Ingredient>
+<SequentialNumber>123</SequentialNumber>
+<Amount1>Amount1</Amount1>
+<KindOfCoefficient>KindOfCoefficient</KindOfCoefficient>
+<Amount2>Amount2</Amount2>
+<Rate>Rate</Rate>
+<WeightPercent>99.12</WeightPercent>
+<Weight>122121.11</Weight>
+<UniqueFactoryNumber>123</UniqueFactoryNumber>
+<TarifNumber>3423434</TarifNumber>
+<LicenceNumber>LicenceNumber</LicenceNumber>
+<Text>Text</Text>
+</Ingredient>
+</ExportRefundItem>
+<CustomsApprovedTreatment>
+<Declared>23321 fexapo_anmvrf</Declared>
+<Previous>312 fexapo_prevrf</Previous>
+<National>National fexapo_natvrf</National>
+<CodeForRefund>CodeForRefund fexapo_wmahst</CodeForRefund>
+</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>231.21 fexapo_wmahst</AdditionalUnit>
+<AdditionalUnitConfirmation>AdditionalUnitConfirmation</AdditionalUnitConfirmation>
+<StatisticalValue>32321 fexapo_ahwert</StatisticalValue>
+<StatisticalValueConfirmation>StatisticalValueConfirmation </StatisticalValueConfirmation>
+<Value>1232.22 fexepo_basbtg</Value>
+<Currency>Currency fexepo_baswrg</Currency>
+</Statistic>
+<SensitiveGoods>
+<Type>1</Type>
+<Weight>22.23</Weight>
+</SensitiveGoods>
+<SpecialMention>
+<TypeOfExport>TypeOfExport</TypeOfExport>
+<ExportFromEU>ExportFromEU</ExportFromEU>
+<ExportFromCountry>ExportFromCountry</ExportFromCountry>
+<Text>Text</Text>
+</SpecialMention>
+<NonCustomsLaw>
+<NonCustomsLaw>NonCustomsLaw</NonCustomsLaw>
+</NonCustomsLaw>
+<Permit>
+<PermitAuthority>PermitAuthority</PermitAuthority>
+<PermitNumber>PermitNumber</PermitNumber>
+<IssueDate>20081030</IssueDate>
+<AdditionalInformation>AdditionalInformation</AdditionalInformation>
+</Permit>
+<Notifications>
+<NotificationCode>NotificationCode</NotificationCode>
+</Notifications>
+<Consignee>
+<VATNumber>pos Consignee VATNumber</VATNumber>
+<ETNAdress>pos Consignee ETNAdress</ETNAdress>
+<Address>
+<Name>pos Consignee Name</Name>
+<Street>pos Consignee Street</Street>
+<City>pos Consignee City</City>
+<PostalCode>pos Consignee PostalCode</PostalCode>
+<Country>pos Consignee Country</Country>
+</Address>
+</Consignee>
+<ConsigneeTIN>
+<TIN>12332 fexapo_tinem</TIN>
+<IsTINGermanApprovalNumber>pos ConsigneeTIN IsTINGermanApprovalNumber</IsTINGermanApprovalNumber>
+<CustomerIdentifier>pos ConsigneeTIN CustomerIdentifier fexapo_kdnrem</CustomerIdentifier>
+</ConsigneeTIN>
+<Packages>
+<Quantity>Quantity fexaco_colanz</Quantity>
+<SequentialNumber>SequentialNumber fexaco_lfdnr</SequentialNumber>
+<Type>Type fexaco_colart</Type>
+<Marks>Marks fexaco_colzch</Marks>
+<QuantityCH>QuantityCH</QuantityCH>
+<TransportMeans>
+<TransportMode>22</TransportMode>
+<TransportationType>33</TransportationType>
+<TransportTime>1025</TransportTime>
+<TransportationNumber>TransportationNumber</TransportationNumber>
+<TransportationCountry>TransportationCountry</TransportationCountry>
+<PlaceOfLoading>PlaceOfLoading</PlaceOfLoading>
+</TransportMeans>
+</Packages>
+<Container>
+<Number>11111</Number>
+<Number>222222</Number>
+<Number>33333333</Number>
+<Number>4444444444</Number>
+</Container>
+<Document>
+<Qualifier>Pos Qualifier fexaed_untqar</Qualifier>
+<Type>Type fexaed_untart</Type>
+<Reference>Reference fexaed_untnr</Reference>
+<AdditionalInformation>AdditionalInformation fexaed_untzus</AdditionalInformation>
+<Detail>Detail</Detail>
+<IssueDate>20081010 IssueDate fexaed_untdat</IssueDate>
+<ExpirationDate>20081030 ExpirationDate fexaed_gbdat</ExpirationDate>
+<Value>11.23</Value>
+<WritedownAmount>
+<Qualifier>POS WritedownAmount Qualifier</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement</UnitOfMeasurement>
+<Value>87.65</Value>
+</WritedownAmount>
+</Document>
+<PreviousDocument>
+<Type>PreviousDocument Type fexazv_vptyp</Type>
+<Marks>PreviousDocument Marks fexazv_azvref</Marks>
+<AdditionalInformation>PreviousDocument AdditionalInformation fexazv_azvzus</AdditionalInformation>
+</PreviousDocument>
+</GoodsItem>
+</GoodsDeclaration></Cancellation></soap:Body></soap:Envelope>

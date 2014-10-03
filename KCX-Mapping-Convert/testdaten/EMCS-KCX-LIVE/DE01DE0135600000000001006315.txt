@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2012</Year>
+                    <Month>01</Month>
+                    <Day>02</Day>
+                </Date>
+                <Time>090611</Time>
+                <TimeZone>+0100</TimeZone>
+            </SentAt>
+            <Transmitter>DE.JUHO.DUE</Transmitter>
+            <Receiver>DE.JUHO.DUE</Receiver>
+            <Method>EME</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EMCS</Procedure>
+                <MessageName>localAppResult</MessageName>
+                <Release>2.0.00</Release>
+                <Direction>TO_CUSTOMER</Direction>
+            </MessageTP>
+            <MessageID>DE-JUHO-DUE001672020112</MessageID>
+            <InReplyTo>DE01DE0135600000000001006315</InReplyTo>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <localAppResult>
+            <GoodsDeclaration>
+                <ReferenceNumber>0000000081/0080383415</ReferenceNumber>
+                <CorrectionNumber>0</CorrectionNumber>
+                <ProcedureType>EME</ProcedureType>
+                <GoodsItem>
+                    <ItemNumber>1</ItemNumber>
+                    <PositionError>
+                        <KindOfError>WRG</KindOfError>
+                        <ErrorCode>EmepacDTO.anzahl.0001a</ErrorCode>
+                        <ErrorText>Eintrag 1: Bei einer nicht zählbaren Packstückart (VL) darf keine Packstückanzahl angegeben werden.</ErrorText>
+                        <DateOfErrorMessage>20120102</DateOfErrorMessage>
+                        <TimeOfErrorMessage>090611</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+                <GoodsItem>
+                    <ItemNumber>0</ItemNumber>
+                    <PositionError>
+                        <KindOfError>INF</KindOfError>
+                        <ErrorCode>LOGGING</ErrorCode>
+                        <ErrorText>--- AADSUB-Nachricht mit 1 Warnung(en) verarbeitet</ErrorText>
+                        <DateOfErrorMessage>20120102</DateOfErrorMessage>
+                        <TimeOfErrorMessage>090611</TimeOfErrorMessage>
+                    </PositionError>
+                </GoodsItem>
+            </GoodsDeclaration>
+        </localAppResult>
+    </soap:Body>
+</soap:Envelope>

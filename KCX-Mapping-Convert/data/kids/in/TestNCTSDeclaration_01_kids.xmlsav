@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <KCX>
+  <Primary>DE</Primary>
+  <Secondary>NCTS</Secondary>
+  <Audit_Id>No Mule Call</Audit_Id>
+  <Content>
+  <![CDATA[<?xml version="1.0"?>
+<soap:Envelope
+	xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Header
+			xmlns="http://www.eBiz.com/schemas/header/200310"
+			soap:mustUnderstand="true">
+			<SentAt>
+				<Date>
+					<Year>2010</Year>
+					<Month>09</Month>
+					<Day>07</Day>
+				</Date>
+				<Time>12:09:15</Time>
+				<TimeZone>+0100</TimeZone>
+			</SentAt>
+			<Transmitter>DE.CSF</Transmitter>
+			<Receiver>DE.CSF</Receiver>
+			<Method>NCTS</Method>
+			<MessageTP>
+				<CountryCode>DE</CountryCode>
+				<Procedure>NCTS</Procedure>
+				<MessageName>NCTSDeclaration</MessageName>
+				<Release>4.0</Release>
+				<Direction>FROM_CUSTOMER</Direction>
+			</MessageTP>
+			<MessageID>test-msg-id-01</MessageID>
+		</Header>
+	</soap:Header>
+<soap:Body>
+<NCTSDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>ReferenceNumber1</ReferenceNumber>
+<ShipmentNumber>ShipmentNumber1</ShipmentNumber>
+<AuthorisationNumber>AuthorisationNumber1</AuthorisationNumber>
+<TypeOfDeclaration>TypeOfDeclaration1</TypeOfDeclaration>
+<PlaceOfLoading>
+<Code>Code1</Code>
+<Street>Street1</Street>
+<PostalCode>1</PostalCode>
+<City>City1</City>
+<AgreedLocationOfGoods>AgreedLocationOfGoods1</AgreedLocationOfGoods>
+<AgreedLocationOfGoodsCode>AgreedLocationOfGoodsCode1</AgreedLocationOfGoodsCode>
+<AuthorisedLocationOfGoodsCode>AuthorisedLocationOfGoodsCode1</AuthorisedLocationOfGoodsCode>
+</PlaceOfLoading>
+<DestinationCountry>D1</DestinationCountry>
+<DispatchCountry>D2</DispatchCountry>
+<CustomsSubPlace>CustomsSubPlace1</CustomsSubPlace>
+<MeansOfTransportInland>
+<TransportMode>2</TransportMode>
+<TransportationType>3</TransportationType>
+<TransportTime>201008191434</TransportTime>
+<TransportationNumber>TransportationNumber1</TransportationNumber>
+<TransportationCountry>T1</TransportationCountry>
+<PlaceOfLoading>PlaceOfLoading1</PlaceOfLoading>
+<PlaceOfLoadingCode>PlaceOfLoadingCode1</PlaceOfLoadingCode>
+</MeansOfTransportInland>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationType>5</TransportationType>
+<TransportTime>201008201434</TransportTime>
+<TransportationNumber>TransportationNumber2</TransportationNumber>
+<TransportationCountry>T2</TransportationCountry>
+<PlaceOfLoading>PlaceOfLoading2</PlaceOfLoading>
+<PlaceOfLoadingCode>PlaceOfLoadingCode2</PlaceOfLoadingCode>
+</MeansOfTransportBorder>
+<MeansOfTransportDeparture>
+<TransportMode>6</TransportMode>
+<TransportationType>7</TransportationType>
+<TransportTime>201008211434</TransportTime>
+<TransportationNumber>TransportationNumber3</TransportationNumber>
+<TransportationCountry>T3</TransportationCountry>
+<PlaceOfLoading>PlaceOfLoading3</PlaceOfLoading>
+<PlaceOfLoadingCode>PlaceOfLoadingCode3</PlaceOfLoadingCode>
+</MeansOfTransportDeparture>
+<MeansOfTransportCrossingBorder>
+<TransportMode>8</TransportMode>
+<TransportationType>9</TransportationType>
+<TransportTime>201008221434</TransportTime>
+<TransportationNumber>TransportationNumber4</TransportationNumber>
+<TransportationCountry>T4</TransportationCountry>
+<PlaceOfLoading>PlaceOfLoading4</PlaceOfLoading>
+<PlaceOfLoadingCode>PlaceOfLoadingCode4</PlaceOfLoadingCode>
+</MeansOfTransportCrossingBorder>
+<TransportInContainer>10</TransportInContainer>
+<NCTSDocumentLanguage>NCTSDocumentLanguage1</NCTSDocumentLanguage>
+<TotalNumberPositions>11</TotalNumberPositions>
+<TotalNumberPackages>12</TotalNumberPackages>
+<TotalCrossMass>1.12</TotalCrossMass>
+<DeclarationDate>20100823</DeclarationDate>
+<DeclarationPlace>DeclarationPlace1</DeclarationPlace>
+<SituationCode>SituationCode1</SituationCode>
+<PaymentType>PaymentType1</PaymentType>
+<SecurityIndicator>SecurityIndicator1</SecurityIndicator>
+<ConveyanceNumber>ConveyanceNumber1</ConveyanceNumber>
+<PlaceOfUnLoading>PlaceOfUnLoading1</PlaceOfUnLoading>
+<ConsignorTIN>
+<TIN>13</TIN>
+<IsTINGermanApprovalNumber>true</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier1</CustomerIdentifier>
+</ConsignorTIN>
+<Consignor>
+<VATNumber>VATNumber1</VATNumber>
+<ETNAddress>ETNAddress1</ETNAddress>
+<Address>
+<Name>Name1</Name>
+<Street>Street2</Street>
+<City>City2</City>
+<PostalCode>PostalCode1</PostalCode>
+<Country>C1</Country>
+<CountrySubEntity>CountrySubEntity1</CountrySubEntity>
+</Address>
+</Consignor>
+<ConsigneeTIN>
+<TIN>14</TIN>
+<IsTINGermanApprovalNumber>false</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier2</CustomerIdentifier>
+</ConsigneeTIN>
+<Consignee>
+<VATNumber>VATNumber2</VATNumber>
+<ETNAddress>ETNAddress2</ETNAddress>
+<Address>
+<Name>Name2</Name>
+<Street>Street3</Street>
+<City>City3</City>
+<PostalCode>PostalCode2</PostalCode>
+<Country>C2</Country>
+<CountrySubEntity>CountrySubEntity2</CountrySubEntity>
+</Address>
+</Consignee>
+<AuthorisedConsigneeTIN>
+<TIN>15</TIN>
+<IsTINGermanApprovalNumber>true</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier3</CustomerIdentifier>
+</AuthorisedConsigneeTIN>
+<AuthorisedConsignee>
+<VATNumber>VATNumber3</VATNumber>
+<ETNAddress>ETNAddress3</ETNAddress>
+<Address>
+<Name>Name3</Name>
+<Street>Street4</Street>
+<City>City4</City>
+<PostalCode>PostalCode3</PostalCode>
+<Country>C3</Country>
+<CountrySubEntity>CountrySubEntity3</CountrySubEntity>
+</Address>
+</AuthorisedConsignee>
+<PrincipalTIN>
+<TIN>16</TIN>
+<IsTINGermanApprovalNumber>false</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier4</CustomerIdentifier>
+</PrincipalTIN>
+<Principal>
+<VATNumber>VATNumber4</VATNumber>
+<ETNAddress>ETNAddress4</ETNAddress>
+<Address>
+<Name>Name4</Name>
+<Street>Street5</Street>
+<City>City5</City>
+<PostalCode>PostalCode4</PostalCode>
+<Country>C4</Country>
+<CountrySubEntity>CountrySubEntity4</CountrySubEntity>
+</Address>
+</Principal>
+<OfficeOfDeparture>OfficeO1</OfficeOfDeparture>
+<OfficeOfTransit>
+<Code>Code2___</Code>
+<ArrivalDateAndTime>2010-08-24T14:34:41 +0200</ArrivalDateAndTime>
+</OfficeOfTransit>
+<OfficeOfTransit>
+<Code>Code3___</Code>
+<ArrivalDateAndTime>2010-08-25T14:34:41 +0200</ArrivalDateAndTime>
+</OfficeOfTransit>
+<OfficeOfDestination>OfficeO2</OfficeOfDestination>
+<ControlResultCode>ControlResultCode1</ControlResultCode>
+<ControlResultDateLimit>20100826</ControlResultDateLimit>
+<SimplifiedProcedureIndicator>true</SimplifiedProcedureIndicator>
+<RepresentativeName>RepresentativeName1</RepresentativeName>
+<RepresentativeCapacity>RepresentativeCapacity1</RepresentativeCapacity>
+<TotalNumberOfSeals>TotalNumberOfSeals1</TotalNumberOfSeals>
+<Seals>
+<Kind>Kind1</Kind>
+<Number>17</Number>
+<UseOfTydenseals>false</UseOfTydenseals>
+<UseOfTydensealStock>true</UseOfTydensealStock>
+<SealNumbers>
+<Number>Number1</Number>
+<SealingParty>SealingParty1</SealingParty>
+</SealNumbers>
+<SealNumbers>
+<Number>Number2</Number>
+<SealingParty>SealingParty2</SealingParty>
+</SealNumbers>
+</Seals>
+
+<Guarantee>
+<TypeOfGuarantee>Kopf_TypeOfGuarantee1</TypeOfGuarantee>
+<Reference>
+<GRN>GRN1</GRN>
+</Reference>
+<Reference>
+<GRN>GRN2</GRN>
+</Reference>
+</Guarantee>
+<Guarantee>
+<TypeOfGuarantee>Kopf_TypeOfGuarantee22</TypeOfGuarantee>
+<Reference>
+<OtherNumber>OtherNumber1</OtherNumber>
+</Reference>
+<Reference>
+<OtherNumber>OtherNumber2</OtherNumber>
+</Reference>
+</Guarantee>
+<TransportationRoute>
+<Country>C5</Country>
+<Country>C6</Country>
+<SuspensionIndicator>false</SuspensionIndicator>
+</TransportationRoute>
+<CarrierTIN>
+<TIN>18</TIN>
+<IsTINGermanApprovalNumber>true</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier5</CustomerIdentifier>
+</CarrierTIN>
+<Security>
+<ShipmentNumber>ShipmentNumber2</ShipmentNumber>
+<PlaceOfLoading>PlaceOfLoading5</PlaceOfLoading>
+<PlaceOfUnloading>PlaceOfUnloading1</PlaceOfUnloading>
+<Itinerary>Itinerary1</Itinerary>
+<Itinerary>Itinerary2</Itinerary>
+</Security>
+<ConsignorSecurityTIN>
+<TIN>19</TIN>
+<IsTINGermanApprovalNumber>false</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier6</CustomerIdentifier>
+</ConsignorSecurityTIN>
+<ConsigneeSecurityTIN>
+<TIN>20</TIN>
+<IsTINGermanApprovalNumber>true</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier7</CustomerIdentifier>
+</ConsigneeSecurityTIN>
+<GoodsItem>
+<ItemNumber>21</ItemNumber>
+<TypeOfDeclaration>TypeOfDeclaration2</TypeOfDeclaration>
+<CommodityCode>
+<TarifCode>TarifCode22</TarifCode>
+<EUTarifCode>EUTarifCode1</EUTarifCode>
+<TarifAddition1>TarifAddition11</TarifAddition1>
+<TarifAddition2>TarifAddition21</TarifAddition2>
+<Addition>Addition1</Addition>
+<Addition2>Addition21</Addition2>
+<Addition3>Addition31</Addition3>
+</CommodityCode>
+<Description>00000000001111111111222222222233333333334444444444555555555566666666667777777777888888888899999999990000000000111111111122222222223333333333</Description>
+<ArticleNumber>ArticleNumber1</ArticleNumber>
+<DestinationCountry>D3</DestinationCountry>
+<DispatchCountry>D4</DispatchCountry>
+<NetMass>6.12</NetMass>
+<GrossMass>7.12</GrossMass>
+<DangerousGoodsNumber>23</DangerousGoodsNumber>
+<PreviousDocument>
+	<Type>PreviousDocumentType1</Type>
+	<DocumentType>DocumentType1</DocumentType>
+	<Marks>PreviousDocumentMarks1</Marks>
+	<Reference>PreviousDocumentReference1</Reference>
+	<ReferenceSpecification>24</ReferenceSpecification>
+	<Quantity>25</Quantity>
+	<GrossMass>8.120000000000001</GrossMass>
+	<NetMass>9.120000000000001</NetMass>
+	<UnitOfMeasurement>26</UnitOfMeasurement>
+	<Value>10.120000000000001</Value>
+	<AdditionalInformation>PreviousDocumentAdditionalInformation1</AdditionalInformation>
+	<Date>Date1</Date>
+	<Office>Office1</Office>
+</PreviousDocument>
+<PreviousDocument>
+<Type>Type2</Type>
+<DocumentType>DocumentType2</DocumentType>
+<Marks>Marks2</Marks>
+<Reference>Reference2</Reference>
+<ReferenceSpecification>27</ReferenceSpecification>
+<Quantity>28</Quantity>
+<GrossMass>11.120000000000001</GrossMass>
+<NetMass>12.120000000000001</NetMass>
+<UnitOfMeasurement>29</UnitOfMeasurement>
+<Value>13.120000000000001</Value>
+<AdditionalInformation>AdditionalInformation2</AdditionalInformation>
+<Date>Date2</Date>
+<Office>Office2</Office>
+</PreviousDocument>
+<Document>
+	<Qualifier>DocumentQualifier1</Qualifier>
+	<Type>DocumentType3</Type>
+	<Reference>DocumentReference3</Reference>
+	<AdditionalInformation>DocumentAdditionalInformation3</AdditionalInformation>
+	<Detail>Detail1</Detail>
+	<IssueDate>20100827</IssueDate>
+	<ExpirationDate>20100828</ExpirationDate>
+	<Value>30</Value>
+	<Reason>Reason1</Reason>
+	<WritedownAmount>
+	<Qualifier>Qualifier2</Qualifier>
+	<UnitOfMeasurement>UnitOfMeasurement1</UnitOfMeasurement>
+	<Value>14.120000000000001</Value>
+	</WritedownAmount>
+	<WritedownQuantity>
+	<Qualifier>Qualifier3</Qualifier>
+	<UnitOfMeasurement>UnitOfMeasurement2</UnitOfMeasurement>
+	<Value>15.120000000000001</Value>
+	</WritedownQuantity>
+	<Office>Office3</Office>
+	<Present>Present1</Present>
+	<PresentLocation>PresentLocation1</PresentLocation>
+</Document>
+<Document>
+<Qualifier>Qualifier4</Qualifier>
+<Type>Type4</Type>
+<Reference>Reference4</Reference>
+<AdditionalInformation>AdditionalInformation4</AdditionalInformation>
+<Detail>Detail2</Detail>
+<IssueDate>20100829</IssueDate>
+<ExpirationDate>20100830</ExpirationDate>
+<Value>31</Value>
+<Reason>Reason2</Reason>
+<WritedownAmount>
+<Qualifier>Qualifier5</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement3</UnitOfMeasurement>
+<Value>16.12</Value>
+</WritedownAmount>
+<WritedownQuantity>
+<Qualifier>Qualifier6</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement4</UnitOfMeasurement>
+<Value>17.12</Value>
+</WritedownQuantity>
+<Office>Office4</Office>
+<Present>Present2</Present>
+<PresentLocation>PresentLocation2</PresentLocation>
+</Document>
+<SpecialMention>
+<TypeOfExport>TypeOfExport1</TypeOfExport>
+<ExportFromEU>false</ExportFromEU>
+<ExportFromCountry>E1</ExportFromCountry>
+<Text>Text1</Text>
+<Language>Language1</Language>
+</SpecialMention>
+<SpecialMention>
+<TypeOfExport>TypeOfExport2</TypeOfExport>
+<ExportFromEU>true</ExportFromEU>
+<ExportFromCountry>E2</ExportFromCountry>
+<Text>Text2</Text>
+<Language>Language2</Language>
+</SpecialMention>
+<Containers>
+<Number>Number3</Number>
+<Number>Number4</Number>
+</Containers>
+<Package>
+<Quantity>32</Quantity>
+<SequentialNumber>33</SequentialNumber>
+<Type>PackageType5</Type>
+<Marks>PackageMarks3</Marks>
+<QuantityCH>34</QuantityCH>
+<TransportMeans>
+<TransportMode>35</TransportMode>
+<TransportationType>36</TransportationType>
+<TransportTime>201008311434</TransportTime>
+<TransportationNumber>TransportationNumber5</TransportationNumber>
+<TransportationCountry>T5</TransportationCountry>
+<PlaceOfLoading>PlaceOfLoading6</PlaceOfLoading>
+<PlaceOfLoadingCode>PlaceOfLoadingCode5</PlaceOfLoadingCode>
+</TransportMeans>
+</Package>
+<SensitiveGoods>
+<Type>37</Type>
+<Weight>18.12</Weight>
+</SensitiveGoods>
+<Guarantee>
+<TypeOfGuarantee>POS_TypeOfGuarantee2</TypeOfGuarantee>
+<Reference>
+<GRN>GRN3</GRN>
+</Reference>
+<Reference>
+<OtherNumber>OtherNumber4</OtherNumber>
+</Guarantee>
+<ConsignorTIN>
+<TIN>38</TIN>
+<IsTINGermanApprovalNumber>false</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier8</CustomerIdentifier>
+</ConsignorTIN>
+<Consignor>
+<VATNumber>VATNumber5</VATNumber>
+<ETNAddress>ETNAddress5</ETNAddress>
+<Address>
+<Name>Pos ConsignorName5</Name>
+<Street>Pos ConsignorStreet6</Street>
+<City>Pos ConsignorCity6</City>
+<PostalCode>Pos ConsignorPostalCode5</PostalCode>
+<Country>C7</Country>
+<CountrySubEntity>CountrySubEntity5</CountrySubEntity>
+</Address>
+</Consignor>
+<ConsigneeTIN>
+<TIN>39</TIN>
+<IsTINGermanApprovalNumber>true</IsTINGermanApprovalNumber>
+<CustomerIdentifier>CustomerIdentifier9</CustomerIdentifier>
+</ConsigneeTIN>
+<Consignee>
+<VATNumber>VATNumber6</VATNumber>
+<ETNAddress>ETNAddress6</ETNAddress>
+<Address>
+<Name>Pos ConsigneeName6</Name>
+<Street>Pos ConsigneeStreet7</Street>
+<City>Pos ConsigneeCity7</City>
+<PostalCode>Pos ConsigneePostalCode6</PostalCode>
+<Country>C8</Country>
+<CountrySubEntity>CountrySubEntity6</CountrySubEntity>
+</Address>
+</Consignee>
+<BondedWarehouseCompletion>
+<Checked>false</Checked>
+<TotalNumberOfPositions>TotalNumberOfPositions1</TotalNumberOfPositions>
+<AuthorizationNumber>AuthorizationNumber1</AuthorizationNumber>
+<ReferenceNumber>ReferenceNumber2</ReferenceNumber>
+<CompletionItem>
+<SequentialNumber>40</SequentialNumber>
+<PositionNumber>41</PositionNumber>
+<UCR>UCR1</UCR>
+<EntryInAtlas>true</EntryInAtlas>
+<Text>Text3</Text>
+<Tarifnumber>42</Tarifnumber>
+<UsualFormOfHandling>false</UsualFormOfHandling>
+<WriteDownAmount>
+<Qualifier>Qualifier7</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement5</UnitOfMeasurement>
+<Value>23.12</Value>
+</WriteDownAmount>
+<TradeAmount>
+<Qualifier>Qualifier8</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement6</UnitOfMeasurement>
+<Value>24.12</Value>
+</TradeAmount>
+</CompletionItem>
+<CompletionItem>
+<SequentialNumber>43</SequentialNumber>
+<PositionNumber>44</PositionNumber>
+<UCR>UCR2</UCR>
+<EntryInAtlas>true</EntryInAtlas>
+<Text>Text4</Text>
+<Tarifnumber>45</Tarifnumber>
+<UsualFormOfHandling>false</UsualFormOfHandling>
+<WriteDownAmount>
+<Qualifier>Qualifier9</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement7</UnitOfMeasurement>
+<Value>25.12</Value>
+</WriteDownAmount>
+<TradeAmount>
+<Qualifier>Qualifier10</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement8</UnitOfMeasurement>
+<Value>26.12</Value>
+</TradeAmount>
+</CompletionItem>
+</BondedWarehouseCompletion>
+<InwardProcessingCompletion>
+<Checked>true</Checked>
+<TotalNumberOfPositions>TotalNumberOfPositions2</TotalNumberOfPositions>
+<AuthorizationNumber>AuthorizationNumber2</AuthorizationNumber>
+<ReferenceNumber>ReferenceNumber3</ReferenceNumber>
+<CompletionItem>
+<SequentialNumber>46</SequentialNumber>
+<PositionNumber>47</PositionNumber>
+<UCR>UCR3</UCR>
+<EntryInAtlas>false</EntryInAtlas>
+<Text>Text5</Text>
+<Tarifnumber>48</Tarifnumber>
+<UsualFormOfHandling>true</UsualFormOfHandling>
+<WriteDownAmount>
+<Qualifier>Qualifier11</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement9</UnitOfMeasurement>
+<Value>27.12</Value>
+</WriteDownAmount>
+<TradeAmount>
+<Qualifier>Qualifier12</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement10</UnitOfMeasurement>
+<Value>28.12</Value>
+</TradeAmount>
+</CompletionItem>
+<CompletionItem>
+<SequentialNumber>49</SequentialNumber>
+<PositionNumber>50</PositionNumber>
+<UCR>UCR4</UCR>
+<EntryInAtlas>false</EntryInAtlas>
+<Text>Text6</Text>
+<Tarifnumber>51</Tarifnumber>
+<UsualFormOfHandling>true</UsualFormOfHandling>
+<WriteDownAmount>
+<Qualifier>Qualifier13</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement11</UnitOfMeasurement>
+<Value>29.12</Value>
+</WriteDownAmount>
+<TradeAmount>
+<Qualifier>Qualifier14</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement12</UnitOfMeasurement>
+<Value>30.12</Value>
+</TradeAmount>
+</CompletionItem>
+</InwardProcessingCompletion>
+<ManifestCompletion>
+<Checked>false</Checked>
+<TotalNumberOfPositions>TotalNumberOfPositions3</TotalNumberOfPositions>
+<AuthorizationNumber>AuthorizationNumber3</AuthorizationNumber>
+<ReferenceNumber>ReferenceNumber4</ReferenceNumber>
+<CompletionItem>
+<SequentialNumber>52</SequentialNumber>
+<PositionNumber>53</PositionNumber>
+<UCR>UCR5</UCR>
+<EntryInAtlas>true</EntryInAtlas>
+<Text>Text7</Text>
+<Tarifnumber>54</Tarifnumber>
+<UsualFormOfHandling>false</UsualFormOfHandling>
+<WriteDownAmount>
+<Qualifier>Qualifier15</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement13</UnitOfMeasurement>
+<Value>31.12</Value>
+</WriteDownAmount>
+<TradeAmount>
+<Qualifier>Qualifier16</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement14</UnitOfMeasurement>
+<Value>32.120000000000005</Value>
+</TradeAmount>
+</CompletionItem>
+<CompletionItem>
+<SequentialNumber>55</SequentialNumber>
+<PositionNumber>56</PositionNumber>
+<UCR>UCR6</UCR>
+<EntryInAtlas>true</EntryInAtlas>
+<Text>Text8</Text>
+<Tarifnumber>57</Tarifnumber>
+<UsualFormOfHandling>false</UsualFormOfHandling>
+<WriteDownAmount>
+<Qualifier>Qualifier17</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement15</UnitOfMeasurement>
+<Value>33.120000000000005</Value>
+</WriteDownAmount>
+<TradeAmount>
+<Qualifier>Qualifier18</Qualifier>
+<UnitOfMeasurement>UnitOfMeasurement16</UnitOfMeasurement>
+<Value>34.120000000000005</Value>
+</TradeAmount>
+</CompletionItem>
+</ManifestCompletion>
+</GoodsItem>
+</GoodsDeclaration>
+</NCTSDeclaration>
+  </soap:Body>
+</soap:Envelope>
+]]>
+  </Content>
+  </KCX>

@@ -1,0 +1,52 @@
+<CC316A xmlns="http://www.eurodyn.com">
+   <MesSenMES3>CY</MesSenMES3>
+   <MesRecMES6>CY0000000071</MesRecMES6>
+   <DatOfPreMES9>110704</DatOfPreMES9>
+   <TimOfPreMES10>1956</TimOfPreMES10>
+   <MesIdeMES19>CYICS110034174</MesIdeMES19>
+   <MesTypMES20>CC316A</MesTypMES20>
+   <CorIdeMES25>MS-20110704-04</CorIdeMES25>
+   <HEAHEA316>
+      <RefNumHEA4>MS-20110704-04</RefNumHEA4>
+      <DecRejDatTimHEA116>201107041956</DecRejDatTimHEA116>
+   </HEAHEA316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.HEA.Identity of means of transport crossing border</ErrPoiER12>
+      <ErrReaER13>C017</ErrReaER13>
+      <OriAttValER14>OO-THB</OriAttValER14>
+   </FUNERRER1316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.HEA.Nationality of means of transport crossing border</ErrPoiER12>
+      <ErrReaER13>C024</ErrReaER13>
+      <OriAttValER14>BE</OriAttValER14>
+   </FUNERRER1316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.HEA.Total number of packages</ErrPoiER12>
+      <ErrReaER13>R105</ErrReaER13>
+      <OriAttValER14>19</OriAttValER14>
+   </FUNERRER1316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.LON</ErrPoiER12>
+      <ErrReaER13>R827</ErrReaER13>
+   </FUNERRER1316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.SUM.TIN</ErrPoiER12>
+      <ErrReaER13>R837</ErrReaER13>
+      <OriAttValER14>DE9008144</OriAttValER14>
+   </FUNERRER1316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.GDS(1).MTI(1)</ErrPoiER12>
+      <ErrReaER13>C019</ErrReaER13>
+   </FUNERRER1316>
+   <FUNERRER1316>
+      <ErrTypER11>15</ErrTypER11>
+      <ErrPoiER12>MES.GDS(2).MTI(1)</ErrPoiER12>
+      <ErrReaER13>C019</ErrReaER13>
+   </FUNERRER1316>
+</CC316A>

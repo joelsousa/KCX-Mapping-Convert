@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+	<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+		<To>DE01.CSFALT.2144</To>
+		<From>DE01.CSFALT.2144</From>
+		<MessageID>EI20100519</MessageID>
+		<SentAt>2010-05-19 12:02:00 +0200</SentAt>
+		<Act>status</Act>
+		<AdditionalInformation>NewStatus</AdditionalInformation>
+		<MessageVersion>1.0</MessageVersion>
+		<MessageType>InternalStatusInformation</MessageType>
+	</Header>
+</soap:Header>
+</soap:Envelope>
+
+
+
+
+
+
+

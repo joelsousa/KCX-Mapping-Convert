@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>DE.SKGTST.4037</To>
+      <From>DE.SKGTST.4037</From>
+      <MessageID>7d51d5f5-1a54-4e07-bf2d-eecc47d1b135</MessageID>
+      <SentAt>2011-12-08T11:02:39</SentAt>
+      <Act>inform</Act>
+      <Procedure>NCTS</Procedure>
+      <MessageType>NCTSDeclaration</MessageType>
+      <Direction>FROM_CUSTOMER</Direction>
+      <MessageVersion>4.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ncts/body/200911">
+      <NCTS>
+        <NCTSDeclaration>
+          <LocalReferenceNumber>11S00003D8</LocalReferenceNumber>
+          <TypeOfDeclaration>T1</TypeOfDeclaration>
+          <CountryOfDestination>PL</CountryOfDestination>
+          <CountryOfDispatch>DE</CountryOfDispatch>
+          <TransportAtBorder>
+            <Identity>SB89897</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtBorder>
+          <TransportAtDeparture>
+            <Identity>SB99809</Identity>
+            <Mode>3</Mode>
+            <Nationality>PL</Nationality>
+          </TransportAtDeparture>
+          <ContainerIndicator>0</ContainerIndicator>
+          <TotalNumberOfItems>1</TotalNumberOfItems>
+          <TotalNumberOfPackages>100</TotalNumberOfPackages>
+          <TotalGrossMass>1000000</TotalGrossMass>
+          <Consignor>
+            <Address>
+              <Name>NADAWCA SPZ O.O.</Name>
+              <Street>Nadawcow 10/1</Street>
+              <PostalCode>43-300</PostalCode>
+              <City>Bielsko-Biala</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignor>
+          <Consignee>
+            <Address>
+              <Name>ODBIORCA SPZ O.O.</Name>
+              <Street>Odbiorcow 99m2</Street>
+              <PostalCode>43-346</PostalCode>
+              <City>Bielsko-Biala</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Consignee>
+          <Principal>
+            <TIN>9002758</TIN>
+            <TIRHolderID>PL1234</TIRHolderID>
+            <Address>
+              <Name>SKG S.A.</Name>
+              <Street>Armii Krajowej 336</Street>
+              <PostalCode>43-309</PostalCode>
+              <City>Bielsko-Biala</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </Principal>
+          <OfficeOfDeparture>DE005866</OfficeOfDeparture>
+          <OfficeOfDestination>DE005876</OfficeOfDestination>
+          <SimplifiedProcedureFlag>0</SimplifiedProcedureFlag>
+          <RepresentativeName>JOZEF CZERWINSKI</RepresentativeName>
+          <RepresentativeCapacity>agent celny</RepresentativeCapacity>
+          <Guarantee>
+            <TypeOfGuarantee>1</TypeOfGuarantee>
+            <Reference>
+              <GRN>07DE0000000003204</GRN>
+              <AccessCode>NNNZ</AccessCode>
+              <Amounts>
+                <Amount>2762300</Amount>
+                <Currency>EUR</Currency>
+              </Amounts>
+            </Reference>
+          </Guarantee>
+          <GoodsItem>
+            <ItemNumber>1</ItemNumber>
+            <GoodsDescription>Piekarniki do zabudowy Simens</GoodsDescription>
+            <GrossMass>1000000</GrossMass>
+            <NetMass>876000</NetMass>
+            <ProducedDocuments>
+              <Type>380</Type>
+              <Reference>FV89089</Reference>
+            </ProducedDocuments>
+            <Packages>
+              <Quantity>100</Quantity>
+              <MarksAndNumbers>Brak</MarksAndNumbers>
+              <Type>NE</Type>
+            </Packages>
+            <WriteOffInfo>
+              <WriteOffSumA>
+                <Identification>FV</Identification>
+                <Reference>ATB098409/1</Reference>
+              </WriteOffSumA>
+              <WriteOffSumA>
+                <Identification>FV</Identification>
+                <Reference>ATB123456789/2</Reference>
+              </WriteOffSumA>
+            </WriteOffInfo>
+          </GoodsItem>
+        </NCTSDeclaration>
+      </NCTS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

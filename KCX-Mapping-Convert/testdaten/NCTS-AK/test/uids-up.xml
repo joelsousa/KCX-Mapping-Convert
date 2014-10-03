@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+<To>DE01.FORDTST.3087</To>
+<From>DE</From>
+<MessageID>testdaten/NCTS/test/fss.vph</MessageID>
+<SentAt>2011-05-27T13:00:18Z</SentAt>
+<Act>inform</Act>
+<Procedure>NCTS</Procedure>
+<Method>NCTS</Method>
+<MessageType>NCTSUnloadingPermission</MessageType>
+<Direction>TO_CUSTOMER</Direction>
+<MessageVersion>4.0</MessageVersion>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit>
+<NCTS>
+<NCTSUnloadingPermission>
+<LocalReferenceNumber>beznr</LocalReferenceNumber>
+<MRN>mrn</MRN>
+<TypeOfDeclaration>anmart</TypeOfDeclaration>
+<PlaceOfTransfer>ubort</PlaceOfTransfer>
+<CountryOfDispatch>ldvs</CountryOfDispatch>
+<TransportAtDeparture />
+<SealsIdentity>seal1</SealsIdentity>
+<SealsIdentity>seal2</SealsIdentity>
+<GoodsItem>
+<ItemNumber>posnr</ItemNumber>
+<CommodityCodeKN8>tnr</CommodityCodeKN8>
+<GoodsDescription>wabsch</GoodsDescription>
+<SpecialMentions>
+<Text>unstm</Text>
+</SpecialMentions>
+<ProducedDocuments>
+<Reference>untref</Reference>
+<Remark>untzus</Remark>
+</ProducedDocuments>
+<Packages>
+<Quantity>colanz</Quantity>
+<MarksAndNumbers>collz</MarksAndNumbers>
+<Type>colart</Type>
+</Packages>
+<SGICodes>
+<Code>code</Code>
+<Quantity>menge</Quantity>
+</SGICodes>
+</GoodsItem>
+</NCTSUnloadingPermission>
+</NCTS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

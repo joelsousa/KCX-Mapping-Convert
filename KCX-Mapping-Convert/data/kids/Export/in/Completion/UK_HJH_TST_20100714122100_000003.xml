@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2010</Year>
+<Month>07</Month>
+<Day>13</Day>
+</Date>
+<Time>10:14:18</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>UK.HJH.TST</Transmitter>
+<Receiver>UK.HJH.TST</Receiver>
+<MessageTP>
+<CountryCode>NL</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>Completion</MessageName>
+<Release>2.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>NL</MapFrom>
+<MapTo>NL</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>UK_HJH_TST_20100714122100_000001</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<Completion>
+<GoodsDeclaration>
+<CompletionTime>201007131014</CompletionTime>
+<ShipmentNumber>ShipmentNumber</ShipmentNumber>
+<ReferenceNumber>Example_Completion</ReferenceNumber>
+<LoadingTime>
+	<EndTime>201007141614</EndTime>
+</LoadingTime>
+<GoodsItem>
+	<ItemNumber>1</ItemNumber>	
+	<Containers>
+		<Number>Number11</Number>
+		<Number>Number12</Number>
+		<Number>Number13</Number>
+	</Containers>		
+</GoodsItem>
+<GoodsItem>
+	<ItemNumber>2</ItemNumber>	
+	<Containers>
+		<Number>Number21</Number>
+		<Number>Number22</Number>
+		<Number>Number23</Number>
+	</Containers>		
+</GoodsItem>
+</GoodsDeclaration>
+</Completion>
+</soap:Body>
+</soap:Envelope>

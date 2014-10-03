@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>02</Month>
+<Day>11</Day>
+</Date>
+<Time>173246</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>CZ01.EK.TST</Transmitter>
+<Receiver>AE.EK.TST</Receiver>
+<MessageTP>
+<CountryCode>CZ</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntryRelease</MessageName>
+<Release>1.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+</Codemapping>
+</CustomsExchange>
+<MessageID>fd055764-6e52-466b-bdd7-d27ac5dea619</MessageID>
+<InReplyTo>17619814421-2EV4SV5</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSEntryRelease>
+<GoodsDeclaration>
+<DateOfPresentation>201102111408</DateOfPresentation>
+<MRN>11CZ194400R51SI1I0</MRN>
+<CustomsOfficeFirstEntry>CZ194400</CustomsOfficeFirstEntry>
+<CarrierTIN>
+<TIN>CZ24682705</TIN>
+</CarrierTIN>
+<CarrierAddress>
+<Address>
+<Name>Emirates, organizaï¿½?nÃ­ sloÅ¾ka</Name>
+<Street>Olivova 2096/4</Street>
+<City>Praha</City>
+<PostalCode>11000</PostalCode>
+<Country>CZ</Country>
+</Address>
+</CarrierAddress>
+</GoodsDeclaration>
+</ICSEntryRelease>
+</soap:Body>
+</soap:Envelope>

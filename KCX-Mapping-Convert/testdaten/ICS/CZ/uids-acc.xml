@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eurtradenet.com/schemas/header/200809">
+      <To>CZ01.EK.TST</To>
+      <From>CZ01.EK.TST</From>
+      <MessageID>4d0f128f-01b2-4249-94f6-d03d7ad77d8d</MessageID>
+      <InReplyTo>SK1-28</InReplyTo>
+      <SentAt>2011-02-02T11:29:50</SentAt>
+      <Act>inform</Act>
+      <Procedure>ICS</Procedure>
+      <MessageType>ICSDeclarationAccepted</MessageType>
+      <Direction>TO_CUSTOMER</Direction>
+      <MessageVersion>1.0</MessageVersion>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+    <Submit xmlns="http://www.eurtradenet.com/schemas/uids/ics/body/200911">
+      <ICS>
+        <ICSDeclarationAccepted>
+          <LocalReferenceNumber>SK1-28</LocalReferenceNumber>
+          <MRN>11CZ194100QDFYQSU2</MRN>
+          <RegistrationDateAndTime>2011-02-02T11:26:33</RegistrationDateAndTime>
+          <PersonLodgingSumDec>
+            <TIN>PL547125793600000</TIN>
+            <Address>
+              <Name>SKG S.A.</Name>
+              <StreetAndNumber>Al. Armii Krajowej 336</StreetAndNumber>
+              <PostalCode>43-309</PostalCode>
+              <City>Bielsko-Biała</City>
+              <CountryCodeISO>PL</CountryCodeISO>
+            </Address>
+          </PersonLodgingSumDec>
+          <OfficeOfFirstEntry>CZ194100</OfficeOfFirstEntry>
+        </ICSDeclarationAccepted>
+      </ICS>
+    </Submit>
+  </soap:Body>
+</soap:Envelope>

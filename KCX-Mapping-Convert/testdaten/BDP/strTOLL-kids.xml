@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2012</Year>
+<Month>04</Month>
+<Day>18</Day>
+</Date>
+<Time>13:00:23</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>DE.TOLL.TST</Receiver>
+<Method>JOB</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>PORT</Procedure>
+<MessageName>PortDeclarationStatus</MessageName>
+<Release>2.0.00</Release>
+<Direction>TO_CUSTOMER</Direction>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>testdaten\BDP\strTOLL.fss</MessageID>
+<InReplyTo>0000232329</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<PortDeclarationStatus>
+<GoodsDeclaration>
+<ReferenceNumber>IWA-STR</ReferenceNumber>
+<PortSystem>DAK</PortSystem>
+<SendingDateTime>201201200915</SendingDateTime>
+<StatusSender>ZABIS</StatusSender>
+<SequenceNumber>1</SequenceNumber>
+<MRN>12DE1234567890E0</MRN>
+<PortRegistrationNumber>Z-Nummer</PortRegistrationNumber>
+<PortRegistrationMode>1</PortRegistrationMode>
+<StatusKind>FR</StatusKind>
+<StatusCode>sta</StatusCode>
+<StatusType>4</StatusType>
+<DateOfStatus>201201191530</DateOfStatus>
+<StatusDescription>statxt</StatusDescription>
+<DateOfControl>201204200915</DateOfControl>
+<ControlDescription>contrl</ControlDescription>
+<ControlAnnotation>contrA</ControlAnnotation>
+<DateOfInterdiction>201202200915</DateOfInterdiction>
+<DateOfFinal>201203200915</DateOfFinal>
+<DateOfExitAllowance>201205200915</DateOfExitAllowance>
+<ContainerNumber>container</ContainerNumber>
+<StatusAnnotation>
+<AnnotationKey>AAA</AnnotationKey>
+<Text>Textfeld AAA 1</Text>
+<Text>text AAA 2</Text>
+</StatusAnnotation>
+<StatusAnnotation>
+<AnnotationKey>BBB</AnnotationKey>
+<Text>Textfeld BBB 1</Text>
+<Text>text BBB 2</Text>
+</StatusAnnotation>
+</GoodsDeclaration>
+</PortDeclarationStatus>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2010</Year>
+<Month>07</Month>
+<Day>13</Day>
+</Date>
+<Time>10:14:18</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>UK.HJH.TST</Transmitter>
+<Receiver>UK.HJH.TST</Receiver>
+<MessageTP>
+<CountryCode>NL</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>Completion</MessageName>
+<Release>2.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<Codemapping>
+<Map>0</Map>
+<MapFrom>NL</MapFrom>
+<MapTo>NL</MapTo>
+</Codemapping>
+</CustomsExchange>
+<MessageID>UK_HJH_TST_20100714122100_000001</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<Completion>
+<GoodsDeclaration>
+<UCRNumber>10DE460519986983E4</UCRNumber>
+<CompletionTime>201007131014</CompletionTime>
+<ShipmentNumber>ShipmentNumber</ShipmentNumber>
+<ReferenceNumber>Example_Completion</ReferenceNumber>
+<MeansOfTransportInland>
+    <TransportMode>03</TransportMode>
+</MeansOfTransportInland>
+<MeansOfTransportBorder>
+<TransportMode>00</TransportMode>
+<TransportationType>00</TransportationType>
+<TransportationCountry>QU</TransportationCountry>
+</MeansOfTransportBorder>
+<CustomsOfficeExport>DE004605</CustomsOfficeExport>
+<CustomsOfficeForCompletion>DE009452</CustomsOfficeForCompletion>
+<Business>
+<BusinessTypeCode>11</BusinessTypeCode>
+<InvoicePrice>205974000</InvoicePrice>
+<Currency>EUR</Currency>
+</Business>
+<LoadingTime>
+	<EndTime>201007141614</EndTime>
+</LoadingTime>
+<DeclarantTIN>
+<TIN>2364824</TIN>
+<IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+</DeclarantTIN>
+<Consignee>
+<Address>
+<Name>Star Panel Boards Ltd. Plot No. 1, Kiadb Industrial Area</Name>
+<Street>Plot No.1</Street>
+<City>Bengaluru</City>
+<PostalCode>563130</PostalCode>
+<Country>IN</Country>
+</Address>
+</Consignee>
+</GoodsDeclaration>
+</Completion>
+</soap:Body>
+</soap:Envelope>

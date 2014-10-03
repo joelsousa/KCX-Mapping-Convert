@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3c.org/2003/05/soap-envelope">
+        <soap:Header>
+<Header xmlns="http:///www.eBiz.com/schemas/header/200310/">
+<SentAt>
+<Date>
+<Year>2011</Year>
+<Month>7</Month>
+<Day>15</Day>
+</Date>
+<Time>17:06:34</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE.CSF</Transmitter>
+<Receiver>DE.CSF</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>CY</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSDeclarationAmendment</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>KA-20110706-03</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ICSDeclarationAmendment>
+<GoodsDeclaration>
+<ReferenceNumber>17694728594-E3G9ITHC</ReferenceNumber>
+<ShipmentNumber>17694728594</ShipmentNumber>
+<MRN>11CY00051030017148</MRN>
+<TotalNumberPositions>1</TotalNumberPositions>
+<TotalNumberPackages>7</TotalNumberPackages>
+<TotalGrossMass>1414</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>A6-EKR</TransportationNumber>
+<TransportationCountry>AE</TransportationCountry>
+</MeansOfTransportBorder>
+<ConveyanceReference>EK0107</ConveyanceReference>
+<LoadingPlace>AE Dubai Intl</LoadingPlace>
+<UnloadingPlace>CY Larnaca</UnloadingPlace>
+<PaymentType>A</PaymentType>
+<DeclarationTime>201107151420</DeclarationTime>
+<DeclarationPlace>Larnaca</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>NNR GLOBAL LOGISTICS THAILAND CO.</Name>
+<Street>8TH FLOOR TRAC BUILDING</Street>
+<City>BANGKOK</City>
+<PostalCode>10320</PostalCode>
+<Country>TH</Country>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>CARMELO CARUANA CO. LTD.</Name>
+<Street>1923 VALLETTA ROAD</Street>
+<City>MALTA</City>
+<PostalCode>3000</PostalCode>
+<Country>MT</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>CY0000000071</TIN>
+<IdentificationType>2</IdentificationType>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>Address</Name>
+<Street>Street</Street>
+<City>City</City>
+<PostalCode>Postcode</PostalCode>
+<Country>DE</Country>
+</Address>
+</PersonLodgingSumaAddress>
+<PersonLodgingSumaContact>
+<Clerk>Max Mustermann</Clerk>
+<Identity>Emirates - Frankfurt</Identity>
+<Email>test@kewill.de</Email>
+<FaxNumber>0815</FaxNumber>
+<PhoneNumber>4711</PhoneNumber>
+</PersonLodgingSumaContact>
+<CustomsOfficeFirstEntry>CY000440</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201107131059</DeclaredDateOfArrival>
+<SealsID>
+</SealsID>
+<CountryOfRouting>AE</CountryOfRouting>
+<CountryOfRouting>CY</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>CONSOLIDATION</Description>
+<GrossMass>1414</GrossMass>
+<Packages>
+<Type>PK</Type>
+<Marks>NNRTH0144619</Marks>
+<Number>7</Number>
+</Packages>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>A6-EKR</TransportationNumber>
+<TransportationCountry>AE</TransportationCountry>
+</MeansOfTransportBorder>
+<Document>
+<Type>N703</Type>
+<Reference>NNRTH0144619</Reference>
+</Document>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSDeclarationAmendment>
+</soap:Body>
+</soap:Envelope>

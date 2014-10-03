@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+      <SentAt>
+        <Date>
+          <Year>2010</Year>
+          <Month>05</Month>
+          <Day>10</Day>
+        </Date>
+        <Time>12:02:00</Time>
+        <TimeZone>+0100</TimeZone>
+      </SentAt>
+      <Transmitter>DE01.CSFALT.2144</Transmitter>
+      <Receiver>DE.CSF</Receiver>
+      <Method>ICS</Method>
+      <MessageTP>
+        <CountryCode>DE</CountryCode>
+        <Procedure>ICS</Procedure>
+        <MessageName>ICSArrivalNotificationValidation</MessageName>
+        <Release>1.0.00</Release>
+      </MessageTP>
+      <CustomsExchange>
+        <Codemapping>
+          <Map>0</Map>
+          <MapFrom>DE</MapFrom>
+          <MapTo>DE</MapTo>
+        </Codemapping>
+      </CustomsExchange>
+      <MessageID>DE01DE01214420100510120200000001</MessageID>
+    </Header>
+  </soap:Header>
+  <soap:Body>
+<ICSArrivalNotificationValidation>
+  <GoodsDeclaration>
+    <ReferenceNumber>ReferenceNumber1</ReferenceNumber>
+    <MRN>MRN1</MRN>
+    <RegistrationDateTime>201008261702</RegistrationDateTime>
+    <CarrierTIN>
+      <TIN>TIN1</TIN>
+      <CustomerIdentifier>CustomerIdentifier1</CustomerIdentifier>
+      <IdentificationType>IdentificationType1</IdentificationType>
+    </CarrierTIN>
+    <CarrierAddress>
+      <VATNumber>VATNumber1</VATNumber>
+      <ETNAdress>ETNAdress1</ETNAdress>
+      <Address>
+        <Name>Name1</Name>
+        <Street>Street1</Street>
+        <HouseNumber>HouseNumber1</HouseNumber>
+        <City>City1</City>
+        <PostalCode>PostalCode1</PostalCode>
+        <Country>C1</Country>
+        <CountrySubEntity>CountrySubEntity1</CountrySubEntity>
+      </Address>
+    </CarrierAddress>
+  </GoodsDeclaration>
+</ICSArrivalNotificationValidation>
+  </soap:Body>
+</soap:Envelope>

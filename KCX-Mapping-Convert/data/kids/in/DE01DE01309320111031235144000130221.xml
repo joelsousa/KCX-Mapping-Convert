@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+  <SentAt>
+  <Date>
+  <Year>2011</Year>
+  <Month>10</Month>
+  <Day>31</Day>
+  </Date>
+  <Time>235024</Time>
+  <TimeZone>+0100</TimeZone>
+  </SentAt>
+  <Transmitter>DE01.CSFTEST.2158</Transmitter>
+  <Receiver>DE.CSF.FRA</Receiver>
+  <MessageTP>
+  <CountryCode>DE</CountryCode>
+  <Procedure>NCTS</Procedure>
+  <MessageName>ArrivalNotification</MessageName>
+  <Release>4.0.00</Release>
+  </MessageTP>
+  <CustomsExchange>
+  <Codemapping>
+  <Map>0</Map>
+  <MapFrom>DE</MapFrom>
+  <MapTo>DE</MapTo>
+  </Codemapping>
+  </CustomsExchange>
+  <MessageID>DE01DE01309320111031235000524</MessageID>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <ArrivalNotification>
+  <GoodsDeclaration>
+  <UCRNumber>11SI00707515896280</UCRNumber>
+  <ReferenceNumber>309320111031221900495</ReferenceNumber>
+  <AuthorisedConsigneeTIN>
+  <TIN>2006480</TIN>
+  </AuthorisedConsigneeTIN>
+  <ArrivalNotificationDate>20111031</ArrivalNotificationDate>
+  <PlaceOfUnloadingCode>FW21</PlaceOfUnloadingCode>
+  <PermitNumber>DE7150ZT1120</PermitNumber>
+  <PresentationOffice>DE007206</PresentationOffice>
+  </GoodsDeclaration>
+  </ArrivalNotification>
+  </soap:Body>
+  </soap:Envelope>

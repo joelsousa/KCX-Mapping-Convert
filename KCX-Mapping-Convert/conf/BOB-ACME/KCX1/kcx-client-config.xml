@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:file="http://www.mulesource.org/schema/mule/file/2.1"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.mulesource.org/schema/mule/core/2.1 http://www.mulesource.org/schema/mule/core/2.1/mule.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.1.xsd
+		http://www.mulesource.org/schema/mule/file/2.1 http://www.mulesource.org/schema/mule/file/2.1/mule-file.xsd">
+
+	<!-- by convention add -Inbound to make identification in jmx easier -->
+	<file:connector name="fileConnector-Inbound" autoDelete="true" streaming="false" fileAge="${file.input.throttle}">
+		<service-overrides messageReceiver="org.mule.transport.file.ThrottledFileMessageReceiver"/>
+	</file:connector>
+
+	<!-- we have to name this otherwise the "default" endpoints where connector-Ref is NOT specified will use the above -->
+	<file:connector name="fileConnector-Outbound"/>
+</mule>

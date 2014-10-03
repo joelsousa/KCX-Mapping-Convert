@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+<Header xmlns="http:///www.eBiz.com/schemas/header/200310/">
+<SentAt>
+<Date>
+<Year>2012</Year>
+<Month>1</Month>
+<Day>6</Day>
+</Date>
+<Time>07:30:05</Time>
+<TimeZone>+0100</TimeZone>
+</SentAt>
+<Transmitter>AE.EK.TST</Transmitter>
+<Receiver>AE.EK.TST</Receiver>
+<Method>ESU</Method>
+<MessageTP>
+<CountryCode>GR</CountryCode>
+<Procedure>ICS</Procedure>
+<MessageName>ICSEntrySummaryDeclaration</MessageName>
+<Release>1.0.00</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>17660753755-E1UJV9TS</MessageID>
+</Header>
+</soap:Header>
+	<soap:Body>
+<ICSEntrySummaryDeclaration>
+<GoodsDeclaration>
+<ReferenceNumber>17660753755-E1UJV9TS</ReferenceNumber>
+<ShipmentNumber>17660753755</ShipmentNumber>
+<TotalNumberPositions>1</TotalNumberPositions>
+<TotalNumberPackages>58</TotalNumberPackages>
+<TotalGrossMass>615</TotalGrossMass>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>A6-EAP</TransportationNumber>
+<TransportationCountry>AE</TransportationCountry>
+</MeansOfTransportBorder>
+<ConveyanceReference>EK0105</ConveyanceReference>
+<LoadingPlace>AE Dubai Intl</LoadingPlace>
+<UnloadingPlace>GR Eleftherios Venizelos Intl</UnloadingPlace>
+<PaymentType>A</PaymentType>
+<DeclarationTime>201201060730</DeclarationTime>
+<DeclarationPlace>Eleftherios Venizelos Intl</DeclarationPlace>
+<ConsignorAddress>
+<Address>
+<Name>AL AINKAWI ENTERPRISES</Name>
+<Street>P O BOX 2148</Street>
+<City>RUWI</City>
+<PostalCode>112</PostalCode>
+<Country>OM</Country>
+</Address>
+</ConsignorAddress>
+<ConsigneeAddress>
+<Address>
+<Name>GENFROCO E P E  LTD</Name>
+<Street>EBORIA IXTHION ALIEYTIKON I DON</Street>
+<City>ATHENS</City>
+<Country>GR</Country>
+</Address>
+</ConsigneeAddress>
+<PersonLodgingSumaTIN>
+<TIN>GR098105046</TIN>
+<IdentificationType>2</IdentificationType>
+</PersonLodgingSumaTIN>
+<PersonLodgingSumaAddress>
+<Address>
+<Name>Emirates SkyCargo</Name>
+<Street>Cargo City South, Building 530 d</Street>
+<City>Frankfurt Airport</City>
+<PostalCode>60549</PostalCode>
+<Country>DE</Country>
+</Address>
+</PersonLodgingSumaAddress>
+<PersonLodgingSumaContact>
+<Clerk>Contact Person</Clerk>
+<Identity>Emirates - Frankfurt</Identity>
+<Email>info@kewill.de</Email>
+<FaxNumber>Fax</FaxNumber>
+<PhoneNumber>Telephone</PhoneNumber>
+</PersonLodgingSumaContact>
+<CustomsOfficeFirstEntry>GR000304</CustomsOfficeFirstEntry>
+<DeclaredDateOfArrival>201201061333</DeclaredDateOfArrival>
+<SealsID>
+</SealsID>
+<CountryOfRouting>AE</CountryOfRouting>
+<CountryOfRouting>GR</CountryOfRouting>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>FRESH FISH</Description>
+<GrossMass>615</GrossMass>
+<Packages>
+<Type>PK</Type>
+<Marks>17660753755</Marks>
+<Number>58</Number>
+</Packages>
+<MeansOfTransportBorder>
+<TransportMode>4</TransportMode>
+<TransportationNumber>A6-EAP</TransportationNumber>
+<TransportationCountry>AE</TransportationCountry>
+</MeansOfTransportBorder>
+<Document>
+<Type>N741</Type>
+<Reference>17660753755</Reference>
+</Document>
+</GoodsItem>
+</GoodsDeclaration>
+</ICSEntrySummaryDeclaration>
+</soap:Body>
+</soap:Envelope>

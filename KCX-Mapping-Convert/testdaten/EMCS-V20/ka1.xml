@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>FR01.CSFALT.2144</From>
+<MessageID>AI-20110926-01</MessageID>
+<SentAt>2011-09-26 10:24:20 +0200</SentAt>
+<Act>request</Act>
+<Method>EMB</Method>
+<MessageVersion>2.0</MessageVersion>
+<MessageType>EMCSDeclarationRejected</MessageType>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+<EMCS>
+<EMCSDeclarationRejected>
+<AadReferenceCode>AadReferenceCode1</AadReferenceCode>
+<SequenceNumber>SequenceNumber1</SequenceNumber>
+<LocalReferenceNumber>AI-20110926-01</LocalReferenceNumber>
+<RejectionDateAndTime>2000-01-01T00:00:00+0100</RejectionDateAndTime>
+<RejectionReason>RejectionReason1</RejectionReason>
+<Error>
+<Type>ErrorType1</Type>
+<Pointer>ErrorLocation1</Pointer>
+<Reason>ErrorReason1</Reason>
+<OriginalValue>OriginalAttributeValue1</OriginalValue>
+</Error>
+<Error>
+<Type>ErrorType2</Type>
+<Pointer>ErrorLocation2</Pointer>
+<Reason>ErrorReason2</Reason>
+<OriginalValue>OriginalAttributeValue2</OriginalValue>
+</Error>
+</EMCSDeclarationRejected>
+</EMCS>
+</Submit>
+</soap:Body>
+</soap:Envelope>

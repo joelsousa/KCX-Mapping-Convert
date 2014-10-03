@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--erzeugt von ZABIS HGP der Fa. Kewill-->
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Header>
+            <SentAt>
+                <Date>
+                    <Year>2010</Year>
+                    <Month>06</Month>
+                    <Day>16</Day>
+                </Date>
+                <Time>10:01:45</Time>
+                <TimeZone>+0200</TimeZone>
+            </SentAt>
+            <Transmitter>DE.DIEH.TST</Transmitter>
+            <Receiver>DE.DIEH.TST</Receiver>
+            <Method>EME</Method>
+            <MessageTP>
+                <CountryCode>DE</CountryCode>
+                <Procedure>EMCS</Procedure>
+                <MessageName>EMCSGenericRefusalMessage</MessageName>
+                <Direction>TO_CUSTOMER</Direction>
+                <Release>6.1.00</Release>
+            </MessageTP>
+            <MessageID>DE-DIEH-TST000080160610</MessageID>
+        </Header>
+    </soap:Header>
+    <soap:Body>
+        <EMCSGenericRefusalMessage>
+            <ReferenceNumber>0000000130/0090034841</ReferenceNumber>
+            <Clerk>FSS</Clerk>
+            <SequenceNumber>0</SequenceNumber>
+            <FunctionalError>
+                <ErrorType>12</ErrorType>
+                <ErrorReason>EMCS-30167: Die im techn. Header genannte Verbrauchsteuernummer des Nachrichtensenders stimmt mit der im fachl. Inhalt der Nachricht genannten Verbrauchsteuernummer des Beteiligten nicht überein.</ErrorReason>
+                <ErrorLocation>/ED815A/MessageSender</ErrorLocation>
+                <OriginalAttributeValue>DE99000003300</OriginalAttributeValue>
+            </FunctionalError>
+        </EMCSGenericRefusalMessage>
+    </soap:Body>
+</soap:Envelope>

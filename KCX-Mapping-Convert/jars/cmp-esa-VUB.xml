@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope/">
+<soap:Header>
+<Header>
+<SentAt>
+<Date>
+<Year>2014</Year>
+<Month>04</Month>
+<Day>04</Day>
+<Time>160922</Time>
+<TimeZone>+0200</TimeZone>
+</Date>
+</SentAt>
+<Transmitter>DE.CMP.KWL</Transmitter>
+<Receiver>DE.KCX.KWL</Receiver>
+<Method>CMP</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>TEMPSTORAGE</Procedure>
+<MessageName>CMPCompleteDataFormat</MessageName>
+<Release>1.0.0</Release>
+<Direction>FROM_CUSTOMER</Direction>
+</MessageTP>
+<MessageID>1de0e7fd-b7f3-4e34-85ca-0cbb7941b26b</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<CMPCompleteDataFormat>
+<PurposeCode>TEMPSTORAGE</PurposeCode>
+<Waybill>
+    <MessageHeaderDocument>
+        <ID>XFWB</ID>
+        <Name>Air Waybill</Name>
+        <TypeCode>740</TypeCode>
+        <IssueDateTime>2014-04-04T14:08:32</IssueDateTime>
+        <PurposeCode>Creation</PurposeCode>
+        <VersionID>3</VersionID>
+        <SenderParty>
+            <PrimaryID schemeID="1">IBSFFLH</PrimaryID>
+        </SenderParty>
+        <RecipientParty>
+            <PrimaryID schemeID="1">ZABIS</PrimaryID>
+        </RecipientParty>
+    </MessageHeaderDocument>
+    <BusinessHeaderDocument>
+        <ID>020-13002765</ID>
+        <SenderAssignedID>13002765</SenderAssignedID>
+        <IncludedHeaderNote>
+            <ContentCode>D</ContentCode>
+            <Content>Text</Content>
+        </IncludedHeaderNote>
+        <SignatoryCarrierAuthentication>
+            <ActualDateTime>2014-04-04T00:00:00</ActualDateTime>
+            <Signatory>U535723</Signatory>
+            <IssueAuthenticationLocation>
+                <Name>JFK</Name>
+            </IssueAuthenticationLocation>
+        </SignatoryCarrierAuthentication>
+    </BusinessHeaderDocument>
+    <MasterConsignment>
+        <NilCarriageValueIndicator>true</NilCarriageValueIndicator>
+        <NilCustomsValueIndicator>true</NilCustomsValueIndicator>
+        <NilInsuranceValueIndicator>true</NilInsuranceValueIndicator>
+        <TotalChargePrepaidIndicator>true</TotalChargePrepaidIndicator>
+        <TotalDisbursementPrepaidIndicator>true</TotalDisbursementPrepaidIndicator>
+        <IncludedTareGrossWeightMeasure unitCode="KGM">300.0</IncludedTareGrossWeightMeasure>
+        <GrossVolumeMeasure unitCode="MC">3.0</GrossVolumeMeasure>
+        <DensityGroupCode>0</DensityGroupCode>
+        <TotalPieceQuantity>3</TotalPieceQuantity>
+        <ProductID>GEN,SPX</ProductID>
+        <ConsignorParty>
+            <Name>AAA AIR EXPRESS OF MIAMI LTD.</Name>
+            <PostalStructuredAddress>
+                <PostcodeCode>11356</PostcodeCode>
+                <StreetName>2085 130TH STREET</StreetName>
+               <CityName>COLLEGE POINT</CityName>
+                <CountryID>US</CountryID>
+                <CountrySubDivisionName>NY</CountrySubDivisionName>
+                <PostOfficeBox>11356</PostOfficeBox>
+                <CityID>COLLEGE POINT</CityID>
+                <CountrySubDivisionID>NY</CountrySubDivisionID>
+            </PostalStructuredAddress>
+            <DefinedTradeContact>
+                <PersonName>AAA AIR EXPRESS OF MIAMI LTD.</PersonName>
+                <DirectTelephoneCommunication>
+                    <CompleteNumber>17184618862</CompleteNumber>
+                </DirectTelephoneCommunication>
+            </DefinedTradeContact>
+        </ConsignorParty>
+        <ConsigneeParty>
+            <Name>LHT FRA TM 71-6</Name>
+            <PostalStructuredAddress>
+                <PostcodeCode>60549</PostcodeCode>
+                <StreetName>MATERIAL SHIPPING DEP.</StreetName>
+                <CityName>RHEIN-MAIN-AIRPOR</CityName>
+                <CountryID>DE</CountryID>
+            </PostalStructuredAddress>
+        </ConsigneeParty>
+        <FreightForwarderParty>
+            <PrimaryID>0117432</PrimaryID>
+            <Name>SERVICE BY AIR INC.</Name>
+            <CargoAgentID>0117432</CargoAgentID>
+            <FreightForwarderAddress>
+                <CityName>JFK</CityName>
+            </FreightForwarderAddress>
+            <SpecifiedCargoAgentLocation>
+                <ID>0011</ID>
+            </SpecifiedCargoAgentLocation>
+        </FreightForwarderParty>
+        <OriginLocation>
+           <ID>JFK</ID>
+        </OriginLocation>
+        <FinalDestinationLocation>
+            <ID>FRA</ID>
+        </FinalDestinationLocation>
+        <SpecifiedLogisticsTransportMovement>
+            <StageCode>ON-Carriage</StageCode>
+            <ID>9756</ID>
+            <UsedLogisticsTransportMeans>
+                <Name>LH</Name>
+            </UsedLogisticsTransportMeans>
+            <DepartureEvent>
+                <ScheduledOccurrenceDateTime>2014-04-05T00:00:00</ScheduledOccurrenceDateTime>
+                <OccurrenceDepartureLocation>
+                    <ID>JFK</ID>
+                    <TypeCode>Aiport</TypeCode>
+                </OccurrenceDepartureLocation>
+            </DepartureEvent>
+        </SpecifiedLogisticsTransportMovement>
+        <HandlingSPHInstructions>
+            <DescriptionCode>GEN,SPX</DescriptionCode>
+        </HandlingSPHInstructions>
+        <IncludedCustomsNote>
+            <ContentCode>M</ContentCode>
+            <Content>14DE587600145063I6</Content>
+            <SubjectCode>OCI</SubjectCode>
+            <CountryID>DE</CountryID>
+        </IncludedCustomsNote>
+        <IncludedCustomsNote>
+            <ContentCode>T</ContentCode>
+            <Content>DE90076010000</Content>
+            <SubjectCode>BRK</SubjectCode>
+            <CountryID>DE</CountryID>
+        </IncludedCustomsNote>
+        <IncludedCustomsNote> 
+	     <Content>VUB-C</Content> 
+	     <CountryID>DE</CountryID> 
+	</IncludedCustomsNote> 
+
+        <AssociatedConsignmentCustomsProcedure>
+            <GoodsStatusCode>T1</GoodsStatusCode>
+        </AssociatedConsignmentCustomsProcedure>
+        <ApplicableOriginCurrencyExchange>
+            <SourceCurrencyCode>USD</SourceCurrencyCode>
+        </ApplicableOriginCurrencyExchange>
+        <ApplicableDestinationCurrencyExchange>
+            <TargetCurrencyCode>EUR</TargetCurrencyCode>
+            <ConversionRate>0.73</ConversionRate>
+        </ApplicableDestinationCurrencyExchange>
+        <ApplicableLogisticsServiceCharge>
+            <TransportPaymentMethodCode>A</TransportPaymentMethodCode>
+            <ServiceTypeCode>PP</ServiceTypeCode>
+        </ApplicableLogisticsServiceCharge>
+        <ApplicableRating>
+            <TypeCode>P</TypeCode>
+            <TotalChargeAmount currencyID="USD">6856876.0</TotalChargeAmount>
+            <ConsignmentItemQuantity>1</ConsignmentItemQuantity>
+            <IncludedMasterConsignmentItem>
+               <SequenceNumeric>0</SequenceNumeric>
+                <GrossWeightMeasure unitCode="KGM">300.0</GrossWeightMeasure>
+                <GrossVolumeMeasure unitCode="MC">3.0</GrossVolumeMeasure>
+                <PieceQuantity>3</PieceQuantity>
+                <Information>CMT</Information>
+                <NatureIdentificationTransportCargo>
+                    <Identification>CARS WITH NO FUEL OR OIL NOT RESTRICTED</Identification>
+                </NatureIdentificationTransportCargo>
+                <ApplicableFreightRateServiceCharge>
+                    <CommodityItemID/>
+                    <ChargeableWeightMeasure unitCode="KGM">500.0</ChargeableWeightMeasure>
+                    <AppliedRate>45.0</AppliedRate>
+                    <AppliedAmount currencyID="USD">6856876.0</AppliedAmount>
+                </ApplicableFreightRateServiceCharge>
+                <SpecifiedRateCombinationPointLocation>
+                    <ID>3</ID>
+                </SpecifiedRateCombinationPointLocation>
+                <ApplicableUnitLoadDeviceRateClass>
+                    <AppliedPercent>0.0</AppliedPercent>
+                </ApplicableUnitLoadDeviceRateClass>
+            </IncludedMasterConsignmentItem>
+        </ApplicableRating>
+        <ApplicableTotalRating>
+            <TypeCode>P</TypeCode>
+            <ApplicableDestinationCurrencyServiceCharge>
+                <CollectAppliedAmount currencyID="USD">0.0</CollectAppliedAmount>
+                <DestinationAppliedAmount currencyID="USD">0.0</DestinationAppliedAmount>
+                <TotalAppliedAmount currencyID="USD">0.0</TotalAppliedAmount>
+            </ApplicableDestinationCurrencyServiceCharge>
+            <ApplicablePrepaidCollectMonetarySummation>
+                <PrepaidIndicator>true</PrepaidIndicator>
+                <WeightChargeTotalAmount currencyID="USD">6856876.0</WeightChargeTotalAmount>
+                <GrandTotalAmount currencyID="USD">6856876.0</GrandTotalAmount>
+            </ApplicablePrepaidCollectMonetarySummation>
+        </ApplicableTotalRating>
+    </MasterConsignment>
+</Waybill>
+<StatusMessage>
+    <MessageHeaderDocument>
+        <ID>XFSU</ID>
+        <Name>Cargo Status</Name>
+        <TypeCode>34</TypeCode>
+        <IssueDateTime>2014-04-04T14:08:32</IssueDateTime>
+        <PurposeCode>Creation</PurposeCode>
+        <VersionID>2</VersionID>
+        <SenderParty>
+            <PrimaryID schemeID="1">IBSFFLH</PrimaryID>
+        </SenderParty>
+        <RecipientParty>
+            <PrimaryID schemeID="1">ZABIS</PrimaryID>
+        </RecipientParty>
+    </MessageHeaderDocument>
+    <BusinessHeaderDocument>
+        <ID>LH975620140405FRA</ID>
+    </BusinessHeaderDocument>
+    <MasterConsignment>
+        <GrossWeightMeasure unitCode="KGM">300.0</GrossWeightMeasure>
+        <TotalGrossWeightMeasure unitCode="KGM">300.0</TotalGrossWeightMeasure>
+        <PieceQuantity>3</PieceQuantity>
+        <TotalPieceQuantity>3</TotalPieceQuantity>
+        <TransportSplitDescription>T</TransportSplitDescription>
+        <TransportContractDocument>
+            <ID>020-13002765</ID>
+            <Name>Cargo Status</Name>
+            <TypeCode>34</TypeCode>
+        </TransportContractDocument>
+        <OriginLocation>
+            <ID>JFK</ID>
+        </OriginLocation>
+        <FinalDestinationLocation>
+            <ID>FRA</ID>
+        </FinalDestinationLocation>
+        <RoutingLocation>
+            <ID schemeID="1">JFK</ID>
+        </RoutingLocation>
+        <ReportedStatus>
+            <ReasonCode>RCF</ReasonCode>
+            <AssociatedStatusConsignment>
+                <GrossWeightMeasure unitCode="KGM">300.0</GrossWeightMeasure>
+                <PieceQuantity>3</PieceQuantity>
+                <TransportSplitDescription>P</TransportSplitDescription>
+                <SpecifiedLogisticsTransportMovement>
+                    <ID>LH9756</ID>
+                    <ScheduledArrivalEvent>
+                        <ScheduledOccurrenceDateTime>2014-04-05T10:00:00</ScheduledOccurrenceDateTime>
+                    </ScheduledArrivalEvent>
+                    <ArrivalEvent>
+                        <ArrivalOccurrenceDateTime>2014-04-05T10:00:00</ArrivalOccurrenceDateTime>
+                        <ArrivalDateTimeTypeCode>S</ArrivalDateTimeTypeCode>
+                    </ArrivalEvent>
+                    <DepartureEvent>
+                        <DepartureOccurrenceDateTime>2014-04-04T01:00:00</DepartureOccurrenceDateTime>
+                        <DepartureDateTimeTypeCode>S</DepartureDateTimeTypeCode>
+                    </DepartureEvent>
+                    <SpecifiedLocation>
+                        <ID>FRA</ID>
+                    </SpecifiedLocation>
+                    <SpecifiedEvent>
+                        <OccurrenceDateTime>2014-04-05T10:00:00</OccurrenceDateTime>
+                        <DateTimeTypeCode>S</DateTimeTypeCode>
+                    </SpecifiedEvent>
+                </SpecifiedLogisticsTransportMovement>
+                <AssociatedConsignmentCustomsProcedure>
+                    <GoodsStatusCode>T1</GoodsStatusCode>
+                </AssociatedConsignmentCustomsProcedure>
+                <UtilizedUnitLoadTransportEquipment/>
+            </AssociatedStatusConsignment>
+        </ReportedStatus>
+    </MasterConsignment>
+</StatusMessage>
+</CMPCompleteDataFormat>
+</soap:Body>
+</soap:Envelope>

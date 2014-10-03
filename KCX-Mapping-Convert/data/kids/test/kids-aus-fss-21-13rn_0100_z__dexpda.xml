@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2009</Year>
+<Month>01</Month>
+<Day>14</Day>
+</Date>
+<Time>10:04:08</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<ProcedureSpecification>NP</ProcedureSpecification>
+<MessageName>ExportDeclaration</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<MessageID>MsgID20080902</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ExportDeclaration>
+<GoodsDeclaration>
+<AreaCode>EX</AreaCode>
+<TypeOfPermit>a</TypeOfPermit>
+<DestinationCountry>US</DestinationCountry>
+<TransportInContainer>1</TransportInContainer>
+<UCROtherSystem>REGNR FREMDSYSTEM</UCROtherSystem>
+<ReferenceNumber>T4-21_0100_z__dexpda</ReferenceNumber>
+<MeansOfTransportInland>
+<TransportMode>30</TransportMode>
+</MeansOfTransportInland>
+<MeansOfTransportBorder>
+<TransportMode>40</TransportMode>
+<TransportationType>40</TransportationType>
+<TransportationNumber>AIR 101</TransportationNumber>
+<TransportationCountry>DE</TransportationCountry>
+</MeansOfTransportBorder>
+<CustomsOfficeExport>DE005866</CustomsOfficeExport>
+<RealOfficeOfExit>DE005876</RealOfficeOfExit>
+<Business>
+<BusinessTypeCode>11</BusinessTypeCode>
+<InvoicePrice>3055000</InvoicePrice>
+<Currency>EUR</Currency>
+</Business>
+<DeclarantTIN>
+<TIN>8999708</TIN>
+<IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+</DeclarantTIN>
+<AgentTIN>
+<TIN>8999708</TIN>
+<IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+</AgentTIN>
+<SubcontractorTIN>
+<TIN>8999708</TIN>
+<IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+</SubcontractorTIN>
+<Consignee>
+<Address>
+<Name>Fa. Empf‰nger</Name>
+<Street>Straﬂe Empf‰nger</Street>
+<City>Ort Empf‰nger</City>
+<PostalCode>665--0844</PostalCode>
+<Country>US</Country>
+</Address>
+</Consignee>
+<ConsigneeTIN>
+<TIN>a12345678</TIN>
+</ConsigneeTIN>
+<IncoTerms>
+<IncoTerm>CFR</IncoTerm>
+<Place>Orlando</Place>
+</IncoTerms>
+<GoodsItem>
+<ItemNumber>1</ItemNumber>
+<Description>T-Shirts aus 100% BW, gewirkt</Description>
+<UCROtherSystem>AWB 12345678900</UCROtherSystem>
+<OriginFederalState>08</OriginFederalState>
+<NetMass>1500000</NetMass>
+<GrossMass>1700000</GrossMass>
+<CommodityCode>
+<TarifCode>61091000</TarifCode>
+</CommodityCode>
+<CustomsApprovedTreatment>
+<Declared>10</Declared>
+<Previous>00</Previous>
+</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>4500000</AdditionalUnit>
+<StatisticalValue>32000</StatisticalValue>
+</Statistic>
+<Package>
+<Quantity>100</Quantity>
+<SequentialNumber>1</SequentialNumber>
+<Type>CH</Type>
+<Marks>1-100</Marks>
+</Package>
+<Containers>
+<Number>C 301</Number>
+</Containers>
+<Document>
+<Type>N380</Type>
+<Reference>Rechn. 123 v. 1.1.06</Reference>
+</Document>
+</GoodsItem>
+</GoodsDeclaration>
+</ExportDeclaration>
+</soap:Body>
+</soap:Envelope>

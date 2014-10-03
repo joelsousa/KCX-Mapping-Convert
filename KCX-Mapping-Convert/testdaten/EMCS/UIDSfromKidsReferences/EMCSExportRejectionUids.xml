@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>DE01.CSFALT.2144</From>
+<MessageID>EI20100519</MessageID>
+<SentAt>2010-05-19 12:02:00 +0200</SentAt>
+<Act>request</Act>
+<MessageType>EMCSRejectionOfEAADForExport</MessageType>
+<MessageVersion>1.0</MessageVersion>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/export/body/200601">
+<EMCS>
+<EMCSRejectionOfEAADForExport><DateAndTimeOfIssuance>2010-06-01 00:00:00 +0200</DateAndTimeOfIssuance><ExportCrossCheckingDiagnoses><LocalReferenceNumber>LocalReferenceNumber</LocalReferenceNumber><DocumentReferenceNumber>DocumentReferenceNumber</DocumentReferenceNumber><CancelExportFlag>CancelExport</CancelExportFlag><Diagnosis><AadReferenceCode>AadReferenceCode1</AadReferenceCode><BodyRecordUniqueReference>ItemNumber1</BodyRecordUniqueReference><DiagnosisCode>DiagnosisCode1</DiagnosisCode></Diagnosis><Diagnosis><AadReferenceCode>AadReferenceCode2</AadReferenceCode><BodyRecordUniqueReference>ItemNumber2</BodyRecordUniqueReference><DiagnosisCode>DiagnosisCode2</DiagnosisCode></Diagnosis></ExportCrossCheckingDiagnoses><Rejection><RejectionDateAndTime>201005191455</RejectionDateAndTime><RejectionReasonCode>RejectionReasonCode</RejectionReasonCode></Rejection><CAadVal><FunctionalError><ErrorType>ErrorType1</ErrorType><ErrorPointer>ErrorLocation1</ErrorPointer><ErrorReason>ErrorReason1</ErrorReason><OriginalAttributeValue>OriginalAttributeValue1</OriginalAttributeValue></FunctionalError></CAadVal><CAadVal><FunctionalError><ErrorType>ErrorType2</ErrorType><ErrorPointer>ErrorLocation2</ErrorPointer><ErrorReason>ErrorReason2</ErrorReason><OriginalAttributeValue>OriginalAttributeValue2</OriginalAttributeValue></FunctionalError></CAadVal></EMCSRejectionOfEAADForExport></EMCS></Submit></soap:Body></soap:Envelope>

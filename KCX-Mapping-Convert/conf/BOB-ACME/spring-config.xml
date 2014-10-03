@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="addressingBusinessFacade" class="com.kewill.kcx.core.addressing.business.caching.CachingBusinessFacadeImpl"></bean>
+
+	<!-- Sets up the data access facade to be a JDBC resource -->
+	<bean id="addressingDataAccessFacade"
+		class="com.kewill.kcx.core.addressing.dataaccess.jdbc.DataAccessImpl">
+		
+		<constructor-arg index="0" ref="dataSource"></constructor-arg>
+		
+	</bean>
+
+	<!-- Sets up the data access facade to be a JDBC resource -->
+	<bean id="ORSDataAccessFacade"
+		class="com.kewill.kcx.core.parties.dataaccess.jdbc.JDBCDataAccessImpl">
+		
+		<constructor-arg index="0" ref="dataSource"></constructor-arg>
+		
+	</bean>
+	
+	<!-- to say this is better is a bit of an understatement and also leads me to conclude that statements rather
+	than connections are the issue.
+		
+	use the following to increase the number of statements your oracle express can use, make sure you bounce the server!! 
+		alter system set processes=150 scope=spfile;
+	-->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+<property name="jdbcUrl" value="jdbc:oracle:thin:kcx/kcx@172.16.6.191:1521:KCX"/>
+        <property name="user" value="kcx"/>
+        <property name="password" value="kcx"/>
+        <property name="maxPoolSize" value="1"/>
+        <property name="minPoolSize" value="0"/>
+        <property name="acquireIncrement" value="1"/>
+        
+        <property name="maxIdleTimeExcessConnections" value="600000"/>
+        <property name="maxStatementsPerConnection" value="20"/>
+        <property name="idleConnectionTestPeriod" value="1"/>
+        <property name="acquireRetryAttempts" value="5"/>
+	</bean>
+</beans>

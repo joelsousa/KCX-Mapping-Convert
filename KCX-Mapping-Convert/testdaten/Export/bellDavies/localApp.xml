@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3c.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SentAt>
+<Date>
+<Year>2012</Year>
+<Month>2</Month>
+<Day>7</Day>
+</Date>
+<Time>093539</Time>
+<TimeZone>+00:00</TimeZone>
+</SentAt>
+<Transmitter>UK.HJH.TST</Transmitter>
+<Receiver>UK.HJH.TST</Receiver>
+<MessageTP>
+<CountryCode>GB</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>localAppResult</MessageName>
+</MessageTP>
+<MessageID>1919</MessageID>
+<InReplyTo>HJH DECL01</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<localAppResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<GoodsDeclaration>
+<ReferenceNumber>GB6450272550000000KCXT-1</ReferenceNumber>
+<Language>EN</Language>
+<FileName>173451E8-516F-11E1-9D94-6B8DFAB77772.DAT</FileName>
+<ProcedureType>EXPORTS</ProcedureType>
+<GoodsItem>
+<ItemNumber>0</ItemNumber>
+<PositionError>
+<KindOfError>ERR</KindOfError>
+<ErrorText>Error - A problem occurred error code 100 
+String or binary data would be truncated.
+The statement has been terminated.
+E_PLA_LDG value is 'WN5 0LR WIGAN'</ErrorText>
+<DateOfErrorMessage>20120207</DateOfErrorMessage>
+<TimeOfErrorMessage>093539</TimeOfErrorMessage>
+</PositionError>
+</GoodsItem>
+</GoodsDeclaration>
+</localAppResult>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,2373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	EurTradeNet(ETN) Schema - etn_export_V20.xsd  
+	http://www.eurtradenet.com/
+	
+	Document Type:     etn_export_V20.xsd
+	Generated On:      Thu Feb 08 15:00:00 2007
+	Author:				Dirk Heidenfelder (CSF)
+	======================================================================================
+	Updated On:				 Mon Mar 20 12:00:00 2006
+	Author:						 Dirk Heidenfelder (CSF)
+	======================================================================================
+  Updated On:        Fri Apr 21 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Tsjisse Tilma (Minihouse)
+  Subject:           local definition and addition into <MT_ExportDeclaration>
+  Elements:          <OriginCountry>
+  
+  Subject:           replacement of local element definitions with local element references 
+                     throughout scheme
+  Elements:          <GrossMass>, <NetMass>
+	======================================================================================
+  Updated On:        Mon May 08 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition into <MT_ExportDeclaration> <MT_ExportRelease>
+                     <ExitNotification>  
+  Elements:          <AirportCode>
+  ======================================================================================
+  Updated On:        Mon May 15 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition into <MT_Completion>  
+  Elements:          <Procedure>
+  
+  Subject:           deleting of local definition in <MT_ExportDeclaration> <MT_ExportRelease>  
+                     <MT_Completion>
+  Elements:          <AdditionalIndicator>
+  ======================================================================================
+  Updated On:        Mon May 19 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition in <MT_ExportDeclaration> 
+  Elements:          <DocumentInformation>
+  ======================================================================================
+  Updated On:        Mon Jun 02 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition in <MT_ExportResponse> 
+  Elements:          <Incoterms>
+    
+  Subject:           adding of local definitions in <MT_ExportResponse>                       
+  Elements:          <DateOf...>
+  ======================================================================================
+  Updated On:        Mon Jun 14 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition in <MT_ExitInformation> 
+  Elements:          <GoodsTransport>
+    
+  Subject:           moving of local definitions in <MT_ExportResponse>                       
+  Elements:          <GoodsItem>
+  ======================================================================================
+  Updated On:        Mon Jun 21 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition in <MT_ExitDeclaration> 
+  Elements:          <TypeOfDeclaration> <DeclarationCode>
+  ======================================================================================
+  Updated On:        Mon Jun 27 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definition in <MT_ExitAuthorisation> 
+  Elements:          <DateOfPermission> <Justification>
+  ======================================================================================
+  Updated On:        Mon Jun 27 12:00:00 2006
+  Author:            Kilian Braune (CSF) 
+  ChangeRequest:     Kilian Braune (CSF) 
+  Subject:           adding of local definitions in <MT_PreNotification> 
+  Elements:          <SuperiorHeader> <InferiorHeader>
+  ======================================================================================
+  Updated On:        Fri 07 05 12:00:00 2006
+  Author:            Kilian Braune (CSF)   
+  Subject:           change of local definition <MT_ExportDeclaration>
+  Element:           <*TIN> elements refering to <etn:ST_TIN>
+  ======================================================================================
+  Updated On:        Thu 07 13 12:00:00 2006
+  Author:            Kilian Braune (CSF)   
+  Subject:           change of local definition and structure <MT_ExitInformation> & 
+                     <MT_ExitNotification>
+  Structure:         uids:CT_Packaging derived from etn:CT_Packaging
+  Element:           <choice> for <IndividualMarking> & <Packaging>
+  Element:          <IndividualMarking> element refering to etn:CT_IndividualMarking
+  Element:          <Packaging> element refering to uids:CT_Packaging
+  ======================================================================================
+  Updated On:        26.10.2006
+  Author:            D. Heidenfelder (CSF)   
+  Subject:           Local Extensions for Swiss EDEC-Export:
+  					 <EdecHeader> in Exporteclaration,
+                     <EdecItem> in Exporteclaration.GoodsItem.
+  ======================================================================================
+  Updated On:		 Thu 03 20 12:00:00 2007
+  Author:			 Ingo Koschara (Kewill CSF)
+  Subject:			 change of repetition factor
+  Element:			 <GoodsItem> set to minOccurs="0" maxOccurs="unbounded"
+  Element:			 <ProducedDocument> set to minOccurs="0" maxOccurs="unbounded"
+  Element:			 <PreviousDocument> set to minOccurs="0" maxOccurs="unbounded"
+  ======================================================================================
+  Updated On:		 Mon 03 26 12:00:00 2007
+  Author:			 Ingo Koschara (Kewill CSF)
+  Subject:			 adding new tags to <GoodsItem> in MT_ExportDeclaration and MT_Completion
+  Element:			 <StatisticalBaseValue>
+  Element:			 <StatisticalBaseCurrency>
+  ======================================================================================
+  Updated On:		 Wed 06 04 12:03:00 2008
+  Author:			 Christine Kron (Kewill CSF)
+  Subject:			 adding new tags in MT_ExitNotification
+  Element:			 <MessageNo> serial number of message
+  Element:			 <MaxMessageNo> Total amount of messages for this MRN
+  ======================================================================================
+  Updated On:		 Wed 06 04 12:03:00 2008
+  Author:			 Christine Kron (Kewill CSF)
+  Subject:			 adding new tags in MT_ExitInformation
+  Element:			 <MessageNo> serial number of message
+  Element:			 <MaxMessageNo> Total amount of messages for this MRN
+  ======================================================================================
+-->
+<xsd:schema targetNamespace="http://www.eurtradenet.com/schemas/uids/export/body/200809" elementFormDefault="qualified" attributeFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:uids="http://www.eurtradenet.com/schemas/uids/export/body/200809">
+<!-- ein Versuc h...xsd:schema targetNamespace="http://www.eurtradenet.com/schemas/uids/export/body/200809" elementFormDefault="qualified" attributeFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:etn="http://www.eurtradenet.com/schemas/etn/types/body/200809"-->
+	<!-- Begin: root element-->
+	<xsd:include schemaLocation="etn_export_types_V20.xsd"/>
+	<xsd:element name="Submit">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Export" type="CT_Export"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Revoke">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Export" type="CT_Export"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- End: root element-->
+	<!-- Begin: messages-->
+	<xsd:complexType name="CT_Export">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="ExportDeclaration" type="MT_ExportDeclaration" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX001/IE515/E_EXP_DAT Declaration of Export
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- ETN200809-->
+				<xsd:element name="ExportPreAdvice" type="MT_ExportDeclaration" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX001/IE... /E_EXP_IND Predeclaration of Export
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExportAmendment" type="MT_ExportDeclaration" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX513/IE513 /E_EXP_AMD Amendmemt of Export
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="NonExitedExportRequest" type="MT_NonExitedExportRequest" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX513/IE582 /E_EXP_FUP Request for Exit Information
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="NonExitedExportResponse" type="MT_NonExitedExportResponse" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX513/IE583 /E_EXP_EXT Response for Non Exited Export Request
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!-- ETN200809-->
+				<xsd:element name="ExportDeclarationResponse" type="MT_ExportDeclarationResponse" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							The EX002/(IE516/IE509/IE505)/E_EXP_STA message, wich is the Customs
+							answer to the export declaration
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitDeclaration" type="MT_ExitDeclaration" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_EXT_DAT message, wich is the message that Customs sends to the
+							trader at exit that trader needs to either confirm od reject
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitDeclarationResponse" type="MT_ExitDeclarationResponse" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							The EX002/E_EXT_STA message, wich is the Traders anw
+							answer to the exit declaration
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExportRelease" type="MT_ExportRelease" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+		              IE529/E_EXP_REL - Declaration of Exit 
+		              procedure
+		        </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ControlNotification" type="MT_ControlNotification" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							The EX003/E_EXT_CTL message. A message that Customs
+							may send when it selects the goods for
+							control
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ControlResultDeclaration" type="MT_ControlResultDeclaration" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX004 - Message sent by Customs to
+							comunicate the result of the control op
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="DebtNotification" type="MT_DebtNotification" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>EX005 - The message Customs sends if 
+						there is something to pay
+					</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitAuthorisation" type="MT_ExitAuthorisation" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>EX006 - The message customs send if 
+						goods are clear to exit
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Cancelation" type="MT_Cancelation" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>EX007/IE514/E_EXP_CAN - Request from the trader to 
+		               cancel a declaration
+		           </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="GoodsPresented" type="MT_GoodsPresented" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>EX008 - Trader informs that goods referenced 
+						in a previous declaration have arrived
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitCertification" type="MT_ExitCertification" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>EX009
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="CompletionRequest" type="MT_CompletionRequest" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX010 - Request from Customs to change the
+							declaration (after Control, for example)
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Completion" type="MT_Completion" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							EX011/E_EXP_ENT - Modifications or additions 
+							or corrections to a request from customs to change the
+							declaration
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Confirmation" type="MT_Confirmation" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_EXP_NOT - Confirmation from customs to an export procedure
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="PreNotification" type="MT_PreNotification" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_EXT_ANT - Pre-confirmation from the shipper 
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitNotification" type="MT_ExitNotification" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_EXT_NOT - message to customs to confirm the 
+							physical exit of shipment in its full extend 
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitPresentation" type="MT_ExitPresentation" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_EXT_PRE - Presentation to the exit customs office 
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ArrivalAtExit" type="MT_ArrivalAtExit" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_ARR_EXT - Arrival at exit customs office 
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ArrivalAtExitResponse" type="MT_ArrivalAtExitResponse" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_ARR_RSP/IE508(?) - Positive Response after Arrival at exit
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ExitInformation" type="MT_ExitInformation" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_EXT_INF - Additional information to the exit 
+							customs office 
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ErrorInformation" type="MT_ErrorInformation" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							E_fehler - error information from the  
+							customs office 
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ManualTerminationExport" type="MT_ManualTermination" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+		               manual termination wihtin export procedures. This message is being send from 
+		               third party application to inhouse application.
+		            </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ManualTerminationExit" type="MT_ManualTermination" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+		               manual termination wihtin exit procedures. This message is being send from 
+		               third party application to inhouse application.
+		            </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ProcedurePooling" type="MT_ProcedurePooling" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+		               manual termination wihtin exit procedures. This message is being send from 
+		               third party application to inhouse application.
+		            </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: messages-->
+	<!-- 
+	Begin: Trader variants refering to the Trader_Strucure of ETN_Types.xsd 
+	-->
+	<xsd:complexType name="CT_Shipper">
+		<xsd:complexContent>
+			<xsd:restriction base="CT_Trader">
+				<xsd:sequence>
+					<xsd:element ref="CustomerID"/>
+					<xsd:element ref="ETNAddress"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ParticipantTIN">
+		<xsd:complexContent>
+			<xsd:restriction base="CT_Trader">
+				<xsd:sequence>
+					<xsd:element ref="TIN"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Issuer">
+		<xsd:complexContent>
+			<xsd:restriction base="CT_Trader">
+				<xsd:sequence>
+					<xsd:element ref="TIN" minOccurs="0"/>
+					<xsd:element ref="VATID" minOccurs="0"/>
+					<xsd:element ref="Address" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Recipient">
+		<xsd:complexContent>
+			<xsd:restriction base="CT_Trader">
+				<xsd:sequence>
+					<xsd:element ref="TIN" minOccurs="0"/>
+					<xsd:element ref="VATID" minOccurs="0"/>
+					<xsd:element ref="Address" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- 
+	End: Trader variants refering to the Trader_Strucure of ETN_Types.xsd 
+	-->
+	<!-- 
+  Begin: variants refering to the CT_Strucures of ETN_Types.xsd 
+  -->
+	<xsd:complexType name="CT_Packaging">
+		<xsd:complexContent>
+			<xsd:restriction base="CT_Packaging">
+				<xsd:sequence>
+					<xsd:element ref="Quantity" minOccurs="0"/>
+					<xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="ItemFragmenationIndicator" minOccurs="0"/>
+					<xsd:element ref="MarksAndNumbers" minOccurs="0"/>
+					<xsd:element ref="Number" minOccurs="0"/>
+					<xsd:element ref="Type" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- 
+  End: variants refering to the CT_Strucures of ETN_Types.xsd 
+  -->
+	<!-- 
+	Begin: definition of complex structures not included in ETN_Types.xsd
+	-->
+	<!-- Begin: CT_HeaderExtensions -->
+	<xsd:complexType name="CT_HeaderExtensions">
+		<xsd:sequence>
+			<xsd:element name="TydenSealsFlag" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="TydenSealsStockFlag" type="ST_Indicator" minOccurs="0"/>
+			<!-- DH20061026 -->
+			<xsd:element name="EDECRevisionFlag" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="EDECReleaseFlag" type="ST_Indicator" minOccurs="0"/>
+			<!-- DH20061026 -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: CT_HeaderExtensions -->
+	<!-- Begin: PlaceOfLoading structure -->
+	<xsd:complexType name="CT_PlaceOfLoading">
+		<xsd:sequence>
+			<xsd:element name="Code" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="Address" minOccurs="0">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_Address">
+							<xsd:sequence>
+								<xsd:element ref="StreetAndNumber"/>
+								<xsd:element ref="PostalCode"/>
+								<xsd:element ref="City"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Addition" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: PlaceOfLoading structure -->
+	<!-- Begin: SpecialGoodsInformation structure -->
+	<xsd:complexType name="CT_SpecialGoodsInformation">
+		<xsd:sequence>
+			<xsd:element name="Code" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="Amount" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: SpecialGoodsInformation structure -->
+	<!-- Begin: SpecialRemarks structure -->
+	<xsd:complexType name="CT_SpecialRemarks">
+		<xsd:sequence>
+			<xsd:element name="AdditionalCode" type="ST_CodeAlpha" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="AgriculturalRefundCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="RestrictionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="TaxCode" type="ST_CodeAlpha" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: SpecialRemarks structure -->
+	<!-- Begin: Procedure structure -->
+	<xsd:complexType name="CT_Procedure">
+		<xsd:sequence>
+			<xsd:element name="Declared" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="Previous" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="Supplemental" type="ST_CodeAlpha" minOccurs="0"/>
+			<!-- DE - weiteres -->
+			<xsd:element name="Additional" type="ST_CodeAlpha" minOccurs="0"/>
+			<!-- Ausfuhrerstattung -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: Procedure structure -->
+	<!-- Begin: ShipmentPeriod structure -->
+	<xsd:complexType name="CT_ShipmentPeriod">
+		<xsd:sequence>
+			<xsd:element name="Begin" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="End" type="ST_DateTime" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: ShipmentPeriod structure -->
+	<!-- Begin: Transaction structure -->
+	<xsd:complexType name="CT_Transaction">
+		<xsd:sequence>
+			<xsd:element name="Type" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="AdditionalType" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="Amount" minOccurs="0"/>
+			<xsd:element name="Currency" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- End: Transaction structure -->
+	<xsd:complexType name="CT_Customs_dex">
+		<xsd:sequence>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfCommunityExit"/>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfNationalExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GoodsLocation" type="CT_GoodsLocation" minOccurs="0"/>
+			<xsd:element name="LoadingPlaceIdentity" type="xsd:string"/>
+			<xsd:element name="ValidationOffice" type="xsd:string"/>
+			<xsd:element name="Seal" type="CT_Seal" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_GoodsLocation">
+		<xsd:sequence>
+			<xsd:element name="Precise" type="xsd:string" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element name="OfficeIdentity" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="ShipmentPlaceIdentity" type="ST_Identity" minOccurs="0"/>
+				<xsd:element name="AuthorizedPlaceIdentity" type="ST_Identity" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:element ref="StreetAndNumber"/>
+			<xsd:element ref="PostalCode"/>
+			<xsd:element ref="City"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Seal">
+		<xsd:sequence>
+			<xsd:element name="Sealing" type="xsd:string"/>
+			<xsd:element name="SealAffixed" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_DeferredPayment">
+		<xsd:sequence>
+			<xsd:element name="GarantyYear" type="xsd:integer"/>
+			<xsd:element name="GarantyNumber" type="xsd:integer"/>
+			<xsd:element name="GarantyType" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ExportAssuranceCertificate">
+		<xsd:sequence>
+			<xsd:element ref="VATID" minOccurs="0"/>
+			<xsd:element name="Invoice" type="CT_Invoice" minOccurs="0"/>
+			<xsd:element ref="Quantity" minOccurs="0"/>
+			<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0"/>
+			<xsd:element ref="GoodsDescription" minOccurs="0"/>
+			<xsd:element ref="GrossMass" minOccurs="0"/>
+			<xsd:element ref="NetMass" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Invoice">
+		<xsd:sequence>
+			<xsd:element ref="Number" minOccurs="0"/>
+			<xsd:element name="Date" type="ST_Date" minOccurs="0"/>
+			<xsd:element ref="Amount" minOccurs="0"/>
+			<xsd:element name="ExchangeRate" type="CT_ExchangeRate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ExchangeRate">
+		<xsd:sequence>
+			<xsd:element name="Rate" type="xsd:decimal" minOccurs="0"/>
+			<xsd:element name="Currency" type="ST_Currency" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_SpecialRequests">
+		<xsd:sequence>
+			<xsd:element name="Code" type="ST_CodeAlpha"/>
+			<xsd:element name="ReasonsOfRequest" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_SupplementaryUnit">
+		<xsd:sequence>
+			<xsd:element ref="Unit" minOccurs="0"/>
+			<xsd:element name="Code" type="ST_CodeAlpha" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_AdditionalInfo">
+		<xsd:sequence>
+			<xsd:element name="Content" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="Type" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_CustomsTreatment">
+		<xsd:sequence>
+			<xsd:element name="TotalTaxes" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+			<xsd:element name="Warehouse" type="CT_Warehouse" minOccurs="0"/>
+			<xsd:element name="TemporaryExportSimplifiedRequest" type="CT_TemporaryExportSimplifiedRequest" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_TemporaryExportSimplifiedRequest">
+		<xsd:sequence>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="MonthsToReimport" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MeansOfIdentification" type="CT_MeansOfIdentification" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_MeansOfIdentification">
+		<xsd:sequence>
+			<xsd:element name="Code" type="ST_CodeAlpha"/>
+			<xsd:element ref="Description"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_DeliveryTerms">
+		<xsd:sequence>
+			<xsd:element name="DeliveryTerm" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DeliveryTermsPlace" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_AnswerMessages">
+		<xsd:sequence>
+			<xsd:element name="DataElementPath" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DataElementSequence" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="TypeOfDocument" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="RequestedOperation" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DateOfRequest" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="CustomsOffice">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:all>
+								<xsd:element ref="OfficeOfRequest" minOccurs="0"/>
+							</xsd:all>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Acceptance" type="CT_Acceptance" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="SpecialRequestedAnswer" type="CT_SpecialRequestedAnswer" minOccurs="0"/>
+			<xsd:element name="AdditionalInfo" type="CT_AdditionalInfo" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Justification">
+		<xsd:sequence>
+			<xsd:element name="Code" type="ST_CodeAlpha"/>
+			<xsd:element ref="Description"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Acceptance">
+		<xsd:sequence>
+			<xsd:element ref="Number" minOccurs="0"/>
+			<xsd:element name="Date" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="Version" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Revision" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="AG_AcceptanceAtts"/>
+	</xsd:complexType>
+	<xsd:complexType name="CT_SpecialRequestedAnswer">
+		<xsd:sequence>
+			<xsd:element name="Code" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="Date" type="ST_Date" minOccurs="0" maxOccurs="2"/>
+			<xsd:element name="Decision" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Justification" type="CT_Justification" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Error">
+		<xsd:complexContent>
+			<xsd:restriction base="CT_Error">
+				<xsd:sequence>
+					<xsd:element ref="Type"/>
+					<xsd:element ref="Reason"/>
+					<xsd:element ref="Pointer"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CT_CollectiveTerm">
+		<xsd:sequence>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="Code" type="ST_CodeNum" minOccurs="0"/>
+			<xsd:element name="CodeOfReference" type="ST_CodeNum" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ControlResult">
+		<xsd:sequence>
+			<xsd:element name="CustomsOffice">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:all>
+								<xsd:element ref="OfficeOfControl" minOccurs="0"/>
+							</xsd:all>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="Type" minOccurs="0"/>
+			<xsd:element name="Date" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="Result" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GeneralInfoResult" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ControlOfficer" maxOccurs="2">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_Address">
+							<xsd:all>
+								<xsd:element ref="Name"/>
+							</xsd:all>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GoodsItemControlResult" type="CT_GoodsItemControlResult" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_GoodsItemControlResult">
+		<xsd:sequence>
+			<xsd:element ref="ItemNumber" minOccurs="0"/>
+			<xsd:element ref="Type" minOccurs="0"/>
+			<xsd:element name="Result" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Pending" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Operation">
+		<xsd:sequence>
+			<xsd:element name="OperationType" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="OperationMotive" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="AdditionalIndicator" type="ST_Indicator" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_DueTaxesPerItem">
+		<xsd:sequence>
+			<xsd:element ref="ItemNumber" minOccurs="0"/>
+			<xsd:element name="ProcedureCalculation" type="CT_Calculation" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="Amounts" type="CT_Amounts" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Amounts">
+		<xsd:sequence>
+			<xsd:element name="TaxType" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+			<xsd:element ref="Amount" minOccurs="0"/>
+			<xsd:element name="PaymentMethod" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_AccountingInfo">
+		<xsd:sequence>
+			<xsd:element ref="Type" minOccurs="0"/>
+			<xsd:element ref="Status" minOccurs="0"/>
+			<xsd:element ref="Amount" minOccurs="0"/>
+			<xsd:element ref="Mode" minOccurs="0"/>
+			<xsd:element name="PaymentDateLimit" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfPayment" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="PaymentRecordDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="PaymentRecordNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GarantyIdentification" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GarantyEmitingService" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ControlResultExit">
+		<xsd:sequence>
+			<xsd:element ref="Type" minOccurs="0"/>
+			<xsd:element name="Date" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="Result" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="Status" minOccurs="0"/>
+			<xsd:element name="InCharge" type="CT_Trader" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_TransportInformation">
+		<xsd:sequence>
+			<xsd:element ref="Identity"/>
+			<xsd:element ref="Type"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Rectification">
+		<xsd:sequence>
+			<xsd:element name="NewVersionReferenceNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="NewRevisionReferenceNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DateOfModification" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="ModificationMotive" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="AdditionalIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="ModificationDescription" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	Begin: EX001
+	-->
+	<xsd:complexType name="MT_ExportDeclaration">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+			<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="DeclarantRepresentative" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+			<!-- Begin: CustomerID - PT -->
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!-- End: CustomerID - PT -->
+			<xsd:element name="Shipper" type="CT_Shipper" minOccurs="0"/>
+			<xsd:element name="Subcontractor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="SubcontractorRepresentative" type="CT_Trader" minOccurs="0"/>
+			<!-- End: Participants -->
+			<xsd:element name="AirportCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="AnswerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element ref="AuthorisationID" minOccurs="0"/>
+			<xsd:element name="CertificatesQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ContainerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="Customs_dex" type="CT_Customs_dex" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>check &gt; PlaceOfLoading, Seals, CustomsOffices</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfAdditionalDeclarationExport"/>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfExport"/>
+								<xsd:element ref="OfficeOfTransit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Date" type="ST_Date" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="DateOfAdditionalDeclaration" type="ST_DateTime" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="DateOfPreAdvice" type="ST_DateTime" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="DateOfDeclaration" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+			<!-- KB -->
+			<xsd:element name="DocumentInformation" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Header" minOccurs="0">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+									<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+									<xsd:element name="CountryOfDestination" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="CountryOfExport" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="CustomsOffices">
+										<xsd:complexType>
+											<xsd:complexContent>
+												<xsd:restriction base="CT_CustomsOffices">
+													<xsd:sequence>
+														<xsd:element ref="OfficeOfExport"/>
+													</xsd:sequence>
+												</xsd:restriction>
+											</xsd:complexContent>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="FormNumber" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0"/>
+									<xsd:element name="Prefix" type="xsd:string" minOccurs="0"/>
+									<xsd:element ref="Type" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Remark" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="LineNumber" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="Comment" type="xsd:string" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Position" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="LineNumber" type="xsd:string" minOccurs="0"/>
+									<xsd:element ref="Description" minOccurs="0"/>
+									<xsd:element name="GoodsItemNumber" type="xsd:string" minOccurs="0"/>
+									<xsd:element ref="GrossMass" minOccurs="0"/>
+									<xsd:element name="InvoiceNumber" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="Measurement" type="xsd:string" minOccurs="0"/>
+									<xsd:element ref="Number" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- KB -->
+			<xsd:element name="ExportAssuranceCertificate" type="CT_ExportAssuranceCertificate" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ExportRefund" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="GrossMass" minOccurs="0"/>
+			<xsd:element name="Guarantee" type="CT_Guarantee" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>check &gt; Guarantee</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Incoterms" type="CT_Incoterms" minOccurs="0"/>
+			<xsd:element name="Invoice" type="CT_Invoice" minOccurs="0"/>
+			<xsd:element name="IssuePlace" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ItemsQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="LoadingList" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="LocalReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="OriginCountry" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PackagesQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ParticipantsCombination" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PaymentDateLimit" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="PlaceOfLoading" type="CT_PlaceOfLoading" minOccurs="0"/>
+			<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element name="RemittanceToOrderIndicator" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="RepresentationFlag" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Route" type="CT_Route" minOccurs="0"/>
+			<xsd:element name="Seals" type="CT_Seals" minOccurs="0"/>
+			<xsd:element name="ShipmentPeriod" type="CT_ShipmentPeriod" minOccurs="0"/>
+			<xsd:element name="ShipReference" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="SimplifiedProcedureAuthorization" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="SimplifiedProcedureIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="SpecialRequests" type="CT_SpecialRequests" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="Transaction" type="CT_Transaction" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration" type="CT_TypeOfDeclaration" minOccurs="0"/>
+			<xsd:element name="HeaderExtensions" type="CT_HeaderExtensions" minOccurs="0"/>
+			<!-- DH20061026 -->
+			<xsd:element name="EdecHeader" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CorrectionCode" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="TypeOfDeclaration" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="GroupageNumber" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatusCode" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="NCTSIdentifier" type="ST_Indicator" minOccurs="0"/>
+						<xsd:element name="PrevRegNr" type="xsd:string" minOccurs="0" maxOccurs="9"/>
+						<!-- CSF200811 -->
+						<xsd:element name="TransitStatus" type="xsd:string" minOccurs="0" maxOccurs="9"/>
+						<!-- CSF200811 -->
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- DH20061026 -->
+			<!-- ETN20080924 -->
+			<!-- CSF200811 -->
+			<xsd:element name="DataForwardingReceiver" type="ST_Indicator" minOccurs="0"/>
+			<!-- CSFKDNR Vortragsempf㭧er-->
+			<!-- CSF200811 -->
+			<xsd:element name="SpecCircumstance" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="TransportPaymentMethod" type="CT_TransportPaymentMethod" minOccurs="0"/>
+			<xsd:element name="CommercialReferenceNumber" type="CT_CommercialReferenceNumber" minOccurs="0"/>
+			<xsd:element name="Itinerary" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CountryOfRouting" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ExportRestitutionHeader" type="CT_ExportRestitutionHeader" minOccurs="0"/>
+			<!-- ETN20080924 -->
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="AdditionalInfo" type="CT_AdditionalInfo" minOccurs="0"/>
+						<xsd:element name="ArticleNumber" type="ST_CodeAlpha" minOccurs="0"/>
+						<xsd:element name="ChassisNumber" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+						<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+						<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+						<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeKN8" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeTARIC" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeFirstAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeSecondAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeNationalAddition" minOccurs="0"/>
+						<xsd:element name="CustomsTreatment" type="CT_CustomsTreatment" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>check Procedure</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="DeliveryTerms" type="CT_DeliveryTerms" minOccurs="0"/>
+						<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="GoodsDescription" minOccurs="0"/>
+						<xsd:element ref="GrossMass" minOccurs="0"/>
+						<xsd:element ref="NetMass" minOccurs="0"/>
+						<xsd:element name="NewOrOldVehiclesIndicator" type="ST_Indicator" minOccurs="0"/>
+						<xsd:element name="OriginCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="OriginRegion" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="Price" type="xsd:decimal" minOccurs="0"/>
+						<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+						<xsd:element name="PreviousDocument" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Document" type="CT_PreviousDocument" minOccurs="0" maxOccurs="unbounded"/>
+									<xsd:element name="Product" type="CT_Product"/>
+									<xsd:element name="Calculation" type="CT_Taxation"/>
+									<xsd:element ref="Type" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="ProducedDocument" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Document" type="CT_ProducedDocument"/>
+									<xsd:element name="ArchiveInfo" type="CT_ArchiveInfo"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="SpecialGoodsInformation" type="CT_SpecialGoodsInformation" minOccurs="0"/>
+						<xsd:element name="SpecialRemarks" type="CT_SpecialRemarks" minOccurs="0"/>
+						<xsd:element name="SpecialTaxes" minOccurs="0"/>
+						<xsd:element name="SupplementaryUnit" type="CT_SupplementaryUnit" minOccurs="0"/>
+						<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="Restitutions" type="CT_Product" minOccurs="0"/>
+						<xsd:element name="RestitutionIndicator" type="ST_Indicator" minOccurs="0"/>
+						<xsd:element name="StatisticalValue" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatisticalQuantity" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatisticalBaseValue" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatisticalBaseCurrency" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="Taxation" type="CT_Taxation" minOccurs="0" maxOccurs="99"/>
+						<!-- DH20061026 -->
+						<xsd:element name="EdecItem" minOccurs="0">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="ClearanceCode" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="ClearanceTypeCode" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="SpecialMentions" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="ECExportIdentifier" type="ST_Indicator" minOccurs="0"/>
+									<xsd:element name="ExportCountry" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="Allowance" minOccurs="0">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="Category" type="xsd:string" minOccurs="0"/>
+												<xsd:element name="Reference" type="xsd:string" minOccurs="0"/>
+												<xsd:element name="Date" type="ST_Date" minOccurs="0"/>
+												<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<!-- DH20061026 -->
+						<!-- ETN20080924 -->
+						<xsd:element name="TransportPaymentMethod" type="CT_TransportPaymentMethod" minOccurs="0"/>
+						<xsd:element name="CommercialReferenceNumber" type="CT_CommercialReferenceNumber" minOccurs="0"/>
+						<xsd:element name="UNDGCode" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="ExportRestitutionItem" type="CT_ExportRestitutionItem" minOccurs="0"/>
+						<xsd:element name="CT_WriteOffATLAS" type="CT_WriteOffATLAS" minOccurs="0"/>
+						<!-- ETN20080924 -->
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX001
+	-->
+	<!-- 
+	Begin: EX002
+	-->
+	<xsd:complexType name="MT_ExportDeclarationResponse">
+		<xsd:sequence>
+			<xsd:element name="AnswerMessages" type="CT_AnswerMessages" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>check</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ApplicationReference" type="xsd:string" minOccurs="0"/>
+			<!-- Begin: CustomerID -->
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!-- End: CustomerID -->
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfDeparture"/>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfExport"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfAcceptance" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfCancellation" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfExit" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfLoadingBegin" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfLoadingEnd" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfProcessing" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfReceipt" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfRejection" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfRelease" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="InvestigationStartDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="InvestigationStartTime" type="ST_Time" minOccurs="0"/>
+			<xsd:element name="Justification" type="CT_Justification" minOccurs="0"/>
+			<xsd:element name="OperationStatus" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PlaceOfCustomsExamination" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration" type="CT_TypeOfDeclaration" minOccurs="0"/>
+			<xsd:element name="RecipientSystemUserID" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="Error" type="CT_Error" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- ETN200809 -->
+			<xsd:element name="CancellationByCustoms" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="CancellationDecision" type="ST_Indicator" minOccurs="0"/>
+			<!-- ETN200809 -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX002
+	-->
+	<!-- 
+	Begin: ExitDeclarationResponse
+	-->
+	<xsd:complexType name="MT_ExitDeclarationResponse">
+		<xsd:sequence>
+			<xsd:element name="AnswerMessages" type="CT_AnswerMessages" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>check</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!--Begin: Participants -->
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="ApplicationReference" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+								<!-- ETN200809 -->
+								<xsd:element ref="OfficeOfAdditionalDeclarationExport"/>
+								<!-- ETN200809 -->
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfExit" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfClosing" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfInvestigation" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfPermission" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfProcessing" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfProhibition" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfPresentation" type="ST_DateTime" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="DateOfPreAdvice" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfPreAdviceRejection" type="ST_DateTime" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="DeclarantRepresentative" type="CT_Trader" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="InvestigationStartDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="InvestigationStartTime" type="ST_Time" minOccurs="0"/>
+			<xsd:element name="Justification" type="CT_Justification" minOccurs="0"/>
+			<xsd:element name="OperationStatus" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PlaceOfCustomsExamination" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration" type="CT_TypeOfDeclaration" minOccurs="0"/>
+			<xsd:element name="RecipientSystemUserID" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: ExitDeclarationResponse
+	-->
+	<!--
+	Begin: IE529 - Release
+	-->
+	<xsd:complexType name="MT_ExportRelease">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+			<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="DeclarantRepresentative" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Shipper" type="CT_Shipper" minOccurs="0"/>
+			<xsd:element name="Subcontractor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="SubcontractorRepresentative" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="AirportCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="AnswerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element ref="AuthorisationID" minOccurs="0"/>
+			<xsd:element name="ContainerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfAdditionalDeclarationExport"/>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfExport"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfAcceptance" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfAdditionalDeclaration" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfCancelation" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfDeclaration" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfExit" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfLoadingBegin" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfLoadingEnd" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfProcessing" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfReceipt" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfRejection" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfRelease" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="ExportRefund" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="GrossMass" minOccurs="0"/>
+			<xsd:element name="Incoterms" type="CT_Incoterms" minOccurs="0"/>
+			<xsd:element name="ItemsQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="LocalReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="PackagesQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ParticipantsCombination" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PDF" type="CT_PDF" minOccurs="0"/>
+			<xsd:element name="PlaceOfLoading" type="CT_PlaceOfLoading" minOccurs="0"/>
+			<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="RepresentationFlag" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Seals" type="CT_Seals" minOccurs="0"/>
+			<xsd:element name="ShortageIndicator" type="ST_Indicator" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="AlternateProofIndicator" type="ST_Indicator" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="ShipmentPeriod" type="CT_ShipmentPeriod" minOccurs="0"/>
+			<xsd:element name="Transaction" type="CT_Transaction" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration" type="CT_TypeOfDeclaration" minOccurs="0"/>
+			<xsd:element name="TypeOfRelease" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="HeaderExtensions" type="CT_HeaderExtensions" minOccurs="0"/>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="ArticleNumber" type="ST_CodeAlpha" minOccurs="0"/>
+						<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+						<xsd:element ref="CommodityCodeKN8" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeTARIC" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeFirstAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeSecondAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeNationalAddition" minOccurs="0"/>
+						<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="GoodsDescription" minOccurs="0"/>
+						<xsd:element ref="GrossMass" minOccurs="0"/>
+						<xsd:element ref="NetMass" minOccurs="0"/>
+						<xsd:element name="OriginCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="OriginRegion" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+						<xsd:element name="PreviousDocument">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Document" type="CT_PreviousDocument" minOccurs="0" maxOccurs="unbounded"/>
+									<xsd:element name="Product" type="CT_Product"/>
+									<xsd:element name="Calculation" type="CT_Taxation"/>
+									<xsd:element ref="Type" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="ProducedDocument">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Document" type="CT_ProducedDocument" minOccurs="0" maxOccurs="unbounded"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="SpecialGoodsInformation" type="CT_SpecialGoodsInformation" minOccurs="0"/>
+						<xsd:element name="SpecialRemarks" type="CT_SpecialRemarks" minOccurs="0"/>
+						<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatisticalValue" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatisticalQuantity" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: IE529 - Release
+	-->
+	<!--
+	Begin: EX003/E_EXT_CTL
+	-->
+	<xsd:complexType name="MT_ControlNotification">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfControl" type="ST_Date" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="NotificationDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="TypeOfControl" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="TypeOfDocument" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="TypeOfControl" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX003
+	-->
+	<!--
+	Begin: E_EXT_NOT
+	-->
+	<xsd:complexType name="MT_ExitNotification">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="AirportCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="CollectiveTerm" type="CT_CollectiveTerm" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfActualExit" minOccurs="0"/>
+								<xsd:element ref="OfficeOfExit" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfExit" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="Termination" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="TypeOfShipment" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MessageNo" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>serial number of message</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name=" " minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Total amount of messages for this MRN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="ExternalReferenceNumber" type="xsd:string" minOccurs="0"/>
+						<xsd:choice>
+							<xsd:element name="IndividualMarking" type="CT_IndividualMarking" minOccurs="0" maxOccurs="unbounded"/>
+							<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: E_EXT_NOT
+	-->
+	<!--
+	Begin EX004
+	-->
+	<xsd:complexType name="MT_ControlResultDeclaration">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="NotificationDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfControl"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ControlResult" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Operation" type="CT_Operation" minOccurs="0"/>
+			<xsd:element name="Document" type="CT_Document" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX004
+	-->
+	<!--
+	Begin EX005
+	-->
+	<xsd:complexType name="MT_DebtNotification">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="TypeOfDocument" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="NotificationDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DueTaxesPerItem" type="CT_DueTaxesPerItem" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="DueTaxes" type="CT_Amounts" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="AccountingInfo" type="CT_AccountingInfo" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End EX005
+	-->
+	<!--
+	Begin: EX006
+	-->
+	<xsd:complexType name="MT_ExitAuthorisation">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="AccountingInfo" type="CT_AccountingInfo" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="AuthorisationDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="AuthorisationResponsible" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ControlResultExit" type="CT_ControlResultExit" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfPermission" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="DueTaxes" type="CT_Amounts" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="ExportDeclaration" type="MT_ExportDeclaration" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Justification" type="CT_Justification" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element name="Seal" type="CT_Seal" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX006
+	-->
+	<!--
+	Begin: EX007
+	-->
+	<xsd:complexType name="MT_Cancelation">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="DeclarantRepresentative" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfExport"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TypeOfDocument" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DateOfAnnulment" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="ReasonOfAnnulment" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<!-- DH20061026 -->
+			<xsd:element name="DecisionFlag" type="ST_Indicator" minOccurs="0"/>
+			<!-- DH20061026 -->
+			<xsd:element name="TypeOfAnnulment" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GoodsItem" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX007
+	-->
+	<!--
+	Begin: EX008
+	-->
+	<xsd:complexType name="MT_GoodsPresented">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="DateOfPresentation" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- 
+	End: EX008
+	-->
+	<!--
+	Begin: EX009
+	-->
+	<xsd:complexType name="MT_ExitCertification">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="InCharge" type="CT_Trader"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration" type="CT_TypeOfDeclaration" minOccurs="0"/>
+			<xsd:element name="CountryOfDispatch" type="ST_CountryCodeISO" minOccurs="0"/>
+			<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ShipReference" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="NationalityTerritoryExitTransport" type="CT_TransportInformation" minOccurs="0"/>
+			<xsd:element name="DepartureTransport" type="CT_TransportInformation" minOccurs="0"/>
+			<xsd:element name="BorderMode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ContainerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="ItemsQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PackagesQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Currency" type="ST_Currency" minOccurs="0"/>
+			<xsd:element name="DeliveryTerms" type="CT_DeliveryTerms" minOccurs="0"/>
+			<xsd:element ref="CommodityCodeFirstAddition" minOccurs="0"/>
+			<xsd:element ref="CommodityCodeSecondAddition" minOccurs="0"/>
+			<xsd:element name="DeferredPayment" type="CT_DeferredPayment" minOccurs="0"/>
+			<xsd:element name="IssuePlace" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DateOfIssue" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="RemittanceToOrderIndicator" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="CustomsOffices" minOccurs="0">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfCommunityExit" minOccurs="0"/>
+								<xsd:element ref="OfficeOfExport" minOccurs="0"/>
+								<xsd:element ref="OfficeOfNationalExit" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Warehouse" minOccurs="0">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_Warehouse">
+							<xsd:sequence>
+								<xsd:element ref="CountryCodeISO" minOccurs="0"/>
+								<xsd:element ref="Identity" minOccurs="0"/>
+								<xsd:element ref="Type" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GoodsLocation" type="CT_GoodsLocation" minOccurs="0"/>
+			<xsd:element name="ShipmentPlaceIdentity" type="ST_Identity" minOccurs="0"/>
+			<xsd:element name="ShipmentPeriod" type="CT_ShipmentPeriod" minOccurs="0"/>
+			<xsd:element name="ExportAssuranceCertificate" type="CT_ExportAssuranceCertificate" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="GoodsItem" minOccurs="0"/>
+			<xsd:element name="DueTaxes" type="CT_Amounts" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="AccountingInfo" type="CT_AccountingInfo" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="ControlResult" type="xsd:string" minOccurs="0" maxOccurs="9"/>
+			<xsd:element name="Seal" type="CT_Seal" minOccurs="0"/>
+			<xsd:element name="AuthorisationDate" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="AuthorisationResponsible" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX009
+	-->
+	<!--
+	Begin: EX010
+	-->
+	<xsd:complexType name="MT_CompletionRequest">
+		<xsd:sequence>
+			<xsd:element name="Rectification"/>
+			<xsd:element name="ExportDeclaration" type="MT_ExportDeclaration" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX010
+	-->
+	<!--
+	Begin: EX011
+	-->
+	<xsd:complexType name="MT_Completion">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+			<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Consignor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Issuer" type="CT_Issuer" minOccurs="0"/>
+			<xsd:element name="Recipient" type="CT_Recipient" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="AnswerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfAdditionalDeclarationExport"/>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfExport"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfAnswer" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="DateOfAdditionalDeclaration" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfDeclaration" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfReceipt" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="Document" type="CT_Document" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element name="Incoterms" type="CT_Incoterms" minOccurs="0"/>
+			<xsd:element name="Justification" type="CT_Justification" minOccurs="0"/>
+			<xsd:element ref="LocalReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element name="RepresentationFlag" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Transaction" type="CT_Transaction" minOccurs="0"/>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="OriginCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="OriginRegion" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+						<xsd:element name="StatisticalValue" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="StatisticalQuantity" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="PreviousDocument">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Document" type="CT_PreviousDocument" minOccurs="0" maxOccurs="unbounded"/>
+									<xsd:element name="Product" type="CT_Product"/>
+									<xsd:element name="Calculation" type="CT_Taxation"/>
+									<xsd:element ref="Type" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: EX011
+	-->
+	<!--
+	Begin: Confirmation
+	-->
+	<xsd:complexType name="MT_Confirmation">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Declarant" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="DeclarantRepresentative" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="Subcontractor" type="CT_Trader" minOccurs="0"/>
+			<xsd:element name="SubcontractorRepresentative" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfActualExport"/>
+								<xsd:element ref="OfficeOfExport"/>
+								<!--Added 070322 -->
+								<xsd:element ref="OfficeOfExit"/>
+								<!--Added 070322 -->
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfExport" type="ST_DateTime" minOccurs="0"/>
+			<!--Added 070322 -->
+			<xsd:element name="DateOfExit" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfRelease" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DateOfReceipt" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+			<!--Added 070322 -->
+			<xsd:element name="DocumentNameCode" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="FunctionCode" type="ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="GrossMass" minOccurs="0"/>
+			<xsd:element name="Incoterms" type="CT_Incoterms" minOccurs="0"/>
+			<xsd:element name="ItemsQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PackagesQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PartialShipment" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="ParticipantsCombination" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PDF" type="CT_PDF" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="Transaction" type="CT_Transaction" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration" type="CT_TypeOfDeclaration" minOccurs="0"/>
+			<!--Added 070322 -->
+			<xsd:element name="ControlResultCode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeKN8" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeTARIC" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeFirstAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeSecondAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeNationalAddition" minOccurs="0"/>
+						<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="GoodsDescription" minOccurs="0"/>
+						<xsd:element ref="GrossMass" minOccurs="0"/>
+						<xsd:element ref="NetMass" minOccurs="0"/>
+						<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="Procedure" type="CT_Procedure" minOccurs="0"/>
+						<xsd:element name="OriginCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="OriginRegion" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: Confirmation
+	-->
+	<!--
+	Begin: PreNotification
+	-->
+	<xsd:complexType name="MT_PreNotification">
+		<xsd:choice>
+			<xsd:element name="SuperiorHeader">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+						<xsd:element name="CollectiveTerm" type="CT_CollectiveTerm" minOccurs="0"/>
+						<xsd:element name="SuperiorReferenceNumber" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="InferiorHeader" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+									<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+									<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+									<xsd:element name="CustomsOffices">
+										<xsd:complexType>
+											<xsd:complexContent>
+												<xsd:restriction base="CT_CustomsOffices">
+													<xsd:sequence>
+														<xsd:element ref="OfficeOfExit"/>
+													</xsd:sequence>
+												</xsd:restriction>
+											</xsd:complexContent>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+									<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+									<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:sequence>
+				<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+				<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+				<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+				<xsd:element name="CustomsOffices">
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:restriction base="CT_CustomsOffices">
+								<xsd:sequence>
+									<xsd:element ref="OfficeOfExit"/>
+								</xsd:sequence>
+							</xsd:restriction>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+				<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--
+	End: PreNotification
+	-->
+	<!--
+	Begin: ExitDeclaration
+	-->
+	<xsd:complexType name="MT_ExitDeclaration">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="ContainerIndicator" type="ST_Indicator" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+								<xsd:element ref="OfficeOfExport"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="GrossMass" minOccurs="0"/>
+			<xsd:element name="ItemsQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PackagesQuantity" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="TypeOfDeclaration">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_TypeOfDeclaration">
+							<xsd:sequence>
+								<xsd:element ref="DeclarationCode"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<!--Begin: Participants -->
+						<xsd:element name="Consignee" type="CT_Trader" minOccurs="0"/>
+						<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+						<!--End: Participants -->
+						<xsd:element ref="CommodityCodeKN8" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeTARIC" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeFirstAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeSecondAddition" minOccurs="0"/>
+						<xsd:element ref="CommodityCodeNationalAddition" minOccurs="0"/>
+						<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+						<xsd:element ref="GoodsDescription" minOccurs="0"/>
+						<xsd:element name="DestinationCountry" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="GrossMass" minOccurs="0"/>
+						<xsd:element ref="NetMass" minOccurs="0"/>
+						<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="ProducedDocument">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Document" type="CT_ProducedDocument"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<!-- ETN20080924 -->
+						<xsd:element name="CommercialReferenceNumber" type="CT_CommercialReferenceNumber" minOccurs="0"/>
+						<xsd:element name="UNDGCode" type="xsd:string" minOccurs="0"/>
+						<!-- ETN20080924 -->
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: ExitDeclaration
+	-->
+	<!--
+	Begin: ExitInformation
+	-->
+	<xsd:complexType name="MT_ExitInformation">
+		<xsd:choice>
+			<xsd:element name="SuperiorHeader">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+						<xsd:element name="CollectiveTerm" type="CT_CollectiveTerm" minOccurs="0"/>
+						<xsd:element name="SuperiorReferenceNumber" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="InferiorHeader" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<!--Begin: Participants -->
+									<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+									<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+									<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+									<!--End: Participants -->
+									<xsd:element name="CustomsOffices">
+										<xsd:complexType>
+											<xsd:complexContent>
+												<xsd:restriction base="CT_CustomsOffices">
+													<xsd:sequence>
+														<xsd:element ref="OfficeOfExit"/>
+													</xsd:sequence>
+												</xsd:restriction>
+											</xsd:complexContent>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="DateOfDispatch" type="ST_DateTime" minOccurs="0"/>
+									<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+									<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0"/>
+									<xsd:element name="PlaceOfLoading" type="CT_PlaceOfLoading" minOccurs="0"/>
+									<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+									<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+									<xsd:element name="Seals" type="CT_Seals" minOccurs="0"/>
+									<xsd:element name="Termination" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="TypeOfInformation" type="xsd:string" minOccurs="0"/>
+									<xsd:element name="HeaderExtensions" type="CT_HeaderExtensions" minOccurs="0"/>
+									<xsd:element name="GoodsTransport" minOccurs="0">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+												<xsd:element name="DateOfDispatch" type="ST_DateTime" minOccurs="0"/>
+												<xsd:element name="InformationIndicator" type="ST_CodeNum" minOccurs="0"/>
+												<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0"/>
+												<xsd:element name="PlaceOfLoading" type="CT_PlaceOfLoading" minOccurs="0"/>
+												<xsd:element name="TypeOfInformation" type="ST_CodeAlpha" minOccurs="0"/>
+												<xsd:element name="GoodsItem" minOccurs="0">
+													<xsd:complexType>
+														<xsd:sequence>
+															<xsd:element ref="ItemNumber" minOccurs="0"/>
+															<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+															<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+															<xsd:element name="ChangedFlag" type="ST_Indicator" minOccurs="0"/>
+															<xsd:element ref="GrossMass" minOccurs="0"/>
+															<xsd:element ref="NetMass" minOccurs="0"/>
+															<xsd:choice>
+																<xsd:element name="IndividualMarking" type="CT_IndividualMarking" minOccurs="0" maxOccurs="unbounded"/>
+																<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+															</xsd:choice>
+														</xsd:sequence>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:sequence>
+				<!--Begin: Participants -->
+				<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+				<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+				<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+				<!--End: Participants -->
+				<xsd:element name="CustomsOffices">
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:restriction base="CT_CustomsOffices">
+								<xsd:sequence>
+									<xsd:element ref="OfficeOfExit"/>
+								</xsd:sequence>
+							</xsd:restriction>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="DateOfDispatch" type="ST_DateTime" minOccurs="0"/>
+				<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+				<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0"/>
+				<xsd:element name="PlaceOfLoading" type="CT_PlaceOfLoading" minOccurs="0"/>
+				<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+				<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+				<xsd:element name="Seals" type="CT_Seals" minOccurs="0"/>
+				<xsd:element name="Termination" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="TypeOfInformation" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="MessageNo" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>serial number of message for this MRN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="MaxMessageNo" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Total amount of messages for this MRN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="HeaderExtensions" type="CT_HeaderExtensions" minOccurs="0"/>
+				<xsd:element name="GoodsTransport" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+							<xsd:element name="DateOfDispatch" type="ST_DateTime" minOccurs="0"/>
+							<xsd:element name="InformationIndicator" type="ST_CodeNum" minOccurs="0"/>
+							<xsd:element name="MeansOfTransport" type="CT_Transport" minOccurs="0"/>
+							<xsd:element name="PlaceOfLoading" type="CT_PlaceOfLoading" minOccurs="0"/>
+							<xsd:element name="TypeOfInformation" type="ST_CodeAlpha" minOccurs="0"/>
+							<xsd:element name="GoodsItem" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element ref="ItemNumber" minOccurs="0"/>
+										<xsd:element name="ContainerRegistration" type="xsd:string" minOccurs="0" maxOccurs="99"/>
+										<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+										<xsd:choice>
+											<xsd:element name="IndividualMarking" type="CT_IndividualMarking" minOccurs="0" maxOccurs="unbounded"/>
+											<xsd:element name="Packaging" type="CT_Packaging" minOccurs="0" maxOccurs="unbounded"/>
+										</xsd:choice>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--
+	End: ExitInformation
+	-->
+	<!--
+	Begin: ExitPresentation
+	-->
+	<xsd:complexType name="MT_ExitPresentation">
+		<xsd:choice>
+			<xsd:element name="SuperiorHeader">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+						<xsd:element name="CollectiveTerm" type="CT_CollectiveTerm" minOccurs="0"/>
+						<xsd:element name="SuperiorReferenceNumber" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="InferiorHeader" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<!--Begin: Participants -->
+									<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+									<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+									<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+									<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+									<!--End: Participants -->
+									<xsd:element name="CustomsOffices">
+										<xsd:complexType>
+											<xsd:complexContent>
+												<xsd:restriction base="CT_CustomsOffices">
+													<xsd:sequence>
+														<xsd:element ref="OfficeOfExit"/>
+													</xsd:sequence>
+												</xsd:restriction>
+											</xsd:complexContent>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="DateOfPresentation" type="ST_DateTime" minOccurs="0"/>
+									<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+									<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+									<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:sequence>
+				<!--Begin: Participants -->
+				<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+				<xsd:element name="CommunicationPartnerTIN" type="CT_ParticipantTIN" minOccurs="0"/>
+				<xsd:element name="Exporter" type="CT_Trader" minOccurs="0"/>
+				<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+				<!--End: Participants -->
+				<xsd:element name="CollectiveTerm" type="CT_CollectiveTerm" minOccurs="0"/>
+				<xsd:element name="CustomsOffices">
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:restriction base="CT_CustomsOffices">
+								<xsd:sequence>
+									<xsd:element ref="OfficeOfExit"/>
+								</xsd:sequence>
+							</xsd:restriction>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="DateOfPresentation" type="ST_DateTime" minOccurs="0"/>
+				<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+				<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--Added 070322 -->
+	<!--
+	Begin: Arrival at Exit
+	-->
+	<xsd:complexType name="MT_ArrivalAtExit">
+		<xsd:choice>
+			<xsd:sequence>
+				<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+				<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="DateOfArrival" type="ST_DateTime" minOccurs="0"/>
+				<xsd:element ref="DocumentNameCode" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="ArrivalNotificationPlace" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="StoringFlag" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element ref="AutLocOfGoods" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="CustomsSubplace" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="AgreedLocationCode" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="AgreedLocation" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="CustomsOffices">
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:restriction base="CT_CustomsOffices">
+								<xsd:sequence>
+									<xsd:element ref="OfficeOfExit"/>
+								</xsd:sequence>
+							</xsd:restriction>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--
+	Begin: Response to Arrival at Exit
+	-->
+	<xsd:complexType name="MT_ArrivalAtExitResponse">
+		<xsd:sequence>
+			<xsd:element name="DateOfAcceptance" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="DateOfRejection" type="ST_Date" minOccurs="0"/>
+			<xsd:element ref="DocumentNameCode" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="DocumentNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="PrevReferenceNumber" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="FunctionalError" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="MessageSection" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="Occurence" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="Pointer" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="ErrorType" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Added 070322 -->
+	<!--
+	Begin: ErrorInformation
+	-->
+	<xsd:complexType name="MT_ErrorInformation">
+		<xsd:sequence>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element ref="RegistrationNumber" minOccurs="0"/>
+			<xsd:element name="Error" type="CT_Error" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--
+	End: ErrorInformation
+	-->
+	<xsd:complexType name="MT_ManualTermination">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfTermination" type="ST_DateTime" minOccurs="0"/>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="HeaderExtensions" type="CT_HeaderExtensions" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MT_ProcedurePooling">
+		<xsd:sequence>
+			<!--Begin: Participants -->
+			<xsd:element name="Contact" type="CT_Contact" minOccurs="0"/>
+			<xsd:element name="Shipper" type="CT_Trader" minOccurs="0"/>
+			<!--End: Participants -->
+			<xsd:element name="CollectiveTerm" type="CT_CollectiveTerm" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="HeaderExtensions" type="CT_HeaderExtensions" minOccurs="0"/>
+			<xsd:element ref="ReferenceNumber" minOccurs="0"/>
+			<xsd:element name="GoodsItem" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ItemNumber" minOccurs="0"/>
+						<xsd:element name="MRN" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ETN200809 -->
+	<!-- Begin: IE582 -->
+	<xsd:complexType name="MT_NonExitedExportRequest">
+		<xsd:sequence>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="ResponseUntil" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="DateOfInvestigation" type="ST_Date" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Begin: IE583 -->
+	<xsd:complexType name="MT_NonExitedExportResponse">
+		<xsd:sequence>
+			<xsd:element ref="DocumentReferenceNumber" minOccurs="0"/>
+			<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="CustomsOffices">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="CT_CustomsOffices">
+							<xsd:sequence>
+								<xsd:element ref="OfficeOfActualExit"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DateOfExit" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="DateOfAwaitedExit" type="ST_Date" minOccurs="0"/>
+			<xsd:element name="TypeOfExit" type="xsd:integer" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ETN200809 -->
+	<!-- End: Messages-->
+</xsd:schema>

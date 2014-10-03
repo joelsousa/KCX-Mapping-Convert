@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2009</Year>
+<Month>06</Month>
+<Day>25</Day>
+</Date>
+<Time>10:08:47</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE</Transmitter>
+<Receiver>DE.CSF.FRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>EXPORT</Procedure>
+<MessageName>DeclarationResponse</MessageName>
+<Release>2.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<CodeMapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</CodeMapping>
+</CustomsExchange>
+<MessageID>data\fss\in\ASP_VULK.fss</MessageID>
+<InReplyTo>DE01DE0135650000000021289537</InReplyTo>
+</Header>
+</soap:Header>
+<soap:Body>
+<DeclarationResponse>
+<GoodsDeclaration>
+<AcceptanceTime>200906251008</AcceptanceTime>
+<ReceiveTime>200906251008</ReceiveTime>
+<Reason>Ausfuhranmeldung nicht angenommen aufgrund PlausibilitÃ¤tsverletzungen</Reason>
+<StatusOfCompletion>13</StatusOfCompletion>
+<ReferenceNumber>0000100002/0033046794</ReferenceNumber>
+<Error>
+<Code>1</Code>
+<Text>AES00031</Text>
+<Pointer>UngÃ¼ltiger Ladeort-Code.</Pointer>
+</Error>
+<Error>
+<Code>2</Code>
+<Text>AES00031</Text>
+<Pointer>LADEORT.Code</Pointer>
+</Error>
+</GoodsDeclaration>
+</DeclarationResponse>
+</soap:Body>
+</soap:Envelope>

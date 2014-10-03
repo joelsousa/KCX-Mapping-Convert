@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+<To>DE01.CSFALT.2144</To>
+<From>DE.CSF</From>
+<MessageID>EI20100519</MessageID>
+<SentAt>2011-08-19 12:02:00 +0200</SentAt>
+<Act>request</Act>
+<Method>EMCS</Method>
+<MessageVersion>2.0</MessageVersion>
+<MessageType>EMCSInterruptionOfMovement</MessageType>
+</Header>
+</soap:Header>
+<soap:Body>
+<Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+<EMCS>
+<EMCSInterruptionOfMovement>
+<LocalReferenceNumber>ReferenceNumber</LocalReferenceNumber>
+<ReasonForInterruption>ReasonForInterruption</ReasonForInterruption>
+<AadReferenceCode>AadReferenceCode</AadReferenceCode>
+<SequenceNumber>SequenceNumber</SequenceNumber>
+<DateAndTimeOfIssuance>2010-07-16T15:56:00+0200</DateAndTimeOfIssuance>
+<ComplementaryInformation language="DE">V20-ComplementaryInformation</ComplementaryInformation>
+<ExciseCustomsOffice>ExciseCustomsOffice</ExciseCustomsOffice>
+<IdentificationOfSenderCustomsOfficer>CustomsOfficerID</IdentificationOfSenderCustomsOfficer>
+<ReferenceControlReports>
+<ControlReportReference>Control1</ControlReportReference>
+<ControlReportReference>Control2</ControlReportReference>
+</ReferenceControlReports>
+<ReferenceEventReports>
+<EventReportNumber>1</EventReportNumber>
+<EventReportNumber>2</EventReportNumber>
+<EventReportNumber>3</EventReportNumber>
+<EventReportNumber>4</EventReportNumber>
+</ReferenceEventReports>
+</EMCSInterruptionOfMovement>
+</EMCS>
+</Submit>
+</soap:Body>
+</soap:Envelope>
+

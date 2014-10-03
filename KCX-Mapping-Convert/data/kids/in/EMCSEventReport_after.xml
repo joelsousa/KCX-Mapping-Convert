@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+  <Header xmlns="http://www.eurtradenet.com/schemas/header/200310" soap:mustUnderstand="true">
+  <To>FR01.CSFALT.2144</To>
+  <From>FR01.CSFALT.2144</From>
+  <MessageID>KA-20110919-05</MessageID>
+  <SentAt>2011-09-18 10:24:20 +0200</SentAt>
+  <Act>inform</Act>
+  <Method>EMB</Method>
+  <MessageVersion>2.0</MessageVersion>
+  <MessageType>EMCSEventReport</MessageType>
+  </Header>
+  </soap:Header>
+  <soap:Body>
+  <Submit xmlns="http://www.eurtradenet.com/schemas/uids/emcs/body/200911">
+  <EMCS>
+  <EMCSEventReport>
+  <LocalReferenceNumber>KA-20110919-05</LocalReferenceNumber>
+  <AadReferenceCode>AadReferenceCode1</AadReferenceCode>
+  <SequenceNumber>SequenceNumber1</SequenceNumber>
+  <EventReportMessageType>EventReportMessageType1</EventReportMessageType>
+  <DateAndTimeOfValidation>2000-01-01T00:00:00+0100</DateAndTimeOfValidation>
+  <ExciseCustomsOffice>ExciseCustomsOffice1</ExciseCustomsOffice>
+  <MemberStateCode>MemberStateCode1</MemberStateCode>
+  <EventReportNumber>EventReportNumber1</EventReportNumber>
+  <SubmissionEventReportReference>SubmissionEventReportReference1</SubmissionEventReportReference>
+  <ChangedTransportArrangement>1.12</ChangedTransportArrangement>
+  <DateOfEvent>20000102</DateOfEvent>
+  <PlaceOfEvent language="DE">test1</PlaceOfEvent>
+  <Comments language="DE">testco1</Comments>
+  <IdentificationOfSenderCustomsOfficer>CustomsOfficerID1</IdentificationOfSenderCustomsOfficer>
+  <SubmittingPerson>
+  <SubmittingPersonCode>SubmittingPersonCode1</SubmittingPersonCode>
+  <SubmittingPersonName>SubmittingPersonName1</SubmittingPersonName>
+  <SubmittingPersonComplement language="DE">1</SubmittingPersonComplement>
+  </SubmittingPerson>
+  <NewTransportArrangerTrader>
+  <CustomerID>CustomerID1</CustomerID>
+  <ExciseTaxNumber>ExciseTaxNumber1</ExciseTaxNumber>
+  <VATID>VATID1</VATID>
+  <Address>
+  <Name>Name1</Name>
+  <Street>Street1</Street>
+  <HouseNumber>StreetNumber1</HouseNumber>
+  <PostalCode>PostalCode1</PostalCode>
+  <City>City1</City>
+  <Language>CountryCodeISO1</Language>
+  </Address>
+  </NewTransportArrangerTrader>
+  <NewTransporterTrader>
+  <CustomerID>CustomerID2</CustomerID>
+  <ExciseTaxNumber>ExciseTaxNumber2</ExciseTaxNumber>
+  <VATID>VATID2</VATID>
+  <Address>
+  <Name>Name2</Name>
+  <Street>Street2</Street>
+  <HouseNumber>StreetNumber2</HouseNumber>
+  <PostalCode>PostalCode2</PostalCode>
+  <City>City2</City>
+  <Language>CountryCodeISO2</Language>
+  </Address>
+  </NewTransporterTrader>
+  <EvidenceOfEvent>
+  <EvidenceTypeCode>EvidenceTypeCode1</EvidenceTypeCode>
+  <IssuingAuthority language="DE">1</IssuingAuthority>
+  <ReferenceOfEvidence language="DE">test</ReferenceOfEvidence>
+  <EvidenceTypeComplement language="DE">test</EvidenceTypeComplement>
+  </EvidenceOfEvent>
+  <EvidenceOfEvent>
+  <EvidenceTypeCode>EvidenceTypeCode2</EvidenceTypeCode>
+  <IssuingAuthority language="DE">2</IssuingAuthority>
+  <ReferenceOfEvidence language="DE">test2</ReferenceOfEvidence>
+  <EvidenceTypeComplement language="DE">test2</EvidenceTypeComplement>
+  </EvidenceOfEvent>
+  <TransportDetails>
+  <TransportUnitCode>TransportUnitCode1</TransportUnitCode>
+  <IdentityOfTransportUnits>IdentityOfTransportUnits1</IdentityOfTransportUnits>
+  <CommercialSealIdentification>CommercialSealIdentification1</CommercialSealIdentification>
+  <ComplementaryInformation language="DE">test</ComplementaryInformation>
+  <SealInformation language="DE">test1</SealInformation>
+  </TransportDetails>
+  <TransportDetails>
+  <TransportUnitCode>TransportUnitCode2</TransportUnitCode>
+  <IdentityOfTransportUnits>IdentityOfTransportUnits2</IdentityOfTransportUnits>
+  <CommercialSealIdentification>CommercialSealIdentification2</CommercialSealIdentification>
+  <ComplementaryInformation language="DE">test</ComplementaryInformation>
+  <SealInformation language="DE">test2</SealInformation>
+  </TransportDetails>
+  <GoodsItem>
+  <ItemNumber>ItemNumber1</ItemNumber>
+  <EventTypeCode>EventTypeCode1</EventTypeCode>
+  <IndicatorOfShortageOrExcess>IndicatorOfShortageOrExcess1</IndicatorOfShortageOrExcess>
+  <ObservedShortageOrExcess>ObservedShortageOrExcess1</ObservedShortageOrExcess>
+  <AssociatedInformation language="DE">test1</AssociatedInformation>
+  </GoodsItem>
+  <GoodsItem>
+  <ItemNumber>ItemNumber2</ItemNumber>
+  <EventTypeCode>EventTypeCode2</EventTypeCode>
+  <IndicatorOfShortageOrExcess>IndicatorOfShortageOrExcess2</IndicatorOfShortageOrExcess>
+  <ObservedShortageOrExcess>ObservedShortageOrExcess2</ObservedShortageOrExcess>
+  <AssociatedInformation language="DE">test2</AssociatedInformation>
+  </GoodsItem>
+  <PDF>
+  <Name>Name3</Name>
+  <Directory>Directory1</Directory>
+  <SubDirectory>NewDirectory1</SubDirectory>
+  </PDF>
+  </EMCSEventReport>
+  </EMCS>
+  </Submit>
+  </soap:Body>
+  </soap:Envelope>

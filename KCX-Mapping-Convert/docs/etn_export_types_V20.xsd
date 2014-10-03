@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  EurTradeNet(ETN) Schema - etn_export_types_V20.xsd  
+  http://www.eurtradenet.com/
+  
+
+  Document Type:     etn_export_types_V20.xsd
+	Generated On:      Thu Feb 08 15:00:00 2007
+	Author:				Dirk Heidenfelder (CSF)
+	======================================================================================
+	Updated On:
+	Author:
+  ======================================================================================  
+
+ -->
+ 
+ <!--"http://www.eurtradenet.com/schemas/uids/export/body/200809"-->
+<!--xsd:schema targetNamespace="http://www.eurtradenet.com/schemas/etn/types/body/200809" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0" xmlns:etn="http://www.eurtradenet.com/schemas/etn/types/body/200809" xmlns:xsd="http://www.w3.org/2001/XMLSchema"-->
+<xsd:schema targetNamespace="http://www.eurtradenet.com/schemas/uids/export/body/200809" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0" xmlns:etn="http://www.eurtradenet.com/schemas/uids/export/body/200809" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- xsd:schema targetNamespace="http://www.eurtradenet.com/schemas/etn/types/body/200703" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0" xmlns:etn="http://www.eurtradenet.com/schemas/etn/types/body/200703" xmlns:xsd="http://www.w3.org/2001/XMLSchema"  -->
+	<!-- xsd:schema elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0" xmlns:etn="http://www.eurtradenet.com/schemas/etn/types/body/200703" xmlns:xsd="http://www.w3.org/2001/XMLSchema"-->
+	<!-- Begin: shared elements in modules-->
+	<xsd:element name="ConfirmationCode" type="xsd:string"/>
+	<xsd:element name="DocumentReferenceNumber" type="xsd:string"/>
+	<xsd:element name="GrossMass" type="etn:ST_Mass"/>
+	<xsd:element name="ItemNumber" type="xsd:string"/>
+	<xsd:element name="LocalReferenceNumber" type="xsd:string"/>
+	<xsd:element name="NetMass" type="etn:ST_Mass"/>
+	<xsd:element name="Number" type="xsd:integer"/>
+	<xsd:element name="ReferenceNumber" type="xsd:string"/>
+	<xsd:element name="RegistrationNumber" type="xsd:string"/>
+	<!-- End: shared elements in modules-->
+	<!-- Begin: shared elements  in structures-->
+	<xsd:element name="Amount" type="xsd:decimal"/>
+	<xsd:element name="Article" type="xsd:string"/>
+	<xsd:element name="Category" type="xsd:string"/>
+	<xsd:element name="City" type="xsd:string"/>
+	<xsd:element name="CountryCodeISO" type="etn:ST_CountryCodeISO"/>
+	<xsd:element name="CustomsOffices" type="etn:CT_CustomsOffices"/>
+	<xsd:element name="Description" type="xsd:string"/>
+	<xsd:element name="GoodsDescription" type="xsd:string"/>
+	<xsd:element name="Identity" type="xsd:string"/>
+	<xsd:element name="Item" type="xsd:string"/>
+	<xsd:element name="Issuer" type="xsd:string"/>
+	<xsd:element name="IssuerType" type="xsd:string"/>
+	<xsd:element name="Language" type="xsd:string"/>
+	<xsd:element name="Location" type="xsd:string"/>
+	<xsd:element name="Name" type="xsd:string"/>
+	<xsd:element name="Quantity" type="xsd:integer"/>
+	<xsd:element name="Reference" type="xsd:string"/>
+	<xsd:element name="Remark" type="xsd:string"/>
+	<xsd:element name="Time" type="etn:ST_Time"/>
+	<xsd:element name="TIN" type="etn:ST_TIN"/>
+	<xsd:element name="Type" type="xsd:string"/>
+	<xsd:element name="Unit" type="xsd:string"/>
+	<!-- End: shared elements in structures-->
+	<!-- Begin: Simple Types -->
+	<xsd:simpleType name="ST_Currency">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_Indicator">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_CodeNum">
+		<xsd:restriction base="xsd:int"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_CodeAlpha">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_CountryCodeISO">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="2"/>
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_Identity">
+		<xsd:annotation>
+			<xsd:documentation>A character string used to establish the identity of, 
+												and distinguish uniquely, one instance of an object 
+												within an identification scheme from all other objects 
+												within the same scheme
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_Mass">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<!-- Begin: Date- & TimeTypes -->
+	<xsd:simpleType name="ST_Date">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{4}[\-][0-9]{2}[\-][0-9]{2}">
+				<xsd:annotation>
+					<xsd:documentation>
+						format:		YYYY-MM-DD 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_DateTime">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{4}[\-][0-9]{2}[\-][0-9]{2}(T)[0-9]{2}[:][0-9]{2}[:][0-9]{2}([+\-][0-9]{2}[:][0-9]{2}|(Z))">
+				<xsd:annotation>
+					<xsd:documentation>
+						format:		YYYY-MM-DDTHH:MM:SS(+HH:MM|Z)
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_Time">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{2}[:][0-9]{2}([:][0-9]{2}([.][0-9]{3}))">
+				<xsd:annotation>
+					<xsd:documentation>
+						format:		HH:MM[:SS[.sss]] 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- End: Date- & TimeTypes -->
+	<xsd:simpleType name="ST_AcceptanceTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="DefinitiveAcceptance"/>
+			<xsd:enumeration value="ProvisoryAcceptance"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_CustomsOffice">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_Product">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="AnnexC"/>
+			<xsd:enumeration value="AnnexC1"/>
+			<xsd:enumeration value="Base"/>
+			<xsd:enumeration value="CompositionProductCode "/>
+			<xsd:enumeration value="FabricationFormula"/>
+			<xsd:enumeration value="RestitutionCode"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_SpecialTax">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Tobacco"/>
+			<xsd:enumeration value="Alcohol"/>
+			<xsd:enumeration value="MineralOil"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_TIN">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_Transport">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Active"/>
+			<xsd:enumeration value="Departure"/>
+			<xsd:enumeration value="Inland"/>
+			<xsd:enumeration value="Border"/>
+			<xsd:enumeration value="Exit"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ST_TransitOffice">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Transit1"/>
+			<xsd:enumeration value="Transit2"/>
+			<xsd:enumeration value="Transit3"/>
+			<xsd:enumeration value="Transit4"/>
+			<xsd:enumeration value="Transit5"/>
+			<xsd:enumeration value="Transit6"/>
+			<xsd:enumeration value="Transit7"/>
+			<xsd:enumeration value="Transit8"/>
+			<xsd:enumeration value="Transit9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- Begin: Attribute Groups -->
+	<xsd:attributeGroup name="AG_AcceptanceAtts">
+		<xsd:attribute name="AcceptanceType" type="etn:ST_AcceptanceTypes" use="required" form="unqualified"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="AG_Product">
+		<xsd:attribute name="ProductType" type="etn:ST_Product" use="required" form="unqualified"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="AG_SpecialTax">
+		<xsd:attribute name="SpecialTaxType" type="etn:ST_SpecialTax" use="required" form="unqualified"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="AG_TransitOffice">
+		<xsd:attribute name="OfficeType" type="etn:ST_TransitOffice" use="required" form="unqualified"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="AG_Transport">
+		<xsd:attribute name="TransportType" type="etn:ST_Transport" use="required" form="unqualified"/>
+	</xsd:attributeGroup>
+	<!-- End: Attribute Groups -->
+	<!-- Begin: Complex Structures -->
+	<xsd:complexType name="CT_ArchiveInfo">
+		<xsd:all>
+			<xsd:element ref="etn:Location" minOccurs="0"/>
+			<xsd:element ref="etn:Support" minOccurs="0"/>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:Content" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="Support" type="xsd:string"/>
+	<xsd:element name="Content" type="xsd:string"/>
+	<xsd:complexType name="CT_Address">
+		<xsd:all>
+			<xsd:element ref="etn:Name" minOccurs="0"/>
+			<xsd:element ref="etn:StreetAndNumber" minOccurs="0"/>
+			<xsd:element ref="etn:PostalCode" minOccurs="0"/>
+			<xsd:element ref="etn:City" minOccurs="0"/>
+			<xsd:element ref="etn:District" minOccurs="0"/>
+			<xsd:element ref="etn:CountryCodeISO" minOccurs="0"/>
+			<xsd:element ref="etn:POBox" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="StreetAndNumber" type="xsd:string"/>
+	<xsd:element name="PostalCode" type="xsd:string"/>
+	<xsd:element name="District" type="xsd:string"/>
+	<xsd:element name="POBox" type="xsd:string"/>
+	<xsd:complexType name="CT_Calculation">
+		<xsd:all>
+			<xsd:element ref="etn:Due" minOccurs="0"/>
+			<xsd:element ref="etn:Payment" minOccurs="0"/>
+			<xsd:element ref="etn:Amount" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attributeGroup ref="etn:AG_SpecialTax"/>
+	</xsd:complexType>
+	<xsd:element name="Due" type="xsd:string"/>
+	<xsd:element name="Payment" type="xsd:string"/>
+	<xsd:complexType name="CT_Contact">
+		<xsd:all>
+			<xsd:element ref="etn:Identity" minOccurs="0"/>
+			<xsd:element ref="etn:Name" minOccurs="0"/>
+			<xsd:element ref="etn:Function" minOccurs="0"/>
+			<xsd:element ref="etn:Phone" minOccurs="0"/>
+			<xsd:element ref="etn:Fax" minOccurs="0"/>
+			<xsd:element ref="etn:Email" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="Function" type="xsd:string"/>
+	<xsd:element name="Phone" type="xsd:string"/>
+	<xsd:element name="Fax" type="xsd:string"/>
+	<xsd:element name="Email" type="xsd:string"/>
+	<xsd:complexType name="CT_CustomsOffices">
+		<xsd:sequence>
+			<xsd:element ref="etn:OfficeOfActualExit" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfActualExport" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfAdditionalDeclarationExport" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfBorder" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfCommunityExit" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfControl" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfDeparture" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfExit" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfExport" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfGuarantee" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfNationalExit" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfPayment" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfPresentation" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfRequest" minOccurs="0"/>
+			<xsd:element ref="etn:OfficeOfTransit" minOccurs="0" maxOccurs="9"/>
+			<xsd:element ref="etn:OfficeOfValidation" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="OfficeOfActualExit" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfActualExport" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfAdditionalDeclarationExport" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfBorder" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfCommunityExit" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfControl" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfDeparture" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfExit" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfExport" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfGuarantee" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfNationalExit" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfPayment" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfPresentation" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfRequest" type="etn:ST_CustomsOffice"/>
+	<xsd:element name="OfficeOfTransit">
+		<xsd:complexType>
+			<xsd:attributeGroup ref="etn:AG_TransitOffice"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="OfficeOfValidation" type="etn:ST_CustomsOffice"/>
+	<xsd:complexType name="CT_Document">
+		<xsd:sequence>
+			<xsd:element ref="etn:Amount" minOccurs="0"/>
+			<xsd:element ref="etn:Article" minOccurs="0"/>
+			<xsd:element ref="etn:Category" minOccurs="0"/>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:CustomsOffices" minOccurs="0"/>
+			<xsd:element name="Date" type="etn:ST_Date" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="etn:Item" minOccurs="0"/>
+			<xsd:element ref="etn:Issuer" minOccurs="0"/>
+			<xsd:element ref="etn:IssuerType" minOccurs="0"/>
+			<xsd:element ref="etn:Location" minOccurs="0"/>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:Reference" minOccurs="0"/>
+			<xsd:element ref="etn:Remark" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element ref="etn:Unit" minOccurs="0"/>
+			<xsd:element ref="etn:CountryCodeISO" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Error">
+		<xsd:all>
+			<xsd:element ref="etn:FileName" minOccurs="0"/>
+			<xsd:element ref="etn:Identity" minOccurs="0"/>
+			<xsd:element ref="etn:ItemNumber" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element ref="etn:OriginID" minOccurs="0"/>
+			<xsd:element ref="etn:ObjectType" minOccurs="0"/>
+			<xsd:element ref="etn:ObjectReference" minOccurs="0"/>
+			<xsd:element ref="etn:Pointer" minOccurs="0"/>
+			<xsd:element ref="etn:Reason" minOccurs="0"/>
+			<xsd:element name="Date" type="etn:ST_Date" minOccurs="0"/>
+			<xsd:element ref="etn:Time" minOccurs="0"/>
+			<xsd:element ref="etn:OriginalAttributeValue" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="FileName" type="xsd:string"/>
+	<xsd:element name="OriginID" type="xsd:string"/>
+	<xsd:element name="ObjectType" type="xsd:string"/>
+	<xsd:element name="ObjectReference" type="xsd:string"/>
+	<xsd:element name="Pointer" type="xsd:string"/>
+	<xsd:element name="Reason" type="xsd:string"/>
+	<xsd:element name="OriginalAttributeValue" type="xsd:string"/>
+	<xsd:complexType name="CT_HeaderExtension">
+		<xsd:all>
+			<xsd:element ref="etn:AdvanceProcedureID" minOccurs="0"/>
+			<xsd:element ref="etn:ConfirmationCode" minOccurs="0"/>
+			<xsd:element ref="etn:HeadPosID" minOccurs="0"/>
+			<xsd:element ref="etn:MaritimTrafficID" minOccurs="0"/>
+			<xsd:element ref="etn:RegristrationID" minOccurs="0"/>
+			<xsd:element ref="etn:TerminationOfFlight" minOccurs="0"/>
+			<xsd:element ref="etn:TydenSealsFlag" minOccurs="0"/>
+			<xsd:element ref="etn:TydenSealsStockFlag" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="AdvanceProcedureID" type="xsd:string"/>
+	<xsd:element name="HeadPosID" type="xsd:string"/>
+	<xsd:element name="MaritimTrafficID" type="xsd:string"/>
+	<xsd:element name="RegristrationID" type="xsd:string"/>
+	<xsd:element name="TerminationOfFlight" type="xsd:string"/>
+	<xsd:element name="TydenSealsFlag" type="xsd:string"/>
+	<xsd:element name="TydenSealsStockFlag" type="xsd:string"/>
+	<xsd:complexType name="CT_Incoterms">
+		<xsd:all>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:Description" minOccurs="0"/>
+			<xsd:element ref="etn:City" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Guarantee">
+		<xsd:sequence>
+			<xsd:element ref="etn:AdministrationCodeActive" minOccurs="0"/>
+			<xsd:element ref="etn:AdministrationCodeInactive" minOccurs="0"/>
+			<xsd:element ref="etn:Amount" minOccurs="0"/>
+			<xsd:element ref="etn:CountryValidityLimitation" minOccurs="0" maxOccurs="99"/>
+			<xsd:element ref="etn:CustomsOffices" minOccurs="0"/>
+			<xsd:element ref="etn:Guarantee" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="etn:Guarantor" minOccurs="0"/>
+			<xsd:element ref="etn:NCTS" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element name="DateOfValidity" type="etn:ST_Date" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Guarantor">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="etn:CT_Trader">
+					<xsd:sequence>
+						<xsd:element ref="etn:TIN"/>
+					</xsd:sequence>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="NCTS">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="etn:AccessCode" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="etn:GuaranteeReferenceNumber" minOccurs="0"/>
+				<xsd:element ref="etn:TIN" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AccessCode" type="xsd:string"/>
+	<xsd:element name="AdministrationCodeActive" type="xsd:string"/>
+	<xsd:element name="AdministrationCodeInactive" type="xsd:string"/>
+	<xsd:element name="CountryValidityLimitation" type="xsd:string"/>
+	<xsd:element name="Guarantee" type="xsd:string"/>
+	<xsd:element name="GuaranteeReferenceNumber" type="xsd:string"/>
+	<!-- ETN200809 - CT_MessageData deleted -->
+	<xsd:element name="TransmissionAddress" type="xsd:string"/>
+	<xsd:element name="CustomsMainReferenceNumber" type="xsd:string"/>
+	<xsd:element name="DocumentReference" type="xsd:string"/>
+	<xsd:element name="MessageGroup" type="xsd:string"/>
+	<xsd:element name="MessageType" type="xsd:string"/>
+	<xsd:element name="Receiver" type="xsd:string"/>
+	<xsd:element name="Release" type="xsd:string"/>
+	<xsd:element name="RevisionReferenceNumber" type="xsd:string"/>
+	<xsd:element name="Sender" type="xsd:string"/>
+	<xsd:element name="SequentialNumber" type="xsd:string"/>
+	<xsd:element name="TestIndikator" type="xsd:string"/>
+	<xsd:element name="TimeOfCreation" type="etn:ST_Time"/>
+	<xsd:element name="VersionReferenceNumber" type="xsd:string"/>
+	<xsd:element name="TraderDocumentReference" type="xsd:string"/>
+	<xsd:complexType name="CT_ItemExtension">
+		<xsd:all>
+			<xsd:element ref="etn:ExternalCode" minOccurs="0"/>
+			<xsd:element ref="etn:TemporaryStorageCode" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="ExternalCode" type="xsd:string"/>
+	<xsd:element name="TemporaryStorageCode" type="xsd:string"/>
+	<xsd:complexType name="CT_Packaging">
+		<xsd:sequence>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="IndividualMarking" type="etn:CT_IndividualMarking" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="etn:ItemFragmenationIndicator" minOccurs="0"/>
+			<xsd:element ref="etn:MarksAndNumbers" minOccurs="0"/>
+			<xsd:element ref="etn:Number" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Identifier" type="xsd:string"/>
+	<xsd:element name="ItemFragmenationIndicator" type="xsd:string"/>
+	<xsd:element name="MarksAndNumbers" type="xsd:string"/>
+	<xsd:complexType name="CT_IndividualMarking">
+		<xsd:sequence>
+			<xsd:element name="Marking" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="NewMarking" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_PDF">
+		<xsd:sequence>
+			<xsd:element ref="etn:Name" minOccurs="0"/>
+			<xsd:element ref="etn:Directory" minOccurs="0"/>
+			<xsd:element ref="etn:Subdirectory" minOccurs="0"/>
+			<!-- ETN200809 -->
+			<xsd:element name="base64" type="xsd:string" minOccurs="0"/>
+			<!-- ETN200809 -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Directory" type="xsd:string"/>
+	<xsd:element name="Subdirectory" type="xsd:string"/>
+	<xsd:complexType name="CT_PreviousDocument">
+		<xsd:sequence>
+			<xsd:element ref="etn:Amount" minOccurs="0"/>
+			<xsd:element ref="etn:Article" minOccurs="0"/>
+			<xsd:element ref="etn:Category" minOccurs="0"/>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:CustomsOffices" minOccurs="0"/>
+			<xsd:element name="DateOfCreation" type="etn:ST_Date" minOccurs="0"/>
+			<xsd:element ref="etn:GrossMass" minOccurs="0"/>
+			<xsd:element ref="etn:Item" minOccurs="0"/>
+			<xsd:element ref="etn:Issuer" minOccurs="0"/>
+			<xsd:element ref="etn:IssuerType" minOccurs="0"/>
+			<xsd:element ref="etn:Location" minOccurs="0"/>
+			<xsd:element ref="etn:NetMass" minOccurs="0"/>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:Reference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="etn:Remark" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element ref="etn:Unit" minOccurs="0"/>
+			<xsd:element ref="etn:CountryCodeISO" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ProducedDocument">
+		<xsd:sequence>
+			<xsd:element ref="etn:Amount" minOccurs="0"/>
+			<xsd:element ref="etn:Article" minOccurs="0"/>
+			<xsd:element ref="etn:Category" minOccurs="0"/>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:CustomsOffices" minOccurs="0"/>
+			<xsd:element name="DateOfCreation" type="etn:ST_Date" minOccurs="0"/>
+			<xsd:element name="DateOfValidity" type="etn:ST_Date" minOccurs="0"/>
+			<xsd:element name="Date" type="etn:ST_Date" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="etn:Item" minOccurs="0"/>
+			<xsd:element ref="etn:Issuer" minOccurs="0"/>
+			<xsd:element ref="etn:IssuerType" minOccurs="0"/>
+			<xsd:element ref="etn:Location" minOccurs="0"/>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:Reference" minOccurs="0"/>
+			<!-- ETN20080924 -->
+			<xsd:element name="Detail" type="xsd:string" minOccurs="0"/>
+			<!-- Detail -->
+			<!-- ETN20080924 -->
+			<xsd:element ref="etn:Remark" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element ref="etn:Unit" minOccurs="0"/>
+			<xsd:element ref="etn:CountryCodeISO" minOccurs="0"/>
+			<!-- ETN20080924 -->
+			<xsd:element name="Writeoff" minOccurs="0">
+				<!-- DE - Abschreibungsmenge -->
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Value" type="xsd:decimal" minOccurs="0"/>
+						<!-- Wert -->
+						<xsd:element name="Measurement" type="xsd:string" minOccurs="0"/>
+						<!-- Maßeinheit -->
+						<xsd:element name="WriteoffValue" type="xsd:decimal" minOccurs="0"/>
+						<!-- Wert -->
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- ETN20080924 -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_Product">
+		<xsd:all>
+			<xsd:element ref="etn:CIFValue" minOccurs="0"/>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:CountryCodeISO" minOccurs="0"/>
+			<xsd:element ref="etn:CommodityCodeKN8" minOccurs="0"/>
+			<xsd:element ref="etn:CommodityCodeTARIC" minOccurs="0"/>
+			<xsd:element ref="etn:CommodityCodeFirstAddition" minOccurs="0"/>
+			<xsd:element ref="etn:CommodityCodeSecondAddition" minOccurs="0"/>
+			<xsd:element ref="etn:CommodityCodeNationalAddition" minOccurs="0"/>
+			<xsd:element ref="etn:GoodsDescription" minOccurs="0"/>
+			<xsd:element ref="etn:ItemNumber" minOccurs="0"/>
+			<xsd:element ref="etn:Preference" minOccurs="0"/>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:Reference" minOccurs="0"/>
+			<xsd:element ref="etn:Unit" minOccurs="0"/>
+			<xsd:element ref="etn:YieldRate" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attributeGroup ref="etn:AG_Product"/>
+	</xsd:complexType>
+	<xsd:element name="CIFValue" type="xsd:string"/>
+	<xsd:element name="CommodityCodeKN8" type="xsd:string"/>
+	<xsd:element name="CommodityCodeTARIC" type="xsd:string"/>
+	<xsd:element name="CommodityCodeNationalAddition" type="xsd:string"/>
+	<xsd:element name="CommodityCodeFirstAddition" type="xsd:string"/>
+	<xsd:element name="CommodityCodeSecondAddition" type="xsd:string"/>
+	<xsd:element name="Preference" type="xsd:string"/>
+	<xsd:element name="YieldRate" type="xsd:string"/>
+	<xsd:complexType name="CT_Route">
+		<xsd:all>
+			<xsd:element ref="etn:Information" minOccurs="0"/>
+			<xsd:element ref="etn:Suspension" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="Information" type="xsd:string"/>
+	<xsd:element name="Suspension" type="xsd:string"/>
+	<xsd:complexType name="CT_Seals">
+		<xsd:sequence>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:SealsID" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SealsID">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="etn:Identity" minOccurs="0"/>
+				<xsd:element ref="etn:Language" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="CT_SpecialTax">
+		<xsd:all>
+			<xsd:element ref="etn:Capacity" minOccurs="0"/>
+			<xsd:element name="Code" type="etn:ST_CodeAlpha" minOccurs="0"/>
+			<xsd:element ref="etn:Percentage" minOccurs="0"/>
+			<xsd:element ref="etn:Quantity" minOccurs="0"/>
+			<xsd:element ref="etn:StorageType" minOccurs="0"/>
+			<xsd:element ref="etn:Unit" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attributeGroup ref="etn:AG_SpecialTax"/>
+	</xsd:complexType>
+	<xsd:element name="Capacity" type="xsd:string"/>
+	<xsd:element name="Percentage" type="xsd:string"/>
+	<xsd:element name="StorageType" type="xsd:string"/>
+	<xsd:complexType name="CT_Taxation">
+		<xsd:all>
+			<xsd:element ref="etn:Base" minOccurs="0"/>
+			<xsd:element ref="etn:Unit" minOccurs="0"/>
+			<xsd:element ref="etn:Qualifier" minOccurs="0"/>
+			<xsd:element ref="etn:Calculation" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attributeGroup ref="etn:AG_SpecialTax"/>
+	</xsd:complexType>
+	<xsd:element name="Base" type="xsd:string"/>
+	<xsd:element name="Qualifier" type="xsd:string"/>
+	<xsd:element name="Calculation" type="etn:CT_Calculation"/>
+	<xsd:complexType name="CT_Trader">
+		<xsd:all>
+			<xsd:element ref="etn:AuthorisationID" minOccurs="0"/>
+			<xsd:element ref="etn:CustomerID" minOccurs="0"/>
+			<xsd:element ref="etn:CustomsID" minOccurs="0"/>
+			<xsd:element ref="etn:ETNAddress" minOccurs="0"/>
+			<xsd:element ref="etn:ElectronicSignature" minOccurs="0"/>
+			<xsd:element ref="etn:TIN" minOccurs="0"/>
+			<xsd:element ref="etn:VATID" minOccurs="0"/>
+			<xsd:element ref="etn:Status" minOccurs="0"/>
+			<xsd:element ref="etn:Address" minOccurs="0"/>
+			<xsd:element ref="etn:Contact" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="AuthorisationID" type="xsd:string"/>
+	<xsd:element name="CustomerID" type="xsd:string"/>
+	<xsd:element name="CustomsID" type="xsd:string"/>
+	<xsd:element name="ETNAddress" type="xsd:string"/>
+	<xsd:element name="ElectronicSignature" type="xsd:string"/>
+	<xsd:element name="VATID" type="xsd:string"/>
+	<xsd:element name="Status" type="xsd:string"/>
+	<xsd:element name="Address" type="etn:CT_Address"/>
+	<xsd:element name="Contact" type="etn:CT_Contact"/>
+	<xsd:complexType name="CT_Transport">
+		<xsd:all>
+			<xsd:element ref="etn:Description" minOccurs="0"/>
+			<xsd:element ref="etn:Identity" minOccurs="0"/>
+			<xsd:element ref="etn:Mode" minOccurs="0"/>
+			<xsd:element ref="etn:Nationality" minOccurs="0"/>
+			<xsd:element ref="etn:ShippingLine" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attributeGroup ref="etn:AG_Transport"/>
+	</xsd:complexType>
+	<xsd:element name="Mode" type="xsd:string"/>
+	<xsd:element name="Nationality" type="xsd:string"/>
+	<xsd:element name="ShippingLine" type="xsd:string"/>
+	<xsd:complexType name="CT_TypeOfDeclaration">
+		<xsd:all>
+			<xsd:element ref="etn:DeclarationCode" minOccurs="0"/>
+			<xsd:element ref="etn:RegionCode" minOccurs="0"/>
+			<xsd:element ref="etn:ProcedureCode" minOccurs="0"/>
+			<xsd:element ref="etn:TransitCode" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="DeclarationCode" type="xsd:string"/>
+	<xsd:element name="RegionCode" type="xsd:string"/>
+	<xsd:element name="ProcedureCode" type="xsd:string"/>
+	<xsd:element name="TransitCode" type="xsd:string"/>
+	<xsd:complexType name="CT_Warehouse">
+		<xsd:all>
+			<xsd:element ref="etn:CountryCodeISO" minOccurs="0"/>
+			<xsd:element ref="etn:Identity" minOccurs="0"/>
+			<xsd:element ref="etn:Product" minOccurs="0"/>
+			<xsd:element ref="etn:TerritoryCode" minOccurs="0"/>
+			<xsd:element ref="etn:Trader" minOccurs="0"/>
+			<xsd:element ref="etn:Type" minOccurs="0"/>
+			<xsd:element ref="etn:StorageDateLimit" minOccurs="0"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="TerritoryCode" type="xsd:string"/>
+	<xsd:element name="StorageDateLimit" type="xsd:string"/>
+	<xsd:element name="Trader" type="etn:CT_Trader"/>
+	<xsd:element name="Product" type="etn:CT_Product"/>
+	<!-- ETN20080924 -->
+	<xsd:complexType name="CT_ExportRestitutionHeader">
+		<xsd:sequence>
+			<xsd:element name="Remark" type="xsd:string" minOccurs="0"/>
+			<!-- textliche Erklärungen -->
+			<xsd:element name="ApplicationType" type="xsd:string" minOccurs="0"/>
+			<!-- Antragsart -->
+			<xsd:element name="PaymentType" type="xsd:integer" minOccurs="0"/>
+			<!-- Zahlungsweg -->
+			<xsd:element name="AIDACode" type="xsd:integer" minOccurs="0"/>
+			<!-- Zustellungsbevollmächtigter -->
+			<xsd:element name="AIDAAccount" type="xsd:integer" minOccurs="0"/>
+			<!-- Sicherheitenkonto -->
+			<!--xsd:element name="RestitutionPending" type="ST_Indicator" minOccurs="0"/-->
+			<xsd:element name="RestitutionPending" type="etn:ST_Indicator" minOccurs="0"/>
+			<!-- Klammerungsvorbehalt -->
+		</xsd:sequence>
+		<!-- Ausfuhrerstattung - DE only -->
+	</xsd:complexType>
+	<xsd:element name="CT_TransportPaymentMethod" type="xsd:string"/>
+	<xsd:element name="CT_CommercialReferenceNumber" type="xsd:string"/>
+	<xsd:complexType name="CT_ExportRestitutionItem">
+		<xsd:sequence>
+			<xsd:element name="GoodsDescriptionExt" type="xsd:string" minOccurs="0" maxOccurs="2"/>
+			<!-- Warenbezeichnung (erste&zweite Ergänzung) -->
+			<xsd:element name="RestitutionProcedure" type="xsd:integer" minOccurs="0"/>
+			<!-- Verfahren(Code) -->
+			<!--xsd:element name="Estimated" type="ST_Indicator" minOccurs="0"/-->
+			<xsd:element name="Estimated" type="etn:ST_Indicator" minOccurs="0"/>
+			<!-- Schätzwert -->
+			<xsd:element name="Amount" type="xsd:decimal" minOccurs="0"/>
+			<!-- Menge -->
+			<xsd:element name="Measurement" type="xsd:string" minOccurs="0"/>
+			<!-- Maßeinheit -->
+			<xsd:element name="OriginCountry" type="xsd:string" minOccurs="0"/>
+			<!-- Ursprungsland -->
+			<!--xsd:element name="BudgetControl" type="ST_Indicator" minOccurs="0"/-->
+			<xsd:element name="BudgetControl" type="etn:ST_Indicator" minOccurs="0"/>
+			<!-- Zahlungsfall NA I -->
+			<xsd:element name="Coeficent" type="xsd:decimal" minOccurs="0"/>
+			<!-- Anpassungskoeffizient -->
+			<xsd:element name="Equity" type="xsd:decimal" minOccurs="0" maxOccurs="4"/>
+			<!-- Anteilswert A,B,C & D -->
+			<xsd:element name="Ingredient" minOccurs="0" maxOccurs="99">
+				<!-- Inhaltsstoff -->
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CalculationFactor1" type="xsd:decimal" minOccurs="0"/>
+						<!-- Umrechnungsfaktor 1 -->
+						<!--xsd:element name="DivisionIndicator1" type="ST_Indicator" minOccurs="0"/-->
+						<xsd:element name="DivisionIndicator1" type="etn:ST_Indicator" minOccurs="0"/>
+						<!-- KZ Umrechnungsfaktor 1 -->
+						<xsd:element name="CalculationFactor2" type="xsd:decimal" minOccurs="0"/>
+						<!-- Umrechnungsfaktor 2 -->
+						<xsd:element name="CalculationFactor3" type="xsd:decimal" minOccurs="0"/>
+						<!-- Umrechnungsfaktor-Satz -->
+						<xsd:element name="WeightPercentage" type="xsd:decimal" minOccurs="0"/>
+						<!-- Anteil GHT -->
+						<xsd:element name="AmountPart" type="xsd:decimal" minOccurs="0"/>
+						<!-- Anteilsmenge -->
+						<xsd:element name="RecipeID" type="xsd:string" minOccurs="0"/>
+						<!-- Hersteller-Erklärungsnummer -->
+						<xsd:element name="Key" type="xsd:string" minOccurs="0"/>
+						<!-- Schlüsselnummer -->
+						<xsd:element name="IngredientLicense" type="xsd:string" minOccurs="0"/>
+						<!-- Lizenznummer -->
+						<xsd:element name="IngredientDescription" type="xsd:string" minOccurs="0"/>
+						<!-- textliche Erklärungen -->
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<!-- Ausfuhrerstattung - DE only -->
+	</xsd:complexType>
+	<xsd:complexType name="CT_WriteOffATLAS">
+		<xsd:sequence>
+			<xsd:element name="WriteOffZL" minOccurs="0" maxOccurs="unbounded">
+				<!-- Beendigung ZL -->
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Allowance" type="xsd:string" minOccurs="0"/>
+						<!-- Bewilligungsnummer -->
+						<xsd:element name="Reference" type="xsd:string" minOccurs="0"/>
+						<!-- Bezugsnummer -->
+						<xsd:element name="WriteOffData" minOccurs="0" maxOccurs="999">
+							<!-- Position ZL -->
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="WriteOffItemNumber" type="xsd:integer" minOccurs="0"/>
+									<!-- Positionsnummer -->
+									<xsd:element name="WriteOffRegNumber" type="xsd:string" minOccurs="0"/>
+									<!-- Registriernummer -->
+									<xsd:element name="WriteOffTariffCode" type="xsd:string" minOccurs="0"/>
+									<!-- Warennummer -->
+									<xsd:element name="HandlingCode" type="xsd:boolean" minOccurs="0"/>
+									<!-- KZ übliche Behandlung -->
+									<xsd:element name="ATLASCode" type="xsd:boolean" minOccurs="0"/>
+									<!-- KZ Zugang in ATLAS -->
+									<xsd:element name="AdditionalText" type="xsd:string" minOccurs="0"/>
+									<!-- Zusatz -->
+									<xsd:element name="WriteOffUnitQualifier" type="xsd:string" minOccurs="0"/>
+									<!-- Abgangsmenge/Qualifikator-->
+									<xsd:element name="WriteOffUnit" type="xsd:string" minOccurs="0"/>
+									<!-- Abgangsmenge/Maßeinheit -->
+									<xsd:element name="WriteOffValue" type="xsd:string" minOccurs="0"/>
+									<!-- Abgangsmenge/Wert -->
+									<xsd:element name="HandlingUnitQualifier" type="xsd:string" minOccurs="0"/>
+									<!-- Handelsmenge/Qualifikator -->
+									<xsd:element name="HandlingUnit" type="xsd:string" minOccurs="0"/>
+									<!-- Handelsmenge/Maßeinheit -->
+									<xsd:element name="HandlingValue" type="xsd:string" minOccurs="0"/>
+									<!-- Handelsmenge/Wert -->
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="WriteOffAVUV" minOccurs="0" maxOccurs="unbounded">
+				<!-- Beendigung AV/UV -->
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Allowance" type="xsd:string" minOccurs="0"/>
+						<!-- Bewilligungsnummer -->
+						<xsd:element name="WriteOffData" minOccurs="0" maxOccurs="999">
+							<!-- Position ZL -->
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="WriteOffItemNumber" type="xsd:integer" minOccurs="0"/>
+									<!-- Positionsnummer -->
+									<xsd:element name="WriteOffRegNumber" type="xsd:string" minOccurs="0"/>
+									<!-- Registriernummer -->
+									<xsd:element name="ATLASCode" type="xsd:boolean" minOccurs="0"/>
+									<!-- KZ Zugang in ATLAS -->
+									<xsd:element name="AdditionalText" type="xsd:string" minOccurs="0"/>
+									<!-- Warenbezogene Angaben -->
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ETN20080924 -->
+	<!-- End: Structures -->
+</xsd:schema>

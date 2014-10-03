@@ -1,0 +1,26 @@
+<CC328A xmlns="http://www.eurodyn.com">
+   <MesSenMES3>CY0000000071</MesSenMES3>
+   <MesRecMES6>CY0000000071</MesRecMES6>
+   <DatOfPreMES9>110713</DatOfPreMES9>
+   <TimOfPreMES10>1223</TimOfPreMES10>
+   <MesIdeMES19>CYICS110034356</MesIdeMES19>
+   <MesTypMES20>CC328A</MesTypMES20>
+   <CorIdeMES25>KA-20110713-02</CorIdeMES25>
+   <HEAHEA328>
+      <RefNumHEA4>KA-20110713-02</RefNumHEA4>
+      <DocNumHEA5>11CY00051030016863</DocNumHEA5>
+      <TraModAtBorHEA76>3</TraModAtBorHEA76>
+      <NatHEA001>BE</NatHEA001>
+      <IdeOfMeaOfTraCroHEA85>OO-THB</IdeOfMeaOfTraCroHEA85>
+      <ConRefNumHEA>EK9957</ConRefNumHEA>
+      <DecRegDatTimHEA115>201107131223</DecRegDatTimHEA115>
+   </HEAHEA328>
+   <PERLODSUMDEC>
+      <NamPLD1>Address</NamPLD1>
+      <StrAndNumPLD1>Street</StrAndNumPLD1>
+      <PosCodPLD1>Postcode</PosCodPLD1>
+      <CitPLD1>City</CitPLD1>
+      <CouCodPLD1>DE</CouCodPLD1>
+      <TINPLD1>CY0000000071</TINPLD1>
+   </PERLODSUMDEC>   
+</CC328A>  

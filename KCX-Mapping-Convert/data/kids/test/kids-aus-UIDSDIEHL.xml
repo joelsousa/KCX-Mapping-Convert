@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+<soap:Header>
+<Header xmlns="http://www.eBiz.com/schemas/header/200310" soap:mustUnderstand="true">
+<SentAt>
+<Date>
+<Year>2009</Year>
+<Month>04</Month>
+<Day>16</Day>
+</Date>
+<Time>11:33:30</Time>
+<TimeZone>+0200</TimeZone>
+</SentAt>
+<Transmitter>DE01.CSFTEST.2158</Transmitter>
+<Receiver>CSFFRA</Receiver>
+<Method>Export</Method>
+<MessageTP>
+<CountryCode>DE</CountryCode>
+<Procedure>Export</Procedure>
+<MessageName>ExportDeclaration</MessageName>
+<Release>1.0.00</Release>
+</MessageTP>
+<CustomsExchange>
+<CodeMapping>
+<Map>0</Map>
+<MapFrom>DE</MapFrom>
+<MapTo>DE</MapTo>
+</CodeMapping>
+</CustomsExchange>
+<MessageID>DE01DE0121810000000000641745</MessageID>
+</Header>
+</soap:Header>
+<soap:Body>
+<ExportDeclaration>
+<GoodsDeclaration>
+	<AreaCode>EX</AreaCode>
+	<TypeOfPermit>e</TypeOfPermit>
+	<DestinationCountry>US</DestinationCountry>
+	<TransportInContainer>0</TransportInContainer>
+	<GrossMass>93000</GrossMass>
+	<ReferenceNumber>0000027077/0090034688</ReferenceNumber>
+	<AuthorizationNumber>DE5864ZA0054</AuthorizationNumber>
+	<DeclarantIsConsignor>0</DeclarantIsConsignor>
+	<MeansOfTransportInland>
+		<TransportMode>01</TransportMode>
+	</MeansOfTransportInland>
+	<MeansOfTransportDeparture>
+		<TransportMode>01</TransportMode>
+		<TransportationType>10</TransportationType>
+		<TransportationNumber>MS AIDA</TransportationNumber>
+		<TransportationCountry>QU</TransportationCountry>
+	</MeansOfTransportDeparture>
+	<PlaceOfLoading>
+		<Code>AA01</Code>
+	</PlaceOfLoading>
+	<CustomsOfficeExport>DE005866</CustomsOfficeExport>
+	<Business>
+		<BusinessTypeCode>11</BusinessTypeCode>
+		<InvoicePrice>60000</InvoicePrice>
+		<Currency>USD</Currency>
+	</Business>
+	<Seal>
+		<UseOfTydenseals>0</UseOfTydenseals>
+		<UseOfTydensealStock>0</UseOfTydensealStock>
+	</Seal>
+	<DeclarantTIN>
+	<TIN>9002073</TIN>
+	<IsTINGermanApprovalNumber>1</IsTINGermanApprovalNumber>
+	</DeclarantTIN>
+
+
+	<Consignee>
+		<Address>
+		<Name>Motor Sportsxxxxxxxxx  Motor Sports Inc.</Name>
+		<Street>133 Redbridge Drive 1</Street>
+		<City>ARDMORE</City>
+		<PostalCode>73401</PostalCode>
+		<Country>US</Country>
+		</Address>
+	</Consignee>
+	<IncoTerms>
+		<IncoTerm>CIF</IncoTerm>
+		<Place>Dresden</Place>
+	</IncoTerms>
+	<GoodsItem>
+	<ItemNumber>001</ItemNumber>
+		<Description>TFT Bildschirm, 17"1 / Teleskop- und Stabantennen fÃ¼r Taschen-, Koffer- und KraftfahrzeugempfangsgerÃ¤te</Description>
+	<OriginFederalState>14</OriginFederalState>
+	<NetMass>15000</NetMass>
+		<GrossMass>63000</GrossMass>
+	<CommodityCode>
+		<TarifCode>85291011</TarifCode>
+	</CommodityCode>
+		<CustomsApprovedTreatment>
+			<Declared>10</Declared>
+			<Previous>00</Previous>
+		</CustomsApprovedTreatment>
+	<Statistic>
+	<AdditionalUnit>0</AdditionalUnit>
+	<StatisticalValue>93</StatisticalValue>
+	</Statistic>
+		<Package>
+			<Quantity>1</Quantity>
+			<SequentialNumber>01</SequentialNumber>
+			<Type>NE</Type>
+		</Package>
+		<Package>
+			<Quantity>1</Quantity>
+			<SequentialNumber>02</SequentialNumber>
+			<Type>PX</Type>
+			<Marks>00112005670000010283</Marks>
+		</Package>
+		<Package>
+			<Quantity>1</Quantity>
+			<SequentialNumber>03</SequentialNumber>
+			<Type>PX</Type>
+			<Marks>00112005670000010290</Marks>
+		</Package>
+		<Package>
+			<Quantity>1</Quantity>
+			<SequentialNumber>04</SequentialNumber>
+			<Type>PX</Type>
+			<Marks>00112005670000010313</Marks>
+		</Package>
+	</GoodsItem>
+
+
+
+
+
+
+
+<GoodsItem>
+<ItemNumber>002</ItemNumber>
+	<Description>TFT Bildschirm, 17"1 / Pferde als reinrassige Zuchttiere</Description>
+	<OriginFederalState>14</OriginFederalState>
+	<NetMass>15000</NetMass>
+	<GrossMass>0000</GrossMass>
+<CommodityCode>
+<TarifCode>01011010</TarifCode>
+</CommodityCode>
+	<CustomsApprovedTreatment>
+		<Declared>10</Declared>
+		<Previous>00</Previous>
+	</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>1000</AdditionalUnit>
+<StatisticalValue>93</StatisticalValue>
+</Statistic>
+	<Package>
+	<Quantity>0</Quantity>
+	<SequentialNumber>01</SequentialNumber>
+	<Type>PX</Type>
+	<Marks>00112005670000010290</Marks>
+	</Package>
+</GoodsItem>
+<GoodsItem>
+
+
+0003
+
+
+<ItemNumber>003</ItemNumber>
+	<Description>TFT Bildschirm, 17"1 / Teleskop- und Stabantennen fÃ¼r Taschen-, Koffer- und KraftfahrzeugempfangsgerÃ¤te</Description>
+	<OriginFederalState>14</OriginFederalState>
+	<NetMass>15000</NetMass>
+	<GrossMass>0000</GrossMass>
+<CommodityCode>
+<TarifCode>85291011</TarifCode>
+</CommodityCode>
+	<CustomsApprovedTreatment>
+		<Declared>10</Declared>
+		<Previous>00</Previous>
+	</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>0</AdditionalUnit>
+<StatisticalValue>93</StatisticalValue>
+</Statistic>
+	<Package>
+	<Quantity>0</Quantity>
+	<SequentialNumber>01</SequentialNumber>
+	<Type>PX</Type>
+	<Marks>00112005670000010283</Marks>
+	</Package>
+</GoodsItem>
+
+
+
+
+
+
+
+
+<GoodsItem>
+<ItemNumber>004</ItemNumber>
+	<Description>TFT Bildschirm, 17"1 / Pferde als reinrassige Zuchttiere</Description>
+	<OriginFederalState>14</OriginFederalState>
+	<NetMass>15000</NetMass>
+	<GrossMass>15000</GrossMass>
+<CommodityCode>
+<TarifCode>01011010</TarifCode>
+</CommodityCode>
+<CustomsApprovedTreatment>
+<Declared>10</Declared>
+<Previous>00</Previous>
+</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>1000</AdditionalUnit>
+<StatisticalValue>93</StatisticalValue>
+</Statistic>
+	<Package>
+	<Quantity>1</Quantity>
+	<SequentialNumber>01</SequentialNumber>
+	<Type>NE</Type>
+	</Package>
+</GoodsItem>
+
+
+
+
+
+
+
+
+
+<GoodsItem>
+<ItemNumber>005</ItemNumber>
+	<Description>TFT Bildschirm, 17"1 / Teleskop- und Stabantennen fÃ¼r Taschen-, Koffer- und KraftfahrzeugempfangsgerÃ¤te</Description>
+	<OriginFederalState>14</OriginFederalState>
+	<NetMass>15000</NetMass>
+	<GrossMass>15000</GrossMass>
+<CommodityCode>
+<TarifCode>85291011</TarifCode>
+</CommodityCode>
+<CustomsApprovedTreatment>
+<Declared>10</Declared>
+<Previous>00</Previous>
+</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>0</AdditionalUnit>
+<StatisticalValue>93</StatisticalValue>
+</Statistic>
+	<Package>
+	<Quantity>1</Quantity>
+	<SequentialNumber>01</SequentialNumber>
+	<Type>NE</Type>
+	</Package>
+</GoodsItem>
+
+
+
+
+
+
+
+
+
+
+
+<GoodsItem>
+<ItemNumber>006</ItemNumber>
+	<Description>TFT Bildschirm, 17"1 / Pferde als reinrassige Zuchttiere</Description>
+	<OriginFederalState>14</OriginFederalState>
+	<NetMass>15000</NetMass>
+	<GrossMass>0000</GrossMass>
+<CommodityCode>
+<TarifCode>01011010</TarifCode>
+</CommodityCode>
+<CustomsApprovedTreatment>
+<Declared>10</Declared>
+<Previous>00</Previous>
+</CustomsApprovedTreatment>
+<Statistic>
+<AdditionalUnit>1000</AdditionalUnit>
+<StatisticalValue>93</StatisticalValue>
+</Statistic>
+	<Package>
+	<Quantity>0</Quantity>
+	<SequentialNumber>01</SequentialNumber>
+	<Type>PX</Type>
+	<Marks>00112005670000010313</Marks>
+	</Package>
+</GoodsItem>
+</GoodsDeclaration>
+</ExportDeclaration>
+</soap:Body>
+</soap:Envelope>
